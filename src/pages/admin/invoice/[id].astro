@@ -1,0 +1,118 @@
+---
+// Invoice print view — buka → Ctrl/Cmd+P → save as PDF (v1 pragmatis;
+// generate PDF server→R2 menyusul bila perlu otomasi kirim).
+export const prerender = false;
+
+import { eq } from 'drizzle-orm';
+import { getDb, schema } from '@/lib/db';
+import { getSession } from '@/lib/auth';
+
+const env = Astro.locals.runtime.env;
+const session = await getSession(env, Astro.request);
+if (!session) return Astro.redirect('/admin');
+
+const db = getDb(env);
+const inv = await db.query.invoice.findFirst({ where: eq(schema.invoice.id, Astro.params.id!) });
+if (!inv) return new Response('Invoice tidak ditemukan', { status: 404 });
+
+const client = inv.clientId
+  ? await db.query.client.findFirst({ where: eq(schema.client.id, inv.clientId) })
+  : null;
+
+const items = JSON.parse(inv.items) as { desc: string; qty: number; price: number }[];
+const fmt = (v: number | null) =>
+  v == null
+    ? '—'
+    : new Intl.NumberFormat(inv.currency === 'MYR' ? 'ms-MY' : 'id-ID', {
+        style: 'currency',
+        currency: inv.currency,
+        maximumFractionDigits: 0,
+      }).format(v);
+const dateFmt = (unix: number | null) =>
+  unix ? new Date(unix * 1000).toLocaleDateString('id-ID', { dateStyle: 'long' }) : '—';
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{inv.number} — JASAWEBSITE.co</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: system-ui, sans-serif; color: #1a1a1a; padding: 48px; max-width: 720px; margin: 0 auto; }
+      header { display: flex; justify-content: space-between; align-items: flex-start; }
+      h1 { font-size: 28px; letter-spacing: -0.02em; }
+      .muted { color: #666; font-size: 13px; }
+      .num { font-size: 15px; font-weight: 600; margin-top: 4px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+      th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #666; padding: 8px 0; border-bottom: 2px solid #1a1a1a; }
+      td { padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-size: 14px; }
+      .r { text-align: right; }
+      .totals { margin-top: 16px; margin-left: auto; width: 260px; font-size: 14px; }
+      .totals div { display: flex; justify-content: space-between; padding: 4px 0; }
+      .totals .grand { font-weight: 700; font-size: 17px; border-top: 2px solid #1a1a1a; padding-top: 8px; margin-top: 4px; }
+      .status { display: inline-block; margin-top: 8px; padding: 2px 10px; border: 1px solid #1a1a1a; border-radius: 99px; font-size: 12px; text-transform: uppercase; }
+      footer { margin-top: 48px; font-size: 12px; color: #666; }
+      .print-btn { position: fixed; top: 16px; right: 16px; padding: 10px 20px; background: #1a1a1a; color: #fff; border: 0; border-radius: 8px; cursor: pointer; }
+      @media print { .print-btn { display: none; } body { padding: 0; } }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+    <header>
+      <div>
+        <h1>INVOICE</h1>
+        <p class="num">{inv.number}</p>
+        <span class="status">{inv.status}</span>
+      </div>
+      <div style="text-align:right">
+        <p style="font-weight:700">JASAWEBSITE.co</p>
+        <p class="muted">by VOLUM</p>
+        <p class="muted">halo@jasawebsite.co</p>
+      </div>
+    </header>
+
+    <div style="margin-top:32px; display:flex; gap:64px">
+      <div>
+        <p class="muted">Ditagihkan kepada</p>
+        <p style="font-weight:600; margin-top:4px">{client?.name ?? '—'}</p>
+        {client?.company && <p class="muted">{client.company}</p>}
+        {(client?.email || client?.phone) && <p class="muted">{client?.email ?? client?.phone}</p>}
+      </div>
+      <div>
+        <p class="muted">Tanggal</p>
+        <p style="margin-top:4px">{dateFmt(inv.createdAt)}</p>
+        <p class="muted" style="margin-top:8px">Jatuh tempo</p>
+        <p style="margin-top:4px">{dateFmt(inv.dueDate)}</p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Deskripsi</th><th class="r">Qty</th><th class="r">Harga</th><th class="r">Jumlah</th></tr>
+      </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr>
+            <td>{item.desc}</td>
+            <td class="r">{item.qty}</td>
+            <td class="r">{fmt(item.price)}</td>
+            <td class="r">{fmt(item.qty * item.price)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div><span class="muted">Subtotal</span><span>{fmt(inv.subtotal)}</span></div>
+      <div><span class="muted">Pajak</span><span>{fmt(inv.tax)}</span></div>
+      <div class="grand"><span>Total</span><span>{fmt(inv.total)}</span></div>
+    </div>
+
+    <footer>
+      <p>Terima kasih atas kepercayaan Anda. — JASAWEBSITE.co by VOLUM</p>
+    </footer>
+  </body>
+</html>

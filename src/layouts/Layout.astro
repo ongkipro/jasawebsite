@@ -19,6 +19,17 @@ const nav = [
   { href: '/tentang', label: 'Tentang' },
   { href: '/kontak', label: 'Kontak' },
 ];
+
+// JSON-LD Organization (PRD §19)
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.name,
+  url: 'https://jasawebsite.co',
+  email: site.email,
+  description: site.description,
+  areaServed: ['ID', 'MY'],
+};
 ---
 
 <!doctype html>
@@ -32,6 +43,7 @@ const nav = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
     <ClientRouter />
   </head>
   <body>
