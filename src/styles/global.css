@@ -1,14 +1,15 @@
 @import 'tailwindcss';
 
-/* ── Design tokens (PRD §11) — @theme = Tailwind v4 tokens ── */
+/* ── Design tokens — CLEAN WHITE (ala Hello Monday) ── */
 @theme {
-  --color-bg: #0b0b0c;
-  --color-surface: #151517;
-  --color-text: #f4f4f0;
-  --color-muted: #9a9aa2;
-  --color-accent: #ff4d2e;
+  --color-bg: #fcfcfa; /* off-white hangat */
+  --color-surface: #f1f1ed; /* panel abu muda */
+  --color-line: #e7e7e2; /* border halus */
+  --color-text: #111110; /* near-black */
+  --color-muted: #6e6e68;
+  --color-accent: #ea3e1f; /* merah-oranye — aksen playful */
   --color-accent-2: #2e5bff;
-  --color-wa: #25d366; /* khusus CTA WhatsApp */
+  --color-wa: #0b8043; /* hijau readable di putih (teks/link) */
 
   --font-display: 'Clash Display', 'Inter', system-ui, sans-serif; /* TODO: font brand final */
   --font-body: 'Inter', system-ui, sans-serif;
@@ -45,28 +46,56 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: #fff;
 }
 
-/* Display type — clamp fluid (PRD §11 scale) */
+/* Display type raksasa — clamp fluid (Hello Monday scale) */
 .text-display {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 8rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.75rem, 9vw, 9rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
   font-weight: 600;
 }
 
-/* Reveal siap-animasi: elemen [data-reveal] disembunyikan oleh JS,
-   TIDAK oleh CSS — konten tetap terlihat tanpa JS (progressive enhancement, §8.1 AC6) */
-
-/* Mask untuk line reveal hero */
+/* Mask untuk line reveal hero (JS yang animate; tanpa JS tetap tampil) */
 .mask-line {
   display: block;
   overflow: hidden;
 }
 .mask-line > span {
   display: block;
+}
+
+/* Link underline ala editorial */
+.link-line {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+.link-line:hover {
+  color: var(--color-accent);
+}
+
+/* Marquee loop (§13) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* Focus ring jelas (a11y §20) */

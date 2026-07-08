@@ -18,7 +18,7 @@ const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000');
     </p>
     <div class="mt-12 grid gap-4 md:grid-cols-2">
       {services.map((s) => (
-        <div class="flex items-center justify-between rounded-xl border border-surface p-6" data-reveal>
+        <div class="flex items-center justify-between rounded-xl border border-line p-6" data-reveal>
           <div>
             <h2 class="font-display text-xl font-semibold">{s.title}</h2>
             <p class="mt-1 text-sm text-muted">{s.short}</p>
@@ -35,7 +35,7 @@ const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000');
       href={wa}
       target="_blank"
       rel="noopener"
-      class="mt-10 inline-block rounded-full bg-wa px-8 py-3 font-medium text-bg transition-transform hover:scale-105"
+      class="mt-10 inline-block rounded-full bg-text px-8 py-3 font-medium text-bg transition-transform hover:scale-105"
       data-reveal
     >
       Minta Penawaran

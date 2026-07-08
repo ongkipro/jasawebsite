@@ -62,7 +62,7 @@ export default function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+            className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
           />
         </label>
         <label className="block">
@@ -73,7 +73,7 @@ export default function ContactForm() {
             required
             autoComplete="tel"
             placeholder="08xxxxxxxxxx"
-            className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+            className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
           />
         </label>
       </div>
@@ -83,7 +83,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           autoComplete="email"
-          className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+          className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
         />
       </label>
       <div className="grid gap-5 sm:grid-cols-2">
@@ -91,7 +91,7 @@ export default function ContactForm() {
           <span className="text-sm text-muted">Layanan</span>
           <select
             name="service"
-            className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+            className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
           >
             <option value="">— pilih —</option>
             {SERVICES.map(([value, label]) => (
@@ -105,7 +105,7 @@ export default function ContactForm() {
           <span className="text-sm text-muted">Budget</span>
           <select
             name="budget_range"
-            className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+            className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
           >
             <option value="">— pilih —</option>
             {BUDGETS.map((b) => (
@@ -122,7 +122,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={4}
-          className="mt-1 w-full rounded-lg border border-surface bg-bg px-4 py-3 focus:border-accent"
+          className="mt-1 w-full rounded-lg border border-line bg-bg px-4 py-3 focus:border-accent"
         />
       </label>
       {/* Honeypot — disembunyikan dari manusia */}
@@ -141,7 +141,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.status === 'loading'}
-        className="w-full rounded-full bg-wa px-8 py-4 font-medium text-bg transition-transform hover:scale-[1.02] disabled:opacity-60 sm:w-auto"
+        className="w-full rounded-full bg-text px-8 py-4 font-medium text-bg transition-transform hover:scale-[1.02] disabled:opacity-60 sm:w-auto"
       >
         {state.status === 'loading' ? 'Mengirim…' : 'Kirim'}
       </button>

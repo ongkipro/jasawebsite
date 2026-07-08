@@ -52,10 +52,10 @@ function fmtMoney(v: number | null, currency: string): string {
 }
 
 const input =
-  'w-full rounded-lg border border-surface bg-bg px-3 py-2 text-sm focus:border-accent';
+  'w-full rounded-lg border border-line bg-bg px-3 py-2 text-sm focus:border-accent';
 const btn =
-  'rounded-lg bg-accent px-4 py-2 text-sm font-medium text-bg disabled:opacity-60';
-const badge = 'rounded-full border border-surface bg-bg px-2 py-1 text-xs';
+  'rounded-lg bg-text px-4 py-2 text-sm font-medium text-bg disabled:opacity-60';
+const badge = 'rounded-full border border-line bg-bg px-2 py-1 text-xs';
 
 /* ── Login ── */
 function Login({ onSuccess }: { onSuccess: () => void }) {
@@ -109,7 +109,7 @@ function LeadsTab({ leads, reload }: { leads: Lead[]; reload: () => void }) {
       {leads.length === 0 ? (
         <p className="mt-6 text-muted">Belum ada lead. 🎣</p>
       ) : (
-        <div className="mt-4 overflow-x-auto rounded-xl border border-surface">
+        <div className="mt-4 overflow-x-auto rounded-xl border border-line">
           <table className="w-full text-left text-sm">
             <thead className="bg-surface text-muted">
               <tr>
@@ -121,7 +121,7 @@ function LeadsTab({ leads, reload }: { leads: Lead[]; reload: () => void }) {
             </thead>
             <tbody>
               {leads.map((l) => (
-                <tr key={l.id} className="border-t border-surface">
+                <tr key={l.id} className="border-t border-line">
                   <td className="px-3 py-2 font-medium">{l.name}</td>
                   <td className="px-3 py-2">{l.contact}</td>
                   <td className="px-3 py-2 text-muted">{l.service ?? '—'}</td>
@@ -164,7 +164,7 @@ function ClientsTab({ clients, reload }: { clients: Client[]; reload: () => void
   return (
     <div>
       <h2 className="font-display text-xl font-semibold">Clients</h2>
-      <form onSubmit={create} className="mt-4 grid gap-2 rounded-xl border border-surface p-4 sm:grid-cols-5">
+      <form onSubmit={create} className="mt-4 grid gap-2 rounded-xl border border-line p-4 sm:grid-cols-5">
         <input name="name" required placeholder="Nama *" className={input} />
         <input name="company" placeholder="Company" className={input} />
         <input name="email" type="email" placeholder="Email" className={input} />
@@ -176,7 +176,7 @@ function ClientsTab({ clients, reload }: { clients: Client[]; reload: () => void
           <button type="submit" className={btn}>+</button>
         </div>
       </form>
-      <div className="mt-4 overflow-x-auto rounded-xl border border-surface">
+      <div className="mt-4 overflow-x-auto rounded-xl border border-line">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface text-muted">
             <tr>
@@ -186,7 +186,7 @@ function ClientsTab({ clients, reload }: { clients: Client[]; reload: () => void
           </thead>
           <tbody>
             {clients.map((c) => (
-              <tr key={c.id} className="border-t border-surface">
+              <tr key={c.id} className="border-t border-line">
                 <td className="px-3 py-2 font-medium">{c.name}</td>
                 <td className="px-3 py-2 text-muted">{c.company ?? '—'}</td>
                 <td className="px-3 py-2 text-muted">{c.phone ?? c.email ?? '—'}</td>
@@ -222,7 +222,7 @@ function ProjectsTab({ projects, clients, reload }: { projects: Project[]; clien
   return (
     <div>
       <h2 className="font-display text-xl font-semibold">Projects</h2>
-      <form onSubmit={create} className="mt-4 grid gap-2 rounded-xl border border-surface p-4 sm:grid-cols-4">
+      <form onSubmit={create} className="mt-4 grid gap-2 rounded-xl border border-line p-4 sm:grid-cols-4">
         <input name="title" required placeholder="Judul project *" className={input} />
         <input name="service" required placeholder="Layanan *" className={input} />
         <select name="client_id" className={input}>
@@ -236,7 +236,7 @@ function ProjectsTab({ projects, clients, reload }: { projects: Project[]; clien
       </form>
       <div className="mt-4 space-y-3">
         {projects.map((p) => (
-          <div key={p.id} className="rounded-xl border border-surface p-4">
+          <div key={p.id} className="rounded-xl border border-line p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="font-medium">{p.title}</p>
@@ -298,7 +298,7 @@ function InvoicesTab({ invoices, clients, projects, reload }: {
   return (
     <div>
       <h2 className="font-display text-xl font-semibold">Invoices</h2>
-      <form onSubmit={create} className="mt-4 space-y-2 rounded-xl border border-surface p-4">
+      <form onSubmit={create} className="mt-4 space-y-2 rounded-xl border border-line p-4">
         <div className="grid gap-2 sm:grid-cols-4">
           <select name="client_id" className={input}>
             <option value="">— klien —</option>
@@ -333,13 +333,13 @@ function InvoicesTab({ invoices, clients, projects, reload }: {
           </div>
         ))}
         <div className="flex gap-2">
-          <button type="button" onClick={() => setItems((p) => [...p, { desc: '', qty: 1, price: 0 }])} className="rounded-lg border border-surface px-3 py-2 text-sm">
+          <button type="button" onClick={() => setItems((p) => [...p, { desc: '', qty: 1, price: 0 }])} className="rounded-lg border border-line px-3 py-2 text-sm">
             + item
           </button>
           <button type="submit" className={btn}>Buat Invoice</button>
         </div>
       </form>
-      <div className="mt-4 overflow-x-auto rounded-xl border border-surface">
+      <div className="mt-4 overflow-x-auto rounded-xl border border-line">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface text-muted">
             <tr>
@@ -350,7 +350,7 @@ function InvoicesTab({ invoices, clients, projects, reload }: {
           </thead>
           <tbody>
             {invoices.map((inv) => (
-              <tr key={inv.id} className="border-t border-surface">
+              <tr key={inv.id} className="border-t border-line">
                 <td className="px-3 py-2 font-medium">{inv.number}</td>
                 <td className="px-3 py-2 text-muted">{clientName(inv.clientId)}</td>
                 <td className="px-3 py-2">{fmtMoney(inv.total, inv.currency)}</td>
@@ -391,22 +391,22 @@ function DashboardTab({ leads, projects, invoices }: { leads: Lead[]; projects: 
     <div>
       <h2 className="font-display text-xl font-semibold">Dashboard</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-xl border border-surface p-5">
+        <div className="rounded-xl border border-line p-5">
           <p className="text-3xl font-semibold text-accent">{stats.newLeads}</p>
           <p className="mt-1 text-sm text-muted">Lead baru (7 hari)</p>
         </div>
-        <div className="rounded-xl border border-surface p-5">
+        <div className="rounded-xl border border-line p-5">
           <p className="text-3xl font-semibold text-accent">{stats.activeProjects}</p>
           <p className="mt-1 text-sm text-muted">Project aktif</p>
         </div>
-        <div className="rounded-xl border border-surface p-5">
+        <div className="rounded-xl border border-line p-5">
           <p className="text-3xl font-semibold text-accent">{fmtMoney(stats.outstanding, 'IDR')}</p>
           <p className="mt-1 text-sm text-muted">Invoice outstanding</p>
         </div>
       </div>
       <div className="mt-6 space-y-2">
         {projects.filter((p) => p.status !== 'done').slice(0, 5).map((p) => (
-          <div key={p.id} className="flex items-center gap-3 rounded-xl border border-surface p-4">
+          <div key={p.id} className="flex items-center gap-3 rounded-xl border border-line p-4">
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{p.title}</p>
               <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface">
@@ -457,7 +457,7 @@ function Panel() {
         </p>
         <button onClick={logout} className="text-sm text-muted hover:text-text">Keluar</button>
       </div>
-      <nav className="mt-6 flex flex-wrap gap-1 border-b border-surface" aria-label="Tab admin">
+      <nav className="mt-6 flex flex-wrap gap-1 border-b border-line" aria-label="Tab admin">
         {TABS.map((t) => (
           <button
             key={t}

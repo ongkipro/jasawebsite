@@ -34,7 +34,7 @@ const next = works[(works.findIndex((w) => w.slug === work.slug) + 1) % works.le
       </div>
     </section>
 
-    <div class="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-surface pt-8" data-reveal>
+    <div class="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-8" data-reveal>
       {next && next.slug !== work.slug && (
         <a href={`/portfolio/${next.slug}`} class="text-accent hover:underline">
           Case berikutnya: {next.title} →
@@ -44,7 +44,7 @@ const next = works[(works.findIndex((w) => w.slug === work.slug) + 1) % works.le
         href={wa}
         target="_blank"
         rel="noopener"
-        class="rounded-full bg-wa px-6 py-3 font-medium text-bg transition-transform hover:scale-105"
+        class="rounded-full bg-text px-6 py-3 font-medium text-bg transition-transform hover:scale-105"
       >
         Mau hasil seperti ini?
       </a>
