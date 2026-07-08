@@ -1,0 +1,34 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { works } from '@/data/site';
+---
+
+<Layout title="Portfolio — JASAWEBSITE.co" description="Karya JASAWEBSITE.co: toko online, Shopify, company profile, website sales, custom web.">
+  <section class="mx-auto max-w-7xl px-5 py-20">
+    <h1 class="text-display" data-hero>
+      <span class="mask-line"><span>Portfolio</span></span>
+    </h1>
+    <div class="mt-16 grid gap-8 md:grid-cols-2">
+      {works.map((work) => (
+        <a
+          href={`/portfolio/${work.slug}`}
+          class="group block overflow-hidden rounded-xl bg-surface"
+          data-reveal
+        >
+          <div class="flex aspect-[4/3] items-center justify-center overflow-hidden bg-bg/50">
+            <span class="font-display text-4xl text-muted transition-transform duration-500 group-hover:scale-110">
+              {work.title.split('—')[0]}
+            </span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs uppercase tracking-widest text-accent">{work.category}</p>
+            <h2 class="mt-2 font-display text-2xl font-semibold">{work.title}</h2>
+            {work.result && <p class="mt-2 text-sm text-muted">{work.result}</p>}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

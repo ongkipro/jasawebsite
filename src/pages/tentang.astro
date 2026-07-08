@@ -1,0 +1,28 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { site } from '@/data/site';
+---
+
+<Layout title="Tentang — JASAWEBSITE.co" description="JASAWEBSITE.co by VOLUM — studio web yang menggabungkan craft visual internasional dengan fokus conversion untuk pasar Indonesia & Malaysia.">
+  <section class="mx-auto max-w-4xl px-5 py-20">
+    <h1 class="text-display" data-hero>
+      <span class="mask-line"><span>Tentang</span></span>
+      <span class="mask-line"><span class="text-accent">{site.byline}</span></span>
+    </h1>
+    <div class="mt-16 space-y-8 text-lg" data-reveal>
+      <p>
+        {site.name} adalah studio web di bawah <strong>VOLUM</strong>. Kami percaya website yang
+        bagus bukan cuma indah dilihat — ia harus <em>bekerja</em>: mendatangkan lead, menjual
+        produk, membangun kepercayaan.
+      </p>
+      <p>
+        Karena itu kami menggabungkan dua hal yang jarang ada dalam satu tim: craft visual sekelas
+        studio internasional (motion, interaksi, detail) dan eksekusi ROI-driven (CRO, Meta Ads,
+        Google Ads, SEO) — untuk bisnis di Indonesia dan Malaysia.
+      </p>
+      <!-- TODO: cerita VOLUM, values, tim (§8.5) -->
+    </div>
+  </section>
+</Layout>

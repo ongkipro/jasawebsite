@@ -1,0 +1,30 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { services } from '@/data/site';
+---
+
+<Layout title="Layanan — JASAWEBSITE.co" description="7 layanan: toko online, Shopify, company profile, website sales, custom web, Meta Ads, Google Ads.">
+  <section class="mx-auto max-w-7xl px-5 py-20">
+    <h1 class="text-display" data-hero>
+      <span class="mask-line"><span>Layanan</span></span>
+    </h1>
+    <div class="mt-16 grid gap-6 md:grid-cols-2">
+      {services.map((s) => (
+        <a
+          href={`/layanan/${s.slug}`}
+          class="group rounded-xl border border-surface p-8 transition-colors hover:border-accent"
+          data-reveal
+        >
+          <p class="text-xs uppercase tracking-widest text-muted">
+            {s.type === 'retainer' ? 'Retainer bulanan' : 'Project'}
+          </p>
+          <h2 class="mt-3 font-display text-2xl font-semibold group-hover:text-accent">{s.title}</h2>
+          <p class="mt-3 text-muted">{s.short}</p>
+          {s.priceFrom && <p class="mt-4 text-sm text-accent">{s.priceFrom}</p>}
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

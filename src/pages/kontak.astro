@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import ContactForm from '@/components/islands/ContactForm';
+import { site, waLink } from '@/data/site';
+
+const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000');
+---
+
+<Layout title="Kontak — JASAWEBSITE.co" description="Konsultasi gratis: ceritakan kebutuhan website atau ads Anda — kami balas dalam 1×24 jam kerja.">
+  <section class="mx-auto max-w-4xl px-5 py-20">
+    <h1 class="text-display" data-hero>
+      <span class="mask-line"><span>Ngobrol yuk.</span></span>
+    </h1>
+    <p class="mt-6 max-w-xl text-muted" data-reveal>
+      Cara tercepat: <a href={wa} target="_blank" rel="noopener" class="text-wa hover:underline">chat WhatsApp</a>.
+      Atau isi form di bawah — kami balas dalam 1×24 jam kerja.
+    </p>
+    <div class="mt-12" data-reveal>
+      <ContactForm client:visible />
+    </div>
+    <p class="mt-10 text-sm text-muted" data-reveal>
+      Email: <a href={`mailto:${site.email}`} class="hover:text-text">{site.email}</a>
+    </p>
+  </section>
+</Layout>

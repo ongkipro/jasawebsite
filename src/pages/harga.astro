@@ -1,0 +1,44 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { services, waLink } from '@/data/site';
+
+const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000');
+---
+
+<Layout title="Harga — JASAWEBSITE.co" description="Paket transparan untuk setiap layanan. Konsultasi gratis untuk rekomendasi paket paling pas.">
+  <section class="mx-auto max-w-7xl px-5 py-20">
+    <h1 class="text-display" data-hero>
+      <span class="mask-line"><span>Harga</span></span>
+    </h1>
+    <p class="mt-6 max-w-xl text-muted" data-reveal>
+      Transparan sejak awal. Angka final tergantung scope — konsultasi gratis untuk estimasi akurat.
+      <!-- TODO: toggle IDR/MYR (§8.4 AC4) saat harga real diisi -->
+    </p>
+    <div class="mt-12 grid gap-4 md:grid-cols-2">
+      {services.map((s) => (
+        <div class="flex items-center justify-between rounded-xl border border-surface p-6" data-reveal>
+          <div>
+            <h2 class="font-display text-xl font-semibold">{s.title}</h2>
+            <p class="mt-1 text-sm text-muted">{s.short}</p>
+          </div>
+          <p class="shrink-0 text-right text-accent">{s.priceFrom ?? 'hubungi kami'}</p>
+        </div>
+      ))}
+    </div>
+    <p class="mt-8 text-sm text-muted" data-reveal>
+      * Untuk Meta Ads &amp; Google Ads: ad spend dibayar langsung oleh klien, terpisah dari
+      management fee.
+    </p>
+    <a
+      href={wa}
+      target="_blank"
+      rel="noopener"
+      class="mt-10 inline-block rounded-full bg-wa px-8 py-3 font-medium text-bg transition-transform hover:scale-105"
+      data-reveal
+    >
+      Minta Penawaran
+    </a>
+  </section>
+</Layout>

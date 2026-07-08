@@ -1,0 +1,134 @@
+---
+// HOME — Portfolio Showcase-First (PRD §8.1)
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { site, services, works, waLink } from '@/data/site';
+
+const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000');
+---
+
+<Layout>
+  <!-- 1. HERO — kinetic type + CTA (§8.1 AC1) -->
+  <section class="mx-auto max-w-7xl px-5 py-24 md:py-36" data-hero>
+    <h1 class="text-display">
+      <span class="mask-line"><span>Website cantik</span></span>
+      <span class="mask-line"><span class="text-accent">yang menjual.</span></span>
+    </h1>
+    <p class="mt-8 max-w-xl text-lg text-muted" data-reveal>
+      Craft visual sekelas studio internasional, dieksekusi untuk conversion — website, Shopify,
+      dan ads untuk bisnis Indonesia &amp; Malaysia.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4" data-reveal>
+      <a
+        href={wa}
+        target="_blank"
+        rel="noopener"
+        class="rounded-full bg-wa px-6 py-3 font-medium text-bg transition-transform hover:scale-105"
+      >
+        Konsultasi Gratis via WA
+      </a>
+      <a
+        href="/portfolio"
+        class="rounded-full border border-surface px-6 py-3 font-medium transition-colors hover:border-accent hover:text-accent"
+      >
+        Lihat Karya
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. FEATURED WORK — porsi terbesar homepage (§8.1 AC2) -->
+  <section class="mx-auto max-w-7xl px-5 py-16">
+    <h2 class="font-display text-3xl font-semibold md:text-5xl" data-reveal>Karya Pilihan</h2>
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {works.map((work) => (
+        <a
+          href={`/portfolio/${work.slug}`}
+          class="group block overflow-hidden rounded-xl bg-surface"
+          data-reveal
+        >
+          <div class="flex aspect-[4/3] items-center justify-center overflow-hidden bg-bg/50">
+            {/* TODO: ganti dengan media case study */}
+            <span class="font-display text-4xl text-muted transition-transform duration-500 group-hover:scale-110">
+              {work.title.split('—')[0]}
+            </span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs uppercase tracking-widest text-accent">{work.category}</p>
+            <h3 class="mt-2 font-display text-2xl font-semibold">{work.title}</h3>
+            {work.result && <p class="mt-2 text-sm text-muted">{work.result}</p>}
+          </div>
+        </a>
+      ))}
+      {/* Placeholder slot case berikutnya */}
+      <div class="flex aspect-[4/3] items-center justify-center rounded-xl border border-dashed border-surface text-muted" data-reveal>
+        <p class="px-8 text-center text-sm">Case study berikutnya sedang dikerjakan — brand Anda?</p>
+      </div>
+    </div>
+    <div class="mt-10" data-reveal>
+      <a href="/portfolio" class="text-accent hover:underline">Lihat semua karya →</a>
+    </div>
+  </section>
+
+  <!-- 3. STATS / hasil (§8.1 AC3) -->
+  <section class="border-y border-surface py-16">
+    <div class="mx-auto grid max-w-7xl grid-cols-3 gap-8 px-5 text-center">
+      <div data-reveal>
+        <p class="font-display text-4xl font-semibold text-accent">
+          <span data-counter="7">0</span>
+        </p>
+        <p class="mt-2 text-sm text-muted">Layanan spesialis</p>
+      </div>
+      <div data-reveal>
+        <p class="font-display text-4xl font-semibold text-accent">
+          <span data-counter="2">0</span>
+        </p>
+        <p class="mt-2 text-sm text-muted">Negara (ID + MY)</p>
+      </div>
+      <div data-reveal>
+        <p class="font-display text-4xl font-semibold text-accent">
+          <span data-counter="100">0</span>%
+        </p>
+        <p class="mt-2 text-sm text-muted">Fokus conversion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. LAYANAN ringkas (§8.1 AC4) -->
+  <section class="mx-auto max-w-7xl px-5 py-24">
+    <h2 class="font-display text-3xl font-semibold md:text-5xl" data-reveal>Layanan</h2>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((s) => (
+        <a
+          href={`/layanan/${s.slug}`}
+          class="group rounded-xl border border-surface p-6 transition-colors hover:border-accent"
+          data-reveal
+        >
+          <h3 class="font-display text-xl font-semibold group-hover:text-accent">{s.title}</h3>
+          <p class="mt-2 text-sm text-muted">{s.short}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 5. SELLING POINT + 6. CTA besar -->
+  <section class="mx-auto max-w-4xl px-5 py-24 text-center">
+    <h2 class="font-display text-3xl font-semibold md:text-5xl" data-reveal>
+      Cantik saja tidak cukup.<br />
+      <span class="text-accent">Harus menjual.</span>
+    </h2>
+    <p class="mx-auto mt-6 max-w-2xl text-muted" data-reveal>
+      Studio "artsy" kuat visual tapi lemah conversion. Agency biasa murah tapi generik.
+      {site.name} menggabungkan keduanya: craft + CRO + ads dalam satu tim.
+    </p>
+    <a
+      href={wa}
+      target="_blank"
+      rel="noopener"
+      class="mt-10 inline-block rounded-full bg-wa px-8 py-4 text-lg font-medium text-bg transition-transform hover:scale-105"
+      data-reveal
+    >
+      Mulai Project Anda
+    </a>
+  </section>
+</Layout>

@@ -1,0 +1,23 @@
+---
+// /admin — SSR, cek session server-side (PRD §30)
+export const prerender = false;
+
+import AdminApp from '@/components/islands/AdminApp';
+import { getSession } from '@/lib/auth';
+import '@/styles/global.css';
+
+const session = await getSession(Astro.locals.runtime.env, Astro.request);
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin — JASAWEBSITE.co</title>
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body class="px-5">
+    <AdminApp authed={!!session} client:load />
+  </body>
+</html>

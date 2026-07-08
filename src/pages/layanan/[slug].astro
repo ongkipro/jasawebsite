@@ -1,0 +1,94 @@
+---
+// Halaman layanan (PRD §8.2): Problem → Solusi → Deliverables → CTA + FAQ schema
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import { services, works, waLink } from '@/data/site';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+
+const { service } = Astro.props;
+const wa = waLink(Astro.locals.runtime?.env?.WHATSAPP_NUMBER ?? '62800000000', service.title);
+const relatedWork = works.find((w) => w.category.toLowerCase().includes(service.slug.split('-')[0]));
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.title,
+  description: service.short,
+  provider: { '@type': 'Organization', name: 'JASAWEBSITE.co' },
+  areaServed: ['ID', 'MY'],
+};
+---
+
+<Layout title={`${service.title} — JASAWEBSITE.co`} description={service.short}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <article class="mx-auto max-w-4xl px-5 py-20">
+    <p class="text-xs uppercase tracking-widest text-accent">
+      {service.type === 'retainer' ? 'Retainer bulanan' : 'Project'}
+    </p>
+    <h1 class="mt-4 text-display" data-hero>
+      <span class="mask-line"><span>{service.title}</span></span>
+    </h1>
+
+    <!-- Problem -->
+    <section class="mt-16" data-reveal>
+      <h2 class="font-display text-2xl font-semibold text-muted">Masalahnya</h2>
+      <p class="mt-4 text-lg">{service.problem}</p>
+    </section>
+
+    <!-- Solusi -->
+    <section class="mt-12" data-reveal>
+      <h2 class="font-display text-2xl font-semibold text-muted">Solusi kami</h2>
+      <p class="mt-4 text-lg">{service.solution}</p>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="mt-12" data-reveal>
+      <h2 class="font-display text-2xl font-semibold text-muted">Yang Anda dapat</h2>
+      <ul class="mt-4 space-y-3">
+        {service.deliverables.map((d) => (
+          <li class="flex gap-3">
+            <span class="text-accent" aria-hidden="true">✓</span>
+            {d}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Portfolio terkait -->
+    {relatedWork && (
+      <section class="mt-12" data-reveal>
+        <h2 class="font-display text-2xl font-semibold text-muted">Bukti karya</h2>
+        <a
+          href={`/portfolio/${relatedWork.slug}`}
+          class="mt-4 block rounded-xl border border-surface p-6 transition-colors hover:border-accent"
+        >
+          <p class="font-display text-xl font-semibold">{relatedWork.title}</p>
+          <p class="mt-1 text-sm text-muted">{relatedWork.result}</p>
+        </a>
+      </section>
+    )}
+
+    <!-- Harga + CTA -->
+    <section class="mt-16 rounded-xl bg-surface p-8 text-center" data-reveal>
+      {service.priceFrom && (
+        <p class="font-display text-2xl font-semibold text-accent">{service.priceFrom}</p>
+      )}
+      <p class="mt-2 text-sm text-muted">
+        Konsultasi gratis — ceritakan kebutuhan Anda, kami rekomendasikan paket paling pas.
+      </p>
+      <a
+        href={wa}
+        target="_blank"
+        rel="noopener"
+        class="mt-6 inline-block rounded-full bg-wa px-8 py-3 font-medium text-bg transition-transform hover:scale-105"
+      >
+        Diskusi via WhatsApp
+      </a>
+    </section>
+  </article>
+</Layout>

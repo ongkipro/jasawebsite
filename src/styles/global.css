@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+/* ── Design tokens (PRD §11) — @theme = Tailwind v4 tokens ── */
+@theme {
+  --color-bg: #0b0b0c;
+  --color-surface: #151517;
+  --color-text: #f4f4f0;
+  --color-muted: #9a9aa2;
+  --color-accent: #ff4d2e;
+  --color-accent-2: #2e5bff;
+  --color-wa: #25d366; /* khusus CTA WhatsApp */
+
+  --font-display: 'Clash Display', 'Inter', system-ui, sans-serif; /* TODO: font brand final */
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+/* ── Base ── */
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Display type — clamp fluid (PRD §11 scale) */
+.text-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+/* Reveal siap-animasi: elemen [data-reveal] disembunyikan oleh JS,
+   TIDAK oleh CSS — konten tetap terlihat tanpa JS (progressive enhancement, §8.1 AC6) */
+
+/* Mask untuk line reveal hero */
+.mask-line {
+  display: block;
+  overflow: hidden;
+}
+.mask-line > span {
+  display: block;
+}
+
+/* Focus ring jelas (a11y §20) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Teks ≥16px di mobile agar iOS tidak auto-zoom (§11.1) */
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
