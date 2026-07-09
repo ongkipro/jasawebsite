@@ -1,0 +1,29 @@
+---
+// Tombol CTA konsisten (presisi). Variant: primary (isi, inversi saat hover) | ghost (garis).
+import ArrowUpRight from '@lucide/astro/icons/arrow-up-right';
+interface Props {
+  href: string;
+  variant?: 'primary' | 'ghost';
+  arrow?: boolean;
+  magnetic?: boolean;
+  external?: boolean;
+}
+const { href, variant = 'primary', arrow = true, magnetic = false, external = false } = Astro.props;
+const style = variant === 'primary' ? 'btn-fill bg-text text-bg' : 'border border-line hover:border-text';
+---
+
+<a
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener' : undefined}
+  data-magnetic={magnetic ? '' : undefined}
+  class:list={['group inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-medium transition-colors', style]}
+>
+  <slot />
+  {arrow && (
+    <ArrowUpRight
+      class="h-[1.05em] w-[1.05em] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+      stroke-width={2}
+    />
+  )}
+</a>

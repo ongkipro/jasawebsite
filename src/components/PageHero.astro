@@ -1,0 +1,25 @@
+---
+// Hero halaman — judul konsisten & tidak sebesar hero homepage.
+// Ukuran clamp(2.5rem, 6vw, 4.5rem) → maks ~72px (bukan text-display 144px).
+interface Props {
+  title: string;
+  eyebrow?: string;
+  intro?: string;
+}
+const { title, eyebrow, intro } = Astro.props;
+---
+
+<header class="max-w-3xl">
+  {eyebrow && (
+    <p class="mb-4 text-xs uppercase tracking-[0.25em] text-accent">{eyebrow}</p>
+  )}
+  <h1
+    class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-tight"
+    data-split-hero
+  >
+    <slot name="title">{title}</slot>
+  </h1>
+  {intro && (
+    <p class="mt-6 max-w-xl text-lg text-muted" data-reveal>{intro}</p>
+  )}
+</header>

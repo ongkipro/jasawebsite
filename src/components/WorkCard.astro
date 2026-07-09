@@ -1,0 +1,34 @@
+---
+// Kartu karya — sumber tunggal desain portofolio (visual, tipografi, animasi
+// hover/reveal terkunci di sini). Dipakai di homepage & /portfolio → presisi & konsisten.
+import type { Work } from '@/data/site';
+
+interface Props {
+  work: Work;
+  ratio?: string; // kelas aspect-ratio (mis. "aspect-[4/5]")
+  offset?: string; // kelas offset vertikal masonry (mis. "md:mt-16")
+  nudge?: number; // geser-x kecil (px) untuk kesan berantakan
+}
+
+const { work, ratio = 'aspect-[4/3]', offset = '', nudge = 0 } = Astro.props;
+const title = work.title.split('—')[0].trim();
+const meta = work.year ? `${work.category} · ${work.year}` : work.category;
+---
+
+<a
+  href={`/portfolio/${work.slug}`}
+  class:list={['group mb-10 block break-inside-avoid', offset]}
+  style={nudge ? `transform: translateX(${nudge}px)` : undefined}
+  data-cursor="Lihat karya"
+>
+  <div class:list={['po-media', ratio]} data-reveal-img>
+    <img class="po-img" src={work.cover} alt={work.title} loading="lazy" data-parallax="0.08" />
+    <div class="po-overlay" aria-hidden="true"><span>{meta}</span></div>
+  </div>
+  <div class="mt-4 flex items-baseline justify-between gap-3">
+    <h3 class="font-display text-lg font-semibold transition-colors group-hover:text-accent md:text-xl">
+      {title}<span class="po-title-arrow"> ↗</span>
+    </h3>
+    <span class="shrink-0 text-xs text-muted md:text-sm">{work.category}</span>
+  </div>
+</a>

@@ -1,0 +1,102 @@
+---
+export const prerender = false;
+
+import Layout from '@/layouts/Layout.astro';
+import { getSession } from '@/lib/auth';
+import { getPg } from '@/lib/pg';
+import { clientUser, project, invoice } from '@/db/pg-schema';
+import { desc } from 'drizzle-orm/pg-core/expressions';
+
+const env = Astro.locals.runtime.env;
+const session = await getSession(env, Astro.request);
+if (session?.role !== 'admin') return Astro.redirect('/panel/masuk');
+
+type Row = Record<string, unknown>;
+const db = getPg(env);
+const clients: Row[] = await db.select().from(clientUser).orderBy(desc(clientUser.createdAt));
+const projects: Row[] = await db.select().from(project).orderBy(desc(project.updatedAt));
+const invoices: Row[] = await db.select().from(invoice).orderBy(desc(invoice.createdAt));
+const byClient = (rows: Row[], id: unknown) => rows.filter((r) => r.clientId === id);
+const fmtIDR = (n: unknown) =>
+  new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(Number(n));
+
+const fld = 'w-full border-0 border-b border-line bg-transparent pb-1.5 pt-1 text-sm outline-none transition-colors placeholder:text-muted/50 focus:border-accent';
+const projectStatuses = ['baru', 'proses', 'review', 'selesai'];
+const invoiceStatuses = ['draft', 'terkirim', 'lunas', 'jatuh_tempo'];
+---
+
+<Layout title="Admin Panel — JASAWEBSITE.co" description="Panel admin JASAWEBSITE.co" hideFooter>
+  <section class="mx-auto max-w-[90rem] px-5 py-16 md:px-10 md:py-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-accent">Admin Panel</p>
+          <h1 class="mt-3 font-display text-4xl font-semibold tracking-tight md:text-5xl">Client &amp; project</h1>
+          <p class="mt-2 text-muted">{clients.length} client · {projects.length} project · {invoices.length} invoice</p>
+        </div>
+        <form method="post" action="/api/panel/auth/logout" data-astro-reload>
+          <button type="submit" class="rounded-full border border-line px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent">Keluar</button>
+        </form>
+      </div>
+
+      {clients.length === 0 && <p class="mt-12 text-muted">Belum ada client terdaftar.</p>}
+
+      <div class="mt-12 space-y-8">
+        {clients.map((c) => (
+          <article id={`c-${c.id}`} class="scroll-mt-28 rounded-2xl border border-line p-6 md:p-8">
+            <header class="flex flex-wrap items-baseline justify-between gap-2 border-b border-line pb-4">
+              <div>
+                <h2 class="font-display text-xl font-semibold">{c.name}</h2>
+                <p class="text-sm text-muted">{c.email}{c.company ? ` · ${c.company}` : ''}</p>
+              </div>
+            </header>
+
+            <div class="mt-6 grid gap-8 md:grid-cols-2 md:gap-12">
+              {/* Projects */}
+              <div>
+                <h3 class="text-xs uppercase tracking-[0.2em] text-muted">Project</h3>
+                <ul class="mt-3 space-y-2">
+                  {byClient(projects, c.id).map((p) => (
+                    <li class="flex items-baseline justify-between gap-3 border-b border-line py-2 text-sm">
+                      <span>{String(p.title)}{p.service ? <span class="text-muted"> · {String(p.service)}</span> : null}</span>
+                      <span class="shrink-0 text-muted">{String(p.status)} · {String(p.progress)}%</span>
+                    </li>
+                  ))}
+                  {byClient(projects, c.id).length === 0 && <li class="py-2 text-sm text-muted">Belum ada.</li>}
+                </ul>
+                <form method="post" action="/api/panel/project" data-astro-reload class="mt-4 grid grid-cols-2 gap-3">
+                  <input type="hidden" name="clientId" value={String(c.id)} />
+                  <input name="title" required placeholder="Judul project" class={`${fld} col-span-2`} />
+                  <input name="service" placeholder="Layanan (opsional)" class={`${fld} col-span-2`} />
+                  <select name="status" class={fld}>{projectStatuses.map((s) => <option value={s}>{s}</option>)}</select>
+                  <input name="progress" type="number" min="0" max="100" value="0" placeholder="Progress %" class={fld} />
+                  <button type="submit" class="col-span-2 mt-1 rounded-full bg-text px-4 py-2 text-sm font-medium text-bg transition-transform hover:scale-[1.02]">+ Tambah project</button>
+                </form>
+              </div>
+
+              {/* Invoices */}
+              <div>
+                <h3 class="text-xs uppercase tracking-[0.2em] text-muted">Invoice</h3>
+                <ul class="mt-3 space-y-2">
+                  {byClient(invoices, c.id).map((i) => (
+                    <li class="flex items-baseline justify-between gap-3 border-b border-line py-2 text-sm">
+                      <span>{String(i.number)} · {String(i.title)}</span>
+                      <span class="shrink-0 text-muted">{fmtIDR(i.amount)} · {String(i.status)}</span>
+                    </li>
+                  ))}
+                  {byClient(invoices, c.id).length === 0 && <li class="py-2 text-sm text-muted">Belum ada.</li>}
+                </ul>
+                <form method="post" action="/api/panel/invoice" data-astro-reload class="mt-4 grid grid-cols-2 gap-3">
+                  <input type="hidden" name="clientId" value={String(c.id)} />
+                  <input name="number" required placeholder="No. invoice" class={fld} />
+                  <input name="amount" type="number" min="0" required placeholder="Jumlah (Rp)" class={fld} />
+                  <input name="title" required placeholder="Deskripsi" class={`${fld} col-span-2`} />
+                  <select name="status" class={`${fld} col-span-2`}>{invoiceStatuses.map((s) => <option value={s}>{s}</option>)}</select>
+                  <button type="submit" class="col-span-2 mt-1 rounded-full bg-text px-4 py-2 text-sm font-medium text-bg transition-transform hover:scale-[1.02]">+ Tambah invoice</button>
+                </form>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+</Layout>

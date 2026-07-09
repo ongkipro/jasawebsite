@@ -23,7 +23,7 @@ const items = JSON.parse(inv.items) as { desc: string; qty: number; price: numbe
 const fmt = (v: number | null) =>
   v == null
     ? '—'
-    : new Intl.NumberFormat(inv.currency === 'MYR' ? 'ms-MY' : 'id-ID', {
+    : new Intl.NumberFormat('id-ID', {
         style: 'currency',
         currency: inv.currency,
         maximumFractionDigits: 0,

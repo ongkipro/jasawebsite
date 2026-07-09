@@ -10,8 +10,9 @@ export const GET: APIRoute = () => {
   const urls = [
     '/',
     '/layanan',
+    '/product',
     '/portfolio',
-    '/harga',
+    '/stories',
     '/tentang',
     '/kontak',
     ...services.map((s) => `/layanan/${s.slug}`),

@@ -1,0 +1,123 @@
+---
+export const prerender = true;
+
+import Layout from '@/layouts/Layout.astro';
+import PageHeroVideo from '@/components/PageHeroVideo.astro';
+import Clock from '@lucide/astro/icons/clock';
+
+// Jurnal/cerita studio (DUMMY — narasi & pemikiran, bukan studi kasus/portofolio).
+// Ilustrasi line-art digenerate sesuai tone monokrom (di /public/stories/).
+const articles = [
+  {
+    image: '/stories/cantik-menjual.webp',
+    category: 'Filosofi',
+    date: 'Jul 2026',
+    read: '6 mnt',
+    title: 'Cantik yang menjual: kenapa kami menolak desain yang cuma indah.',
+    excerpt:
+      'Setiap project kami mulai dengan pertanyaan yang tidak nyaman: "ini bikin orang beli, atau cuma bikin kami bangga?" Cerita soal garis tipis antara seni dan jualan.',
+  },
+  {
+    image: '/stories/100-revisi.webp',
+    category: 'Di balik layar',
+    date: 'Jun 2026',
+    read: '5 mnt',
+    title: 'Pelajaran dari 100 revisi: klien selalu benar, tapi tak selalu tahu kenapa.',
+    excerpt:
+      'Revisi bukan musuh — ia sinyal. Bagaimana kami belajar mendengar apa yang klien maksud, bukan cuma apa yang mereka minta.',
+  },
+  {
+    image: '/stories/website-cepat.webp',
+    category: 'Craft',
+    date: 'Jun 2026',
+    read: '4 mnt',
+    title: 'Website tercepat yang pernah kami bangun — dan kenapa kecepatan itu soal respek.',
+    excerpt:
+      'Membuat halaman loading di bawah satu detik itu obsesi. Tapi di baliknya ada keyakinan sederhana: menghargai waktu pengunjung.',
+  },
+  {
+    image: '/stories/warung-kopi.webp',
+    category: 'Lapangan',
+    date: 'Mei 2026',
+    read: '5 mnt',
+    title: 'Apa yang warung kopi ajari kami soal conversion.',
+    excerpt:
+      'Bisnis paling sederhana sering paling paham pelanggannya. Beberapa pelajaran CRO yang justru datang dari luar dunia web.',
+  },
+  {
+    image: '/stories/iklan-boros.webp',
+    category: 'Iklan',
+    date: 'Mei 2026',
+    read: '7 mnt',
+    title: 'Kesalahan Rp puluhan juta yang paling sering kami lihat di iklan.',
+    excerpt:
+      'Bukan soal kreatif jelek — tapi soal fondasi yang bocor. Tiga hal yang diam-diam membakar budget iklan UMKM.',
+  },
+  {
+    image: '/stories/harga-depan.webp',
+    category: 'Transparansi',
+    date: 'Apr 2026',
+    read: '4 mnt',
+    title: 'Kenapa kami taruh harga di depan, bukan "hubungi kami".',
+    excerpt:
+      'Menyembunyikan harga menyaring orang yang salah dan bikin capek yang benar. Sedikit cerita soal jujur sejak paragraf pertama.',
+  },
+];
+const [featured, ...rest] = articles;
+---
+
+<Layout title="Cerita — JASAWEBSITE.co" description="Jurnal JASAWEBSITE.co — cerita, pemikiran, dan pelajaran soal craft, conversion, dan iklan dari balik layar studio." ogImage="/og-stories.png">
+  <PageHeroVideo
+    title="Cerita"
+    eyebrow="Jurnal"
+    intro="Pemikiran & pelajaran dari balik layar — soal craft, conversion, dan apa yang kami pelajari mengerjakan puluhan project."
+  />
+
+  <section class="mx-auto max-w-[90rem] px-5 pb-24 pt-14 md:px-10 md:pb-28 md:pt-20">
+    <!-- Cerita utama -->
+    <article class="grid items-center gap-8 border-t-2 border-text pt-8 md:grid-cols-2 md:gap-12">
+      <div class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface" data-reveal-img>
+        <img class="po-img" src={featured.image} alt={`Ilustrasi: ${featured.title}`} data-parallax="0.06" loading="eager" width="1200" height="896" />
+      </div>
+      <div>
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-[0.2em] text-muted">
+          <span class="font-medium text-accent">{featured.category}</span>
+          <span aria-hidden="true">·</span>
+          <span>{featured.date}</span>
+          <span aria-hidden="true">·</span>
+          <span class="inline-flex items-center gap-1"><Clock class="h-3.5 w-3.5" stroke-width={1.75} />{featured.read} baca</span>
+        </div>
+        <h2 class="mt-4 font-display text-3xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
+          {featured.title}
+        </h2>
+        <p class="mt-5 max-w-xl text-lg text-muted">{featured.excerpt}</p>
+      </div>
+    </article>
+
+    <!-- Cerita lainnya -->
+    <div class="mt-20 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+      {rest.map((a) => (
+        <article>
+          <div class="aspect-[4/3] overflow-hidden rounded-2xl bg-surface">
+            <img class="h-full w-full object-cover" src={a.image} alt={`Ilustrasi: ${a.title}`} loading="lazy" width="1200" height="896" />
+          </div>
+          <div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-[0.2em] text-muted">
+            <span class="font-medium text-accent">{a.category}</span>
+            <span aria-hidden="true">·</span>
+            <span>{a.date}</span>
+            <span aria-hidden="true">·</span>
+            <span class="inline-flex items-center gap-1"><Clock class="h-3.5 w-3.5" stroke-width={1.75} />{a.read}</span>
+          </div>
+          <h3 class="mt-3 font-display text-xl font-semibold leading-tight tracking-tight md:text-2xl">
+            {a.title}
+          </h3>
+          <p class="mt-3 text-muted">{a.excerpt}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-16 border-t border-line pt-8 text-sm text-muted">
+      Artikel lengkap segera terbit. Mau bahas topik tertentu? <a href="/kontak" class="link-line text-text">Ngobrol dengan kami ↗</a>
+    </p>
+  </section>
+</Layout>

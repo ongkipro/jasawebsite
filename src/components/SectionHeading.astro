@@ -1,0 +1,17 @@
+---
+// Judul section — tipografi heading terkunci (Clash Display, text-4xl→6xl,
+// tracking-tight) + reveal SplitText, opsional link "lihat semua".
+interface Props {
+  title: string;
+  href?: string;
+  linkLabel?: string;
+}
+const { title, href, linkLabel = 'Lihat semua ↗' } = Astro.props;
+---
+
+<div class="flex items-end justify-between gap-4">
+  <h2 class="font-display text-4xl font-semibold tracking-tight md:text-6xl" data-split>{title}</h2>
+  {href && (
+    <a href={href} class="link-line hidden shrink-0 text-sm md:inline">{linkLabel}</a>
+  )}
+</div>

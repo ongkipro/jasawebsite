@@ -21,10 +21,18 @@ bucket_name = "jasawebsite-assets"
 binding = "CACHE"
 id = "REPLACE_WITH_KV_ID"
 
+# Postgres client portal — Hyperdrive (prod). Buat dulu:
+#   wrangler hyperdrive create jasawebsite-pg --connection-string="postgres://user:pass@host:5432/db"
+# Dev (astro dev) pakai DATABASE_URL di .dev.vars, binding ini di-skip.
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "REPLACE_WITH_HYPERDRIVE_ID"
+localConnectionString = "postgres://postgres:devpass@localhost:5434/jasawebsite"
+
 # ── Vars publik (non-sensitif) ──────────────────────────────
 # Secrets via: wrangler secret put RESEND_API_KEY / AUTH_SECRET /
 #   TURNSTILE_SECRET_KEY / SANITY_WEBHOOK_SECRET (PRD §33.3)
 [vars]
 SITE_URL = "https://jasawebsite.co"
 DEFAULT_LOCALE = "id"
-WHATSAPP_NUMBER = "62800000000" # TODO: ganti nomor WA bisnis
+WHATSAPP_NUMBER = "6282136093430" # nomor WA bisnis

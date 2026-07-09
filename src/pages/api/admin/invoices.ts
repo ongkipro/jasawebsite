@@ -12,7 +12,7 @@ const Item = z.object({ desc: z.string().min(1), qty: z.number().positive(), pri
 const Input = z.object({
   client_id: z.string().uuid().optional().or(z.literal('')),
   project_id: z.string().uuid().optional().or(z.literal('')),
-  currency: z.enum(['IDR', 'MYR']).default('IDR'),
+  currency: z.enum(['IDR']).default('IDR'),
   items: z.array(Item).min(1),
   tax: z.number().min(0).default(0), // nominal, bukan persen
   due_date: z.number().int().optional(),

@@ -40,18 +40,20 @@ export async function verifyPassword(password: string, stored: string): Promise<
   return (await hashPassword(password, salt)) === stored;
 }
 
-export type Session = { userId: string; role: 'admin' | 'staff' };
+export type Role = 'admin' | 'staff' | 'client';
+export type Session = { userId: string; role: Role };
 
-export async function createSessionCookie(env: Env, session: Session): Promise<string> {
+export async function createSessionCookie(env: Env, session: Session, secure = true): Promise<string> {
   const exp = Math.floor(Date.now() / 1000) + SESSION_TTL;
   const payload = `${session.userId}.${session.role}.${exp}`;
   const sig = await hmac(env.AUTH_SECRET, payload);
   const value = `${payload}.${sig}`;
-  return `${SESSION_COOKIE}=${value}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${SESSION_TTL}`;
+  const flags = `HttpOnly;${secure ? ' Secure;' : ''} SameSite=Lax; Path=/; Max-Age=${SESSION_TTL}`;
+  return `${SESSION_COOKIE}=${value}; ${flags}`;
 }
 
-export function clearSessionCookie(): string {
-  return `${SESSION_COOKIE}=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0`;
+export function clearSessionCookie(secure = true): string {
+  return `${SESSION_COOKIE}=; HttpOnly;${secure ? ' Secure;' : ''} SameSite=Lax; Path=/; Max-Age=0`;
 }
 
 export async function getSession(env: Env, request: Request): Promise<Session | null> {
@@ -64,6 +66,6 @@ export async function getSession(env: Env, request: Request): Promise<Session | 
   const payload = `${userId}.${role}.${expStr}`;
   if ((await hmac(env.AUTH_SECRET, payload)) !== sig) return null;
   if (Number(expStr) < Math.floor(Date.now() / 1000)) return null;
-  if (role !== 'admin' && role !== 'staff') return null;
+  if (role !== 'admin' && role !== 'staff' && role !== 'client') return null;
   return { userId, role };
 }

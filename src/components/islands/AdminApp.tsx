@@ -44,7 +44,7 @@ function fmtDate(unix: number): string {
 
 function fmtMoney(v: number | null, currency: string): string {
   if (v == null) return '—';
-  return new Intl.NumberFormat(currency === 'MYR' ? 'ms-MY' : 'id-ID', {
+  return new Intl.NumberFormat('id-ID', {
     style: 'currency',
     currency,
     maximumFractionDigits: 0,
@@ -171,7 +171,7 @@ function ClientsTab({ clients, reload }: { clients: Client[]; reload: () => void
         <input name="phone" type="tel" placeholder="Phone/WA" className={input} />
         <div className="flex gap-2">
           <select name="country" className={input}>
-            <option value="ID">ID</option><option value="MY">MY</option>
+            <option value="ID">ID</option>
           </select>
           <button type="submit" className={btn}>+</button>
         </div>
@@ -309,7 +309,7 @@ function InvoicesTab({ invoices, clients, projects, reload }: {
             {projects.map((p) => <option key={p.id} value={p.id}>{p.title}</option>)}
           </select>
           <select name="currency" className={input}>
-            <option value="IDR">IDR</option><option value="MYR">MYR</option>
+            <option value="IDR">IDR</option>
           </select>
           <input name="tax" type="number" min={0} placeholder="Pajak (nominal)" className={input} />
         </div>

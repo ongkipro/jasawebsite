@@ -13,7 +13,7 @@ const Input = z.object({
   company: z.string().max(160).optional().or(z.literal('')),
   email: z.string().email().optional().or(z.literal('')),
   phone: z.string().max(30).optional().or(z.literal('')),
-  country: z.enum(['ID', 'MY']).default('ID'),
+  country: z.enum(['ID']).default('ID'),
 });
 
 export const GET: APIRoute = async ({ request, locals }) => {
