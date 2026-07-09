@@ -4,6 +4,7 @@ import { pgTable, uuid, text, integer, numeric, timestamp, pgEnum } from 'drizzl
 
 export const projectStatus = pgEnum('project_status', ['baru', 'proses', 'review', 'selesai']);
 export const invoiceStatus = pgEnum('invoice_status', ['draft', 'terkirim', 'lunas', 'jatuh_tempo']);
+export const leadStatus = pgEnum('lead_status', ['baru', 'dihubungi', 'deal', 'arsip']);
 
 export const clientUser = pgTable('client_user', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -40,6 +41,21 @@ export const invoice = pgTable('invoice', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 });
 
+// Lead dari form kontak (pesan masuk) — dikelola di /panel
+export const lead = pgTable('lead', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  name: text('name').notNull(),
+  contact: text('contact').notNull(), // WhatsApp
+  email: text('email'),
+  service: text('service'),
+  budgetRange: text('budget_range'),
+  message: text('message').notNull(),
+  source: text('source').default('form').notNull(),
+  utm: text('utm'), // JSON string
+  status: leadStatus('status').default('baru').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+});
+
 // Admin panel (staff yang mengelola project & invoice client)
 export const adminUser = pgTable('admin_user', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -50,6 +66,7 @@ export const adminUser = pgTable('admin_user', {
 });
 
 export type ClientUser = typeof clientUser.$inferSelect;
+export type Lead = typeof lead.$inferSelect;
 export type Project = typeof project.$inferSelect;
 export type Invoice = typeof invoice.$inferSelect;
 export type AdminUser = typeof adminUser.$inferSelect;

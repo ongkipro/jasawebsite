@@ -1,8 +1,9 @@
 // POST /api/contact — submit lead (PRD §32.2)
-// Validasi Zod → honeypot → rate-limit KV → (Turnstile bila dikonfigurasi) → insert D1 → email
+// Validasi Zod → honeypot → rate-limit KV → (Turnstile bila dikonfigurasi) → insert Postgres → email
 import type { APIRoute } from 'astro';
 import { z } from 'zod';
-import { getDb, schema } from '@/lib/db';
+import { getPg } from '@/lib/pg';
+import { lead } from '@/db/pg-schema';
 import { ok, err, isRateLimited } from '@/lib/api';
 
 export const prerender = false;
@@ -84,19 +85,21 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
     if (!valid) return err('FORBIDDEN', 'Verifikasi anti-spam gagal. Muat ulang halaman.');
   }
 
-  const id = crypto.randomUUID();
-  const db = getDb(env);
-  await db.insert(schema.lead).values({
-    id,
-    name: input.name,
-    contact: input.contact,
-    email: input.email || null,
-    service: input.service || null,
-    budgetRange: input.budget_range || null,
-    message: input.message,
-    source: input.source,
-    utm: input.utm ? JSON.stringify(input.utm) : null,
-  });
+  const db = getPg(env);
+  const [row] = await db
+    .insert(lead)
+    .values({
+      name: input.name,
+      contact: input.contact,
+      email: input.email || null,
+      service: input.service || null,
+      budgetRange: input.budget_range || null,
+      message: input.message,
+      source: input.source,
+      utm: input.utm ? JSON.stringify(input.utm) : null,
+    })
+    .returning({ id: lead.id });
+  const id = row?.id ?? crypto.randomUUID();
 
   await sendNotification(env, {
     name: input.name,
