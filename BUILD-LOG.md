@@ -63,4 +63,24 @@
     - `npm test` -> 41/41 passing.
     - `npm run build` -> SSG export successful, verified canonical, og:image, og:title, and JSON-LD schema tags across static HTML output.
 
+### Phase 8: 404 Torn Folio Sheet UI/UX & Real Portfolio Integration
+- **Date:** 2026-09-08
+- **Objective:** Design and implement a bespoke 404 page matching the Warm Swiss Monograph tactile book aesthetic, and integrate real client portfolios for Shopify and Automotive Sales & Lead Generation dealers.
+- **Completed Actions:**
+  - **404 Not Found Page (`src/app/not-found.tsx`):**
+    - Engineered 'Torn Folio Sheet' metaphor with perforated top seam, red vermillion `InkStamp` (*FOLIO MISSING / ARSIP TERPISAH*), monumental Newsreader serif 404, diagnostic notes, and full Table of Contents jump links.
+    - Added direct CTAs: *Kembali ke Sampul Depan* (`/`) and pre-filled WhatsApp customer service link.
+    - Zero outer scrollbar architecture across Desktop, Tablet, and Mobile.
+  - **Real Client Portfolio Expansion:**
+    - Shopify D2C Flagships: `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`.
+    - Automotive Sales & Dealers: `dealerhinoofficial.com`, `dealertrukhino.com`, `dealerfoton.com`.
+    - Heavy Machinery & Logistics: `traktor-nusa-teknik`, `logis-track-indonesia`.
+    - Downloaded and placed all high-res WebP visual screenshots under `public/images/portfolio/`.
+    - Added client showcase strips to `CommerceSheet` and `SalesSheet`.
+    - Updated `PortfolioGallerySheetRight` and `PortfolioModal` with browser window mockup framing.
+  - **Deployment & Verification:**
+    - Git commit & push: `6dea79f` to `main`.
+    - Deployed to Vercel production: aliased to `https://jasawebsite.co`.
+    - Probes verified: `GET /halaman-acak-tidak-ada` returns 404 with custom folio layout; all portfolio images return HTTP 200.
+
 
