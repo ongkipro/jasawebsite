@@ -13,7 +13,7 @@ export interface DogEarPeelProps {
 export function DogEarPeel({
   position = 'bottom-right',
   onClick,
-  label = 'Balik Lembar →',
+  label = 'Turn Page →',
   className,
 }: DogEarPeelProps) {
   const isRight = position === 'bottom-right';

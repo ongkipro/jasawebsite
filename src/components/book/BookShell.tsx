@@ -131,14 +131,29 @@ export function BookShell({
           </span>
         </div>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-1.5 sm:gap-4">
+          <button
+            type="button"
+            onClick={() => navigateToSpread(5, spreadIndex > 5 ? 'prev' : 'next')}
+            className={cn(
+              'hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border font-mono text-[10px] sm:text-[11px] tracking-wide transition-all cursor-pointer',
+              spreadIndex === 5
+                ? 'bg-[#ebebe3] border-[#111111] text-[#c23b22] font-bold shadow-2xs'
+                : 'bg-[#fbfbfa] hover:bg-[#ebebe3] border-[#d5d5cd] hover:border-[#111111] text-[#111111]'
+            )}
+            title="Buka Galeri Portofolio & Proyek Live"
+          >
+            <span className="text-[#c23b22] text-[9px]">✦</span>
+            <span>PORTFOLIO</span>
+          </button>
+
           <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#4b4b4b]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
-            <span>LIGHTHOUSE 100/100 · $0 EDGE</span>
+            <span>LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD</span>
           </div>
 
           <div className="flex items-center gap-1 bg-[#ebebe3] px-2 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] font-semibold text-[10px] sm:text-[11px]">
-            <span>LEMBAR</span>
+            <span>FOLIO</span>
             <span className="text-[#c23b22]">{spreadIndex + 1}</span>
             <span>/</span>
             <span>{totalSpreads}</span>
@@ -218,7 +233,7 @@ export function BookShell({
             className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Sebelumnya</span>
+            <span>Prev</span>
           </button>
 
           {/* Spread dots indicator */}
@@ -230,7 +245,7 @@ export function BookShell({
                 onClick={() =>
                   navigateToSpread(idx, idx > spreadIndex ? 'next' : 'prev')
                 }
-                aria-label={`Buka Lembar ${idx + 1}`}
+                aria-label={`Open Folio ${idx + 1}`}
                 className={cn(
                   'h-1.5 sm:h-2 rounded-full transition-all duration-200 cursor-pointer',
                   spreadIndex === idx
@@ -247,7 +262,7 @@ export function BookShell({
             disabled={spreadIndex === totalSpreads - 1}
             className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
-            <span>Selanjutnya</span>
+            <span>Next</span>
             <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
         </div>
@@ -265,7 +280,7 @@ export function BookShell({
           <a
             href={waLeadUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs flex-1 sm:flex-initial"
             title="Chat WhatsApp Customer Service"
           >

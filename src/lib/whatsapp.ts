@@ -32,10 +32,10 @@ export function buildWhatsAppUrl(params: WhatsAppIntentParams = {}): string {
   } else if (niche) {
     message = `Halo Tim JasaWebsite.co by ONG, saya sedang membaca lembar brosur untuk industri "${niche}". Mohon info proposal SOW dan konsultasi spesifikasi teknisnya via Call/WhatsApp.`;
   } else if (serviceName) {
-    const tierText = tier ? ` (Pilihan Paket: ${tier})` : '';
-    message = `Halo Tim JasaWebsite.co by ONG, saya tertarik konsultasi pembuatan "${serviceName}"${tierText} untuk bisnis saya. Mohon informasi tahapan pengerjaannya.`;
+    const tierText = tier ? ` (Simulasi: ${tier})` : '';
+    message = `Halo Tim JasaWebsite.co by ONG, saya ingin mendiskusikan kebutuhan "${serviceName}"${tierText} untuk bisnis saya. Mohon informasi jadwal sesi evaluasi kebutuhan dan estimasi draft SOW-nya.`;
   } else {
-    message = `Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi langsung via Call/WhatsApp mengenai kebutuhan website dan sistem digital untuk bisnis saya.`;
+    message = `Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi mengenai kebutuhan website dan sistem digital untuk bisnis saya. Bisakah bantu sesi evaluasi kebutuhan dan estimasi draft anggarannya?`;
   }
 
   // Append tracking reference metadata

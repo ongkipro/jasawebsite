@@ -157,7 +157,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             className="text-[#4b4b4b] hover:text-[#c23b22] transition-colors hidden sm:inline text-[11px] shrink-0"
             title="Buka Direktori Ceruk Industri"
           >
-            KATALOG INDUSTRI
+            INDUSTRY CATALOG
           </Link>
 
           <span className="text-[#d5d5cd] hidden sm:inline shrink-0">/</span>
@@ -295,10 +295,10 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
                     onClick={() => setDropdownOpen(false)}
                     className="text-[#c23b22] hover:underline font-bold flex items-center gap-1"
                   >
-                    <span>Lihat Semua 12+ Sektor →</span>
+                    <span>View All 12+ Niches →</span>
                   </Link>
                   <span className="text-[#4b4b4b] text-[10px]">
-                    {nichesData.length} Total Spesifikasi
+                    {nichesData.length} Specifications
                   </span>
                 </div>
               </div>
@@ -307,14 +307,23 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
         </div>
 
         {/* Right Header Status */}
-        <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
+          <Link
+            href="/folio/portfolio"
+            className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] hover:border-[#111111] bg-[#fbfbfa] hover:bg-[#ebebe3] font-mono text-[10px] sm:text-[11px] tracking-wide text-[#111111] transition-all cursor-pointer"
+            title="Open Portfolio & Live Projects"
+          >
+            <span className="text-[#c23b22] text-[9px]">✦</span>
+            <span>PORTFOLIO</span>
+          </Link>
+
           <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#4b4b4b]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
-            <span>LIGHTHOUSE 100/100 · $0 EDGE</span>
+            <span>LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD</span>
           </div>
 
           <div className="flex items-center gap-1 bg-[#ebebe3] px-2 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] font-semibold text-[10px] sm:text-[11px]">
-            <span className="hidden sm:inline">SEKTOR</span>
+            <span className="hidden sm:inline">NICHE</span>
             <span className="text-[#c23b22]">{currentIndex + 1}</span>
             <span>/</span>
             <span>{totalNiches}</span>
@@ -404,8 +413,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             title="Kembali ke Direktori Ceruk Industri"
           >
             <ChevronLeft className="w-3.5 h-3.5 text-[#c23b22]" />
-            <span className="hidden sm:inline">Katalog</span>
-            <span>Index</span>
+            <span>Catalog</span>
           </Link>
 
           <button
@@ -414,8 +422,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">Sektor</span>
-            <span>Sebelumnya</span>
+            <span>Prev</span>
           </button>
 
           {/* Niche dots indicator */}
@@ -429,7 +436,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
                   router.push(`/folio/niche-${item.slug}`);
                 }}
                 title={item.industryName}
-                aria-label={`Buka Sektor ${item.industryName}`}
+                aria-label={`Open Niche ${item.industryName}`}
                 className={cn(
                   'h-1.5 sm:h-2 rounded-full transition-all duration-200 cursor-pointer',
                   currentIndex === idx
@@ -446,8 +453,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             disabled={currentIndex === totalNiches - 1}
             className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
-            <span className="hidden md:inline">Sektor</span>
-            <span>Selanjutnya</span>
+            <span>Next</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -465,7 +471,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           <a
             href={waLeadUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs flex-1 sm:flex-initial"
             title={`Chat WhatsApp Konsultasi Website ${currentNiche.industryName}`}
           >

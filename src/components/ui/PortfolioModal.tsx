@@ -150,7 +150,7 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
             <a
               href={item.liveUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-2 font-mono text-xs font-semibold text-[#111111] hover:text-[#c23b22] underline underline-offset-4"
             >
               <span>Kunjungi Website Live ({item.liveUrl})</span>

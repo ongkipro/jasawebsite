@@ -26,13 +26,14 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `Jasa Pembuatan Website & Sistem Digital Indonesia | ${siteConfig.name}`,
-    template: `%s | ${siteConfig.name}`,
+    default: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
+    template: '%s - Jasa Website',
   },
   description:
-    'Jasa pembuatan website profesional & sistem digital full-stack untuk bisnis Indonesia. Company profile, landing page sales, toko online Shopify, & custom web app CRM/ERP. Cepat, aman, tanpa biaya server bulanan. Konsultasi langsung via Call / WhatsApp.',
+    'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Desain premium, performa sub-detik, mobile-responsive, dan infrastruktur Global Edge Cloud. Konsultasi draft SOW via WhatsApp.',
   keywords: [
     'Jasa Pembuatan Website',
+    'Jasa Website',
     'Jasa Bikin Website Profesional',
     'Jasa Pembuatan Website Company Profile',
     'Jasa Landing Page Sales & Leads',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     'Software House Indonesia',
     'Jasa Web Developer Indonesia',
     'Jasa Bikin Website Surabaya Jakarta',
-    'Website Cepat Tanpa Biaya Server Bulanan',
+    'Website Cepat Global Edge Cloud',
     'Digital Brochure Living Folio',
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
@@ -63,26 +64,26 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `Jasa Pembuatan Website & Sistem Digital Indonesia | ${siteConfig.name}`,
+    siteName: 'Jasa Website',
+    title: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
     description:
-      'Jasa pembuatan website profesional & sistem digital full-stack untuk bisnis Indonesia. Company profile, landing page sales, toko online Shopify, & custom web app. Konsultasi langsung via Call / WhatsApp.',
+      'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Desain premium, performa sub-detik, mobile-responsive, dan infrastruktur Global Edge Cloud. Konsultasi draft SOW via WhatsApp.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.webp',
         width: 1200,
         height: 675,
-        alt: `${siteConfig.name} - Jasa Pembuatan Website & Sistem Digital Indonesia`,
-        type: 'image/jpeg',
+        alt: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
+        type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Jasa Pembuatan Website & Sistem Digital Indonesia | ${siteConfig.name}`,
+    title: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
     description:
-      'Website & sistem digital full-stack untuk bisnis Indonesia. Cepat, aman, tanpa biaya server bulanan. Hubungi via Call / WhatsApp.',
-    images: ['/og-image.jpg'],
+      'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Konsultasi draft SOW via WhatsApp.',
+    images: ['/og-image.webp'],
   },
   robots: {
     index: true,

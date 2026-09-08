@@ -6,7 +6,7 @@
     "categoryLabel": "Shopify Brand Flagship",
     "industry": "Fashion & Sarimbit Batik Nusantara",
     "challenge": "Butik batik 3 lantai terkemuka di Semarang membutuhkan ekspansi digital skala nasional dengan katalog ribuan SKU sarimbit keluarga, kain batik tulis asli, dan layanan jahit bespoke tanpa minimal order.",
-    "solution": "Membangun toko online flagship berbasis Shopify Hydrogen & Liquid dengan navigasi katalog 3 kasta (Eksklusif Sutra, Premium Dobby, Kasual Katun), live cart drawer instan, dan integrasi WhatsApp Concierge.",
+    "solution": "Membangun toko online flagship modern dengan navigasi katalog 3 kasta (Eksklusif Sutra, Premium Dobby, Kasual Katun), keranjang belanja instan, dan integrasi WhatsApp Concierge untuk melayani pemesanan langsung.",
     "metrics": [
       {
         "label": "Kecepatan Loading",
@@ -26,7 +26,7 @@
     ],
     "techStack": [
       "Shopify 2.0",
-      "Liquid & Hydrogen",
+      "Toko Online Modern",
       "Indonesian Courier",
       "WhatsApp Concierge"
     ],
@@ -208,7 +208,7 @@
       "Next.js 16 SSG",
       "46 Varian Spec Filter",
       "WhatsApp Multi-Branch",
-      "Cloudflare Edge"
+      "Global Edge Cloud"
     ],
     "desktopImage": "/images/portfolio/dealertrukhino-desktop.webp",
     "mobileImage": "/images/portfolio/dealertrukhino-desktop.webp",

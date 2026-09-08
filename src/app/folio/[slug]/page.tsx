@@ -22,11 +22,12 @@ const CORE_FOLIO_SEO: Record<
   { title: string; description: string; keywords: string[] }
 > = {
   cover: {
-    title: 'Brosur Digital Layanan Jasa Pembuatan Website Indonesia',
+    title: 'Brosur Digital Layanan Jasa Pembuatan Website & Toko Online',
     description:
-      'Dossier dan living brochure resmi studio rekayasa website modern, e-commerce, dan sistem digital terpadu untuk bisnis Indonesia oleh JasaWebsite.co by ONG.',
+      'Dossier resmi layanan pembuatan website profesional, landing page sales, toko online e-commerce, dan custom web application. Konsultasi draft SOW via WhatsApp.',
     keywords: [
       'jasa pembuatan website',
+      'jasa website profesional',
       'brosur digital web developer',
       'software house indonesia',
       'full stack web developer',
@@ -35,76 +36,85 @@ const CORE_FOLIO_SEO: Record<
   'company-profile': {
     title: 'Jasa Pembuatan Website Company Profile Korporat & B2B',
     description:
-      'Bangun kredibilitas resmi perusahaan yang meyakinkan klien korporat, mitra bisnis, dan tender resmi. Loading sub-detik, SEO teroptimasi, tanpa biaya server bulanan.',
+      'Jasa bikin website profil perusahaan & korporat terpercaya. Desain elegan, loading sub-detik, SEO Google teroptimasi, dan infrastruktur Global Edge Cloud.',
     keywords: [
       'jasa pembuatan website company profile',
       'bikin web profil perusahaan',
       'website korporat b2b indonesia',
+      'jasa website perusahaan',
       'website tender b2b',
     ],
   },
   'sales-website': {
     title: 'Jasa Pembuatan Landing Page Sales & Leads WhatsApp Berkonversi Tinggi',
     description:
-      'Corong konversi traffic iklan Meta Ads & Google Ads menjadi leads WhatsApp pembeli unit bernilai tinggi. Untuk dealer mobil, mesin industri, dan kontraktor.',
+      'Jasa pembuatan landing page iklan Meta Ads & Google Ads berkonversi tinggi untuk dealer mobil, mesin industri, kontraktor, dan properti.',
     keywords: [
       'jasa landing page sales',
       'landing page whatsapp leads',
       'jasa bikin landing page iklan',
+      'landing page konversi tinggi',
       'website dealer mesin kontraktor',
     ],
   },
   'ecommerce-shopify': {
-    title: 'Jasa Pembuatan Toko Online & Toko Shopify D2C Indonesia',
+    title: 'Jasa Pembuatan Website Toko Online Shopify & E-Commerce Mandiri',
     description:
-      'Toko online mandiri & Shopify D2C terintegrasi Payment Gateway (QRIS, VA) dan API kurir otomatis Indonesia tanpa potongan komisi marketplace.',
+      'Jasa pembuatan toko online Shopify dan website e-commerce mandiri profesional. Setup Shopify, kustom desain tampilan, 0% komisi, QRIS, dan cek ongkir kurir otomatis.',
     keywords: [
-      'jasa pembuatan toko online',
-      'jasa bikin web shopify indonesia',
-      'website ecommerce qris kurir',
+      'jasa pembuatan website shopify',
+      'jasa pembuatan toko online shopify',
+      'jasa bikin toko online shopify',
       'shopify developer indonesia',
+      'jasa toko online mandiri',
+      'jasa website e-commerce',
+      'toko online qris kurir otomatis',
     ],
   },
   'custom-web-app': {
-    title: 'Jasa Pembuatan Custom Web Application, CRM & Mini ERP Perusahaan',
+    title: 'Jasa Pembuatan Custom Web Application, CRM & Sistem Digital Perusahaan',
     description:
-      'Rekayasa sistem digital operasional kustom: CRM, mini ERP, customer portal, dan dashboard performa sesuai SOP unik bisnis Anda. Full-stack & scalable.',
+      'Jasa pembuatan aplikasi web custom, CRM penjualan, sistem operasional mini ERP, dan portal klien sesuai SOP unik bisnis Anda. Aman dan scalable.',
     keywords: [
       'jasa web application custom',
       'jasa pembuatan crm indonesia',
       'bikin sistem mini erp perusahaan',
+      'software house custom web app',
       'software house custom dashboard',
     ],
   },
   portfolio: {
-    title: 'Portofolio & Studi Kasus Jasa Pembuatan Website Terpercaya',
+    title: 'Portofolio Proyek & Studi Kasus Jasa Pembuatan Website Terpercaya',
     description:
-      'Showcase karya dan studi kasus terverifikasi website company profile, landing page sales, toko online, dan sistem digital dengan bukti metrik pertumbuhan bisnis riil.',
+      'Lihat galeri portofolio website company profile, landing page sales, toko online, dan web app dengan metrik performa nyata dan bukti kepuasan klien.',
     keywords: [
       'portofolio web developer',
       'studi kasus pembuatan website',
       'contoh website company profile',
+      'hasil karya jasa website',
       'hasil karya jasa bikin web',
     ],
   },
   'maintenance-care': {
-    title: 'Jasa Maintenance Website, Keamanan & Optimasi Server-Side CAPI',
+    title: 'Jasa Maintenance Website, Keamanan Cloud & Optimasi CAPI',
     description:
-      'Layanan perlindungan performa, monitoring uptime 24/7, backup rutin, pembaruan keamanan, dan add-on teknis Server-Side CAPI & programmatic SEO.',
+      'Layanan pemeliharaan website profesional: proteksi keamanan, monitoring uptime 99.9%, backup cloud terdistribusi, serta integrasi Server-Side Meta CAPI.',
     keywords: [
       'jasa maintenance website',
       'pemeliharaan website profesional',
       'optimasi website capi meta',
+      'jasa kelola website',
       'backup security website',
     ],
   },
   colophon: {
-    title: 'Direktori Solusi Web 30+ Industri & Kontak Resmi Studio',
+    title: 'Direktori Jasa Pembuatan Website 30+ Industri & Kontak Resmi Studio',
     description:
-      'Katalog lengkap solusi website untuk 30+ ceruk industri spesifik Indonesia dan komitmen rekayasa teknis studio. Hubungi Call / WhatsApp untuk konsultasi proyek.',
+      'Solusi pembuatan website untuk 30+ ceruk industri spesifik Indonesia. Konsultasikan kebutuhan bisnis Anda dan dapatkan draft proposal SOW via WhatsApp.',
     keywords: [
       'direktori jasa website indonesia',
-      'kontak jasawebsite co by ong',
+      'jasa website spesifik industri',
+      'kontak jasa website studio',
       'konsultasi pembuatan website whatsapp',
       'daftar industri jasa web',
     ],
@@ -115,11 +125,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const pageUrl = `${siteConfig.url}/folio/${slug}`;
   const defaultImage = {
-    url: '/og-image.jpg',
+    url: '/og-image.webp',
     width: 1200,
     height: 675,
     alt: `${siteConfig.name} - Jasa Pembuatan Website & Sistem Digital Indonesia`,
-    type: 'image/jpeg',
+    type: 'image/webp',
   };
 
   // Check if niche programmatic SEO page
@@ -128,8 +138,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const niche = nichesData.find((n) => n.slug === nicheSlug);
     if (!niche) return { title: 'Industri Tidak Ditemukan' };
 
-    const pageTitle = `Jasa Pembuatan Website ${niche.industryName} | Mulai ${niche.startingPrice}`;
-    const pageDesc = `${niche.headline}. Solusi web performa sub-detik tanpa biaya server bulanan untuk ${niche.targetMarket}. Hubungi via Call / WhatsApp.`;
+    const pageTitle = `Jasa Pembuatan Website ${niche.industryName} Profesional`;
+    const pageDesc = `${niche.headline}. Solusi jasa pembuatan website ${niche.industryName.toLowerCase()} dengan performa sub-detik dan arsitektur Global Edge Cloud. Hubungi via Call / WhatsApp.`;
 
     return {
       title: pageTitle,
@@ -139,6 +149,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         `website ${niche.industryName.toLowerCase()}`,
         `jasa bikin web ${niche.slug.replace(/-/g, ' ')}`,
         'jasa pembuatan website profesional',
+        'jasa website indonesia',
         'web developer indonesia',
       ],
       alternates: {
@@ -151,21 +162,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         type: 'article',
         locale: 'id_ID',
         url: pageUrl,
-        siteName: siteConfig.name,
-        title: `${pageTitle} | ${siteConfig.name}`,
+        siteName: 'Jasa Website',
+        title: `${pageTitle} - Jasa Website`,
         description: pageDesc,
         images: [
           {
             ...defaultImage,
-            alt: `Jasa Pembuatan Website ${niche.industryName} - ${siteConfig.name}`,
+            alt: `${pageTitle} - Jasa Website`,
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${pageTitle} | ${siteConfig.name}`,
+        title: `${pageTitle} - Jasa Website`,
         description: pageDesc,
-        images: ['/og-image.jpg'],
+        images: ['/og-image.webp'],
       },
       robots: {
         index: true,
@@ -206,16 +217,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'website',
       locale: 'id_ID',
       url: pageUrl,
-      siteName: siteConfig.name,
-      title: `${pageTitle} | ${siteConfig.name}`,
+      siteName: 'Jasa Website',
+      title: `${pageTitle} - Jasa Website`,
       description: pageDesc,
       images: [defaultImage],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${pageTitle} | ${siteConfig.name}`,
+      title: `${pageTitle} - Jasa Website`,
       description: pageDesc,
-      images: ['/og-image.jpg'],
+      images: ['/og-image.webp'],
     },
     robots: {
       index: true,

@@ -20,9 +20,9 @@ import { Button } from '@/components/ui/Button';
 import { SpineCrease } from '@/components/book/SpineCrease';
 
 export const metadata: Metadata = {
-  title: 'Folio 404 — Lembar Tidak Ditemukan',
+  title: 'Halaman Tidak Ditemukan (404)',
   description:
-    'Lembar brosur digital yang Anda tuju tidak ditemukan dalam arsip dossier resmi JasaWebsite.co by ONG. Periksa indeks daftar isi atau hubungi tim studio via WhatsApp.',
+    'Lembar arsip folio yang Anda tuju tidak ditemukan. Periksa indeks daftar isi brosur digital atau hubungi tim studio kami via WhatsApp.',
   robots: {
     index: false,
     follow: true,
@@ -291,7 +291,7 @@ export default function NotFound() {
                   <a
                     href="https://ongki.pro"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                     className="font-bold underline underline-offset-2 hover:text-[#c23b22] transition-colors"
                   >
                     ONGKI.PRO
@@ -371,8 +371,8 @@ export default function NotFound() {
 
               {/* Bottom Folio Footer Right */}
               <div className="flex-shrink-0 flex items-center justify-between border-t border-[#e5e5df] pt-2.5 text-[10px] font-mono text-[#4b4b4b] select-none">
-                <span>100% GITHUB HANDOVER</span>
-                <span>$0 EDGE HOSTING</span>
+                <span>100% KEPEMILIKAN PENUH</span>
+                <span>GLOBAL EDGE CLOUD</span>
               </div>
             </section>
           </div>
@@ -531,7 +531,7 @@ export default function NotFound() {
           <a
             href={wa404Url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
             title="Chat WhatsApp Customer Service"
           >

@@ -41,10 +41,10 @@ export function ColophonSheet() {
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>$0 Server Cost</span>
+            <span>Global Edge Cloud</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Dihosting di Cloudflare Global Edge tanpa tagihan sewa VPS.
+            Infrastruktur Cloud modern terdistribusi global dengan proteksi keamanan dan uptime 99.9%.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function ColophonSheet() {
       <div className="py-1 flex justify-center">
         <InkStamp
           text="RESMI & BERGARANSI"
-          subtext="100% GITHUB HANDOVER · ZERO LOCK-IN"
+          subtext="100% KEPEMILIKAN PENUH · TANPA BIAYA TERSEMBUNYI"
           date="2026"
         />
       </div>

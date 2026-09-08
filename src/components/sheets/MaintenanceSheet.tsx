@@ -9,22 +9,22 @@ const service = servicesData.find((s) => s.id === 'maintenance-care')!;
 const addOns = [
   {
     title: 'Server-Side Meta CAPI & Google Tag Manager',
-    price: 'Rp 1.500.000 – Rp 3.000.000',
+    price: 'Rp 1,5jt – Rp 3jt',
     description: 'Bypass pemblokir iklan iOS 14+ untuk akurasi pelacakan ROAS iklan berbayar.',
   },
   {
     title: 'Programmatic SEO Engine (30+ Landing Pages)',
-    price: 'Rp 3.500.000 – Rp 7.500.000',
+    price: 'Rp 3,5jt – Rp 7,5jt',
     description: 'Puluhan halaman pSEO ceruk industri terstruktur dengan Schema.org lengkap.',
   },
   {
     title: 'Copywriting Full Website Komersial',
-    price: 'Rp 1.500.000 – Rp 3.500.000',
+    price: 'Rp 1,5jt – Rp 3,5jt',
     description: 'Naskah website direct-response berbasis riset mendalam psikologi konversi pembeli.',
   },
   {
     title: 'AI Chatbot & WhatsApp Automation Integration',
-    price: 'Rp 2.500.000 – Rp 5.000.000',
+    price: 'Rp 2,5jt – Rp 5jt',
     description: 'Asisten AI cerdas untuk menjawab FAQ dan kualifikasi prospek 24/7 otomatis.',
   },
 ];
@@ -42,7 +42,7 @@ export function MaintenanceSheetLeft() {
           {service.headline}
         </h2>
         <div className="font-mono text-xs font-semibold text-[#c23b22]">
-          Investasi Terukur: {service.startingPriceAnchor}
+          Simulasi Investasi: {service.startingPriceAnchor}
         </div>
       </div>
 

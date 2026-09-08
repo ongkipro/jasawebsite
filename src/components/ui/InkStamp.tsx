@@ -10,7 +10,7 @@ export interface InkStampProps {
 
 export function InkStamp({
   text = 'CERTIFIED ARCHITECTURE',
-  subtext = 'LIGHTHOUSE 100/100 · $0 EDGE HOSTING',
+  subtext = 'LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD',
   date = '2026',
   className,
 }: InkStampProps) {

@@ -40,12 +40,12 @@
     "spreadIndex": 3,
     "slug": "ecommerce-shopify",
     "ribbonLabel": "COMM",
-    "title": "E-Commerce & Shopify D2C",
-    "leftTitle": "Toko Online Transaksi Langsung",
-    "rightTitle": "Shopify D2C Brand Flagship",
+    "title": "Toko Online Mandiri & Shopify",
+    "leftTitle": "Toko Online Mandiri & Shopify",
+    "rightTitle": "Pilihan Paket: Mandiri & Shopify",
     "leftFolioNumber": "FOLIO 06",
     "rightFolioNumber": "FOLIO 07",
-    "description": "Toko online mandiri terintegrasi Payment Gateway QRIS dan API Kurir Indonesia tanpa biaya komisi marketplace."
+    "description": "Layanan pembuatan toko online Shopify resmi dan sistem toko mandiri berbasis server terukur dengan pembayaran QRIS & kurir otomatis."
   },
   {
     "id": "spread-04",
@@ -63,7 +63,7 @@
     "id": "spread-05",
     "spreadIndex": 5,
     "slug": "portfolio",
-    "ribbonLabel": "GALERI",
+    "ribbonLabel": "WORK",
     "title": "Galeri Portofolio & Case Studies",
     "leftTitle": "Deck Proyek Terkurasi",
     "rightTitle": "Interactive Project Inspector",

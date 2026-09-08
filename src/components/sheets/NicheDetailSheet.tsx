@@ -65,7 +65,7 @@ export function NicheDetailSheetLeft({ niche }: { niche: NicheItem }) {
       {/* Target Market */}
       <div className="p-2.5 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd] font-mono text-[11px]">
         <span className="font-bold text-[#111111]">Sasaran Pasar: </span>
-        <span className="text-[#4b4b4b]">{niche.targetMarket}</span>
+        <span className="stabilo-yellow font-semibold text-[#111111]">{niche.targetMarket}</span>
       </div>
 
       {/* Pain Points */}
@@ -94,8 +94,10 @@ export function NicheDetailSheetRight({ niche }: { niche: NicheItem }) {
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
           FITUR REKAYASA & PROPOSAL
         </span>
-        <span className="font-mono text-xs font-bold text-[#c23b22]">
-          Mulai {niche.startingPrice}
+        <span className="font-mono text-xs font-bold">
+          <span className="stabilo-yellow text-[#111111]">
+            Simulasi: Mulai {niche.startingPrice}
+          </span>
         </span>
       </div>
 

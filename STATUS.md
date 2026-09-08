@@ -30,12 +30,12 @@
     - Deterministic SSG compilation (`npm run build` -> creates static `out/` with 26 pre-rendered routes).
     - Smoke verification suite (`npm test` -> 41/41 passing).
     - GitHub Actions automated workflow (`.github/workflows/ci-cd.yml`).
-  - **Indonesian Market SEO & OpenGraph Perfection:**
-    - High-CTR titles, descriptions, and keywords optimized for Indonesian commercial search intent.
-    - Canonical URL enforcement (`https://ongki.pro` and `/folio/[slug]`) and `id-ID` language tags.
-    - OpenGraph 1200x675 image generated and wired across root and dynamic pages (`public/og-image.jpg`).
-    - Schema.org JSON-LD structured graph (`ProfessionalService`, `LocalBusiness`, `OfferCatalog`, `BreadcrumbList`).
-    - Fixed 1-screen responsive architecture across Desktop, Tablet, and Mobile viewports.
+  - **E-Commerce & Shopify Dual-Track Architecture:**
+    - Explicitly bifurcated into two high-converting offerings on `Folio 06 & 07` (`CommerceSheet.tsx`):
+      1. *Opsi Setup & Custom Toko Shopify:* Setup resmi, custom UI/UX desain tampilan tema eksklusif, integrasi pembayaran lokal (QRIS & Virtual Account), dan cek ongkir kurir otomatis se-Indonesia (J&T, SiCepat, JNE). Menangkap trafik SEO "jasa pembuatan website/toko online shopify indonesia".
+      2. *Opsi Toko Online Mandiri (CMS Studio Pribadi):* 100% hak milik sendiri tanpa biaya sewa/langganan bulanan platform selamanya, 0% komisi penjualan, uang langsung masuk rekening, alur belanja kilat dari HP, dan notifikasi pesanan otomatis masuk ke WhatsApp admin toko.
+    - Updated SEO metadata and Schema.org keywords in `src/app/folio/[slug]/page.tsx` for `ecommerce-shopify`.
+    - Refined metric badge on CoverSheet to `• Cloud: Global` preventing any narrow mobile horizontal scrolling.
 
 ### Production Release Evidence:
 - Build output verified: `out/index.html`, `out/robots.txt`, `out/sitemap.xml`, `out/folio/*.html`.

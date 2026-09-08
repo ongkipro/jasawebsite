@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { ExternalLink, Maximize2, Laptop, Smartphone, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
@@ -85,8 +86,10 @@ export function PortfolioGallerySheetLeft({
                   {item.clientName}
                 </span>
                 {primaryMetric && (
-                  <span className="font-mono text-xs font-bold text-[#c23b22]">
-                    {primaryMetric.label}: {primaryMetric.value}
+                  <span className="font-mono text-xs font-bold">
+                    <span className="stabilo-yellow text-[#111111]">
+                      {primaryMetric.label}: {primaryMetric.value}
+                    </span>
                   </span>
                 )}
               </div>
@@ -128,7 +131,7 @@ export function PortfolioGallerySheetRight({
       {/* Top Header & Viewport Switcher */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-          INSPECTOR PROYEK
+          PROJECT INSPECTOR
         </span>
 
         <div className="flex items-center gap-1 bg-[#ebebe3] p-0.5 rounded-xs border border-[#d5d5cd]">
@@ -140,7 +143,7 @@ export function PortfolioGallerySheetRight({
                 ? 'bg-[#111111] text-[#fbfbfa]'
                 : 'text-[#4b4b4b] hover:text-[#111111]'
             }`}
-            title="Tampilan Layar Desktop"
+            title="Desktop View"
           >
             <Laptop className="w-3.5 h-3.5" />
           </button>
@@ -152,7 +155,7 @@ export function PortfolioGallerySheetRight({
                 ? 'bg-[#111111] text-[#fbfbfa]'
                 : 'text-[#4b4b4b] hover:text-[#111111]'
             }`}
-            title="Tampilan Layar Ponsel"
+            title="Mobile View"
           >
             <Smartphone className="w-3.5 h-3.5" />
           </button>
@@ -178,7 +181,7 @@ export function PortfolioGallerySheetRight({
             className="flex items-center gap-1 text-[#c23b22] hover:text-[#9c2a15] font-semibold transition-colors cursor-pointer"
           >
             <Maximize2 className="w-3 h-3" />
-            <span>Layar Penuh</span>
+            <span>Fullscreen</span>
           </button>
         </div>
 
@@ -203,7 +206,7 @@ export function PortfolioGallerySheetRight({
                 {viewportMode === 'desktop' ? 'DESKTOP MOCKUP' : 'MOBILE MOCKUP'}
               </span>
               <span className="font-mono text-[9px] uppercase tracking-wider text-white/90 bg-[#c23b22] px-2 py-0.5 rounded-xs font-semibold shadow-xs">
-                Perbesar Layar Penuh ↗
+                Fullscreen ↗
               </span>
             </div>
 
@@ -258,10 +261,10 @@ export function PortfolioGallerySheetRight({
           <a
             href={selectedItem.liveUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="inline-flex items-center gap-1 font-mono text-xs text-[#111111] hover:text-[#c23b22] underline"
           >
-            <span>Demo Live</span>
+            <span>Live Website</span>
             <ExternalLink className="w-3 h-3" />
           </a>
         )}
@@ -277,6 +280,27 @@ export function PortfolioGallerySheetRight({
           ref: selectedItem.voucherCode,
         }}
       />
+
+      {/* Post-Portfolio Bridge: Next Step Navigation */}
+      <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-[10px]">
+        <span className="text-[#4b4b4b] text-center sm:text-left">
+          Ingin website dengan standar serupa untuk bisnis Anda?
+        </span>
+        <div className="flex items-center gap-1.5 shrink-0">
+          <Link
+            href="/folio/sales-website"
+            className="px-2 py-1 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] rounded-xs font-semibold transition-colors text-center"
+          >
+            Sales Web (Mulai 3,5jt) →
+          </Link>
+          <Link
+            href="/folio/company-profile"
+            className="px-2 py-1 bg-[#fbfbfa] hover:bg-[#ebebe3] text-[#111111] border border-[#d5d5cd] rounded-xs font-semibold transition-colors text-center"
+          >
+            Compro (Mulai 2,9jt) →
+          </Link>
+        </div>
+      </div>
 
       {/* Full-screen Lightbox Modal */}
       <PortfolioModal

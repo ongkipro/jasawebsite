@@ -8,53 +8,84 @@ const service = servicesData.find((s) => s.id === 'ecommerce-shopify')!;
 
 export function CommerceSheetLeft() {
   return (
-    <article className="space-y-5">
+    <article className="space-y-4 sm:space-y-4.5">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <Badge variant="mono">PILLAR 03 · COMMERCE</Badge>
-        <Badge variant="outline">TRANSAKSI LANGSUNG</Badge>
+        <Badge variant="outline">DUAL TRACK SOLUTION</Badge>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
-          Custom E-Commerce Engine
+          Toko Online Mandiri &amp; Shopify
         </h2>
-        <div className="font-mono text-xs font-semibold text-[#c23b22]">
-          Bebas Biaya Komisi Marketplace 10–15% · $0 Hosting Server
+        <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
+          Pilihan Fleksibel:{' '}
+          <span className="stabilo-green font-bold text-[#111111]">
+            Toko Mandiri (Server Sesuai Traffic)
+          </span>{' '}
+          atau <span className="font-bold text-[#111111]">Setup &amp; Custom Shopify</span>
         </div>
       </div>
 
-      {/* Problem & Solution */}
-      <div className="space-y-3 text-xs sm:text-sm text-[#4b4b4b] leading-relaxed">
-        <div className="p-3 bg-[#ebebe3]/40 border-l-2 border-[#111111] rounded-r-xs">
-          <span className="font-mono text-[11px] font-bold text-[#111111] block uppercase tracking-wider mb-1">
-            Masalah Ketergantungan Marketplace:
-          </span>
-          <p>{service.problemStatement}</p>
+      {/* Two Clear Options: Shopify vs Toko Mandiri */}
+      <div className="space-y-2.5">
+        {/* Track 1: Toko Online Shopify */}
+        <div className="p-2.5 sm:p-3 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs space-y-1">
+          <div className="flex items-center justify-between">
+            <span className="font-mono text-[10.5px] sm:text-[11px] font-bold text-[#111111] flex items-center gap-1.5 uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#111111]" />
+              <span>Opsi 1: Setup &amp; Custom Toko Shopify</span>
+            </span>
+            <span className="font-mono text-[9.5px] sm:text-[10px] text-[#c23b22] font-semibold">
+              Ekosistem Global
+            </span>
+          </div>
+          <p className="text-[11px] sm:text-xs text-[#4b4b4b] leading-relaxed font-sans">
+            Bagi Anda yang ingin ekosistem e-commerce kelas dunia tanpa pusing urusan teknis server. Kami bantu <strong>setup akun resmi Shopify dari nol</strong>, rancang <strong>custom tema &amp; desain tampilan toko yang mewah serta responsif di HP</strong>, plus integrasi lokal: <strong>pembayaran instan QRIS / Virtual Account</strong>, <strong>cek ongkir kurir otomatis se-Indonesia (J&amp;T, SiCepat, JNE)</strong>, dan tracking pixel iklan Meta/TikTok.
+          </p>
+          <div className="font-mono text-[9.5px] text-[#666666] pt-0.5 border-t border-[#e5e5df]/60">
+            *Biaya langganan platform resmi Shopify (mulai ~$19–$39/bln) dibayarkan langsung ke pihak Shopify.
+          </div>
         </div>
 
-        <p>
-          JasaWebsite.co by ONG membangun website toko online mandiri yang mengintegrasikan alur transaksi belanja otomatis: Keranjang Belanja ➜ Payment Gateway Resmi Indonesia (QRIS, VA Bank) ➜ API Cek Ongkir Kurir per Kecamatan (J&amp;T, SiCepat, JNE) ➜ Cetak Invoice PDF &amp; Notifikasi Pesanan ke WhatsApp Pembeli.
-        </p>
+        {/* Track 2: Toko Online Mandiri (CMS Studio Pribadi) */}
+        <div className="p-2.5 sm:p-3 bg-[#f4f4ef] border border-[#111111] rounded-xs space-y-1 shadow-2xs">
+          <div className="flex items-center justify-between">
+            <span className="font-mono text-[10.5px] sm:text-[11px] font-bold text-[#111111] flex items-center gap-1.5 uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c23b22]" />
+              <span>Opsi 2: Toko Mandiri (CMS Studio Pribadi)</span>
+            </span>
+            <span className="font-mono text-[9px] sm:text-[9.5px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-2xs font-bold">
+              100% HAK MILIK
+            </span>
+          </div>
+          <p className="text-[11px] sm:text-xs text-[#4b4b4b] leading-relaxed font-sans">
+            Bagi Anda yang ingin <strong>100% kepemilikan penuh atas website dan database pembeli</strong> tanpa biaya sewa lisensi software pihak ketiga. <strong>0% potongan komisi penjualan</strong>, uang pembeli langsung masuk rekening bank Anda, alur belanja kilat di HP, dan rincian bukti pesanan <strong>otomatis langsung terkirim ke WhatsApp admin toko Anda</strong>.
+          </p>
+          <div className="font-mono text-[9.5px] text-[#666666] pt-0.5 border-t border-[#d5d5cd]">
+            *Biaya sewa server/cloud hosting sangat terjangkau, transparan, dan fleksibel disesuaikan dengan volume traffic toko Anda.
+          </div>
+        </div>
       </div>
 
       {/* Feature Pills */}
-      <div className="space-y-2 pt-2 border-t border-[#e5e5df]">
+      <div className="space-y-1.5 pt-2 border-t border-[#e5e5df]">
         <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] flex items-center gap-1.5">
           <Zap className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>Keunggulan Toko Mandiri:</span>
+          <span>Keunggulan Layanan Toko Online Kami:</span>
         </div>
-        <div className="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#4b4b4b]">
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            ✓ 0% Komisi Penjualan
+        <div className="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-[#4b4b4b]">
+          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
+            ✓ Opsi Shopify &amp; Toko Mandiri
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            ✓ Database Pelanggan 100% Milik Anda
+          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
+            ✓ 0% Potongan Komisi Jualan
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            ✓ Midtrans/Xendit QRIS Otomatis
+          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
+            ✓ Bayar QRIS &amp; Transfer Bank
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            ✓ Cek Ongkir Real-Time Kurir Indo
+          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
+            ✓ Hitung Ongkir Kurir Otomatis
           </div>
         </div>
       </div>
@@ -62,16 +93,16 @@ export function CommerceSheetLeft() {
       {/* Real Client Showcase Strip */}
       <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
         <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
-          <span>Karya Toko Shopify Live:</span>
+          <span>Karya Toko Online Klien Kami Live:</span>
           <span className="text-[#c23b22]">4 Brand Aktif ↗</span>
         </div>
         <div className="grid grid-cols-4 gap-1.5">
           <a
             href="https://batiksmile.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
-            title="Batik Smile Semarang (Shopify Hydrogen)"
+            title="Batik Smile Semarang (Toko Online Flagship)"
           >
             <img
               src="/images/portfolio/batiksmile-desktop.webp"
@@ -89,9 +120,9 @@ export function CommerceSheetLeft() {
           <a
             href="https://beautyinu.co"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
-            title="Beautyinu Skincare (Shopify D2C)"
+            title="Beautyinu Skincare (Toko Online Brand)"
           >
             <img
               src="/images/portfolio/beautyinu-desktop.webp"
@@ -109,9 +140,9 @@ export function CommerceSheetLeft() {
           <a
             href="https://petcue.co"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
-            title="Petcue Travel Gear (Shopify Global D2C)"
+            title="Petcue Travel Gear (Toko Online Brand)"
           >
             <img
               src="/images/portfolio/petcue-desktop.webp"
@@ -129,9 +160,9 @@ export function CommerceSheetLeft() {
           <a
             href="https://homelook.shop"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
-            title="Homelook Hardware (Shopify Flagship)"
+            title="Homelook Hardware (Toko Online Brand)"
           >
             <img
               src="/images/portfolio/homelook-desktop.webp"
@@ -154,21 +185,25 @@ export function CommerceSheetLeft() {
 
 export function CommerceSheetRight() {
   return (
-    <article className="space-y-4">
-      <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
+    <article className="space-y-2.5 sm:space-y-3">
+      <div className="flex items-center justify-between border-b border-[#e5e5df] pb-1.5">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111] flex items-center gap-1.5">
           <ShoppingBag className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>SHOPIFY D2C & TIERS TOKO ONLINE</span>
+          <span>PILIHAN PAKET: TOKO MANDIRI &amp; SHOPIFY</span>
         </span>
-        <Badge variant="vermillion">BRAND FLAGSHIP</Badge>
+        <Badge variant="vermillion">SIAP JUALAN</Badge>
       </div>
 
+      <p className="font-sans text-[10.5px] text-[#4b4b4b] italic -mt-1">
+        *Biaya pembuatan &amp; setup sistem studio. Kebutuhan server/hosting atau langganan platform disesuaikan dengan traffic &amp; skala bisnis Anda.
+      </p>
+
       {/* Tiers List */}
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-2.5">
         {service.tiers.map((tier) => (
           <div
             key={tier.id}
-            className={`p-3 sm:p-3.5 rounded-xs border transition-all ${
+            className={`p-2.5 sm:p-3 rounded-xs border transition-all ${
               tier.isRecommended
                 ? 'bg-[#f4f4ef] border-[#111111] shadow-xs'
                 : 'bg-[#fbfbfa] border-[#d5d5cd]'
@@ -190,12 +225,12 @@ export function CommerceSheetRight() {
               </span>
             </div>
 
-            <div className="font-mono text-[10px] text-[#4b4b4b] mt-0.5 mb-2">
+            <div className="font-mono text-[9.5px] sm:text-[10px] text-[#4b4b4b] mt-0.5 mb-1.5">
               Sprint: {tier.timeline} · Sasaran: {tier.targetClients}
             </div>
 
-            <ul className="space-y-1 text-[11px] text-[#4b4b4b]">
-              {tier.deliverables.slice(0, 3).map((item, i) => (
+            <ul className="space-y-0.5 text-[10.5px] sm:text-[11px] text-[#4b4b4b]">
+              {tier.deliverables.slice(0, 2).map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />
                   <span>{item}</span>
@@ -212,9 +247,10 @@ export function CommerceSheetRight() {
         code={service.voucherCode}
         perks={service.voucherPerks}
         startingPrice={service.startingPriceAnchor}
+        className="my-1 sm:my-1.5 p-2.5 sm:p-3"
         intentParams={{
-          serviceName: service.title,
-          tier: 'Shopify Growth ⭐ (Rp 6,9jt)',
+          serviceName: 'Toko Online Mandiri & Shopify',
+          tier: 'Shopify Storefront & Custom Design ⭐ (Rp 6,9jt)',
           ref: service.voucherCode,
         }}
       />

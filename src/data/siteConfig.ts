@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
   stats: {
     speedScore: 100,
     ttfb: '< 0.3s',
-    hostingCost: '$0 / bln',
+    hostingCost: 'Global Edge Cloud',
     codeOwnership: '100%',
   },
 };

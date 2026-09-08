@@ -31,7 +31,7 @@ export function SpreadView({
   return (
     <div
       className={cn(
-        'relative w-full max-w-7xl mx-auto h-full max-h-[calc(100dvh-125px)] xl:max-h-[calc(100dvh-135px)] min-h-[500px] flex bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden',
+        'relative w-full max-w-7xl 2xl:max-w-[1400px] mx-auto h-full flex-1 min-h-0 flex bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden',
         className
       )}
     >
@@ -61,7 +61,7 @@ export function SpreadView({
             <a
               href="https://ongki.pro"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="font-bold underline underline-offset-2 hover:text-[#c23b22] transition-colors"
             >
               ONGKI.PRO
@@ -75,7 +75,7 @@ export function SpreadView({
           <DogEarPeel
             position="bottom-left"
             onClick={onPrevPage}
-            label="← Balik Lembar Sebelumnya"
+            label="← Previous Spread"
           />
         )}
       </div>
@@ -86,7 +86,7 @@ export function SpreadView({
         <div className="flex-shrink-0 flex items-center justify-between border-b border-[#e5e5df] pb-2.5 text-[11px] font-mono text-[#4b4b4b] select-none">
           <span className="tracking-widest">{rightFolioNumber}</span>
           <span className="text-[#c23b22] font-semibold tracking-wider">
-            CERTIFIED SOW SPRINT
+            SPECIFICATIONS &amp; TIERS
           </span>
         </div>
 
@@ -97,8 +97,8 @@ export function SpreadView({
 
         {/* Bottom Folio Footer Right */}
         <div className="flex-shrink-0 flex items-center justify-between border-t border-[#e5e5df] pt-2.5 text-[10px] font-mono text-[#4b4b4b] select-none">
-          <span>100% GITHUB HANDOVER</span>
-          <span>$0 EDGE HOSTING</span>
+          <span>100% KEPEMILIKAN PENUH</span>
+          <span>GLOBAL EDGE CLOUD</span>
         </div>
 
         {/* Bottom-Right Corner Dog Ear for Next Page */}
@@ -106,7 +106,7 @@ export function SpreadView({
           <DogEarPeel
             position="bottom-right"
             onClick={onNextPage}
-            label="Balik Lembar Selanjutnya →"
+            label="Next Spread →"
           />
         )}
       </div>

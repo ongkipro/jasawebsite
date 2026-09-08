@@ -18,8 +18,11 @@ export function CustomAppSheetLeft() {
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
         </h2>
-        <div className="font-mono text-xs font-semibold text-[#c23b22]">
-          Investasi Terukur: {service.startingPriceAnchor}
+        <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
+          Simulasi Investasi:{' '}
+          <span className="stabilo-yellow font-bold text-[#111111]">
+            {service.startingPriceAnchor}
+          </span>
         </div>
       </div>
 
@@ -66,10 +69,14 @@ export function CustomAppSheetRight() {
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111] flex items-center gap-1.5">
           <Cpu className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>ARSITEKTUR SISTEM & PILIHAN SOW</span>
+          <span>SIMULASI INVESTASI CUSTOM WEB APP</span>
         </span>
         <Badge variant="outline">FULL-STACK</Badge>
       </div>
+
+      <p className="font-sans text-[11px] text-[#4b4b4b] italic -mt-1">
+        *Setiap sistem aplikasi unik mengikuti SOP bisnis Anda. Nilai di bawah adalah estimasi dasar; penawaran pasti disusun setelah sesi bedah alur kerja dan draft blueprint SOW.
+      </p>
 
       {/* Tiers List */}
       <div className="space-y-3">

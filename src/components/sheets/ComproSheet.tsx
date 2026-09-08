@@ -18,8 +18,11 @@ export function ComproSheetLeft() {
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
         </h2>
-        <div className="font-mono text-xs font-semibold text-[#c23b22]">
-          Investasi Terjangkau: {service.startingPriceAnchor}
+        <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
+          Simulasi Investasi:{' '}
+          <span className="stabilo-yellow font-bold text-[#111111]">
+            {service.startingPriceAnchor}
+          </span>
         </div>
       </div>
 
@@ -61,10 +64,14 @@ export function ComproSheetRight() {
     <article className="space-y-4">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-          PILIHAN INVESTASI SOW & DELIVERABLES
+          SIMULASI INVESTASI & LINGKUP KERJA
         </span>
-        <Badge variant="outline">3 PILIHAN TIER</Badge>
+        <Badge variant="outline">3 SIMULASI TIER</Badge>
       </div>
+
+      <p className="font-sans text-[11px] text-[#4b4b4b] italic -mt-1">
+        *Nilai di bawah adalah simulasi dasar paket standar. Biaya final ditentukan setelah evaluasi kebutuhan dan penyusunan draft Scope of Work (SOW).
+      </p>
 
       {/* Tiers List */}
       <div className="space-y-3">
@@ -88,8 +95,14 @@ export function ComproSheetRight() {
                   </Badge>
                 )}
               </div>
-              <span className="font-mono text-xs font-bold text-[#c23b22]">
-                {tier.investment}
+              <span className="font-mono text-xs font-bold">
+                {tier.isRecommended ? (
+                  <span className="stabilo-yellow text-[#111111]">
+                    {tier.investment}
+                  </span>
+                ) : (
+                  <span className="text-[#c23b22]">{tier.investment}</span>
+                )}
               </span>
             </div>
 

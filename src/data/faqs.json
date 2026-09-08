@@ -1,32 +1,42 @@
 [
   {
     "category": "Arsitektur & Kepemilikan",
-    "question": "Apakah saya mendapatkan 100% kepemilikan source code dan repositori GitHub?",
-    "answer": "Ya, mutlak 100%. Tidak seperti agensi konvensional yang mengunci website Anda di cPanel pribadi mereka agar Anda terus membayar biaya langganan, Ong-OS menyerahkan seluruh repositori GitHub dan aset digital kepada Anda setelah pelunasan project."
+    "question": "Apakah saya mendapatkan 100% kepemilikan penuh atas website saya?",
+    "answer": "Ya, mutlak 100%. Berbeda dari agensi konvensional yang mengunci website klien agar Anda terus membayar biaya sewa lisensi tahunan yang mahal, kami menyerahkan kepemilikan sistem dan seluruh aset digital secara penuh kepada Anda setelah pelunasan proyek. Aset digital bisnis Anda seutuhnya milik Anda tanpa biaya tersembunyi."
   },
   {
-    "category": "Hosting & Biaya",
-    "question": "Berapa biaya server bulanan untuk website yang dibuat oleh Ong-OS?",
-    "answer": "Rp 0 (Nol Rupiah). Kami menggunakan arsitektur modern Static Site Generation (SSG) yang dideploy ke Cloudflare Pages Global Edge. Anda tidak perlu membayar sewa hosting VPS tahunan ratusan ribu atau jutaan rupiah."
+    "category": "Infrastruktur & Kecepatan",
+    "question": "Bagaimana sistem hosting dan reliabilitas server website?",
+    "answer": "Website Anda dibangun dengan arsitektur Cloud Serverless modern yang terdistribusi di Global Edge Network (300+ kota di seluruh dunia). Ini memberikan kecepatan akses instan sub-detik, proteksi keamanan tingkat tinggi, serta uptime 99.9% tanpa risiko server overload atau beban biaya sewa server konvensional tahunan yang membebani."
+  },
+  {
+    "category": "Alur Kerjasama & Harga",
+    "question": "Bagaimana alur penentuan harga dan pengerjaan proyek?",
+    "answer": "Nilai investasi pada brosur ini merupakan simulasi dasar paket standar. Di Ong-OS, alur closing kami selalu diawali dengan: Konsultasi Kebutuhan Bisnis ➜ Evaluasi Teknis & Penyusunan Draft SOW (Scope of Work) tanpa fitur mubazir ➜ Proposal Rencana Anggaran Pasti yang mengikat dan transparan tanpa biaya tersembunyi (no hidden fees)."
   },
   {
     "category": "Kecepatan & SEO",
     "question": "Bagaimana format buku/brosur digital ini tetap 100% SEO-friendly?",
-    "answer": "Kami tidak menggunakan flipbook berbasis Canvas atau iframe PDF yang tidak bisa dibaca mesin pencari. Setiap lembar di Ong-OS dirender sebagai halaman semantic HTML murni (RSC) dengan URL kanonikal tersendiri (/folio/[slug]) dan Schema.org JSON-LD lengkap. Googlebot dapat mengindeks setiap kata kunci di dalamnya."
+    "answer": "Kami tidak menggunakan flipbook berbasis Canvas atau iframe PDF yang tidak bisa dibaca mesin pencari. Setiap lembar di Ong-OS dirender sebagai halaman semantic HTML murni (RSC) dengan URL kanonikal tersendiri (/folio/[slug]) dan Schema.org JSON-LD lengkap. Googlebot dapat mengindeks setiap kata kunci di dalamnya secara sempurna."
   },
   {
     "category": "Perbedaan Layanan",
     "question": "Apa perbedaan mendasar antara Company Profile dan Sales Website?",
-    "answer": "Company Profile menjawab pertanyaan 'Siapa perusahaan ini?' untuk membangun reputasi dan kredibilitas di mata mitra korporat. Sedangkan Sales Website fokus total pada 'Mengapa calon pembeli harus menghubungi kami sekarang?' dengan corong konversi teruji (Traffic Ads ➜ LP ➜ Spec ➜ Simulasi ➜ WA Lead) yang sangat cocok untuk dealer, alat berat, properti, dan mesin B2B."
+    "answer": "Company Profile berfokus pada reputasi dan kredibilitas ('Siapa perusahaan ini?') untuk meyakinkan mitra B2B atau klien korporat. Sedangkan Sales Website dirancang khusus sebagai mesin konversi ('Mengapa calon pembeli harus menghubungi sekarang?') dengan corong penjualan teruji untuk traffic iklan: Iklan ➜ Landing Page ➜ Katalog Spek ➜ WhatsApp Lead Otomatis."
+  },
+  {
+    "category": "Toko Online & E-Commerce",
+    "question": "Bagaimana perbedaan biaya operasional Toko Online Mandiri dengan Shopify?",
+    "answer": "Pada Shopify, terdapat biaya langganan bulanan platform resmi yang dibayarkan ke pihak Shopify (mulai ~$19–$39/bulan) dan maintenance server di-handle penuh oleh Shopify secara global; kami bantu setup resmi dari nol, kustomisasi tema & desain tampilan eksklusif, serta integrasi QRIS dan kurir lokal se-Indonesia. Sedangkan pada Toko Online Mandiri (CMS Studio), Anda memegang 100% kepemilikan kode & database tanpa biaya lisensi software pihak ketiga; biaya operasionalnya berupa biaya sewa cloud server hosting & domain (tahunan atau bulanan) yang fleksibel disesuaikan dengan volume traffic dan kapasitas katalog produk Anda."
   },
   {
     "category": "Toko Online & E-Commerce",
     "question": "Apakah toko online mendukung kurir lokal dan QRIS otomatis?",
-    "answer": "Tentu. Baik sistem custom kami maupun Shopify store diintegrasikan dengan Payment Gateway resmi Indonesia (Midtrans/Xendit) untuk pembayaran QRIS, Virtual Account, dan kartu kredit, serta API kurir lokal (J&T, SiCepat, JNE) yang menghitung ongkos kirim real-time per kecamatan."
+    "answer": "Tentu. Baik sistem Toko Mandiri kami maupun toko resmi Shopify diintegrasikan dengan pembayaran instan QRIS dan Virtual Account bank lokal, serta sistem kurir Indonesia (J&T, SiCepat, JNE) yang menghitung ongkos kirim otomatis real-time hingga tingkat kecamatan."
   },
   {
     "category": "Sistem Pembayaran",
-    "question": "Bagaimana tahapan pembayaran dan milestone proyek?",
-    "answer": "Kami menerapkan sistem pembayaran berbasis milestone yang transparan: 50% Down Payment (DP) untuk kickoff sprint, 30% setelah tahap staging/desain disetujui, dan 20% pelunasan saat serah terima repositori GitHub dan live domain cutover."
+    "question": "Bagaimana tahapan pembayaran dan serah terima proyek?",
+    "answer": "Kami menerapkan sistem pembayaran berbasis milestone yang transparan dan aman: 50% Down Payment (DP) untuk kickoff sprint & perancangan, 30% setelah tahap preview/staging disetujui, dan 20% pelunasan saat live domain cutover serta serah terima penuh seluruh akses dan aset website."
   }
 ]

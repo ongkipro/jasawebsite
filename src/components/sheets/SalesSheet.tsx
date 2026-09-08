@@ -18,8 +18,11 @@ export function SalesSheetLeft() {
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
         </h2>
-        <div className="font-mono text-xs font-semibold text-[#c23b22]">
-          Investasi Terjangkau: {service.startingPriceAnchor}
+        <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
+          Simulasi Investasi:{' '}
+          <span className="stabilo-yellow font-bold text-[#111111]">
+            {service.startingPriceAnchor}
+          </span>
         </div>
       </div>
 
@@ -90,7 +93,7 @@ export function SalesSheetLeft() {
           <a
             href="https://dealerhinoofficial.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
             title="Dealer Hino Resmi Indonesia"
           >
@@ -110,7 +113,7 @@ export function SalesSheetLeft() {
           <a
             href="https://dealertrukhino.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
             title="Dealer Truk Hino Jawa Timur"
           >
@@ -130,7 +133,7 @@ export function SalesSheetLeft() {
           <a
             href="https://dealerfoton.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
             title="Dealer Resmi Foton Motor Indonesia"
           >
@@ -158,10 +161,14 @@ export function SalesSheetRight() {
     <article className="space-y-4">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-          PILIHAN INVESTASI SOW & DELIVERABLES
+          SIMULASI PAKET & CORONG PENJUALAN
         </span>
-        <Badge variant="outline">3 PILIHAN TIER</Badge>
+        <Badge variant="outline">3 SIMULASI TIER</Badge>
       </div>
+
+      <p className="font-sans text-[11px] text-[#4b4b4b] italic -mt-1">
+        *Simulasi dasar untuk corong penjualan teruji. Lingkup kerja dan anggaran disesuaikan dengan variasi unit dan alur follow-up sales Anda.
+      </p>
 
       {/* Tiers List */}
       <div className="space-y-3">
@@ -214,7 +221,7 @@ export function SalesSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Growth ⭐ (Rp 8,9jt)',
+          tier: 'Sales Engine ⭐ (Rp 6,5jt)',
           ref: service.voucherCode,
         }}
       />

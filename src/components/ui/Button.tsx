@@ -54,7 +54,7 @@ export function Button({
         <a
           href={href}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className={combinedClassName}
         >
           {children}

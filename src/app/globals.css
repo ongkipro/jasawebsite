@@ -116,3 +116,34 @@ body {
   background: #111111;
 }
 
+/* Stabilo Highlighter System for Editorial Notebook / Dossier Metaphor */
+.stabilo-yellow {
+  background: linear-gradient(104deg, rgba(254, 240, 138, 0.75) 0%, rgba(253, 224, 71, 0.65) 50%, rgba(250, 204, 21, 0.75) 100%);
+  padding: 0.12em 0.35em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #111111;
+  font-weight: inherit;
+}
+
+.stabilo-green {
+  background: linear-gradient(104deg, rgba(187, 247, 208, 0.8) 0%, rgba(134, 239, 172, 0.65) 50%, rgba(74, 222, 128, 0.75) 100%);
+  padding: 0.12em 0.35em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #111111;
+  font-weight: inherit;
+}
+
+.stabilo-vermillion {
+  background: linear-gradient(104deg, rgba(254, 205, 202, 0.8) 0%, rgba(252, 165, 165, 0.65) 50%, rgba(248, 113, 113, 0.7) 100%);
+  padding: 0.12em 0.35em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #9c2a15;
+  font-weight: inherit;
+}
+

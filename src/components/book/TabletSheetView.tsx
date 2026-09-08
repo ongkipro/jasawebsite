@@ -88,7 +88,7 @@ export function TabletSheetView({
               )}
             >
               <BookOpen className="w-3 h-3" />
-              <span>Halaman 1</span>
+              <span>Page 1: Overview</span>
             </button>
             <button
               type="button"
@@ -101,7 +101,7 @@ export function TabletSheetView({
               )}
             >
               <Layers className="w-3 h-3" />
-              <span>Halaman 2</span>
+              <span>Page 2: Pricing &amp; SOW</span>
             </button>
           </div>
         )}
@@ -143,7 +143,7 @@ export function TabletSheetView({
           <span>USAP KIRI / KANAN UNTUK MEMBALIK</span>
         </div>
         <div>
-          <span>TABLET VIEW · $0 EDGE HOSTING</span>
+          <span>TABLET VIEW · GLOBAL EDGE CLOUD</span>
         </div>
       </div>
 
@@ -155,21 +155,21 @@ export function TabletSheetView({
             setActiveSubSheet(0);
             onNextPage();
           }}
-          label="Balik Bab Selanjutnya →"
+          label="Next Folio →"
         />
       )}
       {activeSubSheet === 0 && rightContent && (
         <DogEarPeel
           position="bottom-right"
           onClick={() => setActiveSubSheet(1)}
-          label="Buka Halaman 2 →"
+          label="Page 2: Pricing &amp; SOW →"
         />
       )}
       {activeSubSheet === 1 && (
         <DogEarPeel
           position="bottom-left"
           onClick={() => setActiveSubSheet(0)}
-          label="← Kembali ke Halaman 1"
+          label="← Page 1: Overview"
         />
       )}
       {activeSubSheet === 0 && hasPrev && onPrevPage && (
@@ -179,7 +179,7 @@ export function TabletSheetView({
             setActiveSubSheet(1);
             onPrevPage();
           }}
-          label="← Balik Bab Sebelumnya"
+          label="← Previous Folio"
         />
       )}
     </motion.div>
