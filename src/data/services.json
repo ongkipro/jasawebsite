@@ -278,66 +278,68 @@
   {
     "id": "maintenance-care",
     "pillarNumber": "SUPPORTING",
-    "category": "Retainer & Reliability",
-    "title": "Website Maintenance Care & Add-Ons",
-    "headline": "Lindungi Aset Digital Bisnis Anda Agar Selalu Cepat, Aman, dan Tanpa Error",
-    "startingPriceAnchor": "Mulai Rp 350rb / bln",
-    "problemStatement": "Website adalah mesin bisnis yang beroperasi 24/7. Tanpa perawatan rutin, website rentan terserang malware, link rusak saat update sistem, atau melambat seiring waktu.",
-    "solutionNarrative": "Layanan pemeliharaan berkala mencakup pemantauan uptime 24/7, cadangan (backup) cloud rutin, audit performa Google Lighthouse, dan penanganan darurat prioritas.",
+    "category": "Retainer & Growth Ads",
+    "title": "Website Maintenance Care & Ads Scaling",
+    "headline": "Lindungi Aset Digital & Maksimalkan Hasil Iklan Meta & Google Bisnis Anda",
+    "startingPriceAnchor": "Mulai Rp 2,5jt / bln",
+    "problemStatement": "Website dan corong iklan adalah mesin penjualan 24/7. Tanpa perawatan rutin dan pelacakan sinyal yang presisi, performa website melambat, link rusak, dan budget iklan berbayar bocor tanpa menghasilkan konversi.",
+    "solutionNarrative": "Layanan pemeliharaan berkala mencakup pemantauan uptime 24/7, cadangan cloud terpisah, audit kecepatan Google Lighthouse, integrasi pelacakan sinyal Meta CAPI & Google Ads, serta optimasi corong konversi.",
     "idealFor": [
-      "Pemilik Website Bisnis Aktif",
-      "Brand yang Mengandalkan Iklan Berbayar",
-      "Perusahaan Tanpa Tim IT Internal"
+      "Brand yang Aktif Menjalankan Iklan Berbayar",
+      "Bisnis yang Mengutamakan Uptime & Kecepatan Web",
+      "Perusahaan yang Butuh Tim Engineering & Ads Partner Terpercaya"
     ],
-    "voucherTitle": "KONSULTASI PERAWATAN & ADD-ON SOW",
+    "voucherTitle": "KONSULTASI PERAWATAN & SETUP IKLAN SOW",
     "voucherCode": "ONG-CARE-RETAINER",
-    "voucherPerks": "Audit Keamanan & Performa Gratis serta Rekomendasi Modul Tambahan",
-    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi Maintenance Care atau penambahan fitur add-on untuk website bisnis saya.",
+    "voucherPerks": "Audit Keamanan, Sinyal Tracking Iklan & Rekomendasi Setup Meta/Google Ads",
+    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi Maintenance Care dan setup iklan Meta Ads / Google Ads untuk website bisnis saya.",
     "tiers": [
       {
-        "id": "basic-care",
-        "name": "Basic Care",
-        "investment": "Rp 350rb – Rp 500rb / bln",
+        "id": "growth-care",
+        "name": "Growth Care & Ads Readiness",
+        "investment": "Rp 2,5jt / bln",
         "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Website profil UMKM & landing page standar",
+        "targetClients": "Bisnis & brand aktif beriklan yang butuh web kencang, pemantauan uptime, backup cloud & sinyal pixel terawat",
         "deliverables": [
-          "Pemantauan uptime & downtime otomatis 24/7",
-          "Cadangan (backup) rutin berkala ke penyimpanan cloud terpisah",
-          "Pembaruan keamanan minor dan dependensi sistem",
-          "Alokasi update konten minor (ganti teks/foto) hingga 1 jam/bln"
+          "Monitoring Uptime 24/7 & Cloud Shield",
+          "Backup Rutin Otomatis Berkala",
+          "Audit Performa & Garansi Skor Hijau",
+          "Cek Rutin Pixel Iklan (Meta & Google)",
+          "Bantu Update Teks, Foto & Promo (3x/bln)",
+          "Dukungan Teknis Prioritas via WhatsApp"
         ],
-        "couponCode": "ONG-CARE-BASIC"
+        "couponCode": "ONG-CARE-GROWTH"
       },
       {
-        "id": "business-care",
-        "name": "Business Care ⭐",
+        "id": "scale-ads",
+        "name": "Scale & Ads Management Retainer ⭐",
         "isRecommended": true,
-        "investment": "Rp 850rb – Rp 1,5jt / bln",
+        "investment": "Rp 4,5jt – Rp 7,5jt / bln",
         "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Bisnis bertumbuh, toko online, dealer aktif beriklan",
+        "targetClients": "Bisnis yang beriklan intensif di Meta Ads & Google Ads, dealer, atau toko online berkembang",
         "deliverables": [
-          "Seluruh fasilitas dalam paket Basic Care",
-          "Audit performa bulanan Google Lighthouse (garansi zona hijau)",
-          "Pemeriksaan kesehatan Technical SEO secara berkala",
-          "Penambahan section baru atau update promo hingga 3 jam/bln",
-          "Jalur penanganan darurat prioritas via WhatsApp teknis"
+          "Semua Fasilitas Paket Growth Care",
+          "Maintenance Server-Side CAPI & GTM",
+          "Evaluasi Konversi & Split Testing Promo",
+          "Update / Tambah Section Baru (8x/bln)",
+          "Review Performa Iklan bersama Lead Engineer"
         ],
-        "couponCode": "ONG-CARE-BIZ"
+        "couponCode": "ONG-CARE-SCALE"
       },
       {
-        "id": "pro-care",
-        "name": "Corporate Care",
-        "investment": "Rp 2,5jt+ / bln",
+        "id": "enterprise-care",
+        "name": "Enterprise Dedicated Growth Partner",
+        "investment": "Rp 10jt – Rp 25jt+ / bln",
         "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Korporasi & brand besar dengan traffic tinggi",
+        "targetClients": "Korporasi, jaringan multi-cabang, atau platform dengan anggaran iklan skala besar",
         "deliverables": [
-          "Seluruh fasilitas dalam paket Business Care",
-          "Pendampingan teknis langsung dari Senior Full-Stack Engineer",
-          "Optimasi konversi berkelanjutan (CRO) & evaluasi performa corong iklan",
-          "Laporan analitik performa & data pengunjung berkala",
-          "Alokasi pengembangan aktif fitur baru hingga 8–12 jam/bln"
+          "Semua Fasilitas Paket Scale & Ads",
+          "Dedicated Engineer Khusus Akun Anda",
+          "Optimasi Menyeluruh Meta & Google Ads",
+          "Request Kustom Fitur & Integrasi API Bebas",
+          "Laporan Mingguan & Respon Cepat 24/7"
         ],
-        "couponCode": "ONG-CARE-PRO"
+        "couponCode": "ONG-CARE-ENTERPRISE"
       }
     ]
   }

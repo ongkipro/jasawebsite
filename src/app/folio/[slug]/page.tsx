@@ -96,15 +96,17 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'maintenance-care': {
-    title: 'Jasa Maintenance Website, Keamanan Cloud & Optimasi CAPI',
+    title: 'Jasa Maintenance Website, Setup Iklan Meta & Google Ads - Jasa Website',
     description:
-      'Layanan pemeliharaan website profesional: proteksi keamanan, monitoring uptime 99.9%, backup cloud terdistribusi, serta integrasi Server-Side Meta CAPI.',
+      'Layanan pemeliharaan website profesional, pemantauan uptime, proteksi performa cloud, serta jasa setup iklan Facebook, Instagram & Google Ads untuk bisnis yang ingin bertumbuh.',
     keywords: [
       'jasa maintenance website',
-      'pemeliharaan website profesional',
-      'optimasi website capi meta',
-      'jasa kelola website',
-      'backup security website',
+      'jasa setup meta ads',
+      'jasa pasang iklan facebook',
+      'jasa iklan google ads',
+      'jasa kelola website indonesia',
+      'server side capi meta google',
+      'jasa optimasi website indonesia',
     ],
   },
   colophon: {

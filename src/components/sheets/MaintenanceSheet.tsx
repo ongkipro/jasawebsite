@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Check, PlusCircle } from 'lucide-react';
+import { Wrench, Check, PlusCircle, Megaphone, Target, ShieldCheck, Sparkles } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -8,40 +8,62 @@ const service = servicesData.find((s) => s.id === 'maintenance-care')!;
 
 const addOns = [
   {
-    title: 'Server-Side Meta CAPI & Google Tag Manager',
+    title: 'Landing Page Promo Iklan Cepat (Single Campaign)',
+    price: 'Mulai Rp 350rb / hal',
+    tag: 'ADS LP',
+    description: 'Halaman promo taktis khusus kampanye iklan harian/mingguan untuk uji produk, flash sale, atau tes penawaran cepat tanpa ribet.',
+  },
+  {
+    title: 'Landing Page Interaktif Modern (Motion Animation)',
+    price: 'Mulai Rp 3,5jt',
+    tag: 'PREMIUM LP',
+    description: 'Landing page direct-response beranimasi interaktif halus (Motion GPU-accelerated), storytelling visual memikat & struktur konversi tinggi.',
+  },
+  {
+    title: 'Dynamic Geo-Targeting Logic (Deteksi Lokasi Kota)',
     price: 'Rp 1,5jt – Rp 3jt',
-    description: 'Bypass pemblokir iklan iOS 14+ untuk akurasi pelacakan ROAS iklan berbayar.',
+    tag: 'SMART GEO',
+    description: 'Logika otomatis menyapa pengunjung sesuai kota asal (misal: "Halo Warga Surabaya, Promo Khusus Hari Ini...") untuk mendongkrak konversi iklan lokal.',
+  },
+  {
+    title: 'Setup Kampanye Meta Ads (Facebook & Instagram)',
+    price: 'Rp 2,5jt – Rp 5jt',
+    tag: 'META ADS',
+    description: 'Setup Business Manager resmi, pixel & Server-Side CAPI, riset audiens tertarget, copywriting direct-response, dan funnel retargeting.',
+  },
+  {
+    title: 'Setup Kampanye Google Ads (Search & PMax)',
+    price: 'Rp 2,5jt – Rp 5jt',
+    tag: 'GOOGLE ADS',
+    description: 'Setup Google Ads, riset kata kunci niat beli tinggi (high commercial intent), GTM Enhanced Conversions, teks iklan, & negatif keyword.',
+  },
+  {
+    title: 'Server-Side Meta CAPI & Google Tag Manager (GTM)',
+    price: 'Rp 2,5jt – Rp 4jt',
+    tag: 'TRACKING',
+    description: 'Bypass pemblokir pelacak iOS 14+ via Cloudflare Server Gateway untuk akurasi data pembelian dan optimasi algoritma ROAS iklan berbayar.',
   },
   {
     title: 'Programmatic SEO Engine (30+ Landing Pages)',
-    price: 'Rp 3,5jt – Rp 7,5jt',
-    description: 'Puluhan halaman pSEO ceruk industri terstruktur dengan Schema.org lengkap.',
-  },
-  {
-    title: 'Copywriting Full Website Komersial',
-    price: 'Rp 1,5jt – Rp 3,5jt',
-    description: 'Naskah website direct-response berbasis riset mendalam psikologi konversi pembeli.',
-  },
-  {
-    title: 'AI Chatbot & WhatsApp Automation Integration',
-    price: 'Rp 2,5jt – Rp 5jt',
-    description: 'Asisten AI cerdas untuk menjawab FAQ dan kualifikasi prospek 24/7 otomatis.',
+    price: 'Rp 4,5jt – Rp 8,5jt',
+    tag: 'SEO ENGINE',
+    description: 'Puluhan landing page pSEO spesifik ceruk industri atau target kota berbasis JSON statis dan Schema.org otomatis untuk dominasi Google Search.',
   },
 ];
 
 export function MaintenanceSheetLeft() {
   return (
-    <article className="space-y-4">
+    <article className="space-y-3.5 pb-2">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <Badge variant="mono">{service.pillarNumber}</Badge>
         <Badge variant="outline">{service.category}</Badge>
       </div>
 
-      <div className="space-y-1.5">
+      <div className="space-y-1">
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
         </h2>
-        <div className="font-mono text-xs font-semibold text-[#c23b22]">
+        <div className="font-mono text-xs font-bold text-[#c23b22]">
           Simulasi Investasi: {service.startingPriceAnchor}
         </div>
       </div>
@@ -57,8 +79,8 @@ export function MaintenanceSheetLeft() {
                 : 'bg-[#fbfbfa] border-[#d5d5cd]'
             }`}
           >
-            <div className="flex items-baseline justify-between gap-2">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 <span className="font-serif text-sm font-bold text-[#111111]">
                   {tier.name}
                 </span>
@@ -68,13 +90,13 @@ export function MaintenanceSheetLeft() {
                   </Badge>
                 )}
               </div>
-              <span className="font-mono text-xs font-bold text-[#c23b22]">
+              <span className="font-mono text-xs font-bold text-[#c23b22] shrink-0">
                 {tier.investment}
               </span>
             </div>
 
             <ul className="mt-2 space-y-1 text-[11px] text-[#4b4b4b]">
-              {tier.deliverables.slice(0, 3).map((item, i) => (
+              {tier.deliverables.slice(0, 4).map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />
                   <span>{item}</span>
@@ -90,32 +112,37 @@ export function MaintenanceSheetLeft() {
 
 export function MaintenanceSheetRight() {
   return (
-    <article className="space-y-4">
+    <article className="space-y-3.5 pb-2">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111] flex items-center gap-1.5">
-          <Wrench className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>MODUL REKAYASA ADD-ON STRATEGIS</span>
+          <Megaphone className="w-3.5 h-3.5 text-[#c23b22]" />
+          <span>SETUP IKLAN & MODUL ADD-ON STRATEGIS</span>
         </span>
-        <Badge variant="outline">OPTIONAL SOW</Badge>
+        <Badge variant="outline">EXPANSION & GROWTH</Badge>
       </div>
 
-      {/* Add-ons list */}
-      <div className="space-y-2.5">
+      {/* Add-ons list with scrollbar for containment */}
+      <div className="space-y-2 max-h-[360px] sm:max-h-[380px] lg:max-h-[400px] overflow-y-auto paper-scrollbar pr-1">
         {addOns.map((addon, idx) => (
           <div
             key={idx}
-            className="p-3 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs space-y-1"
+            className="p-2.5 bg-[#fbfbfa] hover:bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-1 transition-colors"
           >
-            <div className="flex items-baseline justify-between gap-2">
-              <span className="font-serif text-xs font-bold text-[#111111] flex items-center gap-1.5">
-                <PlusCircle className="w-3 h-3 text-[#c23b22]" />
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+              <span className="font-serif text-xs font-bold text-[#111111] flex items-center gap-1.5 flex-wrap">
+                <PlusCircle className="w-3 h-3 text-[#c23b22] shrink-0" />
                 <span>{addon.title}</span>
+                {addon.tag && (
+                  <span className="font-mono text-[9px] font-semibold px-1.5 py-0.2 bg-[#ebebe3] text-[#4b4b4b] border border-[#d5d5cd] rounded-2xs">
+                    {addon.tag}
+                  </span>
+                )}
               </span>
-              <span className="font-mono text-[11px] font-bold text-[#c23b22] shrink-0">
+              <span className="font-mono text-[11px] font-bold text-[#c23b22] shrink-0 pl-4.5 sm:pl-0">
                 {addon.price}
               </span>
             </div>
-            <p className="font-sans text-[11px] text-[#4b4b4b]">
+            <p className="font-sans text-[11px] text-[#4b4b4b] leading-relaxed pl-4.5">
               {addon.description}
             </p>
           </div>
@@ -130,10 +157,11 @@ export function MaintenanceSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Business Care ⭐ (Rp 750rb/bln)',
+          tier: 'Scale & Ads Management Retainer ⭐ (Rp 4,5jt – Rp 7,5jt/bln)',
           ref: service.voucherCode,
         }}
       />
     </article>
   );
 }
+

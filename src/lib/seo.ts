@@ -25,7 +25,7 @@ export function generateMasterSchema() {
         description: siteConfig.description,
         telephone: `+${siteConfig.phone}`,
         email: siteConfig.email,
-        priceRange: 'Rp 2,9jt - Rp 50jt+',
+        priceRange: 'Rp 2,5jt - Rp 50jt+',
         currenciesAccepted: 'IDR',
         paymentAccepted: 'Bank Transfer, QRIS, Virtual Account',
         areaServed: {
@@ -93,10 +93,10 @@ export function generateMasterSchema() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'Website Maintenance Care & Strategic Add-Ons',
-                description: 'Layanan perlindungan performa 24/7, monitoring uptime, backup rutin, dan add-on teknis Server-Side CAPI & pSEO.',
+                name: 'Website Maintenance Care, Ads Scaling & Strategic Add-Ons',
+                description: 'Layanan perlindungan performa 24/7, setup kampanye iklan Meta & Google Ads, monitoring uptime, backup rutin, dan add-on teknis Server-Side CAPI & pSEO.',
               },
-              price: '300000',
+              price: '2500000',
               priceCurrency: 'IDR',
             },
           ],
