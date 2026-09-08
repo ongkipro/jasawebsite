@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peta-development xmlns="https://jasawebsite.co/schema/peta-development/v1">
+  <metadata>
+    <project>JasaWebsite.co by ONG</project>
+    <tagline>Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh</tagline>
+    <canonical-domain>https://jasawebsite.co</canonical-domain>
+    <architecture>Next.js 16.3.4 SSG (output: export) + Tailwind CSS v4 + Motion 13.2.0</architecture>
+    <cdn-edge>Vercel Edge Singapore (sin1) + Cloudflare Pages</cdn-edge>
+    <total-semantic-routes>33</total-semantic-routes>
+    <total-prerendered-outputs>41</total-prerendered-outputs>
+    <last-updated>2026-09-09T00:40:00+07:00</last-updated>
+    <hotline-whatsapp>+62 838-3044-1495</hotline-whatsapp>
+    <email-cs>get@ongki.pro</email-cs>
+  </metadata>
+
+  <core-folios>
+    <folio id="00" slug="cover">
+      <route>/</route>
+      <canonical-route>/folio/cover</canonical-route>
+      <title>Sampul Monograf Digital &amp; Daftar Isi</title>
+      <type>Cover &amp; Table of Contents</type>
+      <component-left>src/components/sheets/CoverSheet.tsx</component-left>
+      <component-right>src/components/sheets/TocSheet.tsx</component-right>
+      <seo-title>Jasa Pembuatan Website Profesional &amp; Toko Online Terbaik - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="01" slug="company-profile">
+      <route>/folio/company-profile</route>
+      <title>Company Profile Website Korporat &amp; B2B</title>
+      <pillar>PILLAR 01</pillar>
+      <starting-anchor>Rp 2,9jt</starting-anchor>
+      <voucher-code>ONG-COMPRO-2026</voucher-code>
+      <component>src/components/sheets/ComproSheet.tsx</component>
+      <tiers>
+        <tier id="starter" name="Starter Kredibilitas Usaha" price="Rp 2,9jt" sprint="3–5 Hari" target="Usaha baru &amp; jasa profesional butuh legalitas web" />
+        <tier id="business" name="Kredibilitas Vendor &amp; Mitra B2B" is-recommended="true" price="Rp 4,9jt" sprint="5–10 Hari" target="PT/CV, pabrik &amp; kontraktor untuk kurasi vendor B2B" />
+        <tier id="corporate" name="Standar Korporat &amp; Lolos Tender Besar" price="Rp 8,9jt – Rp 15jt+" sprint="10–20 Hari" target="Korporasi, holding &amp; eksportir skala nasional" />
+      </tiers>
+      <seo-title>Jasa Pembuatan Website Company Profile Korporat &amp; B2B - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="02" slug="sales-website">
+      <route>/folio/sales-website</route>
+      <title>Sales &amp; Lead Generation Website</title>
+      <pillar>PILLAR 02</pillar>
+      <starting-anchor>Rp 3,5jt</starting-anchor>
+      <voucher-code>ONG-SALES-LEADS</voucher-code>
+      <component>src/components/sheets/SalesSheet.tsx</component>
+      <tiers>
+        <tier id="starter" name="Landing Page Iklan Siap Jualan" price="Rp 3,5jt" sprint="4–7 Hari" target="Sales dealer, agen properti &amp; pengiklan promo cepat" />
+        <tier id="growth" name="Mesin Iklan Siap Tempur &amp; Katalog Sales" is-recommended="true" price="Rp 6,5jt" sprint="7–14 Hari" target="Dealer resmi, distributor mesin &amp; tim sales aktif iklan" />
+        <tier id="pro" name="Showroom Digital &amp; Brosur Sales Interaktif" price="Rp 12,5jt+" sprint="14–21 Hari" target="Showroom multi-cabang &amp; developer kawasan" />
+      </tiers>
+      <seo-title>Jasa Pembuatan Landing Page Sales &amp; Leads WhatsApp Berkonversi Tinggi - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="03" slug="ecommerce-shopify">
+      <route>/folio/ecommerce-shopify</route>
+      <title>Toko Online Mandiri &amp; Shopify E-Commerce</title>
+      <pillar>PILLAR 03 &amp; 04</pillar>
+      <starting-anchor>Rp 3,9jt</starting-anchor>
+      <voucher-code>ONG-COMMERCE-D2C</voucher-code>
+      <component>src/components/sheets/CommerceSheet.tsx</component>
+      <tiers>
+        <tier id="shopify-starter" name="Toko Mandiri Bebas Komisi (CMS Pribadi)" price="Rp 3,9jt" sprint="4–7 Hari" target="Brand &amp; UKM jualan mandiri tanpa potongan admin 10%" />
+        <tier id="shopify-growth" name="Shopify Custom Storefront &amp; Desain Mewah" is-recommended="true" price="Rp 6,9jt" sprint="7–14 Hari" target="Brand D2C &amp; pebisnis butuh toko resmi Shopify kelas dunia" />
+        <tier id="custom-ecommerce" name="Toko Mandiri Skala Besar &amp; Grosir / Reseller" price="Rp 8,9jt – Rp 19,9jt+" sprint="10–20 Hari" target="Brand volume tinggi, grosir &amp; jaringan agen reseller" />
+      </tiers>
+      <seo-title>Jasa Pembuatan Website Toko Online Shopify &amp; E-Commerce Mandiri - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="04" slug="custom-web-app">
+      <route>/folio/custom-web-app</route>
+      <title>Custom Web Application &amp; Systems</title>
+      <pillar>PILLAR 05</pillar>
+      <starting-anchor>Rp 15jt+</starting-anchor>
+      <voucher-code>ONG-SYSTEM-APP</voucher-code>
+      <component>src/components/sheets/CustomAppSheet.tsx</component>
+      <tiers>
+        <tier id="mvp" name="Digitalisasi 1 Alur Kunci (MVP)" price="Rp 15jt – Rp 25jt" sprint="2–4 Minggu" target="Bisnis mendigitalkan 1 alur kerja krusial terlebih dahulu" />
+        <tier id="business-system" name="Sistem Operasional Bisnis Terpadu" is-recommended="true" price="Rp 25jt – Rp 50jt" sprint="4–8 Minggu" target="Perusahaan multi-divisi, sales lapangan &amp; multi-gudang" />
+        <tier id="advanced-saas" name="Platform Skala Korporat / SaaS" price="Rp 50jt – Rp 100jt+" sprint="8–16 Minggu" target="Sistem ribuan user, multi-tenant &amp; produk digital SaaS" />
+      </tiers>
+      <seo-title>Jasa Pembuatan Custom Web Application, CRM &amp; Sistem Digital Perusahaan - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="05" slug="portfolio">
+      <route>/folio/portfolio</route>
+      <title>Deck Portofolio Terkurasi Live</title>
+      <pillar>SHOWCASE</pillar>
+      <starting-anchor>10+ Live Proyek</starting-anchor>
+      <component>src/components/sheets/PortfolioGallerySheet.tsx</component>
+      <seo-title>Portofolio &amp; Bukti Hasil Karya Pembuatan Website Live - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="06" slug="maintenance-care">
+      <route>/folio/maintenance-care</route>
+      <title>Website Maintenance Care &amp; Ads Scaling</title>
+      <pillar>SUPPORTING</pillar>
+      <starting-anchor>Rp 2,5jt / bln</starting-anchor>
+      <voucher-code>ONG-CARE-RETAINER</voucher-code>
+      <component>src/components/sheets/MaintenanceSheet.tsx</component>
+      <tiers>
+        <tier id="growth-care" name="Growth Care &amp; Ads Readiness" price="Rp 2,5jt / bln" sprint="Bulanan" target="Brand aktif iklan butuh web kencang &amp; pixel terawat" />
+        <tier id="scale-ads" name="Scale &amp; Ads Management Retainer" is-recommended="true" price="Rp 4,5jt – Rp 7,5jt / bln" sprint="Bulanan" target="Bisnis iklan intensif di Meta Ads &amp; Google Ads" />
+        <tier id="enterprise-care" name="Enterprise Dedicated Growth Partner" price="Rp 10jt – Rp 25jt+ / bln" sprint="Bulanan" target="Korporasi &amp; brand dengan budget iklan skala besar" />
+      </tiers>
+      <seo-title>Jasa Maintenance Website, Setup Iklan Meta &amp; Google Ads - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+
+    <folio id="07" slug="colophon">
+      <route>/folio/colophon</route>
+      <title>Direktori Ceruk Industri &amp; Colophon Studio</title>
+      <pillar>DIRECTORY &amp; INVARIANTS</pillar>
+      <starting-anchor>24 Sektor Terverifikasi</starting-anchor>
+      <voucher-code>ONG-MASTER-BRIEF</voucher-code>
+      <component-left>src/components/sheets/NicheCatalogSheet.tsx</component-left>
+      <component-right>src/components/sheets/ColophonSheet.tsx</component-right>
+      <seo-title>Direktori Jasa Pembuatan Website 30+ Industri &amp; Kontak Resmi Studio - Jasa Website</seo-title>
+      <status>200 OK (Live)</status>
+    </folio>
+  </core-folios>
+
+  <niche-directories total="24">
+    <niche id="01" slug="dealer-otomotif">
+      <route>/folio/niche-dealer-otomotif</route>
+      <name>Dealer Mobil &amp; Showroom Kendaraan</name>
+      <category>Otomotif &amp; Transportasi</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 5,9jt</starting-price>
+      <voucher-code>ONG-NICHE-DEALER</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="02" slug="rental-mobil-bus-pariwisata">
+      <route>/folio/niche-rental-mobil-bus-pariwisata</route>
+      <name>Rental Mobil Mewah &amp; Bus Pariwisata</name>
+      <category>Otomotif &amp; Transportasi</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 3,5jt</starting-price>
+      <voucher-code>ONG-NICHE-RENTAL</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="03" slug="bengkel-mobil-body-repair">
+      <route>/folio/niche-bengkel-mobil-body-repair</route>
+      <name>Bengkel Mobil, Body Repair &amp; Modifikasi</name>
+      <category>Otomotif &amp; Transportasi</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 3,5jt</starting-price>
+      <voucher-code>ONG-NICHE-BENGKEL</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="04" slug="alat-berat-mesin">
+      <route>/folio/niche-alat-berat-mesin</route>
+      <name>Distributor Alat Berat &amp; Mesin Industri</name>
+      <category>Industri &amp; Manufaktur</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 8,9jt</starting-price>
+      <voucher-code>ONG-NICHE-ALATBERAT</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="05" slug="pabrik-manufaktur-b2b">
+      <route>/folio/niche-pabrik-manufaktur-b2b</route>
+      <name>Pabrikasi &amp; Manufaktur Industri B2B</name>
+      <category>Industri &amp; Manufaktur</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 6,9jt</starting-price>
+      <voucher-code>ONG-NICHE-PABRIK</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="06" slug="percetakan-packaging-kemasan">
+      <route>/folio/niche-percetakan-packaging-kemasan</route>
+      <name>Percetakan Kemasan, Dus Box &amp; Offset</name>
+      <category>Industri &amp; Manufaktur</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-PERCETAKAN</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="07" slug="developer-properti">
+      <route>/folio/niche-developer-properti</route>
+      <name>Pengembang Properti &amp; Real Estate</name>
+      <category>Properti &amp; Konstruksi</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 5,9jt</starting-price>
+      <voucher-code>ONG-NICHE-PROPERTI</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="08" slug="kontraktor-arsitek">
+      <route>/folio/niche-kontraktor-arsitek</route>
+      <name>Kontraktor Bangunan &amp; Desain Interior</name>
+      <category>Properti &amp; Konstruksi</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-KONTRAKTOR</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="09" slug="klinik-kesehatan">
+      <route>/folio/niche-klinik-kesehatan</route>
+      <name>Klinik Medis, Dokter &amp; Rumah Sakit</name>
+      <category>Kesehatan &amp; Farmasi</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-KLINIK</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="10" slug="distributor-alkes-farmasi">
+      <route>/folio/niche-distributor-alkes-farmasi</route>
+      <name>Distributor Alat Kesehatan &amp; Farmasi</name>
+      <category>Kesehatan &amp; Farmasi</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 6,9jt</starting-price>
+      <voucher-code>ONG-NICHE-ALKES</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="11" slug="kantor-hukum-advokat">
+      <route>/folio/niche-kantor-hukum-advokat</route>
+      <name>Kantor Hukum, Advokat &amp; Notaris</name>
+      <category>Jasa Profesional</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-HUKUM</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="12" slug="konsultan-pajak-akuntan">
+      <route>/folio/niche-konsultan-pajak-akuntan</route>
+      <name>Konsultan Pajak, Kantor Akuntan Publik &amp; Keuangan</name>
+      <category>Jasa Profesional</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 3,9jt</starting-price>
+      <voucher-code>ONG-NICHE-PAJAK</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="13" slug="konsultan-it-cctv-keamanan">
+      <route>/folio/niche-konsultan-it-cctv-keamanan</route>
+      <name>Integrator IT, CCTV, Smart Home &amp; Keamanan</name>
+      <category>Jasa Profesional</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-IT-CCTV</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="14" slug="brand-fashion-d2c">
+      <route>/folio/niche-brand-fashion-d2c</route>
+      <name>Brand Fashion, Hijab, Sepatu &amp; Apparel D2C</name>
+      <category>Retail, Fashion &amp; D2C</category>
+      <recommended-pillar>Toko Mandiri &amp; Shopify</recommended-pillar>
+      <starting-price>Rp 3,9jt</starting-price>
+      <voucher-code>ONG-NICHE-FASHION</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="15" slug="brand-skincare-kosmetik">
+      <route>/folio/niche-brand-skincare-kosmetik</route>
+      <name>Brand Skincare, Kosmetik &amp; Herbal Alami</name>
+      <category>Retail, Fashion &amp; D2C</category>
+      <recommended-pillar>Toko Mandiri &amp; Shopify</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-SKINCARE</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="16" slug="restoran-cafe-fnb">
+      <route>/folio/niche-restoran-cafe-fnb</route>
+      <name>Restoran Fine Dining, Cafe &amp; Franchise F&amp;B</name>
+      <category>Kuliner &amp; F&amp;B</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 3,5jt</starting-price>
+      <voucher-code>ONG-NICHE-FNB</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="17" slug="event-organizer-wedding-planner">
+      <route>/folio/niche-event-organizer-wedding-planner</route>
+      <name>Event Organizer, MICE &amp; Wedding Planner</name>
+      <category>Kuliner &amp; F&amp;B</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 3,5jt</starting-price>
+      <voucher-code>ONG-NICHE-EVENT</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="18" slug="ekspedisi-logistik-cargo">
+      <route>/folio/niche-ekspedisi-logistik-cargo</route>
+      <name>Jasa Ekspedisi, Cargo &amp; Freight Forwarder</name>
+      <category>Logistik &amp; Ekspor</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-LOGISTIK</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="19" slug="ekspor-komoditas-hasil-bumi">
+      <route>/folio/niche-ekspor-komoditas-hasil-bumi</route>
+      <name>Eksportir Komoditas, Kopi &amp; Rempah-Rempah</name>
+      <category>Logistik &amp; Ekspor</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 6,9jt</starting-price>
+      <voucher-code>ONG-NICHE-EKSPOR</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="20" slug="sekolah-universitas-bimbel">
+      <route>/folio/niche-sekolah-universitas-bimbel</route>
+      <name>Sekolah Swasta, Universitas &amp; Bimbel Terakreditasi</name>
+      <category>Pendidikan &amp; Finansial</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-SEKOLAH</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="21" slug="tour-travel-umroh">
+      <route>/folio/niche-tour-travel-umroh</route>
+      <name>Biro Tour Travel, Wisata &amp; Umroh Berizin</name>
+      <category>Pendidikan &amp; Finansial</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-TRAVEL</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="22" slug="cleaning-service-pest-control">
+      <route>/folio/niche-cleaning-service-pest-control</route>
+      <name>Cleaning Service, Pest Control &amp; Facility Care</name>
+      <category>Pendidikan &amp; Finansial</category>
+      <recommended-pillar>Sales &amp; Lead Generation</recommended-pillar>
+      <starting-price>Rp 3,5jt</starting-price>
+      <voucher-code>ONG-NICHE-CLEANING</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="23" slug="agribisnis-peternakan-modern">
+      <route>/folio/niche-agribisnis-peternakan-modern</route>
+      <name>Agribisnis, Hidroponik &amp; Peternakan Modern</name>
+      <category>Pendidikan &amp; Finansial</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 4,9jt</starting-price>
+      <voucher-code>ONG-NICHE-AGRI</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+    <niche id="24" slug="koperasi-keuangan-mikro">
+      <route>/folio/niche-koperasi-keuangan-mikro</route>
+      <name>Lembaga Keuangan Mikro, Koperasi &amp; BPR</name>
+      <category>Pendidikan &amp; Finansial</category>
+      <recommended-pillar>Company Profile Website</recommended-pillar>
+      <starting-price>Rp 5,9jt</starting-price>
+      <voucher-code>ONG-NICHE-KOPERASI</voucher-code>
+      <status>200 OK (Live)</status>
+    </niche>
+  </niche-directories>
+
+  <special-endpoints>
+    <endpoint id="not-found">
+      <route>/_not-found</route>
+      <type>404 Error Page (Torn/Missing Sheet)</type>
+      <component>src/app/not-found.tsx</component>
+      <status>404 Not Found</status>
+    </endpoint>
+    <endpoint id="sitemap">
+      <route>/sitemap.xml</route>
+      <type>Search Engine Sitemap Protocol</type>
+      <component>src/app/sitemap.ts</component>
+      <content-type>application/xml</content-type>
+      <indexed-urls>33</indexed-urls>
+      <status>200 OK</status>
+    </endpoint>
+    <endpoint id="robots">
+      <route>/robots.txt</route>
+      <type>Search Engine Directives</type>
+      <component>src/app/robots.ts</component>
+      <content-type>text/plain</content-type>
+      <status>200 OK</status>
+    </endpoint>
+  </special-endpoints>
+</peta-development>

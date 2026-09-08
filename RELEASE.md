@@ -37,7 +37,8 @@ Status: RELEASED_VERIFIED
   - **Negative Margin Elimination:** Removed `-mx-2 sm:-mx-3` across all recommended tiers in Compro, Sales, Commerce, Custom App, and Maintenance sheets.
   - **Responsive Tier Headers:** Upgraded all tier headers to responsive flex layout (`flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2`) with text wrapping and word breaks.
   - **TearOffVoucher Wrapping:** Headers and actions flex-wrap smoothly on narrow screens.
-  - **Professional Brand Favicon Suite:** Multi-resolution icons (`16/32/48/180/512`) active and verified.
+  - **Page-by-Page Development Map & Manifest:** Published `docs/PETA-DEVELOPMENT.md` (& root `PETA-DEVELOPMENT.md`) and `docs/peta-development.xml` (& `public/peta-development.xml`) cataloging all 33 semantic routes, 8 core spreads, 24 industry niche sheets, component sources, vouchers, and SEO metadata.
 - **Customer Hotline:** Call & WhatsApp `+62 838-3044-1495` (`6283830441495`), Email: `get@ongki.pro`
+
 
 

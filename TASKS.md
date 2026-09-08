@@ -353,3 +353,11 @@
     - Refine UI tier item layouts in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, and `CustomAppSheet.tsx` with responsive wrapping and tight line-heights.
   - **Verification:** Verified via headless mobile browser (390px) screenshots; deterministic test and build passing with 0 errors.
 
+- [x] **TASK-36: Page-by-Page Development Map & Manifest Documentation (MD & XML)**
+  - **Owner:** `full-stack-development` + `seo-website-builder`
+  - **Scope:**
+    - Author canonical Page-by-Page Development Map in Markdown (`docs/PETA-DEVELOPMENT.md` & root `PETA-DEVELOPMENT.md`) cataloging all 33 semantic routes, 8 core spreads, 24 industry niches, pricing anchors, vouchers, and metadata.
+    - Author machine-readable XML manifest (`docs/peta-development.xml` & `public/peta-development.xml`) with structured schema detailing route hierarchy and components.
+  - **Verification:** Verified XML syntax and markdown link integrity; static export output matches manifest inventory 100%.
+
+
