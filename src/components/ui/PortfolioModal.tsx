@@ -63,6 +63,30 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
           </h2>
         </div>
 
+        {/* Full Image Showcase Frame */}
+        <div className="my-5 overflow-hidden rounded-xs border border-[#d5d5cd] bg-[#111111] shadow-lg">
+          {/* Browser Bar */}
+          <div className="flex items-center justify-between border-b border-[#2d2d2d] bg-[#1a1a1a] px-3.5 py-2">
+            <div className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
+            </div>
+            <div className="font-mono text-[10px] text-[#888888] truncate max-w-xs sm:max-w-md">
+              {item.liveUrl || `https://jasawebsite.co/portfolio/${item.id}`}
+            </div>
+            <div className="w-8" />
+          </div>
+          <div className="relative max-h-[440px] overflow-y-auto bg-[#0a0a0a]">
+            <img
+              src={item.desktopImage}
+              alt={`${item.clientName} Full Screenshot`}
+              className="w-full h-auto object-cover object-top"
+              loading="eager"
+            />
+          </div>
+        </div>
+
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
           {item.metrics.map((metric, idx) => (

@@ -58,6 +58,80 @@ export function CommerceSheetLeft() {
           </div>
         </div>
       </div>
+
+      {/* Real Client Showcase Strip */}
+      <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
+        <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
+          <span>Karya Toko Shopify Live:</span>
+          <span className="text-[#c23b22]">4 Brand Aktif ↗</span>
+        </div>
+        <div className="grid grid-cols-4 gap-1.5">
+          <a
+            href="https://batiksmile.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Batik Smile Semarang (Shopify Hydrogen)"
+          >
+            <img
+              src="/images/portfolio/batiksmile-desktop.webp"
+              alt="Batik Smile"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
+              batiksmile.com
+            </span>
+          </a>
+          <a
+            href="https://beautyinu.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Beautyinu Skincare (Shopify D2C)"
+          >
+            <img
+              src="/images/portfolio/beautyinu-desktop.webp"
+              alt="Beautyinu"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
+              beautyinu.co
+            </span>
+          </a>
+          <a
+            href="https://petcue.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Petcue Travel Gear (Shopify Global D2C)"
+          >
+            <img
+              src="/images/portfolio/petcue-desktop.webp"
+              alt="Petcue"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
+              petcue.co
+            </span>
+          </a>
+          <a
+            href="https://homelook.shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Homelook Hardware (Shopify Flagship)"
+          >
+            <img
+              src="/images/portfolio/homelook-desktop.webp"
+              alt="Homelook"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
+              homelook.shop
+            </span>
+          </a>
+        </div>
+      </div>
     </article>
   );
 }

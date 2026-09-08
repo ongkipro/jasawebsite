@@ -182,31 +182,41 @@ export function PortfolioGallerySheetRight({
           </button>
         </div>
 
-        {/* Mockup Presentation Canvas */}
+        {/* Mockup Presentation Canvas with Real Screenshot */}
         <div
           onClick={() => setIsModalOpen(true)}
-          className="relative w-full h-44 sm:h-48 bg-[#ebebe3] rounded-xs border border-[#d5d5cd] overflow-hidden flex flex-col justify-between p-4 cursor-pointer group"
+          className="relative w-full h-44 sm:h-48 bg-[#111111] rounded-xs border border-[#d5d5cd] overflow-hidden cursor-pointer group"
         >
-          <div className="space-y-1">
-            <Badge variant="mono" size="sm">
-              {viewportMode === 'desktop' ? 'MOCKUP DESKTOP' : 'MOCKUP MOBILE'}
-            </Badge>
-            <div className="font-serif text-lg font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors">
-              {selectedItem.clientName}
+          <img
+            src={viewportMode === 'desktop' ? selectedItem.desktopImage : selectedItem.mobileImage}
+            alt={`${selectedItem.clientName} Preview`}
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          {/* Bottom info banner overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-3 flex flex-col justify-between transition-opacity group-hover:from-black/90">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[9px] uppercase tracking-wider text-[#fbfbfa] bg-black/70 px-2 py-0.5 rounded-xs border border-white/20">
+                {viewportMode === 'desktop' ? 'DESKTOP MOCKUP' : 'MOBILE MOCKUP'}
+              </span>
+              <span className="font-mono text-[9px] uppercase tracking-wider text-white/90 bg-[#c23b22] px-2 py-0.5 rounded-xs font-semibold shadow-xs">
+                Perbesar Layar Penuh ↗
+              </span>
             </div>
-            <p className="font-sans text-xs text-[#4b4b4b] line-clamp-2">
-              {selectedItem.challenge}
-            </p>
-          </div>
 
-          <div className="flex items-center justify-between border-t border-[#d5d5cd] pt-2">
-            <div className="flex items-center gap-1 text-[10px] font-mono text-[#111111]">
-              <CheckCircle className="w-3 h-3 text-emerald-600" />
-              <span>Verifikasi Bukti Riil</span>
+            <div className="space-y-0.5">
+              <div className="font-serif text-sm sm:text-base font-bold text-white group-hover:text-[#fbfbfa] transition-colors flex items-center justify-between">
+                <span>{selectedItem.clientName}</span>
+                {selectedItem.liveUrl && (
+                  <span className="font-mono text-[10px] text-[#c23b22] bg-white/90 px-1.5 py-0.5 rounded-xs font-bold">
+                    LIVE
+                  </span>
+                )}
+              </div>
+              <p className="font-sans text-[11px] text-white/80 line-clamp-1">
+                {selectedItem.industry} • {selectedItem.categoryLabel}
+              </p>
             </div>
-            <span className="font-mono text-[10px] text-[#c23b22] group-hover:underline">
-              Buka Lightbox →
-            </span>
           </div>
         </div>
 
