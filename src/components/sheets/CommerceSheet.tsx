@@ -15,15 +15,15 @@ export function CommerceSheetLeft() {
       </div>
 
       <div className="space-y-1.5">
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
-          Toko Online Mandiri &amp; Shopify
+        <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#111111] leading-tight">
+          Toko Online Brand Anda Sendiri
         </h2>
         <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
-          Pilihan Fleksibel:{' '}
+          Bebas Biaya Admin 10% Marketplace:{' '}
           <span className="stabilo-green font-bold text-[#111111]">
-            Toko Mandiri (Server Sesuai Traffic)
+            Toko Mandiri (0% Komisi)
           </span>{' '}
-          atau <span className="font-bold text-[#111111]">Setup &amp; Custom Shopify</span>
+          atau <span className="font-bold text-[#111111]">Setup Resmi Shopify</span>
         </div>
       </div>
 
@@ -41,7 +41,7 @@ export function CommerceSheetLeft() {
             </span>
           </div>
           <p className="text-[11px] sm:text-xs text-[#4b4b4b] leading-relaxed font-sans">
-            Bagi Anda yang ingin ekosistem e-commerce kelas dunia tanpa pusing urusan teknis server. Kami bantu <strong>setup akun resmi Shopify dari nol</strong>, rancang <strong>custom tema &amp; desain tampilan toko yang mewah serta responsif di HP</strong>, plus integrasi lokal: <strong>pembayaran instan QRIS / Virtual Account</strong>, <strong>cek ongkir kurir otomatis se-Indonesia (J&amp;T, SiCepat, JNE)</strong>, dan tracking pixel iklan Meta/TikTok.
+            Bagi Anda yang ingin ekosistem e-commerce kelas dunia tanpa pusing urusan server. Kami bantu <strong>setup akun resmi Shopify dari nol</strong>, rancang <strong>custom tema &amp; desain tampilan toko yang mewah serta super nyaman di HP</strong>, plus integrasi lokal lengkap: <strong>pembayaran instan QRIS / Virtual Account</strong>, <strong>cek ongkir kurir otomatis se-Indonesia (J&amp;T, SiCepat, JNE)</strong>, dan tracking pixel iklan Meta/TikTok.
           </p>
           <div className="font-mono text-[9.5px] text-[#666666] pt-0.5 border-t border-[#e5e5df]/60">
             *Biaya langganan platform resmi Shopify (mulai ~$19–$39/bln) dibayarkan langsung ke pihak Shopify.
@@ -53,14 +53,14 @@ export function CommerceSheetLeft() {
           <div className="flex items-center justify-between">
             <span className="font-mono text-[10.5px] sm:text-[11px] font-bold text-[#111111] flex items-center gap-1.5 uppercase tracking-wider">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c23b22]" />
-              <span>Opsi 2: Toko Mandiri (CMS Studio Pribadi)</span>
+              <span>Opsi 2: Toko Mandiri Bebas Komisi</span>
             </span>
-            <span className="font-mono text-[9px] sm:text-[9.5px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-2xs font-bold">
+            <span className="font-mono text-[9px] sm:text-[9.5px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-2xs font-bold shrink-0">
               100% HAK MILIK
             </span>
           </div>
           <p className="text-[11px] sm:text-xs text-[#4b4b4b] leading-relaxed font-sans">
-            Bagi Anda yang ingin <strong>100% kepemilikan penuh atas website dan database pembeli</strong> tanpa biaya sewa lisensi software pihak ketiga. <strong>0% potongan komisi penjualan</strong>, uang pembeli langsung masuk rekening bank Anda, alur belanja kilat di HP, dan rincian bukti pesanan <strong>otomatis langsung terkirim ke WhatsApp admin toko Anda</strong>.
+            Bagi Anda yang lelah dipotong komisi 8–12% di marketplace. <strong>100% kepemilikan penuh atas website dan database pelanggan</strong> tanpa biaya sewa lisensi pihak ketiga. <strong>0% potongan komisi penjualan</strong>, uang langsung masuk rekening Anda, hitung ongkir otomatis se-kecamatan, dan orderan <strong>otomatis langsung masuk ke WhatsApp admin toko Anda</strong>.
           </p>
           <div className="font-mono text-[9.5px] text-[#666666] pt-0.5 border-t border-[#d5d5cd]">
             *Biaya sewa server/cloud hosting sangat terjangkau, transparan, dan fleksibel disesuaikan dengan volume traffic toko Anda.
@@ -79,7 +79,7 @@ export function CommerceSheetLeft() {
             ✓ Opsi Shopify &amp; Toko Mandiri
           </div>
           <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
-            ✓ 0% Potongan Komisi Jualan
+            ✓ Bebas Potongan Komisi 10%
           </div>
           <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
             ✓ Bayar QRIS &amp; Transfer Bank

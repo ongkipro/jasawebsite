@@ -26,6 +26,12 @@ const addOns = [
     description: 'Logika otomatis menyapa pengunjung sesuai kota asal (misal: "Halo Warga Surabaya, Promo Khusus Hari Ini...") untuk mendongkrak konversi iklan lokal.',
   },
   {
+    title: 'Perisai Anti-COD Fiktif & Bot Shield',
+    price: 'Rp 1,5jt – Rp 3jt',
+    tag: 'ANTI-RTS',
+    description: 'Proteksi formulir toko online dari order iseng, bot, & kompetitor nakal untuk memangkas tingkat retur (RTS) paket COD hingga 80%.',
+  },
+  {
     title: 'Setup Kampanye Meta Ads (Facebook & Instagram)',
     price: 'Rp 2,5jt – Rp 5jt',
     tag: 'META ADS',
@@ -38,16 +44,16 @@ const addOns = [
     description: 'Setup Google Ads, riset kata kunci niat beli tinggi (high commercial intent), GTM Enhanced Conversions, teks iklan, & negatif keyword.',
   },
   {
+    title: 'Dominasi Google Lokal (50+ Halaman Kota Otomatis)',
+    price: 'Rp 4,5jt – Rp 8,5jt',
+    tag: 'LOCAL SEO',
+    description: 'Jaring calon pembeli lokal yang lagi butuh mendesak di Google lewat puluhan landing page kota/kecamatan otomatis tanpa biaya iklan berulang.',
+  },
+  {
     title: 'Server-Side Meta CAPI & Google Tag Manager (GTM)',
     price: 'Rp 2,5jt – Rp 4jt',
     tag: 'TRACKING',
     description: 'Bypass pemblokir pelacak iOS 14+ via Cloudflare Server Gateway untuk akurasi data pembelian dan optimasi algoritma ROAS iklan berbayar.',
-  },
-  {
-    title: 'Programmatic SEO Engine (30+ Landing Pages)',
-    price: 'Rp 4,5jt – Rp 8,5jt',
-    tag: 'SEO ENGINE',
-    description: 'Puluhan landing page pSEO spesifik ceruk industri atau target kota berbasis JSON statis dan Schema.org otomatis untuk dominasi Google Search.',
   },
 ];
 
