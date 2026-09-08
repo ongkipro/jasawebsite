@@ -111,7 +111,7 @@
 - **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
 - **Live URLs:**
   - Primary Domain: [https://jasawebsite.co](https://jasawebsite.co) (HTTP 200)
-  - Deployment URL: [https://jwco-7vab6s0m2-ongkipro.vercel.app](https://jwco-7vab6s0m2-ongkipro.vercel.app) (Production READY)
+  - Deployment URL: [https://jwco-itzw26wgv-ongkipro.vercel.app](https://jwco-itzw26wgv-ongkipro.vercel.app) (Production READY, dpl_9qkj9ZC9ZVruY4GDnnJqYtqMpvJT)
   - Robots: [https://jasawebsite.co/robots.txt](https://jasawebsite.co/robots.txt)
   - Sitemap: [https://jasawebsite.co/sitemap.xml](https://jasawebsite.co/sitemap.xml)
   - Route Manifest: [https://jasawebsite.co/peta-development.xml](https://jasawebsite.co/peta-development.xml)
