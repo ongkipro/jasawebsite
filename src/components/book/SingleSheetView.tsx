@@ -56,7 +56,7 @@ export function SingleSheetView({
       dragElastic={0.15}
       onDragEnd={handleDragEnd}
       className={cn(
-        'relative w-full max-w-md mx-auto h-full max-h-[calc(100dvh-112px)] min-h-[460px] flex flex-col justify-between p-3.5 sm:p-4 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
+        'relative w-full max-w-md mx-auto h-full max-h-[calc(100dvh-155px)] sm:max-h-[calc(100dvh-135px)] min-h-0 flex flex-col justify-between p-3 sm:p-4 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
         className
       )}
     >

@@ -208,14 +208,14 @@ export function BookShell({
       </div>
 
       {/* BOTTOM CONTROLLER & WHATSAPP ACTION BAR */}
-      <footer className="flex-shrink-0 mt-2 sm:mt-3 pt-2.5 sm:pt-3 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 font-mono text-xs select-none">
+      <footer className="flex-shrink-0 mt-1.5 sm:mt-3 pt-2 sm:pt-3 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 font-mono text-xs select-none">
         {/* Navigation buttons */}
         <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
           <button
             type="button"
             onClick={handlePrev}
             disabled={spreadIndex === 0}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Sebelumnya</span>
@@ -245,18 +245,18 @@ export function BookShell({
             type="button"
             onClick={handleNext}
             disabled={spreadIndex === totalSpreads - 1}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium transition-colors cursor-pointer"
           >
             <span>Selanjutnya</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Global direct Call & WhatsApp CS Action Bar */}
-        <div className="flex items-center gap-2 text-center sm:text-right w-full sm:w-auto justify-end">
+        {/* Global direct Call & WhatsApp CS Action Bar (Centered on Mobile, without number) */}
+        <div className="flex items-center justify-center sm:justify-end gap-2.5 text-center w-full sm:w-auto">
           <a
             href={`tel:+${siteConfig.phone}`}
-            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 sm:py-1.5 min-h-[38px] sm:min-h-[34px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[36px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
             title="Telepon Langsung Customer Service"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#c23b22]" />
@@ -266,13 +266,11 @@ export function BookShell({
             href={waLeadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 sm:py-1.5 min-h-[38px] sm:min-h-[34px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
             title="Chat WhatsApp Customer Service"
           >
             <MessageSquareCode className="w-3.5 h-3.5" />
-            <span className="truncate max-w-[175px] sm:max-w-none">
-              WhatsApp {siteConfig.phoneDisplay} →
-            </span>
+            <span>WhatsApp CS →</span>
           </a>
         </div>
       </footer>
