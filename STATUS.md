@@ -80,6 +80,11 @@
     - Removed negative margin bleed (`-mx-2 sm:-mx-3`) on recommended tiers in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, `CustomAppSheet.tsx`, and `MaintenanceSheet.tsx`.
     - Enforced responsive wrapping (`flex-col sm:flex-row sm:items-baseline`) and word-breaks on all tier headers to prevent wide labels from pushing price badges offscreen.
     - Fully verified in `agent-browser` on mobile viewport (390x844): `scrollWidth === innerWidth` across all 8 spreads, maintenance, custom app, and niche directory sheets.
+  - **Phase 16: Concise Executive Copywriting Polish Across All Tiers (Zero Horizontal Sprawl):**
+    - Streamlined `Sprint` and `Sasaran` targets across all 5 core service offerings (`src/data/services.json`) into punchy, high-impact phrases.
+    - Tightened deliverables bullet points across all tiers to clear, professional core essence without rambling text stretching to sides.
+    - Refined UI tier item layouts in `ComproSheet`, `SalesSheet`, `CommerceSheet`, and `CustomAppSheet` with clean typography, responsive wrapping, and zero horizontal stretch.
+    - Verified via mobile (390px) screenshots across all spreads.
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

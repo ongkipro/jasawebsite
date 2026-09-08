@@ -239,15 +239,17 @@ export function CommerceSheetRight() {
               </span>
             </div>
 
-            <div className="font-mono text-[9.5px] sm:text-[10px] text-[#666666] mt-0.5 mb-1">
-              Sprint: {tier.timeline} · Sasaran: {tier.targetClients}
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 font-mono text-[9px] sm:text-[9.5px] text-[#666666] mt-0.5 mb-1 leading-snug">
+              <span className="text-[#111111] font-semibold">Sprint: {tier.timeline}</span>
+              <span>·</span>
+              <span className="break-words">Sasaran: {tier.targetClients}</span>
             </div>
 
-            <ul className="space-y-0.5 text-[10.5px] sm:text-[11px] text-[#4b4b4b]">
+            <ul className="space-y-0.5 text-[10px] sm:text-[10.5px] text-[#4b4b4b]">
               {tier.deliverables.slice(0, 2).map((item, i) => (
-                <li key={i} className="flex items-start gap-1.5">
+                <li key={i} className="flex items-start gap-1.5 leading-tight">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />
-                  <span>{item}</span>
+                  <span className="break-words">{item}</span>
                 </li>
               ))}
             </ul>

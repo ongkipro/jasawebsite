@@ -345,6 +345,11 @@
     - Guard `TearOffVoucher` header and actions with `flex-wrap` and `min-w-0`.
     - Add `max-w-[calc(100vw-24px)]` to `NicheBookShell` dropdown popover.
   - **Verification:** Verified via `agent-browser` on mobile viewport (390px) across all 8 spreads and niche sheets: `scrollWidth === innerWidth` (zero horizontal overflow); captured visual proof artifacts.
-
-
+- [x] **TASK-35: Concise Executive Copywriting & Layout Tightening Across All Service Tiers**
+  - **Owner:** `copywriting` + `design-taste` + `ui-validation`
+  - **Scope:**
+    - Streamline verbose rambling text in `timeline`, `targetClients`, and `deliverables` across all 5 core service offerings in `src/data/services.json`.
+    - Tighten bullet points to the core essence: clear, professional, and punchy without sprawling horizontally.
+    - Refine UI tier item layouts in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, and `CustomAppSheet.tsx` with responsive wrapping and tight line-heights.
+  - **Verification:** Verified via headless mobile browser (390px) screenshots; deterministic test and build passing with 0 errors.
 

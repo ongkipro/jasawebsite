@@ -24,14 +24,14 @@
         "id": "starter",
         "name": "Starter Kredibilitas Usaha",
         "investment": "Rp 2,9jt",
-        "timeline": "3–5 Hari Kerja",
-        "targetClients": "Usaha baru, jasa profesional, dan bisnis yang butuh legalitas & alamat web resmi",
+        "timeline": "3–5 Hari",
+        "targetClients": "Usaha baru & jasa profesional butuh legalitas web",
         "deliverables": [
-          "One-Page rapi: Tentang Kami, Layanan Utama, Legalitas Usaha & Kontak Resmi",
-          "Domain resmi (.com / .id) aktif 1 tahun pertama",
-          "Web super kencang di HP calon klien (Garansi Skor Google Hijau 95–100)",
-          "Tombol WhatsApp langsung terhubung ke admin / nomor kantor",
-          "Bebas biaya sewa server bulanan (infrastruktur Cloud Edge efisien)"
+          "One-page profil: Profil, Layanan, Legalitas & Kontak",
+          "Domain resmi (.com / .id) aktif 1 tahun",
+          "Super kencang di HP (Garansi Google Hijau 95–100)",
+          "Tombol WhatsApp langsung ke admin kantor",
+          "Zero sewa bulanan (infrastruktur Cloud Edge)"
         ],
         "couponCode": "ONG-COMPRO-STARTER"
       },
@@ -40,14 +40,14 @@
         "name": "Kredibilitas Vendor & Mitra B2B",
         "isRecommended": true,
         "investment": "Rp 4,9jt",
-        "timeline": "5–10 Hari Kerja",
-        "targetClients": "Perusahaan PT/CV, pabrik, kontraktor, atau konsultan yang aktif ikut kurasi vendor & tender",
+        "timeline": "5–10 Hari",
+        "targetClients": "PT/CV, pabrik & kontraktor untuk kurasi vendor B2B",
         "deliverables": [
-          "Multi-Halaman (5–7 Halaman): Profil, Layanan, Portofolio Proyek, Legalitas, Kontak",
-          "Tampilan meyakinkan & elegan berstandar kurasi vendor BUMN / swasta",
-          "Mudah update teks, foto proyek, & sertifikasi baru kapan saja tanpa ribet",
-          "Tombol kontak WhatsApp pintar (bisa arahkan ke divisi penjualan / proyek)",
-          "100% Repositori kode & data diserahkan penuh tanpa ketergantungan agensi"
+          "5–7 Halaman: Profil, Layanan, Portofolio & Legalitas",
+          "Desain meyakinkan standar vendor BUMN & swasta",
+          "Mudah update foto proyek & sertifikasi berkala",
+          "WhatsApp routing ke tim sales / proyek",
+          "100% Repositori diserahkan penuh (tanpa lock-in)"
         ],
         "couponCode": "ONG-COMPRO-BIZ"
       },
@@ -55,14 +55,14 @@
         "id": "corporate",
         "name": "Standar Korporat & Lolos Tender Besar",
         "investment": "Rp 8,9jt – Rp 15jt+",
-        "timeline": "10–20 Hari Kerja",
-        "targetClients": "Korporasi, holding, eksportir, dan perusahaan yang butuh profil berwibawa kelas dunia",
+        "timeline": "10–20 Hari",
+        "targetClients": "Korporasi, holding & eksportir skala nasional",
         "deliverables": [
-          "Desain eksklusif berwibawa, mencerminkan skala bisnis bernilai miliaran",
-          "Dukungan 2 Bahasa (Bahasa Indonesia & English) untuk buyer luar negeri",
-          "Portal Karir / Lowongan Kerja & Ruang Berita / Publikasi Proyek",
-          "Akses super instan tanpa loading di seluruh dunia (Cloudflare Global Network)",
-          "Garansi pendampingan & pemeliharaan prioritas pasca peluncuran"
+          "Desain eksklusif berwibawa skala korporasi",
+          "Dukungan 2 Bahasa (Indonesia & English)",
+          "Portal karir, ruang berita & publikasi proyek",
+          "Akses instan global (Cloudflare Network)",
+          "Pendampingan & pemeliharaan prioritas pasca rilis"
         ],
         "couponCode": "ONG-COMPRO-CORP"
       }
@@ -93,15 +93,15 @@
         "id": "starter",
         "name": "Landing Page Iklan Siap Jualan",
         "investment": "Rp 3,5jt",
-        "timeline": "4–7 Hari Kerja",
-        "targetClients": "Sales dealer, agen properti, distributor, atau pengiklan yang butuh halaman promo cepat jadi",
+        "timeline": "4–7 Hari",
+        "targetClients": "Sales dealer, agen properti & pengiklan promo cepat",
         "deliverables": [
-          "1 Halaman Penjualan (Landing Page) kencang berorientasi konversi iklan",
-          "5 Halaman Detail Katalog Produk / Unit spesifik lengkap foto & rincian spek",
-          "Halaman Profil Bisnis, Legalitas Usaha, & Kontak Kantor Resmi",
-          "Tombol WhatsApp pintar: saat diklik otomatis membawa nama unit yang diminati",
-          "Pemasangan Pixel pelacak iklan (Meta & Google Ads) siap pantau hasil iklan",
-          "Kecepatan akses sub-detik di jaringan 4G/5G untuk meminimalkan bounce rate iklan"
+          "1 Landing page kencang siap konversi iklan",
+          "5 Halaman katalog produk lengkap foto & spek",
+          "Profil usaha, legalitas & kontak kantor resmi",
+          "WhatsApp pintar: bawa nama produk otomatis",
+          "Setup Pixel & sinyal pelacak Meta & Google Ads",
+          "Akses sub-detik 4G/5G, minimalkan bounce rate"
         ],
         "couponCode": "ONG-SALES-STARTER"
       },
@@ -110,15 +110,15 @@
         "name": "Mesin Iklan Siap Tempur & Katalog Sales",
         "isRecommended": true,
         "investment": "Rp 6,5jt",
-        "timeline": "7–14 Hari Kerja",
-        "targetClients": "Dealer mobil/truk resmi, distributor mesin, pengembang properti, dan tim sales aktif ngiklan",
+        "timeline": "7–14 Hari",
+        "targetClients": "Dealer resmi, distributor mesin & tim sales aktif iklan",
         "deliverables": [
-          "Multi-Landing Page untuk berbagai promo, variasi produk, atau target segmen",
-          "Katalog Interaktif 15–20 Unit dengan filter pencarian cepat yang nyaman di HP",
-          "WhatsApp Rotator: chat calon pembeli otomatis dibagi rata ke nomor tim sales",
-          "Kalkulator Simulasi Cicilan / Hitung Estimasi Biaya langsung terhubung ke WA",
-          "Pelacak sinyal iklan anti-bocor (Server-Side CAPI) agar budget iklan optimal",
-          "Infrastruktur Cloud Edge tahan lonjakan traffic saat kampanye iklan berjalan"
+          "Multi-landing page untuk berbagai variasi promo",
+          "Katalog interaktif 15–20 unit + filter cepat di HP",
+          "WhatsApp Rotator: bagi leads rata ke tim sales",
+          "Kalkulator simulasi kredit langsung ke WhatsApp",
+          "Tracking Server-Side CAPI anti-bocor sinyal iklan",
+          "Cloud Edge tahan lonjakan traffic iklan besar"
         ],
         "couponCode": "ONG-SALES-GROWTH"
       },
@@ -126,14 +126,14 @@
         "id": "pro",
         "name": "Showroom Digital & Brosur Sales Interaktif",
         "investment": "Rp 12,5jt+",
-        "timeline": "14–21 Hari Kerja",
-        "targetClients": "Jaringan showroom multi-cabang, developer kawasan besar, atau distributor skala nasional",
+        "timeline": "14–21 Hari",
+        "targetClients": "Showroom multi-cabang & developer kawasan",
         "deliverables": [
-          "Showroom digital interaktif (seperti majalah digital) pengganti brosur PDF berat",
-          "Katalog unit tanpa batas dengan fitur komparasi spesifikasi teknis antar unit",
-          "Distribusi prospek otomatis berdasarkan kota / cabang terdekat calon pembeli",
-          "Koneksi data prospek otomatis ke Google Sheets / CRM tim sales",
-          "Pendampingan evaluasi alur konversi iklan bersama lead engineer kami"
+          "Showroom digital interaktif pengganti brosur PDF",
+          "Katalog unit unlimited + komparasi spek teknis",
+          "Routing prospek otomatis ke cabang terdekat",
+          "Sinkronisasi data prospek ke Google Sheets / CRM",
+          "Review alur konversi iklan bersama lead engineer"
         ],
         "couponCode": "ONG-SALES-PRO"
       }
@@ -164,14 +164,14 @@
         "id": "shopify-starter",
         "name": "Toko Mandiri Bebas Komisi (CMS Pribadi)",
         "investment": "Rp 3,9jt",
-        "timeline": "4–7 Hari Kerja",
-        "targetClients": "Brand, produsen, dan UKM yang ingin jualan mandiri tanpa potongan admin 10% marketplace",
+        "timeline": "4–7 Hari",
+        "targetClients": "Brand & UKM jualan mandiri tanpa potongan admin 10%",
         "deliverables": [
-          "100% Toko milik Anda sendiri tanpa potongan komisi sepeser pun per transaksi",
-          "Terima beres: kami bantu input katalog produk awal hingga 20 item lengkap",
-          "Hitung ongkir otomatis se-kecamatan se-Indonesia (J&T, SiCepat, JNE, dll)",
-          "Pembeli bayar instan via QRIS, Virtual Account Bank, atau Transfer",
-          "Rincian pesanan & bukti invoice otomatis terkirim ke WhatsApp admin toko"
+          "100% Hak milik mandiri, 0% potongan komisi",
+          "Input awal katalog lengkap hingga 20 produk",
+          "Hitung ongkir otomatis se-Indonesia (J&T, SiCepat, JNE)",
+          "Bayar instan via QRIS, VA Bank & Transfer",
+          "Notifikasi order & invoice otomatis ke WhatsApp"
         ],
         "couponCode": "ONG-COMMERCE-START"
       },
@@ -180,14 +180,14 @@
         "name": "Shopify Custom Storefront & Desain Mewah",
         "isRecommended": true,
         "investment": "Rp 6,9jt",
-        "timeline": "7–14 Hari Kerja",
-        "targetClients": "Brand D2C & pebisnis yang ingin toko resmi Shopify dengan tampilan kelas dunia dan nyaman di HP",
+        "timeline": "7–14 Hari",
+        "targetClients": "Brand D2C & pebisnis butuh toko resmi Shopify kelas dunia",
         "deliverables": [
-          "Setup resmi akun & toko Shopify dari nol hingga domain brand aktif",
-          "Desain tema custom eksklusif yang memikat mata dan super nyaman di HP pembeli",
-          "Integrasi pembayaran lokal Indonesia (QRIS & Virtual Account) + kurir lokal",
-          "Fitur pemicu konversi: checkout instan, promo diskon otomatis, pop-up penawaran",
-          "Pemasangan pixel iklan Meta & TikTok serta panduan kelola toko di aplikasi Shopify"
+          "Setup resmi akun Shopify hingga domain aktif",
+          "Desain tema custom eksklusif & nyaman di HP",
+          "Integrasi pembayaran QRIS/VA + kurir lokal",
+          "Checkout instan, diskon otomatis & upsell promo",
+          "Setup pixel iklan Meta/TikTok & panduan kelola"
         ],
         "couponCode": "ONG-COMMERCE-GROWTH"
       },
@@ -195,14 +195,14 @@
         "id": "custom-ecommerce",
         "name": "Toko Mandiri Skala Besar & Grosir / Reseller",
         "investment": "Rp 8,9jt – Rp 19,9jt+",
-        "timeline": "10–20 Hari Kerja",
-        "targetClients": "Brand bervolume tinggi, toko grosir, jaringan reseller, atau butuh sistem multi-gudang",
+        "timeline": "10–20 Hari",
+        "targetClients": "Brand volume tinggi, grosir & jaringan agen reseller",
         "deliverables": [
-          "Sistem toko mandiri tangguh siap menampung lonjakan traffic iklan besar-besaran",
-          "Alur checkout fleksibel: bisa belanja eceran, paket bundling, atau harga khusus agen",
-          "Integrasi ekspedisi kurir reguler & kargo khusus barang berat/partai besar",
-          "Sinkronisasi stok barang otomatis atau integrasi sistem pencatatan gudang Anda",
-          "Dukungan teknis prioritas dan garansi kelancaran transaksi belanja"
+          "Sistem tangguh siap lonjakan traffic iklan besar",
+          "Checkout eceran, bundling & harga khusus agen",
+          "Integrasi kurir reguler & kargo partai besar",
+          "Sinkronisasi stok & sistem pencatatan gudang",
+          "Dukungan teknis prioritas & garansi kelancaran"
         ],
         "couponCode": "ONG-COMMERCE-CUSTOM"
       }
@@ -234,12 +234,12 @@
         "name": "Digitalisasi 1 Alur Kunci (MVP)",
         "investment": "Rp 15jt – Rp 25jt",
         "timeline": "2–4 Minggu",
-        "targetClients": "Bisnis yang ingin mendigitalkan 1 alur operasional paling krusial terlebih dahulu",
+        "targetClients": "Bisnis mendigitalkan 1 alur kerja krusial terlebih dahulu",
         "deliverables": [
-          "1 Alur kerja operasional inti (misal: sistem penawaran harga B2B atau surat jalan)",
-          "Database terstruktur, cepat, aman, dan tanpa biaya sewa lisensi per user",
-          "Sistem login staf & pembagian hak akses (admin vs staf lapangan)",
-          "Dashboard ringkas untuk pantau data dan riwayat transaksi harian"
+          "1 Alur kerja inti (penawaran B2B / surat jalan)",
+          "Database aman & tanpa biaya lisensi per user",
+          "Login staf & pembagian hak akses teratur",
+          "Dashboard ringkas pantau transaksi harian"
         ],
         "couponCode": "ONG-APP-MVP"
       },
@@ -249,13 +249,13 @@
         "isRecommended": true,
         "investment": "Rp 25jt – Rp 50jt",
         "timeline": "4–8 Minggu",
-        "targetClients": "Perusahaan berkembang dengan multi-divisi, sales lapangan, atau multi-gudang",
+        "targetClients": "Perusahaan multi-divisi, sales lapangan & multi-gudang",
         "deliverables": [
-          "Sistem operasional terpadu: CRM penjualan, stok multi-gudang, atau portal order",
-          "Manajemen hak akses multi-level: Direktur, Manajer, Staf Admin, Tim Gudang",
-          "Dashboard analitik KPI real-time yang bisa dicek bos langsung dari HP",
-          "Catatan riwayat aktivitas staf (audit trail) & ekspor laporan satu-klik (Excel / PDF)",
-          "Koneksi otomatis ke WhatsApp notifikasi atau API sistem pendukung lainnya"
+          "Sistem terpadu: CRM penjualan, stok gudang & portal",
+          "Hak akses multi-level: Direktur, Manajer, Admin, Gudang",
+          "Dashboard analitik KPI real-time langsung di HP",
+          "Audit trail aktivitas & ekspor laporan satu-klik",
+          "Notifikasi otomatis ke WhatsApp & integrasi API"
         ],
         "couponCode": "ONG-APP-BIZ"
       },
@@ -264,12 +264,12 @@
         "name": "Platform Skala Korporat / SaaS",
         "investment": "Rp 50jt – Rp 100jt+",
         "timeline": "8–16 Minggu",
-        "targetClients": "Platform berskala ribuan user, sistem multi-tenant, atau produk startup siap rilis",
+        "targetClients": "Sistem ribuan user, multi-tenant & produk digital SaaS",
         "deliverables": [
-          "Arsitektur cloud terdistribusi tahan banting untuk traffic dan data masif",
-          "Otomasi alur kerja lintas cabang tanpa jeda dan tanpa batasan jumlah user",
-          "Kecepatan respon sistem instan dengan standar keamanan data tingkat tinggi",
-          "Dokumentasi sistem lengkap, skema database, & pelatihan langsung untuk tim Anda"
+          "Arsitektur cloud terdistribusi tahan data masif",
+          "Otomasi kerja lintas cabang tanpa limit user",
+          "Respon sistem instan dengan enkripsi data tinggi",
+          "Dokumentasi arsitektur, skema DB & training tim"
         ],
         "couponCode": "ONG-APP-SAAS"
       }
@@ -298,15 +298,15 @@
         "id": "growth-care",
         "name": "Growth Care & Ads Readiness",
         "investment": "Rp 2,5jt / bln",
-        "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Bisnis & brand aktif beriklan yang butuh web kencang, pemantauan uptime, backup cloud & sinyal pixel terawat",
+        "timeline": "Bulanan",
+        "targetClients": "Brand aktif iklan butuh web kencang & pixel terawat",
         "deliverables": [
           "Monitoring Uptime 24/7 & Cloud Shield",
-          "Backup Rutin Otomatis Berkala",
-          "Audit Performa & Garansi Skor Hijau",
-          "Cek Rutin Pixel Iklan (Meta & Google)",
-          "Bantu Update Teks, Foto & Promo (3x/bln)",
-          "Dukungan Teknis Prioritas via WhatsApp"
+          "Backup rutin berkala anti-kehilangan data",
+          "Audit performa & garansi skor Google hijau",
+          "Cek rutin sinyal pixel iklan Meta & Google",
+          "Bantu update konten promo rutin (3x/bln)",
+          "Dukungan prioritas langsung via WhatsApp"
         ],
         "couponCode": "ONG-CARE-GROWTH"
       },
@@ -315,14 +315,14 @@
         "name": "Scale & Ads Management Retainer",
         "isRecommended": true,
         "investment": "Rp 4,5jt – Rp 7,5jt / bln",
-        "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Bisnis yang beriklan intensif di Meta Ads & Google Ads, dealer, atau toko online berkembang",
+        "timeline": "Bulanan",
+        "targetClients": "Bisnis iklan intensif di Meta Ads & Google Ads",
         "deliverables": [
-          "Semua Fasilitas Paket Growth Care",
+          "Semua fasilitas paket Growth Care",
           "Maintenance Server-Side CAPI & GTM",
-          "Evaluasi Konversi & Split Testing Promo",
-          "Update / Tambah Section Baru (8x/bln)",
-          "Review Performa Iklan bersama Lead Engineer"
+          "Evaluasi konversi & split testing promo",
+          "Update & tambah section baru (8x/bln)",
+          "Review performa iklan bareng lead engineer"
         ],
         "couponCode": "ONG-CARE-SCALE"
       },
@@ -330,14 +330,14 @@
         "id": "enterprise-care",
         "name": "Enterprise Dedicated Growth Partner",
         "investment": "Rp 10jt – Rp 25jt+ / bln",
-        "timeline": "Bulanan (Monthly Retainer)",
-        "targetClients": "Korporasi, jaringan multi-cabang, atau platform dengan anggaran iklan skala besar",
+        "timeline": "Bulanan",
+        "targetClients": "Korporasi & brand dengan budget iklan skala besar",
         "deliverables": [
-          "Semua Fasilitas Paket Scale & Ads",
-          "Dedicated Engineer Khusus Akun Anda",
-          "Optimasi Menyeluruh Meta & Google Ads",
-          "Request Kustom Fitur & Integrasi API Bebas",
-          "Laporan Mingguan & Respon Cepat 24/7"
+          "Semua fasilitas paket Scale & Ads",
+          "Dedicated engineer khusus akun Anda",
+          "Optimasi teknis iklan Meta & Google Ads",
+          "Request kustom fitur & integrasi API bebas",
+          "Laporan mingguan & respon siaga 24/7"
         ],
         "couponCode": "ONG-CARE-ENTERPRISE"
       }

@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-001
-Base: 024f23a
+Release-ID: REL-20260909-002
+Base: 580cda9
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -31,6 +31,7 @@ Status: RELEASED_VERIFIED
   - `GET /apple-icon.png` -> HTTP 200 (image/png)
   - `GET /favicon.ico` -> HTTP 200 (image/x-icon)
 - **Key Architectural & Zero-Scroll Hardening Highlights:**
+  - **Concise Executive Copywriting:** Tightened all deliverables bullet points, sprints, and target clients across all 5 core service offerings; eliminated verbose rambling text stretching to sides.
   - **Zero Horizontal Scroll Guaranteed:** Complete removal of `overflow-x-auto whitespace-nowrap` on category pills; category filters now wrap vertically (`flex-wrap gap-1`).
   - **Niche Directory Open Editorial Ledger:** Redesigned directory from squished 2-column cards to an open hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped industry names, category, recommended pillar, and price tags (`[01]` to `[24]`).
   - **Negative Margin Elimination:** Removed `-mx-2 sm:-mx-3` across all recommended tiers in Compro, Sales, Commerce, Custom App, and Maintenance sheets.
@@ -38,4 +39,5 @@ Status: RELEASED_VERIFIED
   - **TearOffVoucher Wrapping:** Headers and actions flex-wrap smoothly on narrow screens.
   - **Professional Brand Favicon Suite:** Multi-resolution icons (`16/32/48/180/512`) active and verified.
 - **Customer Hotline:** Call & WhatsApp `+62 838-3044-1495` (`6283830441495`), Email: `get@ongki.pro`
+
 
