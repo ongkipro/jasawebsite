@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <style>
+    :root { color-scheme: light dark; }
+    .ong-dot { fill: #c23b22; }
+    .ong-dot-spec { fill: #ff8a80; opacity: 0.85; }
+    .ong-text { 
+      font-family: -apple-system, BlinkMacSystemFont, "Arial Black", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-weight: 900;
+      font-size: 155px;
+      letter-spacing: -1.5px;
+      fill: #0f1115; 
+    }
+    @media (prefers-color-scheme: dark) {
+      .ong-dot { fill: #ff453a; }
+      .ong-dot-spec { fill: #ffb4ab; opacity: 0.95; }
+      .ong-text { fill: #fcfcfd; }
+    }
+  </style>
+  <!-- Vermillion Dot at baseline -->
+  <circle class="ong-dot" cx="52" cy="285" r="26" />
+  <circle class="ong-dot-spec" cx="45" cy="275" r="10" />
+  
+  <!-- Architectural ONG Typography -->
+  <text class="ong-text" x="96" y="318">ONG</text>
+</svg>

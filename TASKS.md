@@ -360,4 +360,13 @@
     - Author machine-readable XML manifest (`docs/peta-development.xml` & `public/peta-development.xml`) with structured schema detailing route hierarchy and components.
   - **Verification:** Verified XML syntax and markdown link integrity; static export output matches manifest inventory 100%.
 
+- [x] **TASK-37: Polished Transparent `.ONG` Monogram Favicon Suite & Dynamic Multi-Res Pipeline**
+  - **Owner:** `design-taste` + `nextjs-development`
+  - **Scope:**
+    - Engineer dynamic vector SVG favicon (`public/favicon.svg`) with CSS `@media (prefers-color-scheme: dark)`: automatic dark ink `#0f1115` on light tabs and chalk white `#fcfcfd` on dark tabs with vibrant vermillion red `#c23b22` baseline dot.
+    - Build automated Python generation pipeline (`scripts/build_favicons.py`) producing multi-res assets: `public/icon.png` & `src/app/icon.png` (512x512 universal transparent), `public/icon-light.png` & `public/icon-dark.png` (512x512), `public/icon-light-32x32.png` & `public/icon-dark-32x32.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico` & `src/app/favicon.ico` (multi-res 16/32/48), and `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180).
+    - Wire metadata in `src/app/layout.tsx` and verify static HTML output in `out/index.html`.
+  - **Verification:** Verified via test suite (`npm test`), static build (`npm run build`), and visual inspector sheets across white, dark, and chrome tab backgrounds.
+
+
 

@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-002
-Base: 580cda9
+Release-ID: REL-20260909-003
+Base: ec03c58
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -27,18 +27,24 @@ Status: RELEASED_VERIFIED
   - `GET /folio/colophon` -> HTTP 200 (text/html)
   - `GET /sitemap.xml` -> HTTP 200 (application/xml, 33 indexed URLs verified)
   - `GET /robots.txt` -> HTTP 200 (text/plain, User-agent: *, Allow: /)
+  - `GET /favicon.svg` -> HTTP 200 (image/svg+xml)
   - `GET /icon.png` -> HTTP 200 (image/png)
+  - `GET /icon-light.png` -> HTTP 200 (image/png)
+  - `GET /icon-dark.png` -> HTTP 200 (image/png)
   - `GET /apple-icon.png` -> HTTP 200 (image/png)
   - `GET /favicon.ico` -> HTTP 200 (image/x-icon)
-- **Key Architectural & Zero-Scroll Hardening Highlights:**
+- **Key Architectural & Branding Highlights:**
+  - **Polished Transparent `.ONG` Monogram Favicon Suite:**
+    - Dynamic SVG favicon (`/favicon.svg`) with CSS `:root { color-scheme: light dark; }` and `@media (prefers-color-scheme: dark)` adapting typography automatically: solid deep jet ink `#0f1115` on light tabs and pure crisp chalk white `#fcfcfd` on dark tabs with vibrant vermillion red `#c23b22` baseline dot.
+    - Multi-resolution raster favicon suite (`public/icon.png`, `public/icon-light.png`, `public/icon-dark.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico`) with alpha transparency and soft luminous halo for universal legibility on all light, dark, and gray tab bars.
+    - iOS-compliant luxury obsidian `apple-touch-icon.png` (180x180) preventing black-box transparency glitch on Apple devices.
   - **Concise Executive Copywriting:** Tightened all deliverables bullet points, sprints, and target clients across all 5 core service offerings; eliminated verbose rambling text stretching to sides.
   - **Zero Horizontal Scroll Guaranteed:** Complete removal of `overflow-x-auto whitespace-nowrap` on category pills; category filters now wrap vertically (`flex-wrap gap-1`).
   - **Niche Directory Open Editorial Ledger:** Redesigned directory from squished 2-column cards to an open hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped industry names, category, recommended pillar, and price tags (`[01]` to `[24]`).
   - **Negative Margin Elimination:** Removed `-mx-2 sm:-mx-3` across all recommended tiers in Compro, Sales, Commerce, Custom App, and Maintenance sheets.
-  - **Responsive Tier Headers:** Upgraded all tier headers to responsive flex layout (`flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2`) with text wrapping and word breaks.
-  - **TearOffVoucher Wrapping:** Headers and actions flex-wrap smoothly on narrow screens.
   - **Page-by-Page Development Map & Manifest:** Published `docs/PETA-DEVELOPMENT.md` (& root `PETA-DEVELOPMENT.md`) and `docs/peta-development.xml` (& `public/peta-development.xml`) cataloging all 33 semantic routes, 8 core spreads, 24 industry niche sheets, component sources, vouchers, and SEO metadata.
 - **Customer Hotline:** Call & WhatsApp `+62 838-3044-1495` (`6283830441495`), Email: `get@ongki.pro`
+
 
 
 
