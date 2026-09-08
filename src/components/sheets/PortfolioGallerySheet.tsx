@@ -205,8 +205,9 @@ export function PortfolioGallerySheetRight({
               <span className="font-mono text-[9px] uppercase tracking-wider text-[#fbfbfa] bg-black/70 px-2 py-0.5 rounded-xs border border-white/20">
                 {viewportMode === 'desktop' ? 'DESKTOP MOCKUP' : 'MOBILE MOCKUP'}
               </span>
-              <span className="font-mono text-[9px] uppercase tracking-wider text-white/90 bg-[#c23b22] px-2 py-0.5 rounded-xs font-semibold shadow-xs">
-                Fullscreen ↗
+              <span className="font-mono text-[9px] uppercase tracking-wider text-white/90 bg-[#c23b22] px-2 py-0.5 rounded-xs font-semibold shadow-xs inline-flex items-center gap-1">
+                <Maximize2 className="w-2.5 h-2.5" />
+                <span>Fullscreen</span>
               </span>
             </div>
 

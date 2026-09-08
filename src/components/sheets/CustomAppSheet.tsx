@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Check, Layers } from 'lucide-react';
+import { Cpu, Check, Layers, Star, Database, Package, Users, LineChart } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -44,18 +44,22 @@ export function CustomAppSheetLeft() {
           <Layers className="w-3.5 h-3.5 text-[#111111]" />
           <span>Modul Sistem Siap Rekayasa:</span>
         </div>
-        <div className="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#4b4b4b]">
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            • Custom CRM &amp; Sales Pipeline
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[11px] font-mono text-[#333333]">
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Database className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+            <span>CRM &amp; Sales Pipeline</span>
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            • Mini ERP &amp; Stok Gudang
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Package className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+            <span>Mini ERP &amp; Stok Gudang</span>
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            • Portal Klien / Dealer Khusus
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Users className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+            <span>Portal Klien / Dealer Khusus</span>
           </div>
-          <div className="p-2 bg-[#f4f4ef] rounded-xs border border-[#d5d5cd]">
-            • Dashboard Grafik Real-Time
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <LineChart className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+            <span>Dashboard Grafik Real-Time</span>
           </div>
         </div>
       </div>
@@ -95,7 +99,8 @@ export function CustomAppSheetRight() {
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm">
+                  <Badge variant="vermillion" size="sm" className="gap-1">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                     REKOMENDASI SISTEM
                   </Badge>
                 )}
@@ -135,7 +140,7 @@ export function CustomAppSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Business System ⭐ (Rp 25jt)',
+          tier: 'Sistem Operasional Bisnis Terpadu (Rp 25jt)',
           ref: service.voucherCode,
         }}
       />

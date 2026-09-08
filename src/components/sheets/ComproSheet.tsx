@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ShieldCheck } from 'lucide-react';
+import { Check, ShieldCheck, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -90,7 +90,8 @@ export function ComproSheetRight() {
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm">
+                  <Badge variant="vermillion" size="sm" className="gap-1">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                     REKOMENDASI UTAMA
                   </Badge>
                 )}
@@ -130,7 +131,7 @@ export function ComproSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Business ⭐ (Rp 4,9jt)',
+          tier: 'Kredibilitas Vendor & Mitra B2B (Rp 4,9jt)',
           ref: service.voucherCode,
         }}
       />

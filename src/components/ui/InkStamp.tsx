@@ -1,4 +1,5 @@
 import React from 'react';
+import { Star } from 'lucide-react';
 import { cn } from '@/lib/cn';
 
 export interface InkStampProps {
@@ -26,9 +27,9 @@ export function InkStamp({
       }}
     >
       <div className="flex items-center gap-1.5 text-[9px] uppercase tracking-widest font-bold border-b border-[#c23b22]/40 pb-1 w-full justify-center">
-        <span>★</span>
+        <Star className="w-2.5 h-2.5 fill-current shrink-0" />
         <span>{text}</span>
-        <span>★</span>
+        <Star className="w-2.5 h-2.5 fill-current shrink-0" />
       </div>
       <div className="text-[8px] tracking-wider uppercase font-semibold pt-1">
         {subtext}

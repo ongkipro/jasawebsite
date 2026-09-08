@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Zap, Cloud, KeyRound, ShieldCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { InkStamp } from '@/components/ui/InkStamp';
 import { siteConfig } from '@/data/siteConfig';
@@ -73,11 +74,23 @@ export function CoverSheet() {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-x-3 sm:gap-x-4 gap-y-1 font-mono text-[10.5px] sm:text-[11px] text-[#4b4b4b]">
-          <div className="whitespace-nowrap">• Akses: <span className="text-[#111111] font-bold">&lt; 0.3s TTFB</span></div>
-          <div className="whitespace-nowrap">• Cloud: <span className="stabilo-green font-bold text-[#111111]">Global</span></div>
-          <div className="whitespace-nowrap">• Aset: <span className="text-[#111111] font-bold">100% Hak Milik</span></div>
-          <div className="whitespace-nowrap">• Uptime: <span className="text-[#111111] font-bold">99.9% SLA</span></div>
+        <div className="grid grid-cols-2 gap-x-3 sm:gap-x-4 gap-y-1.5 font-mono text-[10.5px] sm:text-[11px] text-[#4b4b4b]">
+          <div className="inline-flex items-center gap-1.5 whitespace-nowrap">
+            <Zap className="w-3 h-3 text-[#c23b22] shrink-0" />
+            <span>Akses: <span className="text-[#111111] font-bold">&lt; 0.3s TTFB</span></span>
+          </div>
+          <div className="inline-flex items-center gap-1.5 whitespace-nowrap">
+            <Cloud className="w-3 h-3 text-[#2d6a4f] shrink-0" />
+            <span>Cloud: <span className="stabilo-green font-bold text-[#111111]">Global Edge</span></span>
+          </div>
+          <div className="inline-flex items-center gap-1.5 whitespace-nowrap">
+            <KeyRound className="w-3 h-3 text-[#111111] shrink-0" />
+            <span>Aset: <span className="text-[#111111] font-bold">100% Hak Milik</span></span>
+          </div>
+          <div className="inline-flex items-center gap-1.5 whitespace-nowrap">
+            <ShieldCheck className="w-3 h-3 text-[#111111] shrink-0" />
+            <span>Uptime: <span className="text-[#111111] font-bold">99.9% SLA</span></span>
+          </div>
         </div>
       </div>
     </article>

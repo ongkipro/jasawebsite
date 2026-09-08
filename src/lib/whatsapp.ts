@@ -2,7 +2,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export interface WhatsAppIntentParams {
   ref?: string; // e.g. "Compro-Folio", "Sales-Folio", "Commerce-Folio", "Niche-Folio", "Portfolio-Case"
-  tier?: string; // e.g. "Starter", "Business ⭐", "Corporate", "Growth ⭐"
+  tier?: string; // e.g. "Starter", "Business", "Corporate", "Growth"
   serviceName?: string; // e.g. "Company Profile", "Sales & Lead Generation"
   niche?: string; // e.g. "Dealer Mobil & Showroom"
   portfolioTitle?: string; // e.g. "Summarecon Mutiara Makassar"

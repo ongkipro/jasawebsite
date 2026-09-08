@@ -87,9 +87,10 @@ export function TearOffVoucher({
         <button
           type="button"
           onClick={handleTear}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] font-mono text-[11px] font-semibold tracking-wider uppercase transition-colors duration-150 rounded-xs shadow-sm cursor-pointer"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-1.5 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] font-mono text-[11px] font-semibold tracking-wider uppercase transition-colors duration-150 rounded-xs shadow-sm cursor-pointer"
         >
-          <span>✂️ Robek &amp; Konsultasi SOW</span>
+          <Scissors className="w-3.5 h-3.5" />
+          <span>Robek &amp; Konsultasi SOW</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </button>
       </div>

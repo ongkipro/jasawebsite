@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Check, PlusCircle, Megaphone, Target, ShieldCheck, Sparkles } from 'lucide-react';
+import { Wrench, Check, PlusCircle, Megaphone, Target, ShieldCheck, Sparkles, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -91,7 +91,8 @@ export function MaintenanceSheetLeft() {
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm">
+                  <Badge variant="vermillion" size="sm" className="gap-1">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                     POPULER
                   </Badge>
                 )}
@@ -169,7 +170,7 @@ export function MaintenanceSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Scale & Ads Management Retainer ⭐ (Rp 4,5jt – Rp 7,5jt/bln)',
+          tier: 'Scale & Ads Management Retainer (Rp 4,5jt – Rp 7,5jt/bln)',
           ref: service.voucherCode,
         }}
       />

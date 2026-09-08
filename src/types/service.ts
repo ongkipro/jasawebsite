@@ -1,6 +1,6 @@
 export interface ServiceTier {
   id: string; // e.g. "starter", "business", "growth", "corporate", "pro"
-  name: string; // e.g. "Starter", "Business ⭐", "Growth ⭐", "Pro"
+  name: string; // e.g. "Starter", "Business", "Growth", "Pro"
   isRecommended?: boolean;
   investment: string; // e.g. "Rp 2.900.000", "Rp 4.900.000", "Rp 8.900.000 - Rp 15.000.000+"
   timeline: string; // e.g. "3–5 Hari Kerja"

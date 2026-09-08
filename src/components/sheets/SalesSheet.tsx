@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Target, TrendingUp } from 'lucide-react';
+import { Check, Target, TrendingUp, ArrowUpRight, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -87,7 +87,10 @@ export function SalesSheetLeft() {
       <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
         <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
           <span>Karya Website Sales / Dealer Live:</span>
-          <span className="text-[#c23b22]">3 Brand Resmi ↗</span>
+          <span className="text-[#c23b22] inline-flex items-center gap-0.5">
+            <span>3 Brand Resmi</span>
+            <ArrowUpRight className="w-3 h-3" />
+          </span>
         </div>
         <div className="grid grid-cols-3 gap-2">
           <a
@@ -187,7 +190,8 @@ export function SalesSheetRight() {
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm">
+                  <Badge variant="vermillion" size="sm" className="gap-1">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                     BEST VALUE
                   </Badge>
                 )}
@@ -227,7 +231,7 @@ export function SalesSheetRight() {
         startingPrice={service.startingPriceAnchor}
         intentParams={{
           serviceName: service.title,
-          tier: 'Sales Engine ⭐ (Rp 6,5jt)',
+          tier: 'Mesin Iklan Siap Tempur & Katalog Sales (Rp 6,5jt)',
           ref: service.voucherCode,
         }}
       />

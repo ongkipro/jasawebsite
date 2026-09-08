@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Check, Zap } from 'lucide-react';
+import { ShoppingBag, Check, Zap, ArrowUpRight, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -74,18 +74,22 @@ export function CommerceSheetLeft() {
           <Zap className="w-3.5 h-3.5 text-[#c23b22]" />
           <span>Keunggulan Layanan Toko Online Kami:</span>
         </div>
-        <div className="grid grid-cols-2 gap-1.5 text-[11px] font-mono text-[#4b4b4b]">
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
-            ✓ Opsi Shopify &amp; Toko Mandiri
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[11px] font-mono text-[#333333]">
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Check className="w-3 h-3 text-[#2d6a4f] shrink-0" />
+            <span>Shopify &amp; Toko Mandiri</span>
           </div>
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
-            ✓ Bebas Potongan Komisi 10%
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Check className="w-3 h-3 text-[#2d6a4f] shrink-0" />
+            <span>Bebas Potongan Komisi 10%</span>
           </div>
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
-            ✓ Bayar QRIS &amp; Transfer Bank
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Check className="w-3 h-3 text-[#2d6a4f] shrink-0" />
+            <span>Bayar QRIS &amp; Transfer Bank</span>
           </div>
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#d5d5cd]">
-            ✓ Hitung Ongkir Kurir Otomatis
+          <div className="flex items-center gap-1.5 py-1 border-b border-[#e5e5df]">
+            <Check className="w-3 h-3 text-[#2d6a4f] shrink-0" />
+            <span>Hitung Ongkir Kurir Otomatis</span>
           </div>
         </div>
       </div>
@@ -94,7 +98,10 @@ export function CommerceSheetLeft() {
       <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
         <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
           <span>Karya Toko Online Klien Kami Live:</span>
-          <span className="text-[#c23b22]">4 Brand Aktif ↗</span>
+          <span className="text-[#c23b22] inline-flex items-center gap-0.5">
+            <span>4 Brand Aktif</span>
+            <ArrowUpRight className="w-3 h-3" />
+          </span>
         </div>
         <div className="grid grid-cols-4 gap-1.5">
           <a
@@ -215,7 +222,8 @@ export function CommerceSheetRight() {
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm">
+                  <Badge variant="vermillion" size="sm" className="gap-1">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                     MOST POPULAR
                   </Badge>
                 )}
@@ -256,7 +264,7 @@ export function CommerceSheetRight() {
         className="my-1 sm:my-1.5 p-2.5 sm:p-3"
         intentParams={{
           serviceName: 'Toko Online Mandiri & Shopify',
-          tier: 'Shopify Storefront & Custom Design ⭐ (Rp 6,9jt)',
+          tier: 'Shopify Custom Storefront & Desain Mewah (Rp 6,9jt)',
           ref: service.voucherCode,
         }}
       />

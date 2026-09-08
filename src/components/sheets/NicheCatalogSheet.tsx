@@ -93,7 +93,7 @@ export function NicheCatalogSheet() {
             className="w-full appearance-none px-3 py-1.5 bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#111111] font-semibold transition-colors cursor-pointer focus:outline-none focus:border-[#111111] pr-8"
           >
             <option value="" disabled>
-              ▼ Lompat Langsung ke Sektor Industri ({nichesData.length} Pilihan)...
+              Pilih Langsung Sektor Industri ({nichesData.length} Pilihan)...
             </option>
             {nichesData.map((n, i) => (
               <option key={n.id} value={n.slug}>
