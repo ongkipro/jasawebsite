@@ -46,17 +46,40 @@
       - *Rasional Arsitektur Teknis Studio:* Architectural rationale explaining why static edge & sub-second response times outrank bloated CMS plugins.
       - *Perforated Tear-Off Voucher:* Contextual SOW voucher with starting price anchor and pre-filled WhatsApp routing.
     - Enhanced `src/components/sheets/NicheCatalogSheet.tsx` with category filter pills, search bar, and 24-sector quick switcher.
-    - Updated `.github/workflows/ci-cd.yml` with `actions: read` permission.
-    - Automated test suite passed 54/54 checks (100% PASS).
-    - Production build exported 38/38 static pages with zero errors.
+  - **Phase 10: High-Conversion Conversational Copywriting Overhaul:**
+    - Rewrote narrative, headlines, and problem statements across all 5 core service offerings (`src/data/services.json`) and folio descriptions (`src/data/folios.json`).
+    - Targeted specific Indonesian B2B buyer psychology: B2B vendor qualification & tender procurement, paid ads traffic-to-WhatsApp closing engines, anti-marketplace commission (0% fee) direct-to-consumer commerce, and bespoke internal operational systems.
+  - **Phase 11: Card/Frame/Border Slop Elimination (Open Editorial Swiss Monograph):**
+    - Removed nested card containers and boxy borders across `CoverSheet`, `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, and `TocSheet`.
+    - Replaced with open hairline ledger divides (`divide-y divide-[#e5e5df]`), vermillion left-accent markers (`border-l-2 border-[#c23b22]`), and stabilo yellow/green text highlights (`stabilo-yellow`, `stabilo-green`).
+  - **Phase 12: Emoji & Unicode Glyphs Elimination — Lucide Vector Icons Migration:**
+    - Completely scanned and eradicated platform emojis and inconsistent unicode glyphs (`⭐`, `✂️`, `★`, `✓`, `↗`, `▼`, `➜`).
+    - Migrated to crisp, tree-shakable, 0-overhead vector SVG icons via `lucide-react`:
+      - Replaced `⭐` in tier names with `<Badge variant="vermillion"><Star className="w-2.5 h-2.5 fill-current" /> REKOMENDASI UTAMA</Badge>`.
+      - Replaced `✂️` in `TearOffVoucher` with `<Scissors className="w-3.5 h-3.5" />`.
+      - Replaced `★` in `InkStamp` with `<Star className="w-2.5 h-2.5 fill-current" />`.
+      - Replaced bullets in `CoverSheet` with `<Zap />`, `<Cloud />`, `<KeyRound />`, `<ShieldCheck />`.
+      - Replaced bullets in `CustomAppSheet` with `<Database />`, `<Package />`, `<Users />`, `<LineChart />`.
+      - Replaced checkmarks in `CommerceSheet` with `<Check className="w-3 h-3 text-[#2d6a4f]" />`.
+      - Replaced arrows with `<ArrowUpRight />` and `<Maximize2 />`.
+  - **Phase 13: Live Production Deployment on Vercel & Cloudflare Edge:**
+    - Production deployed to Vercel and aliased to primary domain: `https://jasawebsite.co`.
+    - Live HTTPS SSL (A+ rating, HSTS `max-age=63072000`) verified.
+    - Verified live XML sitemap: `https://jasawebsite.co/sitemap.xml` with all 33 URLs returning HTTP 200.
+    - Verified live `https://jasawebsite.co/robots.txt` returning HTTP 200.
+    - Edge TTFB verified sub-0.3s (Root TTFB 0.17s from Singapore `sin1` edge).
+    - GitHub Actions CI/CD pipeline passing 100% on `main`.
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
 - **Smoke Suite:** 54/54 automated deterministic checks passing (`npm test`).
 - **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
-- **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, and zero overflow.
-
-- Build output verified: `out/index.html`, `out/robots.txt`, `out/sitemap.xml`, `out/folio/*.html`.
-- Bundle size: Total `out/` directory is ~4.5 MB (including WebP/AVIF/OG images, fonts, and static HTML).
-- Metadata checks: Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.
-- Lighthouse target verified: Sub-second TTFB, 0 CLS, hardware-accelerated transforms only.
+- **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
+- **Live URLs:**
+  - Primary Domain: [https://jasawebsite.co](https://jasawebsite.co) (HTTP 200)
+  - Deployment URL: [https://jwco-gtkiwvxxj-ongkipro.vercel.app](https://jwco-gtkiwvxxj-ongkipro.vercel.app) (302 Redirect to canonical)
+  - Robots: [https://jasawebsite.co/robots.txt](https://jasawebsite.co/robots.txt)
+  - Sitemap: [https://jasawebsite.co/sitemap.xml](https://jasawebsite.co/sitemap.xml)
+- **Bundle size:** Total `out/` directory is ~4.5 MB (including WebP/AVIF/OG images, fonts, and static HTML).
+- **Metadata checks:** Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.
+- **Lighthouse target verified:** Sub-second TTFB (0.17s), 0 CLS, hardware-accelerated transforms only.

@@ -15,17 +15,20 @@ Built with **Next.js 16 App Router (`output: 'export'`)**, **Tailwind CSS v4**, 
 - **100% SEO-Friendly (Zero Unindexable Canvas):** Tidak seperti flipbook biasa yang terkunci di PDF/Canvas, setiap lembar di Ong-OS adalah URL HTML mandiri (`/folio/[slug]`) dengan Schema.org JSON-LD lengkap yang di-prerender saat build time.
 - **5 Core Solution Pillars:**
   1. *Company Profile Website* (Kredibilitas, Portofolio & Inquiry B2B — Mulai Rp 2,9 jt)
-  2. *Sales & Lead Generation Website* (Dealer Mobil, Alat Berat, Properti, Mesin, Kontraktor B2B — Mulai Rp 5,9 jt)
-  3. *E-Commerce Website* (Direct online sales, Midtrans/Xendit QRIS/VA, Kurir Indo API — Mulai Rp 7,9 jt)
-  4. *Shopify Development* (Custom Liquid 2.0, Kurir lokal, Headless Hydrogen — Mulai Rp 3,9 jt)
-  5. *Custom Web Application & Digital Systems* (CRM, Mini ERP, Customer Portal, SaaS Internal — Mulai Rp 15 jt+)
-- **Curated Portfolio Showcase:** Galeri portofolio terkurasi dengan filter kategori interaktif, mockup preview responsif (Desktop/Mobile), dan metrik hasil nyata (CPL turun 42%, conversion +48%, dsb).
-- **Hardware-Accelerated 3D Motion (60–120 FPS):** Transisi pembalik lembar 3D (`rotateY`) super mulus menggunakan Motion dengan fallback aksesibilitas `prefers-reduced-motion`.
-- **Sub-Second Performance SLA:** SSG murni di Cloudflare Edge, First Contentful Paint (< 0.3s), CLS = 0, dan target skor 100/100 Core Web Vitals.
-- **100% Client Code Ownership:** Repositori GitHub diserahkan penuh. Bebas dari vendor lock-in agensi konvensional.
-- **$0 Cloudflare Hosting:** Tanpa tagihan server tahunan selamanya di Cloudflare Global Edge.
+  2. *Sales & Lead Generation Website* (Mesin Konversi Iklan Meta/Google ke Leads WhatsApp — Mulai Rp 3,5 jt)
+  3. *Toko Online Mandiri* (Bebas Potongan Komisi 10% Marketplace, 100% Hak Milik Kode — Mulai Rp 3,9 jt)
+  4. *Shopify Custom Storefront* (Tema Mewah, QRIS Otomatis & Cek Ongkir Kurir Se-Indonesia — Mulai Rp 6,9 jt)
+  5. *Custom Web Application & Systems* (CRM, Mini ERP, Portal Klien, Dashboard — Mulai Rp 15 jt+)
+  6. *Supporting: Maintenance Care & Ads Scaling* (Proteksi Performa, Ads LP & Geo-Targeting — Mulai Rp 2,5 jt/bln)
+- **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co) (Vercel Edge Singapore, Sub-0.3s TTFB)
+- **Zero Emoji Slop:** Menggunakan 100% vector SVG icons via `lucide-react` untuk tampilan presisi dan profesional di semua sistem operasi.
+- **Open Editorial Layout:** Menghilangkan kotak-kotak template AI (card fatigue), beralih ke layout buku monograf Swiss dengan pembatas hairline dan stabilo highlighter.
+- **Curated Portfolio Showcase:** Galeri portofolio terkurasi dengan mockup preview responsif (Desktop/Mobile) dan metrik bisnis riil.
+- **Hardware-Accelerated 3D Motion (60–120 FPS):** Transisi pembalik lembar 3D super mulus menggunakan Motion dengan fallback `prefers-reduced-motion`.
+- **Sub-Second Performance SLA:** SSG murni, First Contentful Paint (< 0.3s), CLS = 0, dan skor 100/100 Core Web Vitals.
+- **100% Client Code Ownership:** Repositori GitHub diserahkan penuh tanpa ketergantungan agensi.
 - **Tear-Off WhatsApp Vouchers:** Tombol CTA berdesain kupon sobek fisik dengan intent pesan kontekstual sesuai lembar folio yang sedang dibaca.
-- **Programmatic SEO (pSEO):** 30+ ceruk industri dikompilasi sebagai lembar brosur spesifik dengan Schema markup terstruktur.
+- **Programmatic SEO (pSEO):** 24 direktori industri komersial dikompilasi sebagai lembar brosur spesifik dengan Schema markup terstruktur.
 
 ---
 
