@@ -36,10 +36,12 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 │ 4. Direktori Ceruk Industri / Programmatic SEO (24 Sektor Spesifik)                    │
 │    └── /folio/niche-[slug]   -> [NicheDetailSheet.tsx]       (24 Halaman Khusus)       │
 │                                                                                        │
-│ 5. Endpoint Utilitas & Metadata                                                        │
+│ 5. Endpoint Utilitas, Manifest & Favicon Suite                                         │
 │    ├── /_not-found           -> [not-found.tsx]              (Folio 404 Lembar Robek)  │
 │    ├── /sitemap.xml          -> [sitemap.ts]                 (XML Search Engine Map)   │
-│    └── /robots.txt           -> [robots.ts]                  (Search Crawler Rules)    │
+│    ├── /robots.txt           -> [robots.ts]                  (Search Crawler Rules)    │
+│    ├── /peta-development.xml -> [peta-development.xml]       (Machine Route Manifest)  │
+│    └── /favicon.svg /icon.png-> [build_favicons.py]          (High-Fill Obsidian .ONG) │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -188,6 +190,23 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 * **Rute:** `/robots.txt` (`src/app/robots.ts`)
   * Tipe: `text/plain`
   * Mengizinkan perayapan seluruh bot (`User-agent: *`, `Allow: /`), merujuk ke `https://jasawebsite.co/sitemap.xml`.
+
+### Machine-Readable Route Manifest XML
+* **Rute:** `/peta-development.xml` (`public/peta-development.xml` & `docs/peta-development.xml`)
+  * Tipe: `application/xml`
+  * Berisi struktur XML komprehensif seluruh 33 semantic routes, komponen sumber, tier harga, target klien, voucher kode, dan metadata SEO.
+
+### High-Fill Obsidian Squircle `.ONG` Favicon Suite
+* **Generator:** `scripts/build_favicons.py`
+* **Desain:** Maximum-fill luxury obsidian squircle (`#0e0f12`, radius 112px) dengan titik vermillion glowing (`#ff453a`) dan huruf bold arsitektural `ONG` (size 187px). Mengisi 95%+ ruang kanvas favicon, menjamin ketajaman dan keterbacaan penuh di tab riil (16×16 px & 32×32 px).
+* **Aset Terdistribusi:**
+  * `/favicon.svg` — Dynamic high-fill vector SVG.
+  * `/icon.png` & `/src/app/icon.png` — 512×512 Master high-density squircle icon.
+  * `/icon-light.png` & `/icon-dark.png` — 512×512 theme-specific PNGs.
+  * `/icon-light-32x32.png` & `/icon-dark-32x32.png` — 32×32 tab icons.
+  * `/favicon-32x32.png` & `/favicon-16x16.png` — Standard browser tab PNGs.
+  * `/apple-touch-icon.png` & `/src/app/apple-icon.png` — 180×180 iOS Home Screen Bookmark.
+  * `/favicon.ico` & `/src/app/favicon.ico` — Multi-resolution ICO (16/32/48).
 
 ---
 

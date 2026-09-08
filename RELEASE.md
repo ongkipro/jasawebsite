@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-003
-Base: ec03c58
+Release-ID: REL-20260909-004
+Base: 4c5193b
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -27,17 +27,24 @@ Status: RELEASED_VERIFIED
   - `GET /folio/colophon` -> HTTP 200 (text/html)
   - `GET /sitemap.xml` -> HTTP 200 (application/xml, 33 indexed URLs verified)
   - `GET /robots.txt` -> HTTP 200 (text/plain, User-agent: *, Allow: /)
-  - `GET /favicon.svg` -> HTTP 200 (image/svg+xml)
-  - `GET /icon.png` -> HTTP 200 (image/png)
+  - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
+  - `GET /favicon.svg` -> HTTP 200 (image/svg+xml, high-fill squircle vector)
+  - `GET /icon.png` -> HTTP 200 (image/png, 512x512 master squircle)
   - `GET /icon-light.png` -> HTTP 200 (image/png)
   - `GET /icon-dark.png` -> HTTP 200 (image/png)
-  - `GET /apple-icon.png` -> HTTP 200 (image/png)
-  - `GET /favicon.ico` -> HTTP 200 (image/x-icon)
+  - `GET /apple-touch-icon.png` -> HTTP 200 (image/png, 180x180 iOS squircle)
+  - `GET /favicon.ico` -> HTTP 200 (image/vnd.microsoft.icon, multi-res 16/32/48)
 - **Key Architectural & Branding Highlights:**
-  - **Polished Transparent `.ONG` Monogram Favicon Suite:**
-    - Dynamic SVG favicon (`/favicon.svg`) with CSS `:root { color-scheme: light dark; }` and `@media (prefers-color-scheme: dark)` adapting typography automatically: solid deep jet ink `#0f1115` on light tabs and pure crisp chalk white `#fcfcfd` on dark tabs with vibrant vermillion red `#c23b22` baseline dot.
-    - Multi-resolution raster favicon suite (`public/icon.png`, `public/icon-light.png`, `public/icon-dark.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico`) with alpha transparency and soft luminous halo for universal legibility on all light, dark, and gray tab bars.
+  - **High-Fill Obsidian Squircle `.ONG` Monogram Favicon Suite:**
+    - High-density luxury obsidian squircle (`#0e0f12`, radius 112px on 512px canvas) filling the entire 1:1 tab canvas, eliminating empty negative space.
+    - Scaled ultra-bold `ONG` lettering (size 187px) with glowing vermillion red baseline dot (`#ff453a`, radius 33px) for 100% legibility in real 16x16 & 32x32 browser tabs.
+    - Dynamic SVG favicon (`/favicon.svg`) with fine luminous perimeter border (`rgba(255,255,255,0.2)`).
+    - Multi-resolution raster favicon suite (`public/icon.png`, `public/icon-light.png`, `public/icon-dark.png`, `public/favicon-32x32.png`, `public/favicon-16x16.png`, `public/favicon.ico`).
     - iOS-compliant luxury obsidian `apple-touch-icon.png` (180x180) preventing black-box transparency glitch on Apple devices.
+  - **Mobile Input & Catalog Search Polish (Commit `904c076`):**
+    - Enforced `text-base md:text-xs` on mobile search inputs to prevent iOS Safari auto-zoom viewport distortion.
+    - Added instant real-time filtering to the top-to-bottom sector directory list in `NicheCatalogSheet`.
+    - Balanced Folio 05 layout in `TocSheet` with structured 2-line title/subtitle hierarchy.
   - **Concise Executive Copywriting:** Tightened all deliverables bullet points, sprints, and target clients across all 5 core service offerings; eliminated verbose rambling text stretching to sides.
   - **Zero Horizontal Scroll Guaranteed:** Complete removal of `overflow-x-auto whitespace-nowrap` on category pills; category filters now wrap vertically (`flex-wrap gap-1`).
   - **Niche Directory Open Editorial Ledger:** Redesigned directory from squished 2-column cards to an open hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped industry names, category, recommended pillar, and price tags (`[01]` to `[24]`).

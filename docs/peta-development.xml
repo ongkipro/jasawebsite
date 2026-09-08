@@ -369,5 +369,40 @@
       <content-type>text/plain</content-type>
       <status>200 OK</status>
     </endpoint>
+    <endpoint id="peta-development-manifest">
+      <route>/peta-development.xml</route>
+      <type>Machine-Readable Route Manifest</type>
+      <component>public/peta-development.xml</component>
+      <content-type>application/xml</content-type>
+      <status>200 OK</status>
+    </endpoint>
+    <endpoint id="favicon-svg">
+      <route>/favicon.svg</route>
+      <type>Vector Favicon (High-Fill Squircle)</type>
+      <component>public/favicon.svg</component>
+      <content-type>image/svg+xml</content-type>
+      <status>200 OK</status>
+    </endpoint>
+    <endpoint id="icon-png">
+      <route>/icon.png</route>
+      <type>Master High-Density Squircle Icon (512x512)</type>
+      <component>public/icon.png</component>
+      <content-type>image/png</content-type>
+      <status>200 OK</status>
+    </endpoint>
+    <endpoint id="apple-touch-icon">
+      <route>/apple-touch-icon.png</route>
+      <type>Apple iOS Home Screen Icon (180x180)</type>
+      <component>public/apple-touch-icon.png</component>
+      <content-type>image/png</content-type>
+      <status>200 OK</status>
+    </endpoint>
+    <endpoint id="favicon-ico">
+      <route>/favicon.ico</route>
+      <type>Multi-Resolution Favicon (16/32/48)</type>
+      <component>public/favicon.ico</component>
+      <content-type>image/vnd.microsoft.icon</content-type>
+      <status>200 OK</status>
+    </endpoint>
   </special-endpoints>
 </peta-development>

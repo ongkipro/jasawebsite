@@ -111,9 +111,11 @@
 - **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
 - **Live URLs:**
   - Primary Domain: [https://jasawebsite.co](https://jasawebsite.co) (HTTP 200)
-  - Deployment URL: [https://jwco-gtkiwvxxj-ongkipro.vercel.app](https://jwco-gtkiwvxxj-ongkipro.vercel.app) (302 Redirect to canonical)
+  - Deployment URL: [https://jwco-7vab6s0m2-ongkipro.vercel.app](https://jwco-7vab6s0m2-ongkipro.vercel.app) (Production READY)
   - Robots: [https://jasawebsite.co/robots.txt](https://jasawebsite.co/robots.txt)
   - Sitemap: [https://jasawebsite.co/sitemap.xml](https://jasawebsite.co/sitemap.xml)
+  - Route Manifest: [https://jasawebsite.co/peta-development.xml](https://jasawebsite.co/peta-development.xml)
+  - Favicon Vector: [https://jasawebsite.co/favicon.svg](https://jasawebsite.co/favicon.svg)
 - **Bundle size:** Total `out/` directory is ~4.5 MB (including WebP/AVIF/OG images, fonts, and static HTML).
 - **Metadata checks:** Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.
 - **Lighthouse target verified:** Sub-second TTFB (0.17s), 0 CLS, hardware-accelerated transforms only.
