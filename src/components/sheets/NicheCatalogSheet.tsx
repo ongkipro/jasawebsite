@@ -90,7 +90,7 @@ export function NicheCatalogSheet() {
               }
             }}
             defaultValue=""
-            className="w-full appearance-none px-3 py-1.5 bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#111111] font-semibold transition-colors cursor-pointer focus:outline-none focus:border-[#111111] pr-8"
+            className="w-full appearance-none px-3 py-2 sm:py-1.5 bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-mono text-base sm:text-xs text-[#111111] font-semibold transition-colors cursor-pointer focus:outline-none focus:border-[#111111] pr-8"
           >
             <option value="" disabled>
               Pilih Langsung Sektor Industri ({nichesData.length} Pilihan)...
@@ -112,7 +112,7 @@ export function NicheCatalogSheet() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Cari sektor: dealer, alkes, kargo, pabrik, katering, hukum..."
-            className="w-full pl-8 pr-3 py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
+            className="w-full pl-8 pr-3 py-2 sm:py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-base sm:text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
           />
           {searchQuery && (
             <button
@@ -125,18 +125,18 @@ export function NicheCatalogSheet() {
           )}
         </div>
 
-        {/* Category Filter Pills (Wrapping Vertically - Tanpa Horizontal Scroll) */}
-        <div className="flex flex-wrap items-center gap-1 font-mono text-[10px]">
+        {/* Category Filter Pills (Horizontal scroll on mobile, wrap on desktop) */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-0.5 no-scrollbar sm:flex-wrap font-mono text-[10.5px] sm:text-[10px] -mx-0.5 px-0.5">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setSelectedCategory(cat)}
               className={cn(
-                'px-2 py-0.5 rounded-xs transition-colors cursor-pointer border',
+                'shrink-0 whitespace-nowrap px-2.5 py-1 sm:py-0.5 rounded-xs transition-colors cursor-pointer border',
                 selectedCategory === cat
-                  ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] font-semibold'
-                  : 'bg-[#f4f4ef] text-[#4b4b4b] hover:text-[#111111] border-[#d5d5cd]'
+                  ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] font-bold shadow-2xs'
+                  : 'bg-[#f4f4ef] text-[#4b4b4b] hover:text-[#111111] hover:bg-[#ebebe3] border-[#d5d5cd]'
               )}
             >
               {cat}
@@ -145,7 +145,7 @@ export function NicheCatalogSheet() {
         </div>
       </div>
 
-      {/* Directory Open Ledger List - Alur Vertikal Murni (Tanpa Box Kaku & Tanpa Scroll Kanan Kiri) */}
+      {/* Directory Open Ledger List - Alur Vertikal Murni yang Rapi & Presisi */}
       <div
         className="divide-y divide-[#e5e5df] max-h-[290px] sm:max-h-[330px] lg:max-h-[360px] overflow-y-auto paper-scrollbar overscroll-contain pr-1"
         style={{ touchAction: 'pan-y' }}
@@ -155,29 +155,29 @@ export function NicheCatalogSheet() {
             <Link
               key={niche.id}
               href={`/folio/niche-${niche.slug}`}
-              className="py-2 sm:py-2.5 px-1 hover:bg-[#f5f5ee] transition-colors rounded-xs group block space-y-0.5"
+              className="py-2 px-1 sm:py-2.5 hover:bg-[#f5f5ee] active:bg-[#ebebe3] transition-colors rounded-xs group block space-y-1"
             >
-              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-                <div className="flex items-baseline gap-2 min-w-0">
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex items-baseline gap-2 min-w-0 flex-1">
                   <span className="text-[#c23b22] font-mono text-xs font-bold shrink-0">
                     [{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}]
                   </span>
-                  <span className="font-serif text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors break-words">
+                  <span className="font-serif text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors leading-snug break-words">
                     {niche.industryName}
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 shrink-0 self-start sm:self-auto pl-6 sm:pl-0">
-                  <span className="font-mono text-[10.5px] font-bold text-[#111111] bg-[#ebebe3] group-hover:bg-[#d5d5cd] px-1.5 py-0.5 rounded-xs border border-[#d5d5cd] transition-colors">
+                <div className="flex items-center gap-1 shrink-0 pt-0.5">
+                  <span className="font-mono text-[10px] sm:text-[10.5px] font-bold text-[#111111] bg-[#ebebe3] group-hover:bg-[#d5d5cd] px-1.5 py-0.5 rounded-xs border border-[#d5d5cd] transition-colors whitespace-nowrap">
                     Mulai {niche.startingPrice}
                   </span>
                   <ArrowRight className="w-3 h-3 text-[#c23b22] opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline shrink-0" />
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] font-mono text-[#666666] pl-6">
-                <span className="text-[#4b4b4b]">{niche.category}</span>
-                <span>·</span>
-                <span className="text-[#111111] font-medium">{niche.recommendedPillar}</span>
+              <div className="flex items-center gap-1.5 text-[10px] font-mono text-[#666666] pl-6 sm:pl-7">
+                <span className="text-[#4b4b4b] truncate max-w-[130px] sm:max-w-none">{niche.category}</span>
+                <span className="shrink-0">·</span>
+                <span className="text-[#111111] font-medium truncate max-w-[160px] sm:max-w-none">{niche.recommendedPillar}</span>
               </div>
             </Link>
           ))

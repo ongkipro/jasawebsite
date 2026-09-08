@@ -32,28 +32,28 @@ export function TocSheet() {
                   : 'border-transparent hover:border-[#d5d5cd] hover:bg-[#f4f4ef]'
               )}
             >
-              <div className="flex items-baseline justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-[#c23b22] font-bold group-hover:translate-x-0.5 transition-transform">
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0 flex-1">
+                  <span className="text-[#c23b22] font-mono text-xs font-bold shrink-0 group-hover:translate-x-0.5 transition-transform">
                     ( 0{index + 1} )
                   </span>
-                  <span className="font-serif text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors">
+                  <span className="font-serif text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors leading-snug">
                     {folio.title}
                   </span>
                   {isPortfolio && (
-                    <span className="px-1.5 py-0.5 bg-[#c23b22] text-[#fbfbfa] text-[9px] font-mono font-bold rounded-xs shrink-0">
+                    <span className="px-1.5 py-0.5 bg-[#c23b22] text-[#fbfbfa] text-[9px] font-mono font-bold rounded-xs shrink-0 tracking-wider">
                       BUKTI KARYA
                     </span>
                   )}
                 </div>
-                <div className="flex items-center gap-1 text-[#4b4b4b] text-[10px]">
-                  <span className="hidden sm:inline">
+                <div className="flex items-center gap-1 text-[#4b4b4b] text-[10px] font-mono shrink-0 pt-0.5">
+                  <span className="text-[9.5px] sm:text-[10px] text-[#666666] tracking-tight">
                     {folio.leftFolioNumber}–{folio.rightFolioNumber}
                   </span>
-                  <ArrowRight className="w-3 h-3 text-[#d5d5cd] group-hover:text-[#c23b22] group-hover:translate-x-0.5 transition-all" />
+                  <ArrowRight className="w-3 h-3 text-[#d5d5cd] group-hover:text-[#c23b22] group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               </div>
-              <p className="font-sans text-[11px] text-[#4b4b4b] mt-0.5 line-clamp-1 group-hover:text-[#111111] transition-colors">
+              <p className="font-sans text-[11px] text-[#4b4b4b] mt-1 line-clamp-2 sm:line-clamp-1 group-hover:text-[#111111] transition-colors leading-relaxed">
                 {folio.description}
               </p>
             </Link>
