@@ -97,6 +97,10 @@ export function SalesSheetLeft() {
             <img
               src="/images/portfolio/dealerhino-desktop.webp"
               alt="Dealer Hino Resmi"
+              width={320}
+              height={180}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">
@@ -113,6 +117,10 @@ export function SalesSheetLeft() {
             <img
               src="/images/portfolio/dealertrukhino-desktop.webp"
               alt="Dealer Truk Hino Jatim"
+              width={320}
+              height={180}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">
@@ -129,6 +137,10 @@ export function SalesSheetLeft() {
             <img
               src="/images/portfolio/dealerfoton-desktop.webp"
               alt="Dealer Foton Motor"
+              width={320}
+              height={180}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">

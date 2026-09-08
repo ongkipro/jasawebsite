@@ -508,10 +508,10 @@ export default function NotFound() {
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
           <a
             href={`tel:+${siteConfig.phone}`}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-2 sm:py-1.5 min-h-[38px] sm:min-h-[34px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
             title="Telepon Langsung Customer Service"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#c23b22]" />
@@ -521,11 +521,13 @@ export default function NotFound() {
             href={wa404Url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 sm:py-1.5 min-h-[38px] sm:min-h-[34px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
             title="Chat WhatsApp Customer Service"
           >
             <MessageSquareCode className="w-3.5 h-3.5" />
-            <span>WhatsApp {siteConfig.phoneDisplay} →</span>
+            <span className="truncate max-w-[175px] sm:max-w-none">
+              WhatsApp {siteConfig.phoneDisplay} →
+            </span>
           </a>
         </div>
       </footer>

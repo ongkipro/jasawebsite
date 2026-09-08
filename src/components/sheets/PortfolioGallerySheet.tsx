@@ -190,8 +190,11 @@ export function PortfolioGallerySheetRight({
           <img
             src={viewportMode === 'desktop' ? selectedItem.desktopImage : selectedItem.mobileImage}
             alt={`${selectedItem.clientName} Preview`}
+            width={640}
+            height={360}
             className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
+            decoding="async"
           />
           {/* Bottom info banner overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-3 flex flex-col justify-between transition-opacity group-hover:from-black/90">

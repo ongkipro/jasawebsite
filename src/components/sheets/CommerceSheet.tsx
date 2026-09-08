@@ -76,6 +76,10 @@ export function CommerceSheetLeft() {
             <img
               src="/images/portfolio/batiksmile-desktop.webp"
               alt="Batik Smile"
+              width={280}
+              height={210}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
@@ -92,6 +96,10 @@ export function CommerceSheetLeft() {
             <img
               src="/images/portfolio/beautyinu-desktop.webp"
               alt="Beautyinu"
+              width={280}
+              height={210}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
@@ -108,6 +116,10 @@ export function CommerceSheetLeft() {
             <img
               src="/images/portfolio/petcue-desktop.webp"
               alt="Petcue"
+              width={280}
+              height={210}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
@@ -124,6 +136,10 @@ export function CommerceSheetLeft() {
             <img
               src="/images/portfolio/homelook-desktop.webp"
               alt="Homelook"
+              width={280}
+              height={210}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
             />
             <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">

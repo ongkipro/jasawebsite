@@ -81,8 +81,11 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
             <img
               src={item.desktopImage}
               alt={`${item.clientName} Full Screenshot`}
+              width={1200}
+              height={700}
               className="w-full h-auto object-cover object-top"
               loading="eager"
+              decoding="async"
             />
           </div>
         </div>

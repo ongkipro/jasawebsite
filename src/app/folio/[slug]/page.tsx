@@ -4,12 +4,7 @@ import foliosData from '@/data/folios.json';
 import nichesData from '@/data/niches.json';
 import { siteConfig } from '@/data/siteConfig';
 import { BookFolioRenderer } from '@/components/book/BookFolioRenderer';
-import { SpreadView } from '@/components/book/SpreadView';
-import { SingleSheetView } from '@/components/book/SingleSheetView';
-import {
-  NicheDetailSheetLeft,
-  NicheDetailSheetRight,
-} from '@/components/sheets/NicheDetailSheet';
+import { NicheBookShell } from '@/components/book/NicheBookShell';
 import { generateSheetSchema } from '@/lib/seo';
 
 interface PageProps {
@@ -253,34 +248,13 @@ export default async function FolioPage({ params }: PageProps) {
     );
 
     return (
-      <main className="relative min-h-screen py-8 sm:py-12 px-3 sm:px-6 lg:px-12 flex flex-col justify-center max-w-7xl mx-auto">
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(sheetSchema) }}
         />
-        {/* Desktop View */}
-        <div className="hidden lg:block w-full">
-          <SpreadView
-            leftContent={<NicheDetailSheetLeft niche={niche} />}
-            rightContent={<NicheDetailSheetRight niche={niche} />}
-            leftFolioNumber="NICHE SPEC"
-            rightFolioNumber={niche.schemaType}
-            hasPrev={false}
-            hasNext={false}
-          />
-        </div>
-
-        {/* Mobile View */}
-        <div className="block lg:hidden w-full">
-          <SingleSheetView
-            leftContent={<NicheDetailSheetLeft niche={niche} />}
-            rightContent={<NicheDetailSheetRight niche={niche} />}
-            folioNumber="NICHE SPEC"
-            hasPrev={false}
-            hasNext={false}
-          />
-        </div>
-      </main>
+        <NicheBookShell currentNiche={niche} />
+      </>
     );
   }
 
