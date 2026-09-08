@@ -1,109 +1,143 @@
-# JASAWEBSITE.co — by VOLUM
+# JasaWebsite.co by ONG · Living Digital Brochure (`jasawebsite.co`)
 
-> Website agency: **Astro + React islands** di **Cloudflare Pages/Workers**, DB **D1**, storage **R2**, cache **KV**.
-> PRD lengkap: `~/Documents/work/prd/prd-jasawebsite-co-by-volum.md`
+Full-stack website, e-commerce, and digital systems development platform presented as an **Interactive, Tactile, SEO-Friendly Living Digital Brochure (Buku Lembar-per-Lembar)**.
 
-## Stack
-- **Frontend:** Astro 5 (SSG/SSR) + React islands + Tailwind v4 + GSAP + Lenis
-- **Backend:** Astro endpoints di Cloudflare Workers
-- **DB:** D1 (SQLite) via Drizzle ORM · **Storage:** R2 · **Cache/rate-limit:** KV
-- **Anti-spam:** honeypot + Turnstile (aktif otomatis bila secret di-set)
-- **Email:** Resend (skip bila `RESEND_API_KEY` kosong — aman untuk dev)
+**Master Tagline:** *"Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh"*  
+*(Website & Digital Systems Built for Business Growth)*  
 
-## Desain & UX (clone Hello Monday, clean white, Bahasa Indonesia)
-- **Font:** Clash Display (display, via Fontshare) + Inter (body, via Google) — di-load di `Layout.astro`.
-- **Skala tipografi terkunci:** hero homepage = `.text-display`; judul halaman = komponen `PageHero`
-  (`clamp(2.5rem,6vw,4.5rem)`); judul section = `SectionHeading` (`text-4xl→6xl`).
-- **Container standar:** `mx-auto max-w-[90rem] px-5 md:px-10` (rata di semua halaman + header + footer).
-- **Motion** (`islands/SmoothScroll.tsx`): Lenis smooth scroll, custom cursor + magnetic, SplitText reveal,
-  marquee reaktif-kecepatan, parallax, clip reveal, hero word-cycler, hover portofolio (border morph organik),
-  stagger. Semua hormati `prefers-reduced-motion`.
-- **Header:** logo mark bulat (½ hitam-½ putih, auto-invert) + burger → overlay fullscreen.
-- **Footer:** ilustrasi + kolom kontak/kantor (London & Surabaya) + back-to-top; latar cream `#f9f6f5`.
-- **Wilayah:** Indonesia-only (Malaysia/MYR sudah dihapus).
+Built with **Next.js 16 App Router (`output: 'export'`)**, **Tailwind CSS v4**, **Motion (Framer Motion)**, strict TypeScript, static Programmatic SEO (pSEO), and direct-to-WhatsApp conversion via **Tear-Off Perforated Vouchers**.
 
-> ⚠️ Aset masih **dummy** — wajib diganti sebelum launch: video hero & GIF footer (milik Hello Monday),
-> logo brand strip, dan gambar portofolio (picsum). Nama klien/portofolio juga karangan.
+---
 
-## Development
-```bash
-pnpm install
-cp .dev.vars.example .dev.vars          # isi AUTH_SECRET
-pnpm db:migrate:local                    # apply migration ke D1 lokal
-pnpm dev                                 # → http://localhost:4321
+## ⚡ Core Value Propositions
+
+- **The Living Digital Brochure:** Antarmuka taktil buku fisik lembar-per-lembar (2-page open spread di desktop dengan *spine crease shadow*, swipeable single-sheet di mobile dengan gestur thumb swipe `drag="x"`, bookmark ribbon tabs, and corner dog-ear curl).
+- **100% SEO-Friendly (Zero Unindexable Canvas):** Tidak seperti flipbook biasa yang terkunci di PDF/Canvas, setiap lembar di Ong-OS adalah URL HTML mandiri (`/folio/[slug]`) dengan Schema.org JSON-LD lengkap yang di-prerender saat build time.
+- **5 Core Solution Pillars:**
+  1. *Company Profile Website* (Kredibilitas, Portofolio & Inquiry B2B — Mulai Rp 2,9 jt)
+  2. *Sales & Lead Generation Website* (Dealer Mobil, Alat Berat, Properti, Mesin, Kontraktor B2B — Mulai Rp 5,9 jt)
+  3. *E-Commerce Website* (Direct online sales, Midtrans/Xendit QRIS/VA, Kurir Indo API — Mulai Rp 7,9 jt)
+  4. *Shopify Development* (Custom Liquid 2.0, Kurir lokal, Headless Hydrogen — Mulai Rp 3,9 jt)
+  5. *Custom Web Application & Digital Systems* (CRM, Mini ERP, Customer Portal, SaaS Internal — Mulai Rp 15 jt+)
+- **Curated Portfolio Showcase:** Galeri portofolio terkurasi dengan filter kategori interaktif, mockup preview responsif (Desktop/Mobile), dan metrik hasil nyata (CPL turun 42%, conversion +48%, dsb).
+- **Hardware-Accelerated 3D Motion (60–120 FPS):** Transisi pembalik lembar 3D (`rotateY`) super mulus menggunakan Motion dengan fallback aksesibilitas `prefers-reduced-motion`.
+- **Sub-Second Performance SLA:** SSG murni di Cloudflare Edge, First Contentful Paint (< 0.3s), CLS = 0, dan target skor 100/100 Core Web Vitals.
+- **100% Client Code Ownership:** Repositori GitHub diserahkan penuh. Bebas dari vendor lock-in agensi konvensional.
+- **$0 Cloudflare Hosting:** Tanpa tagihan server tahunan selamanya di Cloudflare Global Edge.
+- **Tear-Off WhatsApp Vouchers:** Tombol CTA berdesain kupon sobek fisik dengan intent pesan kontekstual sesuai lembar folio yang sedang dibaca.
+- **Programmatic SEO (pSEO):** 30+ ceruk industri dikompilasi sebagai lembar brosur spesifik dengan Schema markup terstruktur.
+
+---
+
+## 🛠️ Tech Stack & Invariants
+
+- **Framework:** Next.js 16 (App Router, Static Site Generation / `output: 'export'`)
+- **Styling:** Tailwind CSS v4 (Warm Swiss Monograph Palette: `#fbfbfa` paper, `#111111` ink, `#e5e5e0` hairline)
+- **Animation Engine:** Motion (Framer Motion, GPU-accelerated CSS transforms)
+- **Icons:** Lucide React
+- **Language:** Strict TypeScript (Target ES2022)
+- **Data Layer:** Strictly typed static JSON (`src/data/*.json`)
+- **Structured Data:** Automated Schema.org JSON-LD (`ProfessionalService`, `LocalBusiness`, `FAQPage`)
+- **Deployment:** Cloudflare Pages / Vercel Edge ($0 Server Cost, Sub-50ms TTFB)
+
+---
+
+## 📂 Project Structure
+
+```text
+jasawebsite/
+├── docs/
+│   ├── spec/                        # Canonical Specification Suite (10 Documents)
+│   │   ├── 01-BRD.md                # Business Requirements, Positioning & Revenue Ladder
+│   │   ├── 02-PRD.md                # Functional PRD for Tactile Brochure Sheets & Services
+│   │   ├── 04-SYSTEM-ARCHITECTURE.md# Next.js 16 SSG + Motion Architecture & Anti-AI Slop
+│   │   ├── 05-DESIGN-BLUEPRINT.md   # Folio Spreads & Sheets Layout Schematics
+│   │   ├── 06-CONTENT-COPYWRITING-PACK.md # Editorial Copywriting Pack & Niche Scripts
+│   │   ├── 07-WHATSAPP-CONVERSION-FUNNEL.md # Tear-off Voucher Lead Engine & UTM Routing
+│   │   ├── 08-PROGRAMMATIC-SEO-ENGINE.md    # 30+ Folio Niche Sheets & Schema Markup
+│   │   ├── 10-DESIGN-SYSTEM-UIUX.md # Warm Swiss Monograph & 10 Tactile Book UI Patterns
+│   │   ├── 11-PRICING-PACKAGING-MODEL.md    # Dual-Layer Pricing Matrix & SOW Tiers
+│   │   └── CONTEXT-RECORD.md        # Architecture Context & Staging Record
+│   └── audit/
+│       ├── jasawebsite.md           # Competitor Teardown
+│       └── images/                  # Audit References
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx               # Root HTML5 Shell, Fonts & Master Schema.org
+│   │   ├── page.tsx                 # Front Cover Folio (`/`)
+│   │   ├── folio/
+│   │   │   └── [slug]/page.tsx      # Dynamic SSG Folio Sheets (`generateStaticParams`)
+│   │   ├── sitemap.ts               # Dynamic XML Sitemap Generator
+│   │   ├── robots.ts                # Search Crawler Directives
+│   │   └── globals.css              # Tailwind CSS v4 + Warm Swiss Monograph Tokens
+│   │
+│   ├── components/
+│   │   ├── book/                    # Tactile Book Motion Shell ('use client')
+│   │   │   ├── BookShell.tsx        # Master book controller & keyboard/touch listeners
+│   │   │   ├── SpreadView.tsx       # 2-Page open book desktop layout with spine shadow
+│   │   │   ├── SingleSheetView.tsx  # Mobile swipeable sheet with gesture physics
+│   │   │   ├── SheetTurner.tsx      # 3D rotateY perspective animation engine
+│   │   │   ├── SpineCrease.tsx      # Realistic center book binding shadow
+│   │   │   ├── BookmarkRibbon.tsx   # Quick jump section tabs on right edge
+│   │   │   ├── DogEarPeel.tsx       # Corner curl hover affordance
+│   │   │   ├── FolioCounter.tsx     # Mechanical folio index indicator
+│   │   │   └── TearOffVoucher.tsx   # Perforated CTA voucher with micro-jiggle
+│   │   │
+│   │   ├── sheets/                  # Semantic HTML Sheets (Server Components)
+│   │   │   ├── CoverSheet.tsx       # Folio 00: Monumental cover & manifesto
+│   │   │   ├── TocSheet.tsx         # Table of contents index
+│   │   │   ├── ComproSheet.tsx      # Pillar 01: Company Profile Website
+│   │   │   ├── SalesSheet.tsx       # Pillar 02: Sales & Lead Gen Website
+│   │   │   ├── CommerceSheet.tsx    # Pillar 03 & 04: E-Commerce & Shopify Flagship
+│   │   │   ├── CustomAppSheet.tsx   # Pillar 05: Custom Web Apps & Systems
+│   │   │   ├── PortfolioGallerySheet.tsx # Spread 05: Curated Portfolio Showcase
+│   │   │   ├── MaintenanceSheet.tsx # Spread 06: Care Retainers & Add-Ons
+│   │   │   ├── NicheCatalogSheet.tsx# Spread 07: 30+ Niches Directory
+│   │   │   └── ColophonSheet.tsx    # Back Cover & Engineering Invariants
+│   │   │
+│   │   └── ui/                      # Atoms & Primitives
+│   │       ├── Button.tsx           # Studio action button
+│   │       ├── Badge.tsx            # Technical index badges
+│   │       ├── InkStamp.tsx         # Certified studio wax/ink seal
+│   │       └── PortfolioModal.tsx   # Full-screen Lightbox Gallery Modal
+│   │
+│   ├── data/                        # Static JSON Data Stores
+│   │   ├── siteConfig.ts            # Global Site Metadata & WhatsApp Routing
+│   │   ├── folios.json              # Core brochure sheets metadata & sequential order
+│   │   ├── services.json            # 5 Core Offerings, proposal tiers & pricing
+│   │   ├── portfolio.json           # Curated Case Studies & Impact Metrics
+│   │   ├── niches.json              # 30+ Industry Verticals Data & Schema
+│   │   └── faqs.json                # Categorized Q&A
+│   │
+│   ├── types/                       # Strict TypeScript Interfaces
+│   │   ├── folio.ts, service.ts, portfolio.ts, niche.ts, config.ts
+│   │
+│   └── lib/                         # Pure Utilities
+│       ├── whatsapp.ts              # Contextual WhatsApp URL & UTM generator
+│       ├── seo.ts                   # JSON-LD Schema.org builder
+│       └── cn.ts                    # Class name merging utility (clsx + twMerge)
+│
+├── ARCHITECTURE.md                  # System Boundaries & Anti-AI Slop Guardrails
+├── DECISIONS.md                     # Technical Decision Register
+├── PRD.md                           # Product Requirements Entrypoint
+├── TASKS.md                         # Full-Stack Development Queue (27 Tasks)
+├── STATUS.md                        # Project Delivery State Machine
+├── BUILD-LOG.md                     # Durable Implementation Log
+├── RELEASE.md                       # Production Release Manifest
+└── OBSERVABILITY.md                 # Health Probes & Monitoring Contract
 ```
 
-## Client portal (Postgres) — register/login + dashboard
-Rute: `/daftar`, `/masuk` (register/login, satu island toggle) → `/dashboard`
-(SSR, dilindungi session role `client`; lihat progress project + invoice sendiri).
-API: `POST /api/client/auth/{register,login,logout}`.
+---
 
-**Dev (Postgres lokal via Docker):**
-```bash
-# ⚠️ port 5433 dipakai project lain (tokophi-db) → pakai 5434
-docker run -d --name jws-pg -e POSTGRES_PASSWORD=devpass \
-  -e POSTGRES_DB=jasawebsite -p 5434:5432 postgres:16-alpine
-docker exec -i jws-pg psql -U postgres -d jasawebsite < migrations/pg/0001_client_portal.sql
-# .dev.vars: DATABASE_URL=postgres://postgres:devpass@localhost:5434/jasawebsite
-```
+## 📋 Governance & Specification Reference
 
-**Prod (Cloudflare Workers):** Postgres eksternal (Neon/VPS) via **Hyperdrive**
-(`nodejs_compat` sudah aktif). Buat binding lalu deploy:
-```bash
-wrangler hyperdrive create jasawebsite-pg --connection-string="postgres://user:pass@host:5432/db"
-# salin id → wrangler.toml [[hyperdrive]] binding HYPERDRIVE
-```
-`getPg()` (src/lib/pg.ts) otomatis pakai `HYPERDRIVE.connectionString` di prod, `DATABASE_URL` di dev.
-
-> Skema Postgres terpisah dari D1: `src/db/pg-schema.ts` (client_user, project, invoice).
-> Admin (lead/client/invoice) masih di D1. Dashboard admin utama & admin-client = fase berikutnya.
-
-## Setup admin pertama (sekali)
-```bash
-curl -X POST http://localhost:4321/api/admin/auth/setup \
-  -H "x-setup-secret: <AUTH_SECRET>" -H "Content-Type: application/json" \
-  -d '{"name":"Owner","email":"admin@jasawebsite.co","password":"min-10-karakter"}'
-# lalu login di /admin
-```
-
-## Deploy production
-1. Buat resource + isi ID di `wrangler.toml`:
-   ```bash
-   wrangler d1 create jasawebsite
-   wrangler kv namespace create CACHE
-   wrangler r2 bucket create jasawebsite-assets
-   ```
-2. Secrets:
-   ```bash
-   wrangler secret put AUTH_SECRET
-   wrangler secret put RESEND_API_KEY        # opsional (email lead)
-   wrangler secret put TURNSTILE_SECRET_KEY  # opsional (anti-spam)
-   ```
-3. Ganti `WHATSAPP_NUMBER` di `wrangler.toml`.
-4. Migrasi + deploy:
-   ```bash
-   pnpm db:migrate:remote
-   pnpm deploy
-   ```
-
-## Struktur penting
-```
-src/pages/               rute publik (index, layanan, portfolio, harga, kontak, tentang, 404) + /admin + /api
-src/components/           komponen Astro terkunci: PageHero, SectionHeading, WorkCard, WorkGrid
-src/components/islands/   React/GSAP: SmoothScroll (motion), NavMenu (burger overlay), ContactForm, AdminApp
-src/layouts/Layout.astro  header (logo mark + burger) + footer + slot; prop hideFooter/mainClass (dipakai 404)
-src/data/site.ts          7 layanan + 15 portofolio (dummy) (nanti → CMS)
-src/styles/global.css     design tokens + semua utility/animasi (hero, cursor, marquee, portofolio, footer)
-src/db/schema.ts          Drizzle: lead/client/project/invoice/app_user
-src/lib/                  db, auth (PBKDF2+HMAC), guard, api helpers
-migrations/               SQL D1
-```
-
-## TODO (fase berikutnya)
-- [ ] **Ganti aset dummy** (video hero + GIF footer + logo brand + gambar portofolio) & isi konten/klien real
-- [ ] Konten harga real (IDR), copywriting, media case study
-- [ ] Isi akun sosial asli di footer (masih `#`)
-- [ ] **Auth client (register/login) + dashboard admin utama & admin client** — butuh keputusan DB (Postgres vs D1)
-- [ ] CMS untuk portfolio/blog (mis. Sanity) + webhook revalidate
-- [ ] Tracking: Meta Pixel/CAPI + GA4 (consent-gated)
-- [ ] Lighthouse CI gate di GitHub Actions
+- **Product Requirements:** [`docs/spec/02-PRD.md`](docs/spec/02-PRD.md) (linked via [`PRD.md`](PRD.md))
+- **System Architecture:** [`docs/spec/04-SYSTEM-ARCHITECTURE.md`](docs/spec/04-SYSTEM-ARCHITECTURE.md) & [`ARCHITECTURE.md`](ARCHITECTURE.md)
+- **Design System & UI/UX:** [`docs/spec/10-DESIGN-SYSTEM-UIUX.md`](docs/spec/10-DESIGN-SYSTEM-UIUX.md)
+- **Folio Spreads Blueprint:** [`docs/spec/05-DESIGN-BLUEPRINT.md`](docs/spec/05-DESIGN-BLUEPRINT.md)
+- **Copywriting Pack:** [`docs/spec/06-CONTENT-COPYWRITING-PACK.md`](docs/spec/06-CONTENT-COPYWRITING-PACK.md)
+- **Pricing & SOW Model:** [`docs/spec/11-PRICING-PACKAGING-MODEL.md`](docs/spec/11-PRICING-PACKAGING-MODEL.md)
+- **WhatsApp Funnel:** [`docs/spec/07-WHATSAPP-CONVERSION-FUNNEL.md`](docs/spec/07-WHATSAPP-CONVERSION-FUNNEL.md)
+- **Programmatic SEO:** [`docs/spec/08-PROGRAMMATIC-SEO-ENGINE.md`](docs/spec/08-PROGRAMMATIC-SEO-ENGINE.md)
+- **Competitor Audit:** [`docs/audit/jasawebsite.md`](docs/audit/jasawebsite.md)

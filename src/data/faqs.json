@@ -1,0 +1,32 @@
+[
+  {
+    "category": "Arsitektur & Kepemilikan",
+    "question": "Apakah saya mendapatkan 100% kepemilikan source code dan repositori GitHub?",
+    "answer": "Ya, mutlak 100%. Tidak seperti agensi konvensional yang mengunci website Anda di cPanel pribadi mereka agar Anda terus membayar biaya langganan, Ong-OS menyerahkan seluruh repositori GitHub dan aset digital kepada Anda setelah pelunasan project."
+  },
+  {
+    "category": "Hosting & Biaya",
+    "question": "Berapa biaya server bulanan untuk website yang dibuat oleh Ong-OS?",
+    "answer": "Rp 0 (Nol Rupiah). Kami menggunakan arsitektur modern Static Site Generation (SSG) yang dideploy ke Cloudflare Pages Global Edge. Anda tidak perlu membayar sewa hosting VPS tahunan ratusan ribu atau jutaan rupiah."
+  },
+  {
+    "category": "Kecepatan & SEO",
+    "question": "Bagaimana format buku/brosur digital ini tetap 100% SEO-friendly?",
+    "answer": "Kami tidak menggunakan flipbook berbasis Canvas atau iframe PDF yang tidak bisa dibaca mesin pencari. Setiap lembar di Ong-OS dirender sebagai halaman semantic HTML murni (RSC) dengan URL kanonikal tersendiri (/folio/[slug]) dan Schema.org JSON-LD lengkap. Googlebot dapat mengindeks setiap kata kunci di dalamnya."
+  },
+  {
+    "category": "Perbedaan Layanan",
+    "question": "Apa perbedaan mendasar antara Company Profile dan Sales Website?",
+    "answer": "Company Profile menjawab pertanyaan 'Siapa perusahaan ini?' untuk membangun reputasi dan kredibilitas di mata mitra korporat. Sedangkan Sales Website fokus total pada 'Mengapa calon pembeli harus menghubungi kami sekarang?' dengan corong konversi teruji (Traffic Ads ➜ LP ➜ Spec ➜ Simulasi ➜ WA Lead) yang sangat cocok untuk dealer, alat berat, properti, dan mesin B2B."
+  },
+  {
+    "category": "Toko Online & E-Commerce",
+    "question": "Apakah toko online mendukung kurir lokal dan QRIS otomatis?",
+    "answer": "Tentu. Baik sistem custom kami maupun Shopify store diintegrasikan dengan Payment Gateway resmi Indonesia (Midtrans/Xendit) untuk pembayaran QRIS, Virtual Account, dan kartu kredit, serta API kurir lokal (J&T, SiCepat, JNE) yang menghitung ongkos kirim real-time per kecamatan."
+  },
+  {
+    "category": "Sistem Pembayaran",
+    "question": "Bagaimana tahapan pembayaran dan milestone proyek?",
+    "answer": "Kami menerapkan sistem pembayaran berbasis milestone yang transparan: 50% Down Payment (DP) untuk kickoff sprint, 30% setelah tahap staging/desain disetujui, dan 20% pelunasan saat serah terima repositori GitHub dan live domain cutover."
+  }
+]

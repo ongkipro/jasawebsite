@@ -1,0 +1,340 @@
+[
+  {
+    "id": "company-profile",
+    "pillarNumber": "PILLAR 01",
+    "category": "Credibility & B2B",
+    "title": "Company Profile Website",
+    "headline": "Membangun Kredibilitas Perusahaan yang Meyakinkan Klien Korporat & Mitra Bisnis",
+    "startingPriceAnchor": "Mulai Rp 2,9 jt",
+    "problemStatement": "Banyak perusahaan memiliki produk luar biasa namun kehilangan peluang tender bernilai ratusan juta hanya karena website terlihat amatir, lambat diakses di HP, atau tampak seperti template terbengkalai.",
+    "solutionNarrative": "Website company profile dari Ong-OS direkayasa secara elegan, memuat legalitas, struktur tim, portofolio proyek, sertifikasi mutu, dan formulir inquiry resmi yang terhubung langsung ke WhatsApp divisi bisnis Anda.",
+    "idealFor": [
+      "Perusahaan PT / CV & Holding",
+      "Kontraktor & Konsultan B2B",
+      "Klinik Medis & Rumah Sakit",
+      "Kantor Hukum & Notaris",
+      "Yayasan & Lembaga Pendidikan"
+    ],
+    "voucherTitle": "KONSULTASI COMPANY PROFILE RESMI",
+    "voucherCode": "ONG-COMPRO-2026",
+    "voucherPerks": "Diskusi Struktur Halaman & Gratis Audit Kecepatan Web",
+    "whatsappMessageTemplate": "Halo Ong-OS, saya tertarik membangun Company Profile Website untuk perusahaan saya. Mohon info paket dan jadwal konsultasi.",
+    "tiers": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "investment": "Rp 2.900.000",
+        "timeline": "3–5 Hari Kerja",
+        "targetClients": "UMKM pemula, jasa personal, legalitas baru",
+        "deliverables": [
+          "One-Page Landing / 3 Section ringkas (About, Services, Contact)",
+          "Super fast Cloudflare Edge Hosting ($0 biaya server)",
+          "Gratis domain resmi (.com / .id) 1 tahun pertama",
+          "Tombol WhatsApp CTA cerdas terintegrasi",
+          "Garansi Google Lighthouse Mobile Hijau (95-100)"
+        ],
+        "couponCode": "ONG-COMPRO-STARTER"
+      },
+      {
+        "id": "business",
+        "name": "Business ⭐",
+        "isRecommended": true,
+        "investment": "Rp 4.900.000",
+        "timeline": "5–10 Hari Kerja",
+        "targetClients": "Perusahaan PT/CV, Kontraktor, Klinik, Konsultan",
+        "deliverables": [
+          "Multi-Page (5–7 Halaman: Home, About, Layanan, Portofolio, Kontak)",
+          "Dynamic CMS / Static JSON data store mudah diedit",
+          "Setup Schema.org JSON-LD LocalBusiness untuk Google Search",
+          "WhatsApp Smart Lead Router ke nomor CS yang tepat",
+          "100% Repositori GitHub & Source Code diserahkan penuh"
+        ],
+        "couponCode": "ONG-COMPRO-BIZ"
+      },
+      {
+        "id": "corporate",
+        "name": "Corporate",
+        "investment": "Rp 8.900.000 – Rp 15.000.000+",
+        "timeline": "10–20 Hari Kerja",
+        "targetClients": "Korporasi, Holding Company, Institusi, B2B Ekspor",
+        "deliverables": [
+          "Custom High-End Corporate Layout dengan branding berwibawa",
+          "Multi-Language Switcher (Bahasa Indonesia & English)",
+          "Portal Karir / Lowongan Kerja & Media Center / Press Release",
+          "Garansi Skor Kecepatan 100/100 Core Web Vitals",
+          "SLA Garansi Perbaikan Bug 60 Hari Pasca Launching"
+        ],
+        "couponCode": "ONG-COMPRO-CORP"
+      }
+    ]
+  },
+  {
+    "id": "sales-website",
+    "pillarNumber": "PILLAR 02",
+    "category": "Revenue & Acquisition",
+    "title": "Sales & Lead Generation Website",
+    "headline": "Bukan Sekadar Brosur Online. Ini Mesin Perekrut Leads WhatsApp Pembeli Ber-tiket Tinggi",
+    "startingPriceAnchor": "Mulai Rp 5,9 jt",
+    "problemStatement": "Website penjualan berbeda fundamental dari company profile. Jika company profile fokus pada 'Siapa kami?', sales website fokus total pada 'Mengapa calon pembeli harus menghubungi kami sekarang juga?'.",
+    "solutionNarrative": "Arsitektur corong penjualan (funnel) teruji: Traffic Iklan ➜ Landing Page Persuasif ➜ Spesifikasi / Katalog Unit ➜ Simulasi / Penawaran Spesial ➜ Direct WhatsApp Lead ➜ Tim Sales Follow Up.",
+    "idealFor": [
+      "Dealer Mobil & Motor",
+      "Distributor Alat Berat & Mesin Industri",
+      "Pengembang Properti & Real Estate",
+      "Kontraktor Desain Interior & Bangunan",
+      "Jasa Sewa Armada & Logistik B2B"
+    ],
+    "voucherTitle": "STRATEGI LEAD GENERATION & CORONG IKLAN",
+    "voucherCode": "ONG-SALES-LEADS",
+    "voucherPerks": "Blueprint Corong Konversi WhatsApp & Setup CAPI Iklan",
+    "whatsappMessageTemplate": "Halo Ong-OS, saya ingin membuat Sales & Lead Generation Website untuk produk/jasa saya. Bisa bantu analisis funnel-nya?",
+    "tiers": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "investment": "Rp 5.900.000",
+        "timeline": "4–7 Hari Kerja",
+        "targetClients": "Launching produk baru, promo tunggal, 1 core offer",
+        "deliverables": [
+          "1 Core Offer Landing Page persuasif",
+          "Copywriting direct-response berbasis riset pain-point",
+          "Setup Meta Pixel & TikTok Pixel dasar",
+          "Tombol WhatsApp CTA dinamis dengan UTM tracking parameter",
+          "Waktu muat instan di bawah 0.5 detik di jaringan 4G"
+        ],
+        "couponCode": "ONG-SALES-STARTER"
+      },
+      {
+        "id": "growth",
+        "name": "Growth ⭐",
+        "isRecommended": true,
+        "investment": "Rp 8.900.000",
+        "timeline": "7–14 Hari Kerja",
+        "targetClients": "Dealer Mobil/Motor, Alat Berat, Distributor B2B",
+        "deliverables": [
+          "Multi-Funnel Landing Pages dengan variasi penawaran",
+          "Katalog produk / unit kendaraan / mesin industri interaktif",
+          "Lead capture form + WA lead router multi-CS",
+          "Server-Side Meta CAPI & Google Ads Conversion Signal",
+          "Kecepatan sub-detik untuk menekan bounce rate iklan di bawah 15%"
+        ],
+        "couponCode": "ONG-SALES-GROWTH"
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "investment": "Rp 14.900.000+",
+        "timeline": "14–21 Hari Kerja",
+        "targetClients": "Jaringan Showroom, Pengembang Properti, Sewa Alat",
+        "deliverables": [
+          "Advanced filter unit, pencarian cepat, & pembanding spesifikasi",
+          "Kalkulator simulasi cicilan / kredit interaktif",
+          "Multi-cabang dealer router berdasarkan lokasi kota prospek",
+          "Integrasi Webhook otomatis ke CRM atau Google Sheets",
+          "A/B Testing corong halaman konversi"
+        ],
+        "couponCode": "ONG-SALES-PRO"
+      }
+    ]
+  },
+  {
+    "id": "ecommerce-shopify",
+    "pillarNumber": "PILLAR 03 & 04",
+    "category": "Commerce & Storefronts",
+    "title": "E-Commerce & Shopify D2C",
+    "headline": "Toko Online Mandiri Tanpa Ketergantungan Marketplace & Tanpa Biaya Komisi Seller",
+    "startingPriceAnchor": "Mulai Rp 3,9 jt",
+    "problemStatement": "Bergantung 100% pada marketplace membuat bisnis rentan terhadap kenaikan biaya admin komisi yang mencekik (hingga 10–15%) dan perang harga banting-bantingan yang merusak margin.",
+    "solutionNarrative": "Dua opsi strategis: Toko online custom terintegrasi Midtrans/Xendit QRIS & kurir lokal otomatis per kecamatan ($0 server cost), atau toko resmi Shopify Liquid 2.0 tanpa bloat plugin untuk brand ritel kelas atas.",
+    "idealFor": [
+      "Brand Fashion & Sepatu",
+      "Brand Skincare & Kosmetik",
+      "F&B Ritel & Kopi Kemasan",
+      "Gadget & Aksesoris",
+      "Suplemen & Produk Kesehatan"
+    ],
+    "voucherTitle": "ARSITEKTUR TOKO ONLINE D2C & SHOPIFY",
+    "voucherCode": "ONG-COMMERCE-D2C",
+    "voucherPerks": "Panduan Integrasi Midtrans QRIS & Kurir Indo Otomatis",
+    "whatsappMessageTemplate": "Halo Ong-OS, saya ingin konsultasi toko online / Shopify untuk brand saya. Mau tanya mengenai integrasi kurir dan pembayaran.",
+    "tiers": [
+      {
+        "id": "shopify-starter",
+        "name": "Shopify Starter",
+        "investment": "Rp 3.900.000",
+        "timeline": "4–7 Hari Kerja",
+        "targetClients": "Brand ritel baru yang butuh setup toko resmi cepat",
+        "deliverables": [
+          "Setup & konfigurasi tema resmi Shopify",
+          "Integrasi Payment Gateway basic (Midtrans/Xendit QRIS)",
+          "Upload hingga 20 produk pertama & variasi",
+          "Setup domain kustom & konfigurasi pajak toko"
+        ],
+        "couponCode": "ONG-SHOPIFY-START"
+      },
+      {
+        "id": "shopify-growth",
+        "name": "Shopify Growth ⭐",
+        "isRecommended": true,
+        "investment": "Rp 6.900.000",
+        "timeline": "7–14 Hari Kerja",
+        "targetClients": "Brand D2C aktif beriklan di Meta & TikTok Ads",
+        "deliverables": [
+          "Kustomisasi tema Shopify Liquid 2.0",
+          "Integrasi kurir lokal Indonesia (cek ongkir per kecamatan)",
+          "Setup Server-Side Meta CAPI tracking",
+          "Optimasi UX sticky cart & checkout trust badges"
+        ],
+        "couponCode": "ONG-SHOPIFY-GROWTH"
+      },
+      {
+        "id": "custom-ecommerce",
+        "name": "Custom E-Com Engine",
+        "investment": "Rp 7.900.000 – Rp 19.900.000+",
+        "timeline": "10–20 Hari Kerja",
+        "targetClients": "Toko online mandiri bebas komisi $0 server cost",
+        "deliverables": [
+          "Keranjang belanja (cart) custom & checkout instan",
+          "Integrasi Midtrans / Xendit QRIS, VA BCA/Mandiri",
+          "Hitung ongkir kurir real-time (J&T, SiCepat, JNE)",
+          "Invoice PDF otomatis & notifikasi pesanan ke WhatsApp",
+          "100% Repositori GitHub diserahkan penuh"
+        ],
+        "couponCode": "ONG-CUSTOM-ECOM"
+      }
+    ]
+  },
+  {
+    "id": "custom-web-app",
+    "pillarNumber": "PILLAR 05",
+    "category": "Enterprise & Systems",
+    "title": "Custom Web Application & Systems",
+    "headline": "Ketika Spreadsheet & Software Standar Sudah Tidak Mampu Menangani Alur Kerja Bisnis Anda",
+    "startingPriceAnchor": "Mulai Rp 15 jt+",
+    "problemStatement": "Software pasaran memaksa bisnis Anda menyesuaikan cara kerja mereka. Custom Web App dari Ong-OS direkayasa 100% mengikuti SOP dan alur kerja unik perusahaan Anda.",
+    "solutionNarrative": "Solusi sistem digital terstruktur: Custom CRM & Pipeline Penjualan, Mini ERP & Manajemen Stok Multi-Gudang, Customer & Dealer Portal, serta Dashboard Analitik Manajemen.",
+    "idealFor": [
+      "Perusahaan Distribusi Multi-Cabang",
+      "Bisnis dengan Alur Kerja Khusus",
+      "Perusahaan dengan Tim Sales Lapangan",
+      "Penyedia Layanan dengan Portal Klien",
+      "Startup yang Membangun MVP Produk Digital"
+    ],
+    "voucherTitle": "BLUEPRINT SISTEM & AUDIT ARSITEKTUR WEB APP",
+    "voucherCode": "ONG-SYSTEM-APP",
+    "voucherPerks": "Konsultasi Skema Database & Alur Kerja Sistem Bisnis",
+    "whatsappMessageTemplate": "Halo Ong-OS, perusahaan kami membutuhkan Custom Web Application untuk operasional. Apakah bisa jadwalkan meeting diskusi kebutuhan?",
+    "tiers": [
+      {
+        "id": "mvp",
+        "name": "MVP / Core Workflow",
+        "investment": "Rp 15.000.000 – Rp 25.000.000",
+        "timeline": "2–4 Minggu",
+        "targetClients": "Bisnis yang ingin mendigitalkan 1 proses kunci",
+        "deliverables": [
+          "1 Alur kerja inti (misal: sistem penawaran harga B2B atau surat jalan)",
+          "Database relasional terstruktur & aman",
+          "Sistem user login & autentikasi aman",
+          "Dashboard ringkas pemantauan data"
+        ],
+        "couponCode": "ONG-APP-MVP"
+      },
+      {
+        "id": "business-system",
+        "name": "Business System ⭐",
+        "isRecommended": true,
+        "investment": "Rp 25.000.000 – Rp 50.000.000",
+        "timeline": "4–8 Minggu",
+        "targetClients": "Perusahaan dengan multi-divisi atau multi-cabang",
+        "deliverables": [
+          "Sistem operasional lengkap (CRM / Mini ERP / Inventory multi-gudang)",
+          "Multi-role permission (Super Admin, Manajer, Staff, Gudang)",
+          "Dashboard grafik analitik real-time",
+          "Audit trail log & export laporan ke Excel/PDF",
+          "Integrasi Webhook & API pihak ketiga"
+        ],
+        "couponCode": "ONG-APP-BIZ"
+      },
+      {
+        "id": "advanced-saas",
+        "name": "Advanced SaaS",
+        "investment": "Rp 50.000.000 – Rp 100.000.000+",
+        "timeline": "8–16 Minggu",
+        "targetClients": "Platform berskala nasional, startup teknologi",
+        "deliverables": [
+          "Arsitektur microservices / Edge scale",
+          "Integrasi API kompleks & webhook automation engine",
+          "Optimasi high concurrency & latency sub-detik",
+          "Dokumentasi API lengkap & monitoring operasional"
+        ],
+        "couponCode": "ONG-APP-SAAS"
+      }
+    ]
+  },
+  {
+    "id": "maintenance-care",
+    "pillarNumber": "SUPPORTING",
+    "category": "Retainer & Reliability",
+    "title": "Website Maintenance Care & Add-Ons",
+    "headline": "Lindungi Aset Digital Bisnis Anda Agar Selalu Cepat, Aman, dan Tanpa Error",
+    "startingPriceAnchor": "Mulai Rp 300rb / bln",
+    "problemStatement": "Website adalah mesin penjualan yang beroperasi 24/7. Tanpa perawatan rutin, website rentan terserang malware, error saat ada update sistem, atau melambat seiring waktu.",
+    "solutionNarrative": "Layanan pemeliharaan berkala mencakup pemantauan uptime 24/7, pencadangan (backup) cloud rutin, audit performa Lighthouse, dan penanganan darurat prioritas.",
+    "idealFor": [
+      "Pemilik Website Bisnis Aktif",
+      "Brand yang Mengandalkan Iklan Berbayar",
+      "Perusahaan Tanpa Tim IT Internal"
+    ],
+    "voucherTitle": "PERAWATAN WEBSITE & ADD-ON ENGINEERING",
+    "voucherCode": "ONG-CARE-RETAINER",
+    "voucherPerks": "Gratis Audit Keamanan & Setup Backup Cloud Pertama",
+    "whatsappMessageTemplate": "Halo Ong-OS, saya ingin berlangganan Maintenance Care atau menambah fitur add-on untuk website saya.",
+    "tiers": [
+      {
+        "id": "basic-care",
+        "name": "Basic Care",
+        "investment": "Rp 300.000 – Rp 500.000 / bln",
+        "timeline": "Bulanan (Monthly Retainer)",
+        "targetClients": "Website profil UMKM & landing page standar",
+        "deliverables": [
+          "24/7 Uptime & downtime monitoring otomatis",
+          "Backup rutin mingguan ke cloud penyimpanan terpisah",
+          "Minor security & dependency update",
+          "Pembaruan konten minor (ganti teks/foto) hingga 1 jam/bln"
+        ],
+        "couponCode": "ONG-CARE-BASIC"
+      },
+      {
+        "id": "business-care",
+        "name": "Business Care ⭐",
+        "isRecommended": true,
+        "investment": "Rp 750.000 – Rp 1.500.000 / bln",
+        "timeline": "Bulanan (Monthly Retainer)",
+        "targetClients": "Bisnis bertumbuh, toko online, dealer aktif beriklan",
+        "deliverables": [
+          "Semua fasilitas dalam paket Basic Care",
+          "Audit performa bulanan Google Lighthouse (garansi hijau)",
+          "Technical SEO health check rutin",
+          "Penambahan section atau banner baru hingga 3 jam/bln",
+          "Dukungan darurat prioritas via jalur khusus WhatsApp"
+        ],
+        "couponCode": "ONG-CARE-BIZ"
+      },
+      {
+        "id": "pro-care",
+        "name": "Pro Care",
+        "investment": "Rp 2.000.000+ / bln",
+        "timeline": "Bulanan (Monthly Retainer)",
+        "targetClients": "Korporasi & brand besar dengan traffic tinggi",
+        "deliverables": [
+          "Semua fasilitas dalam paket Business Care",
+          "Dedicated Senior Full-Stack Engineer pendamping",
+          "Ongoing CRO & A/B testing corong penjualan",
+          "Laporan analitik performa komprehensif bulanan",
+          "Alokasi development aktif fitur baru hingga 6–10 jam/bln"
+        ],
+        "couponCode": "ONG-CARE-PRO"
+      }
+    ]
+  }
+]

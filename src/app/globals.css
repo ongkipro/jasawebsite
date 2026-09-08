@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fbfbfa;
+  --color-paper-muted: #f4f4ef;
+  --color-paper-dark: #ebebe3;
+  --color-charcoal: #111111;
+  --color-charcoal-muted: #4b4b4b;
+  --color-hairline: #e5e5df;
+  --color-hairline-dark: #d5d5cd;
+  --color-vermillion: #c23b22;
+  --color-vermillion-dark: #9c2a15;
+
+  --font-serif: var(--font-newsreader), Georgia, Cambria, 'Times New Roman', serif;
+  --font-mono: var(--font-jetbrains), 'Courier New', Courier, monospace;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #f3f3ee;
+  color: #111111;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Tactile Perforated Dashed Border for Tear-off Vouchers */
+.border-perforated {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: rgba(17, 17, 17, 0.35);
+}
+
+/* Spine Crease Depth Shadows for Book Metaphor */
+.spine-crease-left {
+  box-shadow: inset -24px 0 32px -16px rgba(0, 0, 0, 0.12);
+}
+
+.spine-crease-right {
+  box-shadow: inset 24px 0 32px -16px rgba(0, 0, 0, 0.12);
+}
+
+.book-elevation {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12),
+              0 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Micro Jiggle Animation for Vouchers */
+@keyframes voucherJiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-1.5deg); }
+  75% { transform: rotate(1.5deg); }
+}
+
+.hover-voucher-jiggle:hover {
+  animation: voucherJiggle 0.4s ease-in-out infinite;
+}
+
+/* Smooth Paper Corner Fold Effect */
+.dog-ear-curl {
+  position: relative;
+  background: linear-gradient(135deg, transparent 20px, #fbfbfa 20px);
+}
+
+.dog-ear-curl::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #d8d8d0 50%, transparent 50%);
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.dog-ear-curl:hover::after {
+  width: 28px;
+  height: 28px;
+}
+
+/* Tactile Paper Scrollbar for Fixed Viewports */
+.paper-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d5d5cd transparent;
+}
+
+.paper-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.paper-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.paper-scrollbar::-webkit-scrollbar-thumb {
+  background: #d5d5cd;
+  border-radius: 2px;
+}
+
+.paper-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #111111;
+}
+

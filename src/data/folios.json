@@ -1,0 +1,98 @@
+[
+  {
+    "id": "spread-00",
+    "spreadIndex": 0,
+    "slug": "cover",
+    "ribbonLabel": "COVER",
+    "title": "Front Cover & Table of Contents",
+    "leftTitle": "Living Digital Brochure Vol. 01",
+    "rightTitle": "Index of Services & Capabilities",
+    "leftFolioNumber": "FOLIO 00",
+    "rightFolioNumber": "FOLIO 01",
+    "description": "Dossier resmi studio rekayasa website modern, e-commerce, dan sistem digital terpadu."
+  },
+  {
+    "id": "spread-01",
+    "spreadIndex": 1,
+    "slug": "company-profile",
+    "ribbonLabel": "COMPRO",
+    "title": "Company Profile Website",
+    "leftTitle": "Kredibilitas Resmi & Reposisi B2B",
+    "rightTitle": "Pilihan Investasi & Ruang Lingkup",
+    "leftFolioNumber": "FOLIO 02",
+    "rightFolioNumber": "FOLIO 03",
+    "description": "Membangun kredibilitas perusahaan yang meyakinkan klien korporat, mitra bisnis, dan tender resmi."
+  },
+  {
+    "id": "spread-02",
+    "spreadIndex": 2,
+    "slug": "sales-website",
+    "ribbonLabel": "SALES",
+    "title": "Sales & Lead Generation Website",
+    "leftTitle": "Mesin Perekrut Leads WhatsApp",
+    "rightTitle": "Arsitektur Corong Penjualan",
+    "leftFolioNumber": "FOLIO 04",
+    "rightFolioNumber": "FOLIO 05",
+    "description": "Corong konversi traffic iklan berbayar menjadi leads WhatsApp pembeli unit ber-tiket tinggi."
+  },
+  {
+    "id": "spread-03",
+    "spreadIndex": 3,
+    "slug": "ecommerce-shopify",
+    "ribbonLabel": "COMM",
+    "title": "E-Commerce & Shopify D2C",
+    "leftTitle": "Toko Online Transaksi Langsung",
+    "rightTitle": "Shopify D2C Brand Flagship",
+    "leftFolioNumber": "FOLIO 06",
+    "rightFolioNumber": "FOLIO 07",
+    "description": "Toko online mandiri terintegrasi Payment Gateway QRIS dan API Kurir Indonesia tanpa biaya komisi marketplace."
+  },
+  {
+    "id": "spread-04",
+    "spreadIndex": 4,
+    "slug": "custom-web-app",
+    "ribbonLabel": "APPS",
+    "title": "Custom Web Application & Systems",
+    "leftTitle": "Digital Workflow Automation",
+    "rightTitle": "Pilihan Sistem & Arsitektur",
+    "leftFolioNumber": "FOLIO 08",
+    "rightFolioNumber": "FOLIO 09",
+    "description": "Rekayasa sistem digital operasional (CRM, Mini ERP, Customer Portal, Dashboard) sesuai SOP unik perusahaan."
+  },
+  {
+    "id": "spread-05",
+    "spreadIndex": 5,
+    "slug": "portfolio",
+    "ribbonLabel": "GALERI",
+    "title": "Galeri Portofolio & Case Studies",
+    "leftTitle": "Deck Proyek Terkurasi",
+    "rightTitle": "Interactive Project Inspector",
+    "leftFolioNumber": "FOLIO 10",
+    "rightFolioNumber": "FOLIO 11",
+    "description": "Showcase karya dan studi kasus terverifikasi dengan metrik pertumbuhan bisnis riil."
+  },
+  {
+    "id": "spread-06",
+    "spreadIndex": 6,
+    "slug": "maintenance-care",
+    "ribbonLabel": "CARE",
+    "title": "Website Maintenance Care & Add-Ons",
+    "leftTitle": "Perawatan Rutin & Keamanan Aset",
+    "rightTitle": "Modul Rekayasa Add-On Strategis",
+    "leftFolioNumber": "FOLIO 12",
+    "rightFolioNumber": "FOLIO 13",
+    "description": "Layanan perlindungan performa, backup rutin, dan add-on teknis Server-Side CAPI & pSEO."
+  },
+  {
+    "id": "spread-07",
+    "spreadIndex": 7,
+    "slug": "colophon",
+    "ribbonLabel": "INDEX",
+    "title": "Direktori Niche & Colophon Studio",
+    "leftTitle": "Indeks 30+ Ceruk Industri (pSEO)",
+    "rightTitle": "Colophon & WhatsApp Voucher Utama",
+    "leftFolioNumber": "FOLIO 14",
+    "rightFolioNumber": "FOLIO 15",
+    "description": "Katalog lengkap 30+ industri spesifik dan komitmen kejujuran rekayasa teknis studio."
+  }
+]

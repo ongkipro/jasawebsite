@@ -1,0 +1,112 @@
+[
+  {
+    "id": "summarecon-mutiara",
+    "clientName": "Summarecon Mutiara Makassar",
+    "category": "sales-website",
+    "categoryLabel": "Sales & Lead Gen Website",
+    "industry": "Real Estate & Properti",
+    "challenge": "Landing page WordPress lama lambat (load time 4.8 detik pada ponsel 4G), bounce rate iklan Meta Ads tinggi di atas 65%, dan Cost Per Lead (CPL) terus membengkak.",
+    "solution": "Rekayasa ulang landing page berbasis Next.js 16 SSG dengan optimasi aset gambar WebP sub-detik, kalkulator estimasi KPR interaktif, dan router WhatsApp direct ke tim sales.",
+    "metrics": [
+      { "label": "Loading Speed", "value": "0.38s", "detail": "Dari 4.8s terpangkas ke 0.38s" },
+      { "label": "Cost Per Lead", "value": "-42%", "detail": "Efisiensi biaya iklan Meta Ads" },
+      { "label": "Leads WhatsApp", "value": "1.200+", "detail": "Prospek terverifikasi per kuartal" }
+    ],
+    "techStack": ["Next.js 16 SSG", "Cloudflare Global Edge", "Meta CAPI Server-Side", "Tailwind CSS"],
+    "desktopImage": "/images/portfolio/summarecon-desktop.webp",
+    "mobileImage": "/images/portfolio/summarecon-mobile.webp",
+    "liveUrl": "https://summareconmutiara.com",
+    "voucherCode": "ONG-CASE-SUMMARECON"
+  },
+  {
+    "id": "nocturne-atelier",
+    "clientName": "Nocturne Atelier Paris/Jakarta",
+    "category": "shopify",
+    "categoryLabel": "Shopify D2C Brand Store",
+    "industry": "Fashion & Luxury Apparel",
+    "challenge": "Toko WooCommerce lama sering crash dan mengalami database locking ketika flash sale traffic ribuan pengunjung serentak dari TikTok Live dan Instagram Ads.",
+    "solution": "Migrasi tuntas ke Shopify dengan kustomisasi tema Liquid 2.0 (Zero Plugin Lag), integrasi kurir lokal Indonesia, serta optimasi proses checkout 1-halaman.",
+    "metrics": [
+      { "label": "Konversi Checkout", "value": "+48%", "detail": "Peningkatan rasio beli setelah redesign" },
+      { "label": "Downtime Crash", "value": "0 Menit", "detail": "Kapasitas traffic tak terbatas di Shopify" },
+      { "label": "Kecepatan Mobile", "value": "0.32s", "detail": "Google Lighthouse Score 98/100" }
+    ],
+    "techStack": ["Shopify Liquid 2.0", "Midtrans QRIS", "API Kurir Indonesia", "TikTok Events API"],
+    "desktopImage": "/images/portfolio/nocturne-desktop.webp",
+    "mobileImage": "/images/portfolio/nocturne-mobile.webp",
+    "liveUrl": "https://nocturneatelier.com",
+    "voucherCode": "ONG-CASE-NOCTURNE"
+  },
+  {
+    "id": "traktor-nusa-teknik",
+    "clientName": "Traktor Nusa Teknik B2B",
+    "category": "sales-website",
+    "categoryLabel": "B2B Equipment Catalog & RFQ",
+    "industry": "Alat Berat & Mesin Industri",
+    "challenge": "Calon pembeli tender korporat kesulitan mendownload data sheet PDF spesifikasi mesin presisi; katalog tidak responsif di layar ponsel pengambil keputusan proyek.",
+    "solution": "Katalog digital B2B interaktif dengan filter tipe excavator/loader, fitur 1-klik download lembar spesifikasi teknis, dan formulir Request for Quotation (RFQ) terhubung WhatsApp.",
+    "metrics": [
+      { "label": "Inquiry RFQ Resmi", "value": "450+/bln", "detail": "Pengajuan penawaran tender resmi" },
+      { "label": "Waktu Download PDF", "value": "< 1 detik", "detail": "Optimasi kompresi CDN Edge" },
+      { "label": "Tender Dimenangkan", "value": "Rp 12,4 M", "detail": "Nilai transaksi proyek yang difasilitasi" }
+    ],
+    "techStack": ["Next.js 16 App Router", "Static Data Cache", "WhatsApp Lead Router", "Tailwind CSS v4"],
+    "desktopImage": "/images/portfolio/traktor-desktop.webp",
+    "mobileImage": "/images/portfolio/traktor-mobile.webp",
+    "voucherCode": "ONG-CASE-TRAKTOR"
+  },
+  {
+    "id": "logis-track-indonesia",
+    "clientName": "Logis-Track Armada Indonesia",
+    "category": "custom-app",
+    "categoryLabel": "Custom Web App / Mini ERP",
+    "industry": "Ekspedisi & Distribusi Logistik",
+    "challenge": "Kesalahan manusia (*human-error*) saat mencatat nomor surat jalan di spreadsheet menyebabkan keterlambatan pengiriman dan komplain armada antar cabang.",
+    "solution": "Aplikasi web internal terpadu dengan multi-role permissions (Admin, Dispatcher, Driver), sistem cetak surat jalan otomatis dengan QR Code, dan dashboard tracking status pengiriman.",
+    "metrics": [
+      { "label": "Reduksi Human-Error", "value": "95%", "detail": "Eliminasi kesalahan surat jalan" },
+      { "label": "Efisiensi Dispatch", "value": "3x Lebih Cepat", "detail": "Proses verifikasi muatan armada" },
+      { "label": "Uptime Sistem", "value": "99.98%", "detail": "Operasional stabil 24/7" }
+    ],
+    "techStack": ["Next.js 16", "PostgreSQL Drizzle", "Edge Functions", "Role-Based IAM"],
+    "desktopImage": "/images/portfolio/logistrack-desktop.webp",
+    "mobileImage": "/images/portfolio/logistrack-mobile.webp",
+    "voucherCode": "ONG-CASE-LOGISTRACK"
+  },
+  {
+    "id": "pt-nusa-samudra-logistik",
+    "clientName": "PT Nusa Samudra Maritim",
+    "category": "company-profile",
+    "categoryLabel": "Company Profile Website",
+    "industry": "Maritime & Freight Forwarding",
+    "challenge": "Perusahaan membutuhkan reputasi digital formal dengan legalitas lengkap untuk memenuhi syarat verifikasi lelang pengadaan barang dan jasa BUMN.",
+    "solution": "Company profile korporat berwibawa dengan navigasi dwibahasa (ID/EN), sertifikasi ISO, struktur armada kapal, dan garansi loading 100/100 Google Lighthouse.",
+    "metrics": [
+      { "label": "Lighthouse Score", "value": "100/100", "detail": "Skor hijau penuh di seluruh metrik" },
+      { "label": "Verifikasi Lelang", "value": "Lolos 100%", "detail": "Memenuhi syarat kualifikasi vendor" },
+      { "label": "Inquiry Korporat", "value": "+85%", "detail": "Peningkatan kontak dari klien luar negeri" }
+    ],
+    "techStack": ["Next.js 16 SSG", "Warm Swiss Monograph", "Schema.org Corporate", "Cloudflare Edge"],
+    "desktopImage": "/images/portfolio/samudra-desktop.webp",
+    "mobileImage": "/images/portfolio/samudra-mobile.webp",
+    "voucherCode": "ONG-CASE-SAMUDRA"
+  },
+  {
+    "id": "organik-coffee-roasters",
+    "clientName": "Organik Coffee Roasters",
+    "category": "ecommerce",
+    "categoryLabel": "Custom E-Commerce Storefront",
+    "industry": "Food & Beverage Retail",
+    "challenge": "Biaya komisi 15% di marketplace memakan margin keuntungan biji kopi premium; brand butuh kanal toko online mandiri yang mudah digunakan pelanggan setia.",
+    "solution": "Website toko online custom dengan integrasi Midtrans QRIS otomatis, kalkulator ongkir J&T/SiCepat per kecamatan, dan pengiriman notifikasi invoice pesanan otomatis via WhatsApp.",
+    "metrics": [
+      { "label": "Biaya Komisi Toko", "value": "0%", "detail": "Bebas dari potongan marketplace" },
+      { "label": "Margin Laba Bersih", "value": "+14%", "detail": "Peningkatan profit per kemasan kopi" },
+      { "label": "Repeat Order Rate", "value": "38%", "detail": "Pelanggan setia order rutin langsung" }
+    ],
+    "techStack": ["Next.js 16 SSG", "Midtrans Snap QRIS", "RajaOngkir Kurir API", "Tailwind CSS v4"],
+    "desktopImage": "/images/portfolio/coffee-desktop.webp",
+    "mobileImage": "/images/portfolio/coffee-mobile.webp",
+    "voucherCode": "ONG-CASE-COFFEE"
+  }
+]

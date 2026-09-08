@@ -1,0 +1,266 @@
+[
+  {
+    "id": "niche-otomotif",
+    "slug": "dealer-otomotif",
+    "industryName": "Dealer Mobil & Showroom Kendaraan",
+    "targetMarket": "Dealer Resmi Mobil Baru, Showroom Mobil Bekas, Rental Komersial",
+    "headline": "Website Dealer Otomotif Modern: Ubah Traffic Iklan Menjadi Booking Test Drive & SPK",
+    "painPoints": [
+      "Brosur file PDF lambat di-download dan boros kuota calon pembeli",
+      "Sales dealer kebingungan follow-up leads tanpa tracking sumber iklan",
+      "Katalog unit tidak responsif dan berantakan saat dibuka di layar smartphone"
+    ],
+    "keyFeatures": [
+      "Filter tipe mobil, transmisi, & harga cepat sub-detik",
+      "Kalkulator simulasi kredit & DP interaktif",
+      "Tombol WhatsApp terhubung langsung ke sales sesuai domisili cabang kota",
+      "Pelacakan Meta Pixel CAPI & Google Ads Conversion Signals"
+    ],
+    "recommendedPillar": "Sales & Lead Generation",
+    "startingPrice": "Rp 5.900.000",
+    "schemaType": "AutomotiveBusiness",
+    "voucherCode": "ONG-NICHE-OTOMOTIF"
+  },
+  {
+    "id": "niche-alat-berat",
+    "slug": "alat-berat-mesin",
+    "industryName": "Distributor Alat Berat & Mesin Industri",
+    "targetMarket": "Distributor Mesin Pabrik, Supplier Excavator, Rental Alat Konstruksi B2B",
+    "headline": "Katalog Digital Alat Berat B2B: Presentasi Spesifikasi Teknis Siap Tembus Tender Proyek",
+    "painPoints": [
+      "Pengambil keputusan proyek kesulitan mendapatkan data sheet teknis mesin presisi",
+      "Website ritel biasa tidak cocok untuk transaksi bernilai miliaran rupiah",
+      "Form inquiry tender sering terlewat karena tidak terhubung ke WhatsApp manajemen"
+    ],
+    "keyFeatures": [
+      "Katalog unit mesin dengan tabel spesifikasi teknis mendalam",
+      "Fitur 1-klik download PDF data sheet resmi",
+      "Formulir Request for Quotation (RFQ) terhubung WhatsApp direksi",
+      "Daftar sertifikasi uji kelayakan & garansi purna jual"
+    ],
+    "recommendedPillar": "Sales & Lead Generation",
+    "startingPrice": "Rp 8.900.000",
+    "schemaType": "LocalBusiness",
+    "voucherCode": "ONG-NICHE-ALATBERAT"
+  },
+  {
+    "id": "niche-properti",
+    "slug": "developer-properti",
+    "industryName": "Pengembang Properti & Real Estate",
+    "targetMarket": "Developer Perumahan, Agen Properti, Cluster Hunian, Apartemen",
+    "headline": "Landing Page Properti Berkonversi Tinggi: Maksimalkan Leads Survey Rumah & Booking Fee",
+    "painPoints": [
+      "Foto render 3D terlalu berat membuat calon pembeli kabur sebelum halaman termuat",
+      "Banyak leads masuk tetapi tidak memenuhi kualifikasi penghasilan KPR bank",
+      "Informasi site plan dan tipe rumah membingungkan di layar HP"
+    ],
+    "keyFeatures": [
+      "Galeri foto dan video tour resolusi tinggi dengan kompresi sub-detik Next.js",
+      "Kalkulator simulasi KPR bank terkemuka terpasang langsung",
+      "Filter tipe unit (Luas Tanah / Luas Bangunan / Jumlah Kamar)",
+      "Form booking jadwal survey lokasi terintegrasi WhatsApp marketing gallery"
+    ],
+    "recommendedPillar": "Sales & Lead Generation",
+    "startingPrice": "Rp 5.900.000",
+    "schemaType": "RealEstateAgent",
+    "voucherCode": "ONG-NICHE-PROPERTI"
+  },
+  {
+    "id": "niche-konstruksi",
+    "slug": "kontraktor-arsitek",
+    "industryName": "Kontraktor Bangunan & Desain Interior",
+    "targetMarket": "Jasa Bangun Rumah Mewah, Kontraktor Gedung, Studio Interior & Arsitek",
+    "headline": "Showcase Portofolio Arsitektur & Interior: Yakinkan Pemilik Rumah Mewah & Pengelola Gedung",
+    "painPoints": [
+      "Portofolio hasil kerja berserakan di feed medsos tanpa penjelasan anggaran proyek",
+      "Calon klien ragu dengan kredibilitas legalitas izin usaha kontraktor",
+      "Sulit mengestimasi kisaran biaya renovasi per meter persegi"
+    ],
+    "keyFeatures": [
+      "Galeri showcase foto sebelum dan sesudah renovasi (before-after slider)",
+      "Kalkulator estimasi biaya bangun/renovasi per m² interaktif",
+      "Halaman legalitas resmi PT/CV, sertifikasi SKA, dan daftar vendor material",
+      "Download company profile PDF resmi 1-klik"
+    ],
+    "recommendedPillar": "Company Profile Website",
+    "startingPrice": "Rp 4.900.000",
+    "schemaType": "GeneralContractor",
+    "voucherCode": "ONG-NICHE-KONSTRUKSI"
+  },
+  {
+    "id": "niche-kesehatan",
+    "slug": "klinik-kesehatan",
+    "industryName": "Klinik Medis, Dokter & Rumah Sakit",
+    "targetMarket": "Klinik Pratama/Utama, Dokter Spesialis, Klinik Gigi, Laboratorium Medis",
+    "headline": "Portal Layanan Kesehatan & Jadwal Dokter: Permudah Pasien Menemukan Jadwal & Janji Temu",
+    "painPoints": [
+      "Pasien kesulitan mencari jadwal praktik dokter spesialis yang akurat",
+      "Antrean nomor telepon pendaftaran sering sibuk dan membuat pasien frustrasi",
+      "Informasi fasilitas BPJS dan asuransi rekanan tidak jelas"
+    ],
+    "keyFeatures": [
+      "Tabel jadwal dokter interaktif dengan filter hari dan spesialisasi poli",
+      "Tombol reservasi jadwal janji temu langsung ke WhatsApp pendaftaran",
+      "Daftar asuransi rekanan dan panduan alur pendaftaran pasien",
+      "Schema.org MedicalBusiness untuk ranking Google Search lokal"
+    ],
+    "recommendedPillar": "Company Profile Website",
+    "startingPrice": "Rp 4.900.000",
+    "schemaType": "MedicalBusiness",
+    "voucherCode": "ONG-NICHE-MEDIS"
+  },
+  {
+    "id": "niche-hukum",
+    "slug": "kantor-hukum-advokat",
+    "industryName": "Kantor Hukum, Advokat & Notaris",
+    "targetMarket": "Law Firm Korporasi, Pengacara Perceraian/Pidana, Notaris & PPAT",
+    "headline": "Website Law Firm Berwibawa: Bangun Kepercayaan Klien Korporat & Individu Berkelas",
+    "painPoints": [
+      "Tampilan website kuno merusak persepsi reputasi keahlian hukum firma",
+      "Klien korporat butuh kepastian rekam jejak kasus sukses tanpa melanggar kode etik",
+      "Tidak ada saluran konsultasi awal yang aman dan terjaga kerahasiaannya"
+    ],
+    "keyFeatures": [
+      "Desain tipografi editorial monograf berwibawa khas firma hukum internasional",
+      "Profil lengkap partner advokat, keahlian hukum, dan publikasi artikel opini",
+      "Formulir inquiry konsultasi dengan jaminan kerahasiaan (*Attorney-Client Privilege*)",
+      "Navigasi dwibahasa (Bahasa Indonesia & English) untuk klien multinasional"
+    ],
+    "recommendedPillar": "Company Profile Website",
+    "startingPrice": "Rp 4.900.000",
+    "schemaType": "LegalService",
+    "voucherCode": "ONG-NICHE-HUKUM"
+  },
+  {
+    "id": "niche-fashion",
+    "slug": "brand-fashion-d2c",
+    "industryName": "Brand Fashion, Hijab & Aksesoris",
+    "targetMarket": "Brand Pakaian Lokal, Butik Fashion Muslim, Produsen Sepatu & Tas",
+    "headline": "Flagship Storefront Fashion Modern: Transaksi Lancar Saat Flash Sale Iklan Berbayar",
+    "painPoints": [
+      "Website lelet saat ribuan follower TikTok dan Instagram masuk bersamaan",
+      "Proses checkout rumit membuat calon pembeli membatalkan pesanan (cart abandonment)",
+      "Pelacakan data pembelian iklan di iOS sering meleset"
+    ],
+    "keyFeatures": [
+      "Tema Shopify Liquid 2.0 atau Next.js Storefront ultra cepat",
+      "Integrasi QRIS instan dan Virtual Account bank lokal",
+      "Cek ongkir kurir otomatis per kecamatan (J&T, SiCepat, JNE)",
+      "Pelacakan server-side Meta CAPI & TikTok Pixel untuk akurasi ROAS iklan"
+    ],
+    "recommendedPillar": "E-Commerce & Shopify D2C",
+    "startingPrice": "Rp 6.900.000",
+    "schemaType": "Store",
+    "voucherCode": "ONG-NICHE-FASHION"
+  },
+  {
+    "id": "niche-skincare",
+    "slug": "brand-skincare-kosmetik",
+    "industryName": "Brand Skincare, Kosmetik & Kecantikan",
+    "targetMarket": "Brand Skincare D2C, Klinik Kecantikan, Produsen Serum & Kosmetik",
+    "headline": "Toko Online Skincare Terpercaya: Tampilkan Hasil Nyata & Verifikasi BPOM Resmi",
+    "painPoints": [
+      "Konsumen takut membeli produk kecantikan tanpa kejelasan nomor registrasi BPOM",
+      "Komisi marketplace 10-15% memangkas margin reseller dan brand owner",
+      "Sulit merekrut agen dan distributor baru tanpa portal pendaftaran terpusat"
+    ],
+    "keyFeatures": [
+      "Showcase nomor izin edar BPOM dan sertifikat Halal MUI di setiap produk",
+      "Fitur ulasan pelanggan dengan foto bukti pemakaian sebelum-sesudah",
+      "Sistem paket bundling hemat (in-cart upsell) otomatis",
+      "Portal pendaftaran kemitraan reseller dan distributor"
+    ],
+    "recommendedPillar": "E-Commerce & Shopify D2C",
+    "startingPrice": "Rp 6.900.000",
+    "schemaType": "HealthAndBeautyBusiness",
+    "voucherCode": "ONG-NICHE-SKINCARE"
+  },
+  {
+    "id": "niche-kuliner",
+    "slug": "restoran-cafe-fnb",
+    "industryName": "Restoran, Cafe & Retail F&B",
+    "targetMarket": "Restoran Keluarga, Coffee Shop, Bakery, Waralaba Kuliner",
+    "headline": "Brosur Menu Kuliner Interaktif: Tingkatkan Kunjungan Meja & Pesanan Katering",
+    "painPoints": [
+      "Buku menu PDF buram di layar ponsel dan susah dizoom oleh pelanggan",
+      "Pelanggan bingung cara reservasi meja untuk acara keluarga atau kantor",
+      "Biaya potongan komisi aplikasi ojek online (hingga 20%) memberatkan restoran"
+    ],
+    "keyFeatures": [
+      "Buku menu digital interaktif dengan foto hidangan resolusi tinggi",
+      "Fitur reservasi meja dan pesanan katering langsung terhubung WhatsApp",
+      "Integrasi peta lokasi Google Maps dan petunjuk arah cabang",
+      "Schema.org Restaurant untuk kata kunci 'restoran terdekat' di Google"
+    ],
+    "recommendedPillar": "Company Profile Website",
+    "startingPrice": "Rp 2.900.000",
+    "schemaType": "Restaurant",
+    "voucherCode": "ONG-NICHE-KULINER"
+  },
+  {
+    "id": "niche-logistik",
+    "slug": "ekspedisi-logistik-cargo",
+    "industryName": "Ekspedisi, Cargo & Freight Forwarding",
+    "targetMarket": "Jasa Ekspedisi Darat/Laut/Udara, Forwarder Ekspor Impor, Jasa Pindahan",
+    "headline": "Website Ekspedisi Resmi: Bangun Kepercayaan Pengirim Muatan Kargo Bernilai Ratusan Juta",
+    "painPoints": [
+      "Klien kargo ragu menyerahkan barang berharga ke perusahaan tanpa website resmi",
+      "Customer service lelah bolak-balik ditanya estimasi tarif per kilogram",
+      "Tidak ada sistem lacak resi pengiriman terpadu"
+    ],
+    "keyFeatures": [
+      "Kalkulator cek estimasi ongkir kargo per kota asal dan tujuan",
+      "Fitur pelacakan nomor resi pengiriman kargo",
+      "Informasi armada kendaraan, izin Kemenhub, dan proteksi asuransi muatan",
+      "Download formulir surat jalan dan penawaran kontrak distribusi B2B"
+    ],
+    "recommendedPillar": "Custom Web Application",
+    "startingPrice": "Rp 15.000.000",
+    "schemaType": "LocalBusiness",
+    "voucherCode": "ONG-NICHE-LOGISTIK"
+  },
+  {
+    "id": "niche-pendidikan",
+    "slug": "sekolah-universitas-bimbel",
+    "industryName": "Sekolah, Universitas & Bimbel",
+    "targetMarket": "Sekolah Swasta Unggulan, Kampus, Bimbingan Belajar, Kursus Keahlian",
+    "headline": "Portal Akademik & Penerimaan Siswa Baru: Sukseskan Pendaftaran PPDB Online",
+    "painPoints": [
+      "Alur pendaftaran siswa baru masih manual dengan berkas kertas yang rawan hilang",
+      "Orang tua murid kesulitan memantau jadwal tes masuk dan rincian biaya SPP",
+      "Website sekolah sering down saat pengumuman kelulusan"
+    ],
+    "keyFeatures": [
+      "Formulir pendaftaran siswa baru (PPDB) online dengan upload berkas",
+      "Tabel rincian kurikulum, prestasi siswa, dan fasilitas laboratorium",
+      "Pengumuman kelulusan berbasis static edge yang kebal lonjakan traffic",
+      "Integrasi tanya jawab via WhatsApp panitia penerimaan siswa"
+    ],
+    "recommendedPillar": "Company Profile Website",
+    "startingPrice": "Rp 4.900.000",
+    "schemaType": "EducationalOrganization",
+    "voucherCode": "ONG-NICHE-PENDIDIKAN"
+  },
+  {
+    "id": "niche-travel",
+    "slug": "tour-travel-umroh",
+    "industryName": "Tour & Travel Umroh / Haji Khusus",
+    "targetMarket": "Biro Perjalanan Umroh & Haji Khusus, Paket Wisata Halal, Tour Domestik",
+    "headline": "Website Travel Umroh Resmi: Tampilkan Izin Kemenag & Amankan Pendaftaran Jamaah",
+    "painPoints": [
+      "Masyarakat trauma biro umroh bodong dan butuh bukti legalitas PPIU Kemenag",
+      "Brosur paket keberangkatan sering berubah jadwal dan harga hotel di Saudi",
+      "Pendaftaran jamaah dari daerah terhambat jarak"
+    ],
+    "keyFeatures": [
+      "Verifikasi nomor izin PPIU Kemenag dan akreditasi biro di posisi strategis",
+      "Tabel jadwal keberangkatan, rincian hotel Madinah/Makkah, dan sisa kursi",
+      "Fitur booking DP paket umroh terhubung WhatsApp pendaftaran",
+      "Galeri video dan testimoni kepulangan jamaah"
+    ],
+    "recommendedPillar": "Sales & Lead Generation",
+    "startingPrice": "Rp 5.900.000",
+    "schemaType": "TravelAgency",
+    "voucherCode": "ONG-NICHE-TRAVEL"
+  }
+]

@@ -1,8 +1,0 @@
-# Salin ke .dev.vars untuk dev lokal (JANGAN commit .dev.vars)
-# Production: wrangler secret put <NAMA>
-AUTH_SECRET=dev-secret-ganti-di-production
-RESEND_API_KEY=
-TURNSTILE_SECRET_KEY=
-SANITY_WEBHOOK_SECRET=
-PUBLIC_TURNSTILE_SITE_KEY=
-DATABASE_URL=postgres://user:pass@host:5432/db   # dev/VPS; prod pakai Hyperdrive
