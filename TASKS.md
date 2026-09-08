@@ -335,4 +335,16 @@
   - **Scope:** Generate bespoke Swiss Monograph architectural folio mark with vermillion bookmark ribbon; generate multi-resolution favicon/apple-touch-icon suite; remove icons from cover bottom specs to eliminate horizontal overflow.
   - **Verification:** Verified via mobile (390px) screenshot zero side scroll; Next.js 16 build exports `/icon.png` and `/apple-icon.png`.
 
+- [x] **TASK-34: Complete Zero-Horizontal-Scroll Hardening Across All Sheets & Niche Directory Catalog**
+  - **Owner:** `ui-validation` + `design-taste` + `nextjs-development`
+  - **Scope:**
+    - Transform `NicheCatalogSheet.tsx` category filter pills from single-line horizontal scroll (`overflow-x-auto whitespace-nowrap`) to responsive wrapping pills (`flex-wrap gap-1`).
+    - Revamp Niche Directory listing from squished 2-column card grid to an open editorial hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, full unclipped titles, category, recommended pillar, and price anchors.
+    - Remove negative margin bleed (`-mx-2 sm:-mx-3`) on recommended tiers in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, `CustomAppSheet.tsx`, and `MaintenanceSheet.tsx`.
+    - Make tier headers responsive (`flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2`) with text wrapping to prevent price pushouts on narrow mobile viewports.
+    - Guard `TearOffVoucher` header and actions with `flex-wrap` and `min-w-0`.
+    - Add `max-w-[calc(100vw-24px)]` to `NicheBookShell` dropdown popover.
+  - **Verification:** Verified via `agent-browser` on mobile viewport (390px) across all 8 spreads and niche sheets: `scrollWidth === innerWidth` (zero horizontal overflow); captured visual proof artifacts.
+
+
 

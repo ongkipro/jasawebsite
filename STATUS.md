@@ -74,6 +74,12 @@
     - Produced full multi-resolution icon suite: `public/icon.png` (512x512), `public/apple-touch-icon.png` (180x180), `public/favicon-32x32.png`, `public/favicon-16x16.png`, and `public/favicon.ico` (multi-res 16/32/48).
     - Placed App Router automatic icon routes: `src/app/icon.png`, `src/app/apple-icon.png`, `src/app/favicon.ico` and configured `src/app/layout.tsx` icons metadata.
     - Streamlined `CoverSheet.tsx` bottom metrics to clean monospace text grid without icons, preventing side scrolling on 390px mobile screens.
+  - **Phase 15: Global Zero-Horizontal-Scroll Hardening & Niche Catalog Editorial Overhaul:**
+    - Eradicated all horizontal scroll containers (`overflow-x-auto whitespace-nowrap`) from `NicheCatalogSheet.tsx`, converting category filter pills into responsive vertical wrapping elements (`flex-wrap gap-1`).
+    - Revamped Niche Directory from squished 2-column card grid to an elegant open editorial hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped titles, category, recommended pillar, and price tags (`[01]` to `[24]`).
+    - Removed negative margin bleed (`-mx-2 sm:-mx-3`) on recommended tiers in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, `CustomAppSheet.tsx`, and `MaintenanceSheet.tsx`.
+    - Enforced responsive wrapping (`flex-col sm:flex-row sm:items-baseline`) and word-breaks on all tier headers to prevent wide labels from pushing price badges offscreen.
+    - Fully verified in `agent-browser` on mobile viewport (390x844): `scrollWidth === innerWidth` across all 8 spreads, maintenance, custom app, and niche directory sheets.
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

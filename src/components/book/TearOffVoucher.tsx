@@ -47,19 +47,19 @@ export function TearOffVoucher({
       )}
     >
       {/* Top Perforation guide with Scissors */}
-      <div className="flex items-center justify-between pb-1.5 border-b border-dashed border-[#111111]/20 text-[10px] font-mono text-[#4b4b4b]">
-        <div className="flex items-center gap-1.5 uppercase tracking-wider font-semibold">
-          <Scissors className="w-3 h-3 text-[#c23b22]" />
-          <span>KONSULTASI KEBUTUHAN &amp; DRAFT SOW</span>
+      <div className="flex flex-wrap items-center justify-between gap-1 pb-1.5 border-b border-dashed border-[#111111]/20 text-[10px] font-mono text-[#4b4b4b]">
+        <div className="flex items-center gap-1.5 uppercase tracking-wider font-semibold min-w-0">
+          <Scissors className="w-3 h-3 text-[#c23b22] shrink-0" />
+          <span className="truncate">KONSULTASI KEBUTUHAN &amp; DRAFT SOW</span>
         </div>
-        <div className="font-mono text-[9px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-xs font-bold">
+        <div className="font-mono text-[9px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-xs font-bold shrink-0">
           KODE: {code}
         </div>
       </div>
 
       {/* Main Voucher Body */}
       <div className="pt-2 pb-1.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-        <div className="space-y-0.5 max-w-sm">
+        <div className="space-y-0.5 max-w-sm min-w-0">
           <div className="font-serif text-sm sm:text-base font-bold text-[#111111] tracking-tight">
             {title}
           </div>
@@ -80,7 +80,7 @@ export function TearOffVoucher({
       </div>
 
       {/* Action CTA Button */}
-      <div className="mt-2 pt-2 border-t border-dashed border-[#111111]/20 flex items-center justify-between">
+      <div className="mt-2 pt-2 border-t border-dashed border-[#111111]/20 flex flex-wrap items-center justify-between gap-1.5">
         <span className="font-mono text-[9.5px] text-[#4b4b4b] tracking-wider hidden sm:inline">
           POTONG DI SINI &amp; KLAIM SESI EVALUASI SOW
         </span>

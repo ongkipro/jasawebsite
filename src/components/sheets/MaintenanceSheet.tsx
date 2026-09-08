@@ -81,17 +81,17 @@ export function MaintenanceSheetLeft() {
             key={tier.id}
             className={`py-2.5 sm:py-3 transition-all ${
               tier.isRecommended
-                ? 'bg-[#f5f5ee] -mx-2 sm:-mx-3 px-2 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
-                : 'px-0'
+                ? 'bg-[#f5f5ee] px-2.5 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
+                : 'px-1'
             }`}
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
-              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                <span className="font-serif text-sm font-bold text-[#111111]">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 min-w-0">
+                <span className="font-serif text-sm font-bold text-[#111111] break-words">
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm" className="gap-1">
+                  <Badge variant="vermillion" size="sm" className="gap-1 shrink-0">
                     <Star className="w-2.5 h-2.5 fill-current" />
                     POPULER
                   </Badge>
@@ -112,7 +112,7 @@ export function MaintenanceSheetLeft() {
               {tier.deliverables.slice(0, 4).map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />
-                  <span>{item}</span>
+                  <span className="break-words">{item}</span>
                 </li>
               ))}
             </ul>
@@ -135,18 +135,18 @@ export function MaintenanceSheetRight() {
       </div>
 
       {/* Add-ons list with open ledger row dividers (No Boxy Cards) */}
-      <div className="divide-y divide-[#e5e5df] max-h-[360px] sm:max-h-[380px] lg:max-h-[400px] overflow-y-auto paper-scrollbar pr-1">
+      <div className="divide-y divide-[#e5e5df] max-h-[360px] sm:max-h-[380px] lg:max-h-[400px] overflow-y-auto paper-scrollbar pr-1 overscroll-contain">
         {addOns.map((addon, idx) => (
           <div
             key={idx}
             className="py-2 px-1 hover:bg-[#f5f5ee] transition-colors rounded-xs space-y-0.5"
           >
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5 sm:gap-2">
-              <span className="font-serif text-xs font-bold text-[#111111] flex items-center gap-1.5 flex-wrap">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+              <span className="font-serif text-xs font-bold text-[#111111] flex items-center gap-1.5 flex-wrap min-w-0">
                 <PlusCircle className="w-3 h-3 text-[#c23b22] shrink-0" />
-                <span>{addon.title}</span>
+                <span className="break-words">{addon.title}</span>
                 {addon.tag && (
-                  <span className="font-mono text-[9px] font-semibold px-1.5 py-0.2 bg-[#ebebe3] text-[#4b4b4b] border border-[#d5d5cd] rounded-2xs">
+                  <span className="font-mono text-[9px] font-semibold px-1.5 py-0.2 bg-[#ebebe3] text-[#4b4b4b] border border-[#d5d5cd] rounded-2xs shrink-0">
                     {addon.tag}
                   </span>
                 )}
@@ -155,7 +155,7 @@ export function MaintenanceSheetRight() {
                 {addon.price}
               </span>
             </div>
-            <p className="font-sans text-[11px] text-[#4b4b4b] leading-relaxed pl-4.5">
+            <p className="font-sans text-[11px] text-[#4b4b4b] leading-relaxed pl-4.5 break-words">
               {addon.description}
             </p>
           </div>

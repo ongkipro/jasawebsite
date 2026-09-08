@@ -125,15 +125,15 @@ export function NicheCatalogSheet() {
           )}
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex items-center gap-1 overflow-x-auto pb-1 paper-scrollbar font-mono text-[10px]">
+        {/* Category Filter Pills (Wrapping Vertically - Tanpa Horizontal Scroll) */}
+        <div className="flex flex-wrap items-center gap-1 font-mono text-[10px]">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setSelectedCategory(cat)}
               className={cn(
-                'px-2 py-0.5 rounded-xs whitespace-nowrap transition-colors cursor-pointer border',
+                'px-2 py-0.5 rounded-xs transition-colors cursor-pointer border',
                 selectedCategory === cat
                   ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] font-semibold'
                   : 'bg-[#f4f4ef] text-[#4b4b4b] hover:text-[#111111] border-[#d5d5cd]'
@@ -145,9 +145,9 @@ export function NicheCatalogSheet() {
         </div>
       </div>
 
-      {/* Directory Grid with Smooth Containment Scrolling */}
+      {/* Directory Open Ledger List - Alur Vertikal Murni (Tanpa Box Kaku & Tanpa Scroll Kanan Kiri) */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[260px] sm:max-h-[290px] lg:max-h-[320px] overflow-y-auto paper-scrollbar overscroll-contain pr-1"
+        className="divide-y divide-[#e5e5df] max-h-[290px] sm:max-h-[330px] lg:max-h-[360px] overflow-y-auto paper-scrollbar overscroll-contain pr-1"
         style={{ touchAction: 'pan-y' }}
       >
         {filteredNiches.length > 0 ? (
@@ -155,28 +155,34 @@ export function NicheCatalogSheet() {
             <Link
               key={niche.id}
               href={`/folio/niche-${niche.slug}`}
-              className="p-2.5 bg-[#f4f4ef] hover:bg-[#ebebe3] border border-[#d5d5cd] rounded-xs transition-colors group block relative space-y-1"
+              className="py-2 sm:py-2.5 px-1 hover:bg-[#f5f5ee] transition-colors rounded-xs group block space-y-0.5"
             >
-              <div className="flex items-baseline justify-between text-[11px] font-mono">
-                <span className="text-[#c23b22] font-bold">
-                  [{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}]
-                </span>
-                <span className="text-[10px] font-bold text-[#111111] bg-[#ebebe3] group-hover:bg-[#d5d5cd] px-1.5 py-0.5 rounded-xs border border-[#d5d5cd] transition-colors">
-                  Mulai {niche.startingPrice}
-                </span>
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+                <div className="flex items-baseline gap-2 min-w-0">
+                  <span className="text-[#c23b22] font-mono text-xs font-bold shrink-0">
+                    [{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}]
+                  </span>
+                  <span className="font-serif text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors break-words">
+                    {niche.industryName}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5 shrink-0 self-start sm:self-auto pl-6 sm:pl-0">
+                  <span className="font-mono text-[10.5px] font-bold text-[#111111] bg-[#ebebe3] group-hover:bg-[#d5d5cd] px-1.5 py-0.5 rounded-xs border border-[#d5d5cd] transition-colors">
+                    Mulai {niche.startingPrice}
+                  </span>
+                  <ArrowRight className="w-3 h-3 text-[#c23b22] opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline shrink-0" />
+                </div>
               </div>
-              <div className="font-serif text-xs font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors flex items-center justify-between">
-                <span className="truncate pr-1">{niche.industryName}</span>
-                <ArrowRight className="w-3 h-3 text-[#c23b22] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
-              </div>
-              <div className="flex items-center justify-between text-[9px] font-mono text-[#4b4b4b] pt-0.5">
-                <span className="truncate max-w-[120px] text-[#4b4b4b]">{niche.category}</span>
+
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] font-mono text-[#666666] pl-6">
+                <span className="text-[#4b4b4b]">{niche.category}</span>
+                <span>·</span>
                 <span className="text-[#111111] font-medium">{niche.recommendedPillar}</span>
               </div>
             </Link>
           ))
         ) : (
-          <div className="col-span-2 p-4 text-center bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#4b4b4b] space-y-1">
+          <div className="p-4 text-center bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#4b4b4b] space-y-1 my-2">
             <p>Tidak ada sektor industri yang cocok dengan pencarian Anda.</p>
             <p className="text-[10px]">
               Industri unik Anda belum tercantum? Diskusikan kebutuhan arsitektur kustom bersama lead engineer kami via WhatsApp.

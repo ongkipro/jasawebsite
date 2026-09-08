@@ -141,6 +141,19 @@
   - Streamlined `CoverSheet.tsx` bottom technical metrics (`Akses`, `Cloud`, `Aset`, `Uptime`) to pure monospace text grid without icons, eliminating all horizontal overflow on 390px mobile screens.
   - Captured and verified mobile (390px) and desktop (1440px) screenshots with zero side-scrolling.
 
+### Phase 15: Global Zero-Horizontal-Scroll Hardening & Niche Catalog Editorial Overhaul
+- **Date:** 2026-09-09
+- **Objective:** Completely eradicate horizontal scrolling across all sheets (Niche Catalog, Maintenance, Custom App, Compro, Sales, Commerce) on mobile viewports.
+- **Completed Actions:**
+  - In `NicheCatalogSheet.tsx`, removed `overflow-x-auto whitespace-nowrap` on category pills; made them wrap cleanly with `flex flex-wrap gap-1`.
+  - Redesigned the Niche Directory catalog from squished 2-column boxy cards to an open editorial hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped industry names, category, recommended pillar, and price tags (`[01]` to `[24]`).
+  - Removed negative margin bleed (`-mx-2 sm:-mx-3`) on recommended tiers in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, `CustomAppSheet.tsx`, and `MaintenanceSheet.tsx`.
+  - Upgraded all tier headers to responsive flex layout (`flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2`) with text wrapping and word breaks.
+  - Guarded `TearOffVoucher` header and actions with `flex-wrap` and `min-w-0`.
+  - Added `max-w-[calc(100vw-24px)]` to `NicheBookShell` dropdown popover.
+  - Conducted end-to-end headless browser verification (`agent-browser`) on mobile viewport (390x844) across all routes: `scrollWidth === innerWidth` (0 overflow).
+
+
 
 
 

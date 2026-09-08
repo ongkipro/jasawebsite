@@ -192,7 +192,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             {dropdownOpen && (
               <div
                 role="listbox"
-                className="absolute left-0 mt-1.5 w-[280px] sm:w-[340px] bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs shadow-2xl z-50 overflow-hidden font-sans animate-in fade-in zoom-in-95 duration-150"
+                className="absolute left-0 mt-1.5 w-[280px] sm:w-[340px] max-w-[calc(100vw-24px)] bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs shadow-2xl z-50 overflow-hidden font-sans animate-in fade-in zoom-in-95 duration-150"
               >
                 {/* Search Box Header */}
                 <div className="p-2 border-b border-[#e5e5df] bg-[#ebebe3]/60">

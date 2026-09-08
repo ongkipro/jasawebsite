@@ -89,17 +89,17 @@ export function CustomAppSheetRight() {
             key={tier.id}
             className={`py-2.5 sm:py-3 transition-all ${
               tier.isRecommended
-                ? 'bg-[#f5f5ee] -mx-2 sm:-mx-3 px-2 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
-                : 'px-0'
+                ? 'bg-[#f5f5ee] px-2.5 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
+                : 'px-1'
             }`}
           >
-            <div className="flex items-baseline justify-between gap-2">
-              <div className="flex items-center gap-2">
-                <span className="font-serif text-sm sm:text-base font-bold text-[#111111]">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 min-w-0">
+                <span className="font-serif text-sm sm:text-base font-bold text-[#111111] break-words">
                   {tier.name}
                 </span>
                 {tier.isRecommended && (
-                  <Badge variant="vermillion" size="sm" className="gap-1">
+                  <Badge variant="vermillion" size="sm" className="gap-1 shrink-0">
                     <Star className="w-2.5 h-2.5 fill-current" />
                     REKOMENDASI SISTEM
                   </Badge>
