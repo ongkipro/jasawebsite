@@ -330,3 +330,9 @@
   - **Scope:** Deploy production release to Vercel (`jasawebsite.co`), verify live HTTPS/SSL with HSTS, validate `robots.txt` and `sitemap.xml` with 33 indexed URLs.
   - **Verification:** `curl` probes confirm HTTP 200, 0.17s TTFB, valid XML schema, and zero broken URLs.
 
+- [x] **TASK-33: Professional Brand Favicon & Cover Layout Zero-Scroll Hardening**
+  - **Owner:** `design-taste` + `nextjs-development`
+  - **Scope:** Generate bespoke Swiss Monograph architectural folio mark with vermillion bookmark ribbon; generate multi-resolution favicon/apple-touch-icon suite; remove icons from cover bottom specs to eliminate horizontal overflow.
+  - **Verification:** Verified via mobile (390px) screenshot zero side scroll; Next.js 16 build exports `/icon.png` and `/apple-icon.png`.
+
+
