@@ -169,23 +169,21 @@
   - Authored `docs/PETA-DEVELOPMENT.md` and root `PETA-DEVELOPMENT.md` covering all 33 semantic routes (Root, 8 Core Folio Spreads, 24 Industry Niche Sheets, and 404/utilitarian endpoints).
   - Authored `docs/peta-development.xml` and `public/peta-development.xml` with structured XML schema detailing route topology, component sources, tier pricing, and SEO titles.
 
-### Phase 18: Polished Transparent `.ONG` Monogram Favicon Suite & Dynamic Multi-Res Pipeline
+### Phase 18: High-Fill Obsidian Squircle `.ONG` Monogram Favicon Suite & Multi-Res Pipeline
 - **Date:** 2026-09-09
-- **Objective:** Regenerate brand favicon suite with an ultra-polished, transparent `.ONG` monogram mark optimized for high contrast across both light mode and dark mode browser tabs.
+- **Objective:** Regenerate brand favicon suite with an ultra-bold, maximum-fill luxury obsidian squircle `.ONG` monogram badge to eliminate empty negative space and ensure crisp, prominent legibility in real 16x16 & 32x32 browser tabs.
 - **Completed Actions:**
-  - Designed dynamic vector SVG favicon (`public/favicon.svg`) utilizing CSS `:root { color-scheme: light dark; }` and `@media (prefers-color-scheme: dark)`:
-    - Light browser tabs: Deep jet ink `#0f1115` typography with vibrant vermillion red `#c23b22` baseline dot.
-    - Dark browser tabs: Pure chalk white `#fcfcfd` typography with luminous vermillion red `#ff453a` dot.
-    - 100% transparent vector canvas with infinite scaling without pixelation on retina displays.
-  - Engineered automated Python generation script (`scripts/build_favicons.py`):
-    - `public/icon.png` & `src/app/icon.png` (512x512): Universal transparent monogram with solid dark ink letters and soft luminous halo (crisp on white, dark, and gray backgrounds).
-    - `public/icon-light.png` & `public/icon-dark.png` (512x512): Dedicated transparent assets for system theme queries.
-    - `public/icon-light-32x32.png` & `public/icon-dark-32x32.png`: 32x32 theme-specific favicons wired with `media="(prefers-color-scheme: ...)"`.
+  - Upgraded to a solid luxury obsidian squircle (`#0e0f12`, radius 112px on 512px canvas) filling the entire 1:1 favicon area, eliminating empty top/bottom space.
+  - Scaled typography to maximum density: Ultra-bold `ONG` (size 187px) and prominent glowing vermillion red baseline dot (`#ff453a`, radius 33px) spanning 90%+ of badge width.
+  - Designed vector SVG favicon (`public/favicon.svg`) with fine luminous perimeter border (`rgba(255,255,255,0.2)`).
+  - Built automated Python generation script (`scripts/build_favicons.py`):
+    - `public/icon.png` & `src/app/icon.png` (512x512): High-density master squircle icon.
+    - `public/icon-light.png` & `public/icon-dark.png` (512x512): Theme PNG assets.
+    - `public/icon-light-32x32.png` & `public/icon-dark-32x32.png`: 32x32 theme-specific favicons.
     - `public/favicon-32x32.png` & `public/favicon-16x16.png`: Pixel-fitted PNG fallbacks.
-    - `public/favicon.ico` & `src/app/favicon.ico`: Multi-resolution ICO (16, 32, 48) with alpha transparency.
-    - `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180): High-end Apple iOS home screen icon in luxury obsidian `#0f1013` adhering to iOS Human Interface Guidelines.
-  - Configured Next.js App Router metadata icons in `src/app/layout.tsx`.
-  - Verified static output in `out/index.html` with all icon `<link>` tags properly generated.
+    - `public/favicon.ico` & `src/app/favicon.ico`: Multi-resolution ICO (16, 32, 48).
+    - `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180): Apple iOS home screen icon.
+  - Verified in real tab simulations (16px & 32px): completely fills the tab area with zero empty slivers.
 
 
 
