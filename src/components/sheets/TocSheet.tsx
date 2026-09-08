@@ -61,43 +61,39 @@ export function TocSheet() {
         })}
       </div>
 
-      {/* Consultative SOW & Pricing Transparency Banner */}
-      <div className="p-3 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-2 font-mono text-[11px]">
-        <div className="flex items-center justify-between border-b border-[#d5d5cd] pb-1.5">
+      {/* Consultative SOW & Workflow - Open Editorial Style */}
+      <div className="pt-2 pb-1 border-t border-[#e5e5df] space-y-2 font-mono text-[11px]">
+        <div className="flex items-center justify-between">
           <span className="font-bold text-[#111111] uppercase tracking-wider text-[10px] flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#c23b22]" />
-            <span>ALUR KERJA SAMA MENUJU PROPOSAL PASTI</span>
+            <span>Alur Menuju Proposal Pasti: <span className="stabilo-yellow font-bold text-[#111111] px-1">3 Tahap Sprint</span></span>
           </span>
-          <span className="text-[10px] text-[#c23b22] font-semibold">3 TAHAP SPRINT</span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-[10px] text-[#4b4b4b]">
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#e5e5df]">
-            <span className="font-bold text-[#111111] block mb-0.5">1. Bedah Kebutuhan</span>
-            <span className="font-sans text-[10px]">Analisis model bisnis, target audiens, & alur konversi.</span>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-[10px] text-[#4b4b4b]">
+          <div className="space-y-0.5 border-l border-[#d5d5cd] pl-2">
+            <span className="font-bold text-[#111111] block">1. Bedah Kebutuhan</span>
+            <span className="font-sans text-[10.5px]">Analisis model bisnis, target audiens, &amp; alur konversi.</span>
           </div>
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#e5e5df]">
-            <span className="font-bold text-[#111111] block mb-0.5">2. Evaluasi & SOW</span>
-            <span className="font-sans text-[10px]">Penyusunan lingkup teknis presisi tanpa fitur mubazir.</span>
+          <div className="space-y-0.5 border-l border-[#d5d5cd] pl-2">
+            <span className="font-bold text-[#111111] block">2. Evaluasi SOW</span>
+            <span className="font-sans text-[10.5px]">Penyusunan lingkup teknis presisi tanpa fitur mubazir.</span>
           </div>
-          <div className="p-1.5 bg-[#fbfbfa] rounded-xs border border-[#e5e5df]">
-            <span className="font-bold text-[#111111] block mb-0.5">3. Rencana Anggaran</span>
-            <span className="font-sans text-[10px]">Penawaran harga final mengikat & transparan (no hidden fees).</span>
+          <div className="space-y-0.5 border-l border-[#d5d5cd] pl-2">
+            <span className="font-bold text-[#111111] block">3. Rencana Anggaran</span>
+            <span className="font-sans text-[10.5px]">Penawaran harga final mengikat &amp; transparan (tanpa biaya tersembunyi).</span>
           </div>
         </div>
-        <p className="font-sans text-[10px] text-[#4b4b4b] italic">
+        <p className="font-sans text-[10px] text-[#666666] italic pt-0.5">
           *Nilai investasi pada setiap lembar merupakan simulasi dasar (starting anchor). Biaya final disesuaikan dengan kebutuhan riil bisnis Anda.
         </p>
       </div>
 
-      {/* Instructions callout */}
-      <div className="p-3 bg-[#ebebe3]/60 border border-[#d5d5cd] rounded-xs space-y-1 font-mono text-[10px] text-[#4b4b4b]">
-        <div className="font-bold text-[#111111] flex items-center gap-1.5 uppercase tracking-wider">
-          <ArrowRight className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>Petunjuk Eksplorasi Brosur Digital:</span>
-        </div>
-        <p className="font-sans text-xs leading-relaxed">
-          Gunakan tombol panah keyboard <code className="bg-[#fbfbfa] px-1 py-0.5 rounded-xs border border-[#d5d5cd]">←</code> <code className="bg-[#fbfbfa] px-1 py-0.5 rounded-xs border border-[#d5d5cd]">→</code>, klik tab pita di sisi kanan buku, atau geser layar ponsel Anda untuk membalik lembar brosur.
-        </p>
+      {/* Navigation instructions line (No heavy box) */}
+      <div className="pt-2 border-t border-[#e5e5df] flex items-center gap-2 font-mono text-[10.5px] text-[#666666]">
+        <ArrowRight className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+        <span>
+          Gunakan panah keyboard <kbd className="px-1 py-0.2 bg-[#f4f4ef] border border-[#d5d5cd] rounded-2xs text-[#111111]">←</kbd> <kbd className="px-1 py-0.2 bg-[#f4f4ef] border border-[#d5d5cd] rounded-2xs text-[#111111]">→</kbd> atau geser layar ponsel untuk membalik lembar brosur.
+        </span>
       </div>
     </article>
   );

@@ -34,30 +34,31 @@ export function CoverSheet() {
         Bukan agensi template murahan yang lambat dan rawan malware. Bukan software house elitis yang lambat dan overpriced. JasaWebsite memposisikan diri sebagai mitra rekayasa web dan sistem digital terpercaya untuk pelaku bisnis Indonesia yang sedang bertumbuh.
       </p>
 
-      {/* Golden Conversion Action Hub (Direct to Portfolio & Services) */}
-      <div className="p-2.5 sm:p-3 bg-[#f4f4ef] border border-[#111111] rounded-xs space-y-2 shadow-xs">
-        <div className="flex items-center justify-between text-[11px] font-mono">
-          <span className="font-bold text-[#111111] flex items-center gap-1.5 uppercase tracking-wider text-[10px]">
-            <span className="w-2 h-2 rounded-full bg-[#c23b22] inline-block animate-pulse" />
-            <span>AKSES CEPAT BUKTI KARYA</span>
+      {/* Open Editorial Navigation Band (No boxy frames, stabilo accented) */}
+      <div className="py-3 my-1.5 border-y border-[#e5e5df] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center gap-2 font-mono text-xs">
+          <span className="w-2 h-2 rounded-full bg-[#c23b22] inline-block animate-pulse" />
+          <span className="text-[#111111] uppercase tracking-wider font-semibold">
+            Bukti Karya: <span className="stabilo-yellow font-bold text-[#111111] px-1.5 py-0.5">10+ Proyek Live</span>
           </span>
-          <span className="text-[10px] text-[#c23b22] font-bold">10+ PROYEK LIVE</span>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+        <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
           <Link
             href="/folio/portfolio"
-            className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold rounded-xs transition-colors cursor-pointer shadow-xs text-center"
+            className="group font-serif text-sm font-bold text-[#111111] hover:text-[#c23b22] inline-flex items-center gap-1.5 transition-colors cursor-pointer"
           >
-            <span>Lihat Portofolio &amp; Hasil Karya Live</span>
-            <span>→</span>
+            <span className="underline decoration-[#c23b22] decoration-2 underline-offset-4">
+              Lihat Portofolio &amp; Hasil Karya
+            </span>
+            <span className="text-[#c23b22] group-hover:translate-x-1 transition-transform">→</span>
           </Link>
-
+          <span className="text-[#d5d5cd]">/</span>
           <Link
             href="/folio/company-profile"
-            className="inline-flex items-center justify-center gap-1 px-3 py-2 bg-[#fbfbfa] hover:bg-[#ebebe3] text-[#111111] border border-[#d5d5cd] text-xs font-semibold rounded-xs transition-colors cursor-pointer text-center"
+            className="text-[#4b4b4b] hover:text-[#111111] underline decoration-[#d5d5cd] underline-offset-4 transition-colors cursor-pointer"
           >
-            <span>Daftar Layanan &amp; Paket →</span>
+            Daftar Layanan &amp; Paket →
           </Link>
         </div>
       </div>

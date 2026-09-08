@@ -170,15 +170,15 @@ export function SalesSheetRight() {
         *Simulasi dasar untuk corong penjualan teruji. Lingkup kerja dan anggaran disesuaikan dengan variasi unit dan alur follow-up sales Anda.
       </p>
 
-      {/* Tiers List */}
-      <div className="space-y-3">
+      {/* Tiers List (Editorial Open Ledger - Tanpa Box Frame Kaku) */}
+      <div className="divide-y divide-[#e5e5df]">
         {service.tiers.map((tier) => (
           <div
             key={tier.id}
-            className={`p-3 sm:p-3.5 rounded-xs border transition-all ${
+            className={`py-2.5 sm:py-3 transition-all ${
               tier.isRecommended
-                ? 'bg-[#f4f4ef] border-[#111111] shadow-xs'
-                : 'bg-[#fbfbfa] border-[#d5d5cd]'
+                ? 'bg-[#f5f5ee] -mx-2 sm:-mx-3 px-2 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
+                : 'px-0'
             }`}
           >
             <div className="flex items-baseline justify-between gap-2">
@@ -192,16 +192,22 @@ export function SalesSheetRight() {
                   </Badge>
                 )}
               </div>
-              <span className="font-mono text-xs font-bold text-[#c23b22]">
-                {tier.investment}
+              <span className="font-mono text-xs font-bold shrink-0">
+                {tier.isRecommended ? (
+                  <span className="stabilo-yellow text-[#111111] px-1 py-0.5">
+                    {tier.investment}
+                  </span>
+                ) : (
+                  <span className="text-[#c23b22]">{tier.investment}</span>
+                )}
               </span>
             </div>
 
-            <div className="font-mono text-[10px] text-[#4b4b4b] mt-0.5 mb-2">
+            <div className="font-mono text-[10px] text-[#666666] mt-0.5 mb-1.5">
               Sprint: {tier.timeline} · Sasaran: {tier.targetClients}
             </div>
 
-            <ul className="space-y-1 text-[11px] text-[#4b4b4b]">
+            <ul className="space-y-0.5 text-[11px] text-[#4b4b4b]">
               {tier.deliverables.slice(0, 3).map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />

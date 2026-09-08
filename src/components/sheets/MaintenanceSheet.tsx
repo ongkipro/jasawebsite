@@ -74,15 +74,15 @@ export function MaintenanceSheetLeft() {
         </div>
       </div>
 
-      {/* Retainer Tiers */}
-      <div className="space-y-2.5">
+      {/* Retainer Tiers (Editorial Open Ledger) */}
+      <div className="divide-y divide-[#e5e5df]">
         {service.tiers.map((tier) => (
           <div
             key={tier.id}
-            className={`p-3 rounded-xs border transition-all ${
+            className={`py-2.5 sm:py-3 transition-all ${
               tier.isRecommended
-                ? 'bg-[#f4f4ef] border-[#111111] shadow-xs'
-                : 'bg-[#fbfbfa] border-[#d5d5cd]'
+                ? 'bg-[#f5f5ee] -mx-2 sm:-mx-3 px-2 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
+                : 'px-0'
             }`}
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
@@ -96,12 +96,18 @@ export function MaintenanceSheetLeft() {
                   </Badge>
                 )}
               </div>
-              <span className="font-mono text-xs font-bold text-[#c23b22] shrink-0">
-                {tier.investment}
+              <span className="font-mono text-xs font-bold shrink-0">
+                {tier.isRecommended ? (
+                  <span className="stabilo-yellow text-[#111111] px-1 py-0.5">
+                    {tier.investment}
+                  </span>
+                ) : (
+                  <span className="text-[#c23b22]">{tier.investment}</span>
+                )}
               </span>
             </div>
 
-            <ul className="mt-2 space-y-1 text-[11px] text-[#4b4b4b]">
+            <ul className="mt-1.5 space-y-0.5 text-[11px] text-[#4b4b4b]">
               {tier.deliverables.slice(0, 4).map((item, i) => (
                 <li key={i} className="flex items-start gap-1.5">
                   <Check className="w-3 h-3 text-emerald-600 mt-0.5 shrink-0" />
@@ -122,19 +128,19 @@ export function MaintenanceSheetRight() {
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111] flex items-center gap-1.5">
           <Megaphone className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>SETUP IKLAN & MODUL ADD-ON STRATEGIS</span>
+          <span>SETUP IKLAN &amp; MODUL ADD-ON STRATEGIS</span>
         </span>
-        <Badge variant="outline">EXPANSION & GROWTH</Badge>
+        <Badge variant="outline">EXPANSION &amp; GROWTH</Badge>
       </div>
 
-      {/* Add-ons list with scrollbar for containment */}
-      <div className="space-y-2 max-h-[360px] sm:max-h-[380px] lg:max-h-[400px] overflow-y-auto paper-scrollbar pr-1">
+      {/* Add-ons list with open ledger row dividers (No Boxy Cards) */}
+      <div className="divide-y divide-[#e5e5df] max-h-[360px] sm:max-h-[380px] lg:max-h-[400px] overflow-y-auto paper-scrollbar pr-1">
         {addOns.map((addon, idx) => (
           <div
             key={idx}
-            className="p-2.5 bg-[#fbfbfa] hover:bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-1 transition-colors"
+            className="py-2 px-1 hover:bg-[#f5f5ee] transition-colors rounded-xs space-y-0.5"
           >
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5 sm:gap-2">
               <span className="font-serif text-xs font-bold text-[#111111] flex items-center gap-1.5 flex-wrap">
                 <PlusCircle className="w-3 h-3 text-[#c23b22] shrink-0" />
                 <span>{addon.title}</span>

@@ -198,15 +198,15 @@ export function CommerceSheetRight() {
         *Biaya pembuatan &amp; setup sistem studio. Kebutuhan server/hosting atau langganan platform disesuaikan dengan traffic &amp; skala bisnis Anda.
       </p>
 
-      {/* Tiers List */}
-      <div className="space-y-2 sm:space-y-2.5">
+      {/* Tiers List (Editorial Open Ledger - Tanpa Box Frame Kaku) */}
+      <div className="divide-y divide-[#e5e5df]">
         {service.tiers.map((tier) => (
           <div
             key={tier.id}
-            className={`p-2.5 sm:p-3 rounded-xs border transition-all ${
+            className={`py-2 sm:py-2.5 transition-all ${
               tier.isRecommended
-                ? 'bg-[#f4f4ef] border-[#111111] shadow-xs'
-                : 'bg-[#fbfbfa] border-[#d5d5cd]'
+                ? 'bg-[#f5f5ee] -mx-2 sm:-mx-3 px-2 sm:px-3 rounded-xs border-l-2 border-[#c23b22]'
+                : 'px-0'
             }`}
           >
             <div className="flex items-baseline justify-between gap-2">
@@ -220,12 +220,18 @@ export function CommerceSheetRight() {
                   </Badge>
                 )}
               </div>
-              <span className="font-mono text-xs font-bold text-[#c23b22]">
-                {tier.investment}
+              <span className="font-mono text-xs font-bold shrink-0">
+                {tier.isRecommended ? (
+                  <span className="stabilo-yellow text-[#111111] px-1 py-0.5">
+                    {tier.investment}
+                  </span>
+                ) : (
+                  <span className="text-[#c23b22]">{tier.investment}</span>
+                )}
               </span>
             </div>
 
-            <div className="font-mono text-[9.5px] sm:text-[10px] text-[#4b4b4b] mt-0.5 mb-1.5">
+            <div className="font-mono text-[9.5px] sm:text-[10px] text-[#666666] mt-0.5 mb-1">
               Sprint: {tier.timeline} · Sasaran: {tier.targetClients}
             </div>
 
