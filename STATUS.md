@@ -35,9 +35,27 @@
       1. *Opsi Setup & Custom Toko Shopify:* Setup resmi, custom UI/UX desain tampilan tema eksklusif, integrasi pembayaran lokal (QRIS & Virtual Account), dan cek ongkir kurir otomatis se-Indonesia (J&T, SiCepat, JNE). Menangkap trafik SEO "jasa pembuatan website/toko online shopify indonesia".
       2. *Opsi Toko Online Mandiri (CMS Studio Pribadi):* 100% hak milik sendiri tanpa biaya sewa/langganan bulanan platform selamanya, 0% komisi penjualan, uang langsung masuk rekening, alur belanja kilat dari HP, dan notifikasi pesanan otomatis masuk ke WhatsApp admin toko.
     - Updated SEO metadata and Schema.org keywords in `src/app/folio/[slug]/page.tsx` for `ecommerce-shopify`.
-    - Refined metric badge on CoverSheet to `• Cloud: Global` preventing any narrow mobile horizontal scrolling.
+  - **Phase 9: Comprehensive Industry Catalog (24 Sectors) & Tactile Brochure Overhaul:**
+    - Expanded `src/data/niches.json` from 12 to 24 deeply audited Indonesian commercial sectors across 10 major industry categories.
+    - Upgraded `src/types/niche.ts` with rich editorial schema (`fieldNote`, `conversionFlow`, `painPoints`, `keyFeatures`, `techRationale`).
+    - Revamped `src/components/sheets/NicheDetailSheet.tsx` into a tactile engineering field notebook & monograph brochure:
+      - *Catatan Lapangan Engineer:* Candid, non-AI real-world operational insights per sector.
+      - *Alur Konversi & Transaksi Ideal:* 4-stage visual pipeline showing how traffic turns into qualified WhatsApp leads.
+      - *3 Hambatan Lapangan:* Structured cards detailing specific bottlenecks and revenue bleed.
+      - *Fitur Rekayasa yang Dibangun:* 4 concrete features with implementation and business advantages.
+      - *Rasional Arsitektur Teknis Studio:* Architectural rationale explaining why static edge & sub-second response times outrank bloated CMS plugins.
+      - *Perforated Tear-Off Voucher:* Contextual SOW voucher with starting price anchor and pre-filled WhatsApp routing.
+    - Enhanced `src/components/sheets/NicheCatalogSheet.tsx` with category filter pills, search bar, and 24-sector quick switcher.
+    - Updated `.github/workflows/ci-cd.yml` with `actions: read` permission.
+    - Automated test suite passed 54/54 checks (100% PASS).
+    - Production build exported 38/38 static pages with zero errors.
 
 ### Production Release Evidence:
+- **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
+- **Smoke Suite:** 54/54 automated deterministic checks passing (`npm test`).
+- **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
+- **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, and zero overflow.
+
 - Build output verified: `out/index.html`, `out/robots.txt`, `out/sitemap.xml`, `out/folio/*.html`.
 - Bundle size: Total `out/` directory is ~4.5 MB (including WebP/AVIF/OG images, fonts, and static HTML).
 - Metadata checks: Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.

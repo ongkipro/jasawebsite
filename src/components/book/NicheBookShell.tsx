@@ -295,10 +295,10 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
                     onClick={() => setDropdownOpen(false)}
                     className="text-[#c23b22] hover:underline font-bold flex items-center gap-1"
                   >
-                    <span>View All 12+ Niches →</span>
+                    <span>Lihat Semua {nichesData.length} Sektor →</span>
                   </Link>
                   <span className="text-[#4b4b4b] text-[10px]">
-                    {nichesData.length} Specifications
+                    {nichesData.length} Spesifikasi Sektor
                   </span>
                 </div>
               </div>

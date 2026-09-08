@@ -8,43 +8,60 @@ import { Badge } from '@/components/ui/Badge';
 import { cn } from '@/lib/cn';
 import nichesData from '@/data/niches.json';
 
-const PILLARS = [
+const CATEGORIES = [
   'Semua Sektor',
-  'Sales & Leads',
-  'Company Profile',
-  'E-Commerce D2C',
-  'Custom Systems',
+  'Otomotif & Transportasi',
+  'Industri & Manufaktur',
+  'Properti & Konstruksi',
+  'Kesehatan & Farmasi',
+  'Jasa Profesional',
+  'Retail, Fashion & D2C',
+  'Kuliner & F&B',
+  'Logistik & Ekspor',
+  'Pendidikan & Finansial',
 ];
 
 export function NicheCatalogSheet() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedPillar, setSelectedPillar] = useState('Semua Sektor');
+  const [selectedCategory, setSelectedCategory] = useState('Semua Sektor');
 
   const filteredNiches = useMemo(() => {
     return nichesData.filter((niche) => {
+      const q = searchQuery.toLowerCase();
       const matchesSearch =
-        niche.industryName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        niche.targetMarket.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        niche.recommendedPillar.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        niche.slug.toLowerCase().includes(searchQuery.toLowerCase());
+        niche.industryName.toLowerCase().includes(q) ||
+        niche.targetMarket.toLowerCase().includes(q) ||
+        niche.recommendedPillar.toLowerCase().includes(q) ||
+        (niche.category && niche.category.toLowerCase().includes(q)) ||
+        niche.slug.toLowerCase().includes(q);
 
-      const matchesPillar =
-        selectedPillar === 'Semua Sektor'
+      const matchesCategory =
+        selectedCategory === 'Semua Sektor'
           ? true
-          : selectedPillar === 'Sales & Leads'
-          ? niche.recommendedPillar.includes('Sales')
-          : selectedPillar === 'Company Profile'
-          ? niche.recommendedPillar.includes('Company Profile')
-          : selectedPillar === 'E-Commerce D2C'
-          ? niche.recommendedPillar.includes('Commerce')
-          : selectedPillar === 'Custom Systems'
-          ? niche.recommendedPillar.includes('Custom')
+          : selectedCategory === 'Otomotif & Transportasi'
+          ? niche.category.includes('Otomotif')
+          : selectedCategory === 'Industri & Manufaktur'
+          ? niche.category.includes('Industri') || niche.category.includes('Manufaktur')
+          : selectedCategory === 'Properti & Konstruksi'
+          ? niche.category.includes('Properti') || niche.category.includes('Konstruksi')
+          : selectedCategory === 'Kesehatan & Farmasi'
+          ? niche.category.includes('Kesehatan') || niche.category.includes('Medis') || niche.category.includes('Farmasi')
+          : selectedCategory === 'Jasa Profesional'
+          ? niche.category.includes('Profesional') || niche.category.includes('Hukum')
+          : selectedCategory === 'Retail, Fashion & D2C'
+          ? niche.category.includes('Retail') || niche.category.includes('Fashion')
+          : selectedCategory === 'Kuliner & F&B'
+          ? niche.category.includes('Kuliner') || niche.category.includes('F&B')
+          : selectedCategory === 'Logistik & Ekspor'
+          ? niche.category.includes('Logistik') || niche.category.includes('Ekspor')
+          : selectedCategory === 'Pendidikan & Finansial'
+          ? niche.category.includes('Pendidikan') || niche.category.includes('Keuangan') || niche.category.includes('Agribisnis') || niche.category.includes('Fasilitas')
           : true;
 
-      return matchesSearch && matchesPillar;
+      return matchesSearch && matchesCategory;
     });
-  }, [searchQuery, selectedPillar]);
+  }, [searchQuery, selectedCategory]);
 
   return (
     <article className="space-y-3">
@@ -54,11 +71,11 @@ export function NicheCatalogSheet() {
           <Layers className="w-3.5 h-3.5 text-[#c23b22]" />
           <span>DIREKTORI CERUK INDUSTRI (pSEO)</span>
         </div>
-        <Badge variant="mono">{nichesData.length} SEKTOR AKTIF</Badge>
+        <Badge variant="mono">{nichesData.length} SEKTOR TERVERIFIKASI</Badge>
       </div>
 
       <p className="font-sans text-xs text-[#4b4b4b] leading-relaxed">
-        Setiap industri memiliki tantangan dan alur transaksi unik. Pilih ceruk bisnis Anda untuk membuka lembar spesifikasi teknis dan blueprint SOW:
+        Setiap industri memiliki alur konversi dan tantangan operasional unik. Pilih sektor bisnis Anda untuk membuka lembar spesifikasi teknis, catatan lapangan engineer, dan estimasi SOW:
       </p>
 
       {/* QUICK JUMP DROPDOWN SELECTOR & SEARCH BAR */}
@@ -94,7 +111,7 @@ export function NicheCatalogSheet() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Ketik industri, misal: fnb, dealer, klinik, fashion..."
+            placeholder="Cari sektor: dealer, alkes, kargo, pabrik, katering, hukum..."
             className="w-full pl-8 pr-3 py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
           />
           {searchQuery && (
@@ -110,19 +127,19 @@ export function NicheCatalogSheet() {
 
         {/* Category Filter Pills */}
         <div className="flex items-center gap-1 overflow-x-auto pb-1 paper-scrollbar font-mono text-[10px]">
-          {PILLARS.map((pillar) => (
+          {CATEGORIES.map((cat) => (
             <button
-              key={pillar}
+              key={cat}
               type="button"
-              onClick={() => setSelectedPillar(pillar)}
+              onClick={() => setSelectedCategory(cat)}
               className={cn(
                 'px-2 py-0.5 rounded-xs whitespace-nowrap transition-colors cursor-pointer border',
-                selectedPillar === pillar
+                selectedCategory === cat
                   ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] font-semibold'
                   : 'bg-[#f4f4ef] text-[#4b4b4b] hover:text-[#111111] border-[#d5d5cd]'
               )}
             >
-              {pillar}
+              {cat}
             </button>
           ))}
         </div>
@@ -138,30 +155,31 @@ export function NicheCatalogSheet() {
             <Link
               key={niche.id}
               href={`/folio/niche-${niche.slug}`}
-              className="p-2.5 bg-[#f4f4ef] hover:bg-[#ebebe3] border border-[#d5d5cd] rounded-xs transition-colors group block relative"
+              className="p-2.5 bg-[#f4f4ef] hover:bg-[#ebebe3] border border-[#d5d5cd] rounded-xs transition-colors group block relative space-y-1"
             >
               <div className="flex items-baseline justify-between text-[11px] font-mono">
                 <span className="text-[#c23b22] font-bold">
                   [{idx + 1 < 10 ? `0${idx + 1}` : idx + 1}]
                 </span>
-                <span className="text-[10px] text-[#4b4b4b] font-medium">
-                  {niche.startingPrice}
+                <span className="text-[10px] font-bold text-[#111111] bg-[#ebebe3] group-hover:bg-[#d5d5cd] px-1.5 py-0.5 rounded-xs border border-[#d5d5cd] transition-colors">
+                  Mulai {niche.startingPrice}
                 </span>
               </div>
-              <div className="font-serif text-xs font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors mt-0.5 flex items-center justify-between">
+              <div className="font-serif text-xs font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors flex items-center justify-between">
                 <span className="truncate pr-1">{niche.industryName}</span>
                 <ArrowRight className="w-3 h-3 text-[#c23b22] opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
               </div>
-              <div className="font-mono text-[9px] text-[#4b4b4b] mt-0.5 truncate">
-                {niche.recommendedPillar}
+              <div className="flex items-center justify-between text-[9px] font-mono text-[#4b4b4b] pt-0.5">
+                <span className="truncate max-w-[120px] text-[#4b4b4b]">{niche.category}</span>
+                <span className="text-[#111111] font-medium">{niche.recommendedPillar}</span>
               </div>
             </Link>
           ))
         ) : (
           <div className="col-span-2 p-4 text-center bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#4b4b4b] space-y-1">
-            <p>Tidak ada sektor industri yang cocok.</p>
+            <p>Tidak ada sektor industri yang cocok dengan pencarian Anda.</p>
             <p className="text-[10px]">
-              Industri Anda belum terdaftar? Hubungi kami untuk konsultasi arsitektur custom.
+              Industri unik Anda belum tercantum? Diskusikan kebutuhan arsitektur kustom bersama lead engineer kami via WhatsApp.
             </p>
           </div>
         )}
@@ -169,3 +187,4 @@ export function NicheCatalogSheet() {
     </article>
   );
 }
+
