@@ -58,7 +58,7 @@ export function TabletSheetView({
       dragElastic={0.15}
       onDragEnd={handleDragEnd}
       className={cn(
-        'relative w-full max-w-3xl mx-auto h-full max-h-[calc(100dvh-120px)] min-h-[500px] flex flex-col justify-between p-5 sm:p-6 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
+        'relative w-full max-w-3xl mx-auto h-full flex-1 min-h-0 flex flex-col justify-between p-4 sm:p-6 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
         className
       )}
     >

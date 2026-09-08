@@ -128,17 +128,17 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
       className={cn(
         'relative flex flex-col justify-between max-w-7xl mx-auto w-full transition-all select-text',
         // 1-Screen Fixed Viewport Fit across Desktop, Tablet, and Mobile
-        'h-[100dvh] max-h-[100dvh] overflow-hidden',
+        'h-full h-[100dvh] max-h-[100dvh] overflow-hidden',
         // Desktop spacing
         'lg:py-3 lg:px-8 xl:px-12',
         // Tablet spacing
-        'md:py-3.5 md:px-6',
-        // Mobile spacing
-        'py-2 px-3 sm:px-4'
+        'md:py-3 md:px-6',
+        // Mobile spacing with iOS safe-area support
+        'pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.5rem,env(safe-area-inset-bottom))] px-3 sm:px-4'
       )}
     >
       {/* TOP TECHNICAL RUNNING NAV */}
-      <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-2 mb-2 lg:mb-3 font-mono text-xs select-none relative z-50">
+      <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-1.5 mb-1.5 sm:pb-2 sm:mb-2 lg:mb-3 font-mono text-xs select-none relative z-50">
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Link
             href="/"
@@ -323,7 +323,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
       </header>
 
       {/* MAIN BOOK INTERACTION SHELL */}
-      <div className="relative my-auto w-full flex-1 flex flex-col justify-center min-h-0">
+      <div className="relative w-full flex-1 min-h-0 flex flex-col">
         {/* Bookmark Ribbon on Desktop Edge */}
         <BookmarkRibbon
           currentSpreadIndex={7} // Points to INDEX / Colophon tab
@@ -350,7 +350,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
         />
 
         {/* 3D Motion Turner Container */}
-        <SheetTurner currentKey={currentNiche.slug} direction={direction} className="h-full">
+        <SheetTurner currentKey={currentNiche.slug} direction={direction} className="w-full h-full flex-1 min-h-0">
           {/* 1. Desktop Two-Page Open Spread (>= 1024px) */}
           <div className="hidden lg:block w-full h-full">
             <SpreadView
@@ -366,7 +366,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           </div>
 
           {/* 2. Tablet View (768px - 1023px) */}
-          <div className="hidden md:block lg:hidden w-full">
+          <div className="hidden md:block lg:hidden w-full h-full flex flex-col min-h-0">
             <TabletSheetView
               leftContent={<NicheDetailSheetLeft niche={currentNiche} />}
               rightContent={<NicheDetailSheetRight niche={currentNiche} />}
@@ -380,7 +380,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           </div>
 
           {/* 3. Mobile Web View (< 768px) */}
-          <div className="block md:hidden w-full">
+          <div className="block md:hidden w-full h-full flex flex-col min-h-0">
             <SingleSheetView
               leftContent={<NicheDetailSheetLeft niche={currentNiche} />}
               rightContent={<NicheDetailSheetRight niche={currentNiche} />}
@@ -395,15 +395,15 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
       </div>
 
       {/* BOTTOM CONTROLLER & WHATSAPP ACTION BAR */}
-      <footer className="flex-shrink-0 mt-1.5 sm:mt-3 pt-2 sm:pt-3 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 font-mono text-xs select-none relative z-20">
+      <footer className="flex-shrink-0 mt-1 sm:mt-2 pt-1.5 sm:pt-2.5 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4 font-mono text-xs select-none relative z-20">
         {/* Navigation buttons */}
-        <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
+        <div className="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto justify-between sm:justify-start">
           <Link
             href="/folio/colophon"
-            className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors"
+            className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors"
             title="Kembali ke Direktori Ceruk Industri"
           >
-            <ChevronLeft className="w-4 h-4 text-[#c23b22]" />
+            <ChevronLeft className="w-3.5 h-3.5 text-[#c23b22]" />
             <span className="hidden sm:inline">Katalog</span>
             <span>Index</span>
           </Link>
@@ -411,7 +411,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           <button
             type="button"
             onClick={handlePrev}
-            className="flex items-center gap-1 px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
+            className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#ebebe3] hover:bg-[#d5d5cd] border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-3.5 h-3.5" />
             <span className="hidden md:inline">Sektor</span>
@@ -431,7 +431,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
                 title={item.industryName}
                 aria-label={`Buka Sektor ${item.industryName}`}
                 className={cn(
-                  'h-2 rounded-full transition-all duration-200 cursor-pointer',
+                  'h-1.5 sm:h-2 rounded-full transition-all duration-200 cursor-pointer',
                   currentIndex === idx
                     ? 'w-5 bg-[#111111]'
                     : 'w-1.5 bg-[#d5d5cd] hover:bg-[#4b4b4b]'
@@ -444,7 +444,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             type="button"
             onClick={handleNext}
             disabled={currentIndex === totalNiches - 1}
-            className="flex items-center gap-1 px-3 py-1.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
+            className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <span className="hidden md:inline">Sektor</span>
             <span>Selanjutnya</span>
@@ -453,10 +453,10 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
         </div>
 
         {/* Global direct Call & WhatsApp CS Action Bar (Centered on Mobile, without number) */}
-        <div className="flex items-center justify-center sm:justify-end gap-2.5 text-center w-full sm:w-auto">
+        <div className="flex items-center justify-center sm:justify-end gap-2 text-center w-full sm:w-auto">
           <a
             href={`tel:+${siteConfig.phone}`}
-            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[36px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer flex-1 sm:flex-initial"
             title="Telepon Langsung Customer Service"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#c23b22]" />
@@ -466,7 +466,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             href={waLeadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs flex-1 sm:flex-initial"
             title={`Chat WhatsApp Konsultasi Website ${currentNiche.industryName}`}
           >
             <MessageSquareCode className="w-3.5 h-3.5" />

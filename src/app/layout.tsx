@@ -103,6 +103,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({
@@ -115,7 +116,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${newsreader.variable} ${jetbrains.variable}`}
+      className={`h-full h-[100dvh] overflow-hidden overscroll-none ${inter.variable} ${newsreader.variable} ${jetbrains.variable}`}
     >
       <head>
         <script
@@ -123,7 +124,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(masterSchema) }}
         />
       </head>
-      <body className="min-h-screen bg-[#f3f3ee] text-[#111111] antialiased selection:bg-[#111111] selection:text-[#fbfbfa]">
+      <body className="h-full h-[100dvh] overflow-hidden overscroll-none bg-[#f3f3ee] text-[#111111] antialiased selection:bg-[#111111] selection:text-[#fbfbfa]">
         {children}
       </body>
     </html>

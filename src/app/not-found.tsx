@@ -100,9 +100,9 @@ export default function NotFound() {
       className={cn(
         'relative flex flex-col justify-between max-w-7xl mx-auto w-full transition-all select-text',
         // 1-Screen fixed viewport fit across Desktop and Tablet, natural bound on mobile
-        'h-[100dvh] max-h-[100dvh] overflow-hidden',
+        'h-full h-[100dvh] max-h-[100dvh] overflow-hidden',
         // Spacing matching the BookShell architecture
-        'lg:py-3 lg:px-8 xl:px-12 md:py-3.5 md:px-6 py-2 px-3 sm:px-4'
+        'pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.5rem,env(safe-area-inset-bottom))] px-3 sm:px-4 md:py-3 md:px-6 lg:py-3 lg:px-8 xl:px-12'
       )}
     >
       {/* TOP RUNNING NAV HEADER */}

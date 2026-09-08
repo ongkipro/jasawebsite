@@ -102,18 +102,18 @@ export function BookShell({
       className={cn(
         'relative flex flex-col justify-between max-w-7xl mx-auto w-full transition-all select-text',
         // 1-Screen Fixed Viewport Fit across Desktop, Tablet, and Mobile
-        'h-[100dvh] max-h-[100dvh] overflow-hidden',
+        'h-full h-[100dvh] max-h-[100dvh] overflow-hidden',
         // Desktop spacing
         'lg:py-3 lg:px-8 xl:px-12',
         // Tablet spacing
-        'md:py-3.5 md:px-6',
-        // Mobile spacing
-        'py-2 px-3 sm:px-4',
+        'md:py-3 md:px-6',
+        // Mobile spacing with iOS safe-area support
+        'pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.5rem,env(safe-area-inset-bottom))] px-3 sm:px-4',
         className
       )}
     >
       {/* TOP TECHNICAL RUNNING NAV */}
-      <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-2 mb-2 lg:mb-3 font-mono text-xs select-none">
+      <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-1.5 mb-1.5 sm:pb-2 sm:mb-2 lg:mb-3 font-mono text-xs select-none">
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             type="button"
@@ -147,7 +147,7 @@ export function BookShell({
       </header>
 
       {/* MAIN BOOK INTERACTION SHELL */}
-      <div className="relative my-auto w-full flex-1 flex flex-col justify-center min-h-0">
+      <div className="relative w-full flex-1 min-h-0 flex flex-col">
         {/* Bookmark Ribbon on Desktop Edge */}
         <BookmarkRibbon
           currentSpreadIndex={spreadIndex}
@@ -157,7 +157,7 @@ export function BookShell({
         />
 
         {/* 3D Motion Turner Container */}
-        <SheetTurner currentKey={spreadIndex} direction={direction} className="h-full">
+        <SheetTurner currentKey={spreadIndex} direction={direction} className="w-full h-full flex-1 min-h-0">
           {/* 1. Desktop Two-Page Open Spread (>= 1024px) - 1 Layar Fixed */}
           <div className="hidden lg:block w-full h-full">
             <SpreadView
@@ -175,7 +175,7 @@ export function BookShell({
           </div>
 
           {/* 2. Tablet View (768px - 1023px) - Ergonomic Sub-page Tabbed Switcher */}
-          <div className="hidden md:block lg:hidden w-full">
+          <div className="hidden md:block lg:hidden w-full h-full flex flex-col min-h-0">
             <TabletSheetView
               leftContent={renderLeftSheet(spreadIndex)}
               rightContent={
@@ -191,7 +191,7 @@ export function BookShell({
           </div>
 
           {/* 3. Mobile Web View (< 768px) - Single Tactile Sheet Thumb Optimized */}
-          <div className="block md:hidden w-full">
+          <div className="block md:hidden w-full h-full flex flex-col min-h-0">
             <SingleSheetView
               leftContent={renderLeftSheet(spreadIndex)}
               rightContent={
@@ -208,21 +208,21 @@ export function BookShell({
       </div>
 
       {/* BOTTOM CONTROLLER & WHATSAPP ACTION BAR */}
-      <footer className="flex-shrink-0 mt-1.5 sm:mt-3 pt-2 sm:pt-3 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 font-mono text-xs select-none">
+      <footer className="flex-shrink-0 mt-1 sm:mt-2 pt-1.5 sm:pt-2.5 border-t border-[#d5d5cd] flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4 font-mono text-xs select-none">
         {/* Navigation buttons */}
-        <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
+        <div className="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto justify-between sm:justify-start">
           <button
             type="button"
             onClick={handlePrev}
             disabled={spreadIndex === 0}
-            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>Sebelumnya</span>
           </button>
 
           {/* Spread dots indicator */}
-          <div className="flex items-center gap-1.5 px-2">
+          <div className="flex items-center gap-1 sm:gap-1.5 px-1 sm:px-2">
             {foliosData.map((_, idx) => (
               <button
                 key={idx}
@@ -232,10 +232,10 @@ export function BookShell({
                 }
                 aria-label={`Buka Lembar ${idx + 1}`}
                 className={cn(
-                  'h-2 rounded-full transition-all duration-200 cursor-pointer',
+                  'h-1.5 sm:h-2 rounded-full transition-all duration-200 cursor-pointer',
                   spreadIndex === idx
-                    ? 'w-6 bg-[#111111]'
-                    : 'w-2 bg-[#d5d5cd] hover:bg-[#4b4b4b]'
+                    ? 'w-4 sm:w-6 bg-[#111111]'
+                    : 'w-1.5 sm:w-2 bg-[#d5d5cd] hover:bg-[#4b4b4b]'
                 )}
               />
             ))}
@@ -245,18 +245,18 @@ export function BookShell({
             type="button"
             onClick={handleNext}
             disabled={spreadIndex === totalSpreads - 1}
-            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 min-h-[36px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <span>Selanjutnya</span>
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
         </div>
 
         {/* Global direct Call & WhatsApp CS Action Bar (Centered on Mobile, without number) */}
-        <div className="flex items-center justify-center sm:justify-end gap-2.5 text-center w-full sm:w-auto">
+        <div className="flex items-center justify-center sm:justify-end gap-2 text-center w-full sm:w-auto">
           <a
             href={`tel:+${siteConfig.phone}`}
-            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[36px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs border border-[#d5d5cd] bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] text-xs font-bold text-[#111111] transition-colors cursor-pointer flex-1 sm:flex-initial"
             title="Telepon Langsung Customer Service"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#c23b22]" />
@@ -266,7 +266,7 @@ export function BookShell({
             href={waLeadUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 min-h-[34px] sm:min-h-[36px] rounded-xs bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] text-xs font-bold transition-colors cursor-pointer shadow-xs flex-1 sm:flex-initial"
             title="Chat WhatsApp Customer Service"
           >
             <MessageSquareCode className="w-3.5 h-3.5" />
