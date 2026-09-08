@@ -258,27 +258,27 @@ export default function NotFound() {
                   </div>
                 </div>
 
-                {/* Direct Action Buttons */}
-                <div className="pt-2 flex flex-col xl:flex-row items-stretch xl:items-center gap-2.5">
+                {/* Direct Action Buttons (Single Line & Compact) */}
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                   <Button
                     variant="primary"
-                    size="md"
+                    size="sm"
                     href="/"
-                    className="w-full xl:w-auto text-xs"
+                    className="w-full sm:w-auto whitespace-nowrap text-xs justify-center"
                   >
-                    <Home className="w-3.5 h-3.5" />
-                    <span>Kembali ke Sampul Depan</span>
+                    <Home className="w-3.5 h-3.5 shrink-0" />
+                    <span>Kembali ke Sampul</span>
                   </Button>
 
                   <Button
                     variant="secondary"
-                    size="md"
+                    size="sm"
                     href={wa404Url}
                     isExternal
-                    className="w-full xl:w-auto text-xs"
+                    className="w-full sm:w-auto whitespace-nowrap text-xs justify-center"
                   >
-                    <MessageSquareCode className="w-3.5 h-3.5 text-[#c23b22]" />
-                    <span>Hubungi WhatsApp CS (+62 838-3044-1495)</span>
+                    <MessageSquareCode className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+                    <span>WhatsApp CS ({siteConfig.phoneDisplay})</span>
                   </Button>
                 </div>
               </div>
@@ -286,7 +286,18 @@ export default function NotFound() {
               {/* Bottom Folio Footer Left */}
               <div className="flex-shrink-0 flex items-center justify-between border-t border-[#e5e5df] pt-2.5 text-[10px] font-mono text-[#4b4b4b] select-none">
                 <span>● PEMULIHAN ARSIP OTOMATIS</span>
-                <span>HAK CIPTA REKAYASA © 2026</span>
+                <span>
+                  OFFICIALLY ENGINEERED BY{' '}
+                  <a
+                    href="https://ongki.pro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold underline underline-offset-2 hover:text-[#c23b22] transition-colors"
+                  >
+                    ONGKI.PRO
+                  </a>{' '}
+                  © 2026
+                </span>
               </div>
             </section>
 
@@ -423,27 +434,27 @@ export default function NotFound() {
                 <div>• REKOMENDASI: Buka Daftar Isi di Bawah Ini</div>
               </div>
 
-              {/* Mobile Direct Action Buttons */}
-              <div className="flex flex-col gap-2 pt-1">
+              {/* Mobile Direct Action Buttons (Single Line) */}
+              <div className="flex flex-col sm:flex-row gap-2 pt-1">
                 <Button
                   variant="primary"
-                  size="md"
+                  size="sm"
                   href="/"
-                  className="w-full text-xs justify-center"
+                  className="w-full sm:w-auto whitespace-nowrap text-xs justify-center"
                 >
-                  <Home className="w-3.5 h-3.5" />
-                  <span>Kembali ke Sampul Depan</span>
+                  <Home className="w-3.5 h-3.5 shrink-0" />
+                  <span>Kembali ke Sampul</span>
                 </Button>
 
                 <Button
                   variant="secondary"
-                  size="md"
+                  size="sm"
                   href={wa404Url}
                   isExternal
-                  className="w-full text-xs justify-center"
+                  className="w-full sm:w-auto whitespace-nowrap text-xs justify-center"
                 >
-                  <MessageSquareCode className="w-3.5 h-3.5 text-[#c23b22]" />
-                  <span>Hubungi WhatsApp CS (+62 838-3044-1495)</span>
+                  <MessageSquareCode className="w-3.5 h-3.5 text-[#c23b22] shrink-0" />
+                  <span>WhatsApp CS ({siteConfig.phoneDisplay})</span>
                 </Button>
               </div>
 

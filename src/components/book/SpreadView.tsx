@@ -56,7 +56,18 @@ export function SpreadView({
         {/* Bottom Folio Footer Left */}
         <div className="flex-shrink-0 flex items-center justify-between border-t border-[#e5e5df] pt-2.5 text-[10px] font-mono text-[#4b4b4b] select-none">
           <span>● SUB-SECOND TTFB</span>
-          <span>HAK CIPTA REKAYASA © 2026</span>
+          <span>
+            OFFICIALLY ENGINEERED BY{' '}
+            <a
+              href="https://ongki.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline underline-offset-2 hover:text-[#c23b22] transition-colors"
+            >
+              ONGKI.PRO
+            </a>{' '}
+            © 2026
+          </span>
         </div>
 
         {/* Bottom-Left Corner Dog Ear for Previous Page */}
