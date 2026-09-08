@@ -144,6 +144,114 @@
     "voucherCode": "ONG-CASE-HOMELOOK"
   },
   {
+    "id": "dealer-hino-official",
+    "clientName": "Dealer Hino Resmi Indonesia",
+    "category": "sales-website",
+    "categoryLabel": "Sales & Lead Gen Dealer",
+    "industry": "Truk & Kendaraan Niaga Komersial",
+    "challenge": "Sales dealer memerlukan landing page resmi berkinerja tinggi untuk mengonversi traffic iklan Meta Ads & Google Ads menjadi prospek pengadaan armada Truk Hino 300, 500, dan 700.",
+    "solution": "Landing page dealer berkecepatan tinggi dengan simulasi kredit leasing, katalog tipe karoseri (dump truck, box, wingbox), dan tombol WhatsApp direct ke Sales Executive.",
+    "metrics": [
+      {
+        "label": "Inquiry Unit / Bln",
+        "value": "180+ Unit",
+        "detail": "Prospek pengadaan armada korporat"
+      },
+      {
+        "label": "Cost Per Lead",
+        "value": "-38%",
+        "detail": "Efisiensi biaya iklan Google & Meta"
+      },
+      {
+        "label": "Speed Loading",
+        "value": "0.28s",
+        "detail": "Optimasi sub-detik aset visual WebP"
+      }
+    ],
+    "techStack": [
+      "Next.js 16 SSG",
+      "WhatsApp Lead Router",
+      "Leasing Credit Calculator",
+      "Google Ads Signals"
+    ],
+    "desktopImage": "/images/portfolio/dealerhino-desktop.webp",
+    "mobileImage": "/images/portfolio/dealerhino-desktop.webp",
+    "liveUrl": "https://dealerhinoofficial.com",
+    "voucherCode": "ONG-CASE-HINO"
+  },
+  {
+    "id": "dealer-truk-hino-jatim",
+    "clientName": "Dealer Truk Hino Jawa Timur",
+    "category": "sales-website",
+    "categoryLabel": "Sales & Lead Gen Dealer",
+    "industry": "Otomotif & Truk Angkutan Logistik",
+    "challenge": "Calon pembeli armada ekspedisi di Jawa Timur membutuhkan katalog spesifikasi lengkap 46 varian Hino Dutro, Ranger, & Profia Euro 4 dengan data sheet resmi yang siap tembus tender lelang.",
+    "solution": "Katalog digital spesifikasi teknis unit mesin Euro 4, simulasi DP ringan dan tenor hingga 5 tahun, serta integrasi tombol chat WhatsApp sales per domisili cabang.",
+    "metrics": [
+      {
+        "label": "Konsultasi Unit",
+        "value": "350+/bln",
+        "detail": "Chat WhatsApp calon pembeli aktif"
+      },
+      {
+        "label": "Tender Dimenangkan",
+        "value": "Rp 8,6 M",
+        "detail": "Nilai transaksi lelang difasilitasi"
+      },
+      {
+        "label": "Bounce Rate Iklan",
+        "value": "< 25%",
+        "detail": "Pengunjung betah menelusuri katalog"
+      }
+    ],
+    "techStack": [
+      "Next.js 16 SSG",
+      "46 Varian Spec Filter",
+      "WhatsApp Multi-Branch",
+      "Cloudflare Edge"
+    ],
+    "desktopImage": "/images/portfolio/dealertrukhino-desktop.webp",
+    "mobileImage": "/images/portfolio/dealertrukhino-desktop.webp",
+    "liveUrl": "https://dealertrukhino.com",
+    "voucherCode": "ONG-CASE-TRUKHINO"
+  },
+  {
+    "id": "dealer-foton-motor",
+    "clientName": "Dealer Resmi Foton Motor Indonesia",
+    "category": "sales-website",
+    "categoryLabel": "Sales & Lead Gen Dealer",
+    "industry": "Kendaraan Niaga, Pickup & Bus",
+    "challenge": "Brand baru Foton Motor di Indonesia memerlukan penetrasi digital yang kredibel untuk memperkenalkan line-up pickup niaga, light truck, dan bus komersial ke pengusaha logistik nasional.",
+    "solution": "Showroom digital resmi Foton Motor Indonesia dengan fitur interaktif cek harga OTR, brosur spesifikasi unit, simulasi angsuran kredit, dan konsultasi cepat via konsultan resmi.",
+    "metrics": [
+      {
+        "label": "Booking Test Drive",
+        "value": "+75%",
+        "detail": "Pertumbuhan booking unit per kuartal"
+      },
+      {
+        "label": "Inquiry Armada Fleet",
+        "value": "90+/bln",
+        "detail": "Pengadaan fleet perusahaan logistik"
+      },
+      {
+        "label": "Lighthouse Score",
+        "value": "99/100",
+        "detail": "Performa halaman super cepat"
+      }
+    ],
+    "techStack": [
+      "Next.js 16 SSG",
+      "OTR Price Matrix",
+      "Fleet RFQ Engine",
+      "Meta Ads Tracking"
+    ],
+    "desktopImage": "/images/portfolio/dealerfoton-desktop.webp",
+    "mobileImage": "/images/portfolio/dealerfoton-desktop.webp",
+    "liveUrl": "https://dealerfoton.com",
+    "voucherCode": "ONG-CASE-FOTON"
+  },
+  {
     "id": "traktor-nusa-teknik",
     "clientName": "Traktor Nusa Teknik B2B",
     "category": "sales-website",

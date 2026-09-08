@@ -79,6 +79,64 @@ export function SalesSheetLeft() {
           ))}
         </div>
       </div>
+
+      {/* Real Dealer Sales Sites Showcase Strip */}
+      <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
+        <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
+          <span>Karya Website Sales / Dealer Live:</span>
+          <span className="text-[#c23b22]">3 Brand Resmi ↗</span>
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          <a
+            href="https://dealerhinoofficial.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Dealer Hino Resmi Indonesia"
+          >
+            <img
+              src="/images/portfolio/dealerhino-desktop.webp"
+              alt="Dealer Hino Resmi"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">
+              dealerhinoofficial.com
+            </span>
+          </a>
+          <a
+            href="https://dealertrukhino.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Dealer Truk Hino Jawa Timur"
+          >
+            <img
+              src="/images/portfolio/dealertrukhino-desktop.webp"
+              alt="Dealer Truk Hino Jatim"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">
+              dealertrukhino.com
+            </span>
+          </a>
+          <a
+            href="https://dealerfoton.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block relative aspect-[16/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="Dealer Resmi Foton Motor Indonesia"
+          >
+            <img
+              src="/images/portfolio/dealerfoton-desktop.webp"
+              alt="Dealer Foton Motor"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white text-center py-0.5 truncate px-1">
+              dealerfoton.com
+            </span>
+          </a>
+        </div>
+      </div>
     </article>
   );
 }
