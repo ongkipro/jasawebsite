@@ -128,7 +128,8 @@ jasawebsite/
 ├── STATUS.md                        # Project Delivery State Machine
 ├── BUILD-LOG.md                     # Durable Implementation Log
 ├── RELEASE.md                       # Production Release Manifest
-└── OBSERVABILITY.md                 # Health Probes & Monitoring Contract
+├── OBSERVABILITY.md                 # Health Probes & Monitoring Contract
+└── PETA-DEVELOPMENT.md              # Page-by-Page Development Map (Markdown & XML)
 ```
 
 ---

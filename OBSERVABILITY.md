@@ -25,3 +25,6 @@ Probe: folio-colophon|https://jasawebsite.co/folio/colophon|200|Colophon & Back 
 Probe: folio-niche-dealer|https://jasawebsite.co/folio/niche-dealer-otomotif|200|Dealer Mobil|500
 Probe: sitemap|https://jasawebsite.co/sitemap.xml|200|urlset|500
 Probe: robots|https://jasawebsite.co/robots.txt|200|User-agent|300
+Probe: peta-xml|https://jasawebsite.co/peta-development.xml|200|development-map|300
+Probe: favicon-svg|https://jasawebsite.co/favicon.svg|200|<svg|300
+Probe: icon-512|https://jasawebsite.co/icon.png|200|PNG|500

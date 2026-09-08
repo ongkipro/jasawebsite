@@ -35,24 +35,24 @@ Setiap lembar buku mempresentasikan solusi konkret dari **5 Layanan Utama Ong-OS
 │ Profile Website    │ Business ⭐, dan Corporate      │   Rp4,9jt, Corporate Rp8,9jt+   │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
 │ [FR-05]            │ Calon klien dealer/properti/B2B │ • Rincian Traffic-to-Lead flow  │
-│ Folio: Sales & Lead│ mempelajari sistem Sales Website│ • Starter Rp5,9jt, Growth ⭐    │
-│ Generation Website │ (katalog, spec, lead routing)   │   Rp8,9jt, Pro Rp14,9jt+        │
+│ Folio: Sales & Lead│ mempelajari sistem Sales Website│ • Starter Rp3,5jt, Growth ⭐    │
+│ Generation Website │ (katalog, spec, lead routing)   │   Rp6,5jt, Pro Rp12,5jt+        │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
-│ [FR-06]            │ Calon klien ritel mempelajari   │ • Rincian Cart, Checkout, PG    │
-│ Folio: E-Commerce  │ toko online transaksi langsung: │ • Starter Rp7,9jt, Business ⭐   │
-│ Website            │ Midtrans, Xendit, Kurir Indo    │   Rp12,9jt, Pro Rp19,9jt+       │
+│ [FR-06]            │ Calon klien ritel mempelajari   │ • Toko Mandiri Bebas Komisi     │
+│ Folio: E-Commerce  │ toko online CMS mandiri tanpa   │ • Starter Rp3,9jt, Grosir /     │
+│ Website            │ potongan admin marketplace 10%  │   Skala Besar Rp8,9jt–Rp19,9jt+ │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
 │ [FR-07]            │ Brand D2C mempelajari layanan   │ • Liquid 2.0, Kurir, QRIS CAPI  │
-│ Folio: Shopify     │ khusus Shopify: Setup, Growth ⭐│ • Starter Rp3,9jt, Growth ⭐    │
-│ Development        │ Custom Liquid, Headless Hydrogen│   Rp6,9jt, Custom Rp12,9jt+     │
+│ Folio: Shopify     │ khusus Shopify: Setup, Tema     │ • Shopify Storefront Rp6,9jt,   │
+│ Development        │ Mewah, Headless Hydrogen        │   Headless Hydrogen Rp25jt+     │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
-│ [FR-08]            │ Startup & enterprise mempelajari│ • Scope Frontend, API, DB & Cloud│
-│ Folio: Custom Web  │ aplikasi web kustom: CRM, ERP,  │ • MVP Rp15jt+, Business Rp25jt+ │
-│ Application        │ Portal, Dashboard, SaaS         │   Advanced Rp50jt+, Custom Quote│
+│ [FR-08]            │ Startup & enterprise mempelajari│ • Scope Frontend, API, DB & Edge│
+│ Folio: Custom Web  │ aplikasi web kustom: CRM, ERP,  │ • MVP Rp15jt, Multi-Role Rp35jt,│
+│ Application        │ Portal, Dashboard, SaaS         │   Enterprise SaaS Rp75jt+       │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
-│ [FR-09]            │ Klien mengeksplor supporting    │ • Maintenance Care (300rb-2jt/bl)│
-│ Folio: Growth &    │ services & recurring maintenance│ • SEO, CAPI Tracking, AI Agents │
-│ Maintenance Care   │ untuk menjaga performa sistem   │ • Scope out-of-pocket transparan│
+│ [FR-09]            │ Klien mengeksplor supporting    │ • Growth Care (Rp2,5jt/bln)     │
+│ Folio: Growth &    │ services & recurring maintenance│ • Scale & Ads Retainer Rp4,5-7,5│
+│ Maintenance Care   │ untuk menjaga performa & iklan  │ • Enterprise Partner Rp10-25jt+ │
 ├────────────────────┼─────────────────────────────────┼─────────────────────────────────┤
 │ [FR-10]            │ Calon klien menekan kupon sobek │ • Border putus-putus bergetar   │
 │ Tear-Off WhatsApp  │ bertema voucher fisik untuk chat│ • Pre-filled WA kontekstual     │
