@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-006
-Base: 89d4a49
+Release-ID: REL-20260909-007
+Base: 89df40a
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
