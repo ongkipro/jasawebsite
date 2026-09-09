@@ -99,11 +99,31 @@ export function CommerceSheetLeft() {
         <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
           <span>Karya Toko Online Klien Kami Live:</span>
           <span className="text-[#c23b22] inline-flex items-center gap-0.5">
-            <span>4 Brand Aktif</span>
+            <span>5 Brand Aktif</span>
             <ArrowUpRight className="w-3 h-3" />
           </span>
         </div>
-        <div className="grid grid-cols-4 gap-1.5">
+        <div className="grid grid-cols-5 gap-1.5">
+          <a
+            href="https://elfy.my"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="group block relative aspect-[4/3] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+            title="ELFY Malaysia (Shopify Headless D2C)"
+          >
+            <img
+              src="/images/portfolio/elfy-desktop.webp"
+              alt="ELFY Malaysia"
+              width={280}
+              height={210}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all"
+            />
+            <span className="absolute bottom-0 inset-x-0 bg-black/85 text-[7px] font-mono text-white text-center py-0.5 truncate px-0.5">
+              elfy.my
+            </span>
+          </a>
           <a
             href="https://batiksmile.com"
             target="_blank"

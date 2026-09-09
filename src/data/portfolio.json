@@ -36,6 +36,42 @@
     "voucherCode": "ONG-CASE-SAMIRA"
   },
   {
+    "id": "elfy-malaysia",
+    "clientName": "ELFY Malaysia (Kuala Lumpur)",
+    "category": "shopify",
+    "categoryLabel": "Shopify D2C Flagship (MY)",
+    "industry": "Men's Sartorial Footwear & Horology",
+    "challenge": "Brand fesyen lelaki modern asal Kuala Lumpur membutuhkan storefront e-commerce kelas dunia dengan visual mewah, pengalaman belanja kilat, dan dukungan pembayaran FPX & e-wallet Malaysia.",
+    "solution": "Pengembangan toko online flagship berbasis Shopify Headless Hydrogen & Oxygen CDN dengan filter koleksi kasut kulit wide-fit, jam tangan sartorial, checkout instan, dan integrasi kurir Semenanjung Malaysia.",
+    "metrics": [
+      {
+        "label": "Kecepatan Edge",
+        "value": "0.28s TTFB",
+        "detail": "Shopify Oxygen Edge Runtime"
+      },
+      {
+        "label": "Rating Pembeli",
+        "value": "4.9 / 5.0",
+        "detail": "2.400+ Pelanggan Terverifikasi"
+      },
+      {
+        "label": "Checkout Flow",
+        "value": "+48%",
+        "detail": "Optimasi konversi FPX & E-Wallet"
+      }
+    ],
+    "techStack": [
+      "Shopify Hydrogen",
+      "Oxygen Edge CDN",
+      "Tailwind CSS",
+      "Malaysia FPX Gateway"
+    ],
+    "desktopImage": "/images/portfolio/elfy-desktop.webp",
+    "mobileImage": "/images/portfolio/elfy-mobile.webp",
+    "liveUrl": "https://elfy.my",
+    "voucherCode": "ONG-CASE-ELFY"
+  },
+  {
     "id": "batik-smile",
     "clientName": "Batik Smile Semarang",
     "category": "shopify",

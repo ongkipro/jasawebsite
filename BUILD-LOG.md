@@ -197,9 +197,23 @@
     - Live URL: `https://samiratravelumrohhaji.com`
   - Captured authentic high-resolution screenshots via headless Chrome:
     - Desktop: 1440x900 converted to `public/images/portfolio/samiratravel-desktop.webp` (81 KB)
-    - Mobile: 390x844 converted to `public/images/portfolio/samiratravel-mobile.webp` (27 KB)
-  - Embedded real client showcase strip on `ComproSheetLeft` linking directly to `samiratravelumrohhaji.com` with verification badge.
-  - Aligned pillar numbering: removed legacy `PILLAR 03 & 04` string from `src/data/services.json` to pure `PILLAR 03`, honoring the decision to skip number 4 (Pillar 01 -> 02 -> 03 -> skip 4 -> 05).
+### Phase 20: International Portfolio Expansion — ELFY Malaysia (Shopify Headless D2C Flagship)
+- **Date:** 2026-09-09
+- **Objective:** Integrate international live D2C brand `https://elfy.my` (Kuala Lumpur, Malaysia) into portfolio gallery, generate responsive WebP preview assets, upgrade the client showcase strip in `CommerceSheet.tsx` to 5 active brands, and update AI context documentation.
+- **Completed Actions:**
+  - Integrated `elfy-malaysia` into `src/data/portfolio.json`:
+    - Client: ELFY Malaysia (Kuala Lumpur)
+    - Category: `shopify` (Shopify D2C Flagship MY)
+    - Industry: Men's Sartorial Footwear & Horology
+    - Metrics: Kecepatan Edge (0.28s TTFB, Shopify Oxygen Edge Runtime), Rating Pembeli (4.9 / 5.0, 2.400+ Pelanggan Terverifikasi), Checkout Flow (+48%, Optimasi konversi FPX & E-Wallet)
+    - Tech: Shopify Hydrogen, Oxygen Edge CDN, Tailwind CSS, Malaysia FPX Gateway
+    - Live URL: `https://elfy.my`
+  - Captured authentic high-resolution screenshots via headless Chrome:
+    - Desktop: 1440x900 converted to `public/images/portfolio/elfy-desktop.webp` (71 KB)
+    - Mobile: 390x844 converted to `public/images/portfolio/elfy-mobile.webp` (37 KB)
+  - Upgraded live brand showcase strip in `CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) with `grid-cols-5`.
+  - Updated AI context feed in `public/llms.txt` and `public/llms-full.txt` with 11 live verified projects.
+  - Verified static compilation (`npm run build`) and smoke tests (`npm test` 55/55 passing).
 
 
 

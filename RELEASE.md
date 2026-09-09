@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-007
-Base: 89df40a
+Release-ID: REL-20260909-008
+Base: 58b071e
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -23,18 +23,21 @@ Status: RELEASED_VERIFIED
   - `GET /folio/sales-website` -> HTTP 200 (text/html)
   - `GET /folio/ecommerce-shopify` -> HTTP 200 (text/html)
   - `GET /folio/custom-web-app` -> HTTP 200 (text/html)
+  - `GET /folio/portfolio` -> HTTP 200 (text/html)
   - `GET /folio/maintenance-care` -> HTTP 200 (text/html)
   - `GET /folio/colophon` -> HTTP 200 (text/html)
   - `GET /sitemap.xml` -> HTTP 200 (application/xml, 33 indexed URLs verified)
   - `GET /robots.txt` -> HTTP 200 (text/plain, User-agent: *, Allow: /)
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
-  - `GET /favicon.svg` -> HTTP 200 (image/svg+xml, high-fill squircle vector)
-  - `GET /icon.png` -> HTTP 200 (image/png, 512x512 master squircle)
-  - `GET /icon-light.png` -> HTTP 200 (image/png)
-  - `GET /icon-dark.png` -> HTTP 200 (image/png)
-  - `GET /apple-touch-icon.png` -> HTTP 200 (image/png, 180x180 iOS squircle)
-  - `GET /favicon.ico` -> HTTP 200 (image/vnd.microsoft.icon, multi-res 16/32/48)
+  - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
+  - `GET /images/portfolio/elfy-desktop.webp` -> HTTP 200 (image/webp, 71KB)
+  - `GET /images/portfolio/elfy-mobile.webp` -> HTTP 200 (image/webp, 37KB)
 - **Key Architectural & Branding Highlights:**
+  - **ELFY Malaysia International D2C Flagship Portfolio Expansion:**
+    - Live commercial case study integrated: `https://elfy.my` (Kuala Lumpur, Malaysia).
+    - Authentic desktop & mobile WebP screenshots captured via headless Chrome (<100KB total).
+    - Showcase strip in `CommerceSheet.tsx` upgraded to 5 active live brands in responsive `grid-cols-5`.
+    - Total curated portfolio expanded to 11 live verified projects across Indonesia and Malaysia.
   - **High-Fill Obsidian Squircle `.ONG` Monogram Favicon Suite:**
     - High-density luxury obsidian squircle (`#0e0f12`, radius 112px on 512px canvas) filling the entire 1:1 tab canvas, eliminating empty negative space.
     - Scaled ultra-bold `ONG` lettering (size 187px) with glowing vermillion red baseline dot (`#ff453a`, radius 33px) for 100% legibility in real 16x16 & 32x32 browser tabs.

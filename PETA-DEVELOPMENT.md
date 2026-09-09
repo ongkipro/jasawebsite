@@ -194,7 +194,7 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 ### Standard AI Context Feed (`llms.txt` & `llms-full.txt`)
 * **Rute:** `/llms.txt` & `/llms-full.txt` (`public/llms.txt`)
   * Tipe: `text/plain; charset=utf-8`
-  * Standar web baru untuk LLM & Generative Engine Optimization (GEO). Berisi ringkasan terstruktur Markdown tentang profil studio, 4 pilar layanan, estimasi harga transparan, bukti 10 portofolio live (termasuk Samira Travel), dan 24 direktori industri untuk dikutip langsung oleh ChatGPT Search, Perplexity AI, dan Claude.
+  * Standar web baru untuk LLM & Generative Engine Optimization (GEO). Berisi ringkasan terstruktur Markdown tentang profil studio, 4 pilar layanan, estimasi harga transparan, bukti 11 portofolio live (termasuk Samira Travel & ELFY Malaysia), dan 24 direktori industri untuk dikutip langsung oleh ChatGPT Search, Perplexity AI, dan Claude.
 
 ### Machine-Readable Route Manifest XML
 * **Rute:** `/peta-development.xml` (`public/peta-development.xml` & `docs/peta-development.xml`)

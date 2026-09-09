@@ -110,6 +110,18 @@
     - Added dedicated real client showcase strip on `ComproSheet.tsx` linking directly to `samiratravelumrohhaji.com`.
     - Total curated portfolio projects expanded to 10 live verified commercial systems.
     - Executed user decision to omit number 4 from the pillars: cleaned up legacy `PILLAR 03 & 04` string in `services.json` to pure `PILLAR 03` (Pillar 01 -> Pillar 02 -> Pillar 03 -> skip 4 -> Pillar 05).
+  - **Phase 20: International Portfolio Expansion — ELFY Malaysia (Shopify Headless D2C Flagship):**
+    - Integrated premier international D2C menswear & horology brand: **ELFY Malaysia (Kuala Lumpur)** (`https://elfy.my`).
+    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) screenshots via headless Chrome, converted to lightweight WebP (`public/images/portfolio/elfy-desktop.webp` 71KB, `public/images/portfolio/elfy-mobile.webp` 37KB).
+    - Added `elfy-malaysia` to `src/data/portfolio.json`:
+      - Category: `shopify` (Shopify D2C Flagship MY)
+      - Industry: `Men's Sartorial Footwear & Horology`
+      - Metrics: 0.28s TTFB (Shopify Oxygen Edge Runtime), 4.9/5.0 Rating (2.400+ Pelanggan Terverifikasi), +48% Checkout Flow (Optimasi konversi FPX & E-Wallet Malaysia)
+      - Tech: Shopify Hydrogen, Oxygen Edge CDN, Tailwind CSS, Malaysia FPX Gateway
+      - Live URL: `https://elfy.my`
+    - Upgraded live client showcase strip in `CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) in responsive `grid-cols-5`.
+    - Updated AI context in `public/llms.txt` and `public/llms-full.txt` with 11 live verified projects.
+    - Total curated portfolio projects expanded to 11 live verified commercial systems.
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

@@ -53,28 +53,31 @@
 
 ---
 
-## Bukti Karya Portofolio Terverifikasi (10 Proyek Live)
+## Bukti Karya Portofolio Terverifikasi (11 Proyek Live)
 
 1. **Samira Travel Umroh & Haji Khusus** (https://samiratravelumrohhaji.com)
    - Biro perjalanan ibadah umroh peringkat #1 nasional Kemenag RI (50.000+ jemaah, 3 Rekor MURI).
    - Fitur: Direct charter flight 11 kota, jadwal paket umroh real-time, lead router ke 26 kantor cabang.
-2. **Batik Smile Semarang** (https://batiksmile.com)
+2. **ELFY Malaysia** (https://elfy.my)
+   - Brand fesyen lelaki modern (kasut kulit wide-fit & horology) asal Kuala Lumpur, Malaysia.
+   - Fitur: Shopify Headless Hydrogen, Oxygen Edge CDN, checkout FPX & e-wallet Malaysia (MYR), kurir Semenanjung.
+3. **Batik Smile Semarang** (https://batiksmile.com)
    - Butik batik terkemuka 3 lantai di Semarang dengan ribuan SKU sarimbit & WhatsApp Concierge.
-3. **Beautyinu Skincare** (https://beautyinu.co)
+4. **Beautyinu Skincare** (https://beautyinu.co)
    - Toko online D2C skincare mandiri dengan checkout QRIS & e-wallet tanpa komisi marketplace.
-4. **Dealer Truk Hino Resmi Indonesia** (https://dealerhinoofficial.com)
+5. **Dealer Truk Hino Resmi Indonesia** (https://dealerhinoofficial.com)
    - Landing page dealer komersial dengan simulasi kredit leasing & katalog unit Hino 300, 500, 700.
-5. **Dealer Truk Hino Jawa Timur** (https://dealertrukhino.com)
+6. **Dealer Truk Hino Jawa Timur** (https://dealertrukhino.com)
    - Katalog spesifikasi teknis 46 varian Euro 4 untuk tender pengadaan armada ekspedisi.
-6. **Dealer Resmi Foton Motor Indonesia** (https://dealerfoton.com)
+7. **Dealer Resmi Foton Motor Indonesia** (https://dealerfoton.com)
    - Showroom digital pickup niaga, light truck, dan bus komersial.
-7. **Traktor Nusa Teknik B2B**
+8. **Traktor Nusa Teknik B2B**
    - Katalog digital alat berat & formulir Request for Quotation (RFQ) tender korporat.
-8. **Logis-Track Armada Indonesia**
+9. **Logis-Track Armada Indonesia**
    - Sistem aplikasi web operasional ekspedisi dengan cetak surat jalan QR code otomatis.
-9. **Petcue Travel Gear** (https://petcue.co)
-   - Toko online perlengkapan travel hewan standar global dengan review engine interaktif.
-10. **Homelook Architectural** (https://homelook.shop)
+10. **Petcue Travel Gear** (https://petcue.co)
+    - Toko online perlengkapan travel hewan standar global dengan review engine interaktif.
+11. **Homelook Architectural** (https://homelook.shop)
     - Storefront designer hardware interior mewah dengan data sheet arsitektural presisi.
 
 ---
