@@ -112,6 +112,11 @@ export const metadata: Metadata = {
     },
   },
   category: 'technology',
+  other: {
+    copyright: 'JasaWebsite.co by ONG',
+    author: 'Ong-OS Web Development Services',
+    'llms-txt': '/llms.txt',
+  },
 };
 
 export const viewport: Viewport = {
@@ -135,6 +140,7 @@ export default function RootLayout({
       className={`h-full h-[100dvh] overflow-hidden overscroll-none ${inter.variable} ${newsreader.variable} ${jetbrains.variable}`}
     >
       <head>
+        <link rel="help" href="/llms.txt" type="text/markdown" title="LLMs Context Feed" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(masterSchema) }}

@@ -189,7 +189,12 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
   * Berisi 33 URL terdaftar (1 Root + 8 Core Folios + 24 Niche Pages) dengan priority dan changeFrequency resmi.
 * **Rute:** `/robots.txt` (`src/app/robots.ts`)
   * Tipe: `text/plain`
-  * Mengizinkan perayapan seluruh bot (`User-agent: *`, `Allow: /`), merujuk ke `https://jasawebsite.co/sitemap.xml`.
+  * Mengizinkan perayapan bot pencari AI resmi (`Googlebot`, `Bingbot`, `GPTBot`, `OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`, `Applebot`), memblokir bot scraper training liar (`CCBot`, `Bytespider`, `Diffbot`, `Amazonbot`), dan merujuk ke `https://jasawebsite.co/sitemap.xml`.
+
+### Standard AI Context Feed (`llms.txt` & `llms-full.txt`)
+* **Rute:** `/llms.txt` & `/llms-full.txt` (`public/llms.txt`)
+  * Tipe: `text/plain; charset=utf-8`
+  * Standar web baru untuk LLM & Generative Engine Optimization (GEO). Berisi ringkasan terstruktur Markdown tentang profil studio, 4 pilar layanan, estimasi harga transparan, bukti 10 portofolio live (termasuk Samira Travel), dan 24 direktori industri untuk dikutip langsung oleh ChatGPT Search, Perplexity AI, dan Claude.
 
 ### Machine-Readable Route Manifest XML
 * **Rute:** `/peta-development.xml` (`public/peta-development.xml` & `docs/peta-development.xml`)

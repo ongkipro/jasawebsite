@@ -404,5 +404,12 @@
       <content-type>image/vnd.microsoft.icon</content-type>
       <status>200 OK</status>
     </endpoint>
+    <endpoint id="llms-txt">
+      <route>/llms.txt</route>
+      <type>Standard AI Search &amp; LLM Context Feed</type>
+      <component>public/llms.txt</component>
+      <content-type>text/plain; charset=utf-8</content-type>
+      <status>200 OK</status>
+    </endpoint>
   </special-endpoints>
 </peta-development>

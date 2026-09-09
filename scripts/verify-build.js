@@ -25,6 +25,7 @@ assert(fs.existsSync(outDir), 'out/ directory exists');
 assert(fs.existsSync(path.join(outDir, 'index.html')), 'out/index.html exists');
 assert(fs.existsSync(path.join(outDir, 'robots.txt')), 'out/robots.txt exists');
 assert(fs.existsSync(path.join(outDir, 'sitemap.xml')), 'out/sitemap.xml exists');
+assert(fs.existsSync(path.join(outDir, 'llms.txt')), 'out/llms.txt exists');
 assert(fs.existsSync(path.join(outDir, 'og-image.webp')), 'out/og-image.webp exists');
 
 // 2. Check JSON-LD in index.html

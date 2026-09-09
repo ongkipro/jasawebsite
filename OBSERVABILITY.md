@@ -28,3 +28,4 @@ Probe: robots|https://jasawebsite.co/robots.txt|200|User-agent|300
 Probe: peta-xml|https://jasawebsite.co/peta-development.xml|200|development-map|300
 Probe: favicon-svg|https://jasawebsite.co/favicon.svg|200|<svg|300
 Probe: icon-512|https://jasawebsite.co/icon.png|200|PNG|500
+Probe: llms-txt|https://jasawebsite.co/llms.txt|200|JasaWebsite.co|300

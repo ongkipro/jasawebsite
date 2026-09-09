@@ -17,6 +17,7 @@ support each decision; AI output alone is not evidence.
 | DEC-009 | ACCEPTED | Next.js 16 App Router SSG + Motion (Framer Motion) | Enables hardware-accelerated 3D sheet-turn physics, touch-swipe gestures on mobile, and dual-layer RSC for 100% crawlable semantic HTML | `docs/spec/04-SYSTEM-ARCHITECTURE.md`, `AGENTS.md` | DEC-007 |
 | DEC-010 | ACCEPTED | Tactile Folio Sheet-by-Sheet Metaphor with Perforated Vouchers | Replace conventional vertical scroll with an interactive 2-page open book spread (desktop) and swipeable sheet (mobile) plus perforated WhatsApp vouchers | `docs/spec/05-DESIGN-BLUEPRINT.md`, `docs/spec/10-DESIGN-SYSTEM-UIUX.md` | — |
 | DEC-011 | ACCEPTED | High-Fill Obsidian Squircle Favicon & Vector SVG Suite | Solves low 16x16 browser tab legibility with max-fill squircle badge (#0e0f12, 112px radius, 187px font, glowing vermillion dot #ff453a) + full multi-resolution PNG/SVG/ICO suite | `src/app/layout.tsx`, `public/favicon.svg`, `scripts/build_favicons.py` | — |
+| DEC-012 | ACCEPTED | Generative Engine Optimization (GEO) & Anti-Clone Shielding | Structured standard llms.txt, AI search engine crawler whitelist (GPTBot, PerplexityBot, ClaudeBot), parasitic training scraper block (CCBot, Bytespider, Diffbot), and Vercel edge security headers (X-Frame-Options: SAMEORIGIN) | `public/llms.txt`, `src/app/robots.ts`, `vercel.json`, `src/app/layout.tsx` | — |
 
 Use stable IDs such as `DEC-001`. When a decision needs detailed alternatives or
 consequences, add a repository-owned ADR and link it from this register. Never
