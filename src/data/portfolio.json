@@ -1,5 +1,41 @@
 [
   {
+    "id": "samira-travel-umroh",
+    "clientName": "Samira Travel Umroh & Haji",
+    "category": "company-profile",
+    "categoryLabel": "Company Profile & Portal Umroh",
+    "industry": "Biro Perjalanan Umroh & Haji Khusus",
+    "challenge": "Biro perjalanan umroh peringkat #1 nasional Kemenag RI (50.000+ jemaah) membutuhkan platform resmi berkecepatan tinggi untuk menegaskan legalitas izin PPIU Kemenag, jadwal penerbangan direct charter 11 kota, serta direktori 26 kantor cabang nasional.",
+    "solution": "Membangun website profil korporat & portal ibadah modern berbasis Next.js App Router dengan filter interaktif pencarian paket keberangkatan, skema terstruktur TravelAgency Schema.org, dan integrasi WhatsApp lead router ke 26 cabang.",
+    "metrics": [
+      {
+        "label": "Jemaah Terbantu",
+        "value": "50.000+ Jemaah",
+        "detail": "Peringkat #1 Nasional Kemenag RI & 3 Rekor MURI"
+      },
+      {
+        "label": "Jaminan Terbang",
+        "value": "100% Charter",
+        "detail": "Penerbangan langsung Lion Air & Saudia A330"
+      },
+      {
+        "label": "Kecepatan Akses",
+        "value": "0.29s TTFB",
+        "detail": "Rendering sub-detik Edge CDN Cloudflare"
+      }
+    ],
+    "techStack": [
+      "Next.js 16 App Router",
+      "Interactive Schedule Engine",
+      "Branch Lead Router (26 Cabang)",
+      "TravelAgency Schema.org"
+    ],
+    "desktopImage": "/images/portfolio/samiratravel-desktop.webp",
+    "mobileImage": "/images/portfolio/samiratravel-mobile.webp",
+    "liveUrl": "https://samiratravelumrohhaji.com",
+    "voucherCode": "ONG-CASE-SAMIRA"
+  },
+  {
     "id": "batik-smile",
     "clientName": "Batik Smile Semarang",
     "category": "shopify",

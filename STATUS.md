@@ -103,6 +103,13 @@
       - `public/favicon.ico` & `src/app/favicon.ico`: Multi-resolution ICO (16, 32, 48) with high tab contrast.
       - `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180): High-end Apple iOS home screen icon.
     - Verified in real tab previews (16px & 32px): completely fills the tab space, eliminating hollow outline or tiny sliver rendering.
+  - **Phase 19: Portfolio Expansion (Samira Travel Umroh & Haji) & Pillar 4 Skip Alignment:**
+    - Integrated premier client portfolio project: **Samira Travel Umroh & Haji Khusus** (`https://samiratravelumrohhaji.com/`).
+    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) viewport screenshots, converted to lightweight WebP (`public/images/portfolio/samiratravel-desktop.webp` 81KB, `public/images/portfolio/samiratravel-mobile.webp` 27KB).
+    - Categorized under `company-profile` with rich real-world impact metrics: 50.000+ Jemaah (Peringkat #1 Kemenag RI, 3 Rekor MURI), 100% Charter Flight (Lion Air & Saudia A330 dari 11 Kota), sub-0.3s TTFB.
+    - Added dedicated real client showcase strip on `ComproSheet.tsx` linking directly to `samiratravelumrohhaji.com`.
+    - Total curated portfolio projects expanded to 10 live verified commercial systems.
+    - Executed user decision to omit number 4 from the pillars: cleaned up legacy `PILLAR 03 & 04` string in `services.json` to pure `PILLAR 03` (Pillar 01 -> Pillar 02 -> Pillar 03 -> skip 4 -> Pillar 05).
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

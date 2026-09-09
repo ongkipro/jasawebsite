@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ShieldCheck, Star } from 'lucide-react';
+import { Check, ShieldCheck, Star, ArrowUpRight } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { TearOffVoucher } from '@/components/book/TearOffVoucher';
 import servicesData from '@/data/services.json';
@@ -8,7 +8,7 @@ const service = servicesData.find((s) => s.id === 'company-profile')!;
 
 export function ComproSheetLeft() {
   return (
-    <article className="space-y-5">
+    <article className="space-y-3.5 sm:space-y-4">
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <Badge variant="mono">{service.pillarNumber}</Badge>
         <Badge variant="outline">{service.category}</Badge>
@@ -54,6 +54,43 @@ export function ComproSheetLeft() {
             </span>
           ))}
         </div>
+      </div>
+
+      {/* Real Client Showcase Strip */}
+      <div className="pt-2 border-t border-[#e5e5df] space-y-1.5">
+        <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
+          <span>Karya Company Profile Klien Kami Live:</span>
+          <a
+            href="https://samiratravelumrohhaji.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-[#c23b22] inline-flex items-center gap-0.5 hover:underline font-semibold"
+          >
+            <span>samiratravelumrohhaji.com</span>
+            <ArrowUpRight className="w-3 h-3" />
+          </a>
+        </div>
+        <a
+          href="https://samiratravelumrohhaji.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="group block relative aspect-[21/9] sm:aspect-[24/9] rounded-xs border border-[#d5d5cd] overflow-hidden bg-[#111111]"
+          title="Samira Travel Umroh & Haji Khusus Resmi Kemenag RI"
+        >
+          <img
+            src="/images/portfolio/samiratravel-desktop.webp"
+            alt="Samira Travel"
+            width={540}
+            height={220}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-102 transition-all"
+          />
+          <div className="absolute bottom-0 inset-x-0 bg-black/85 text-[8px] font-mono text-white flex items-center justify-between py-0.5 px-2">
+            <span className="truncate pr-2">PT Samira Ali Wisata (PPIU Kemenag RI)</span>
+            <span className="text-[#C5A059] font-bold shrink-0">50.000+ Jemaah • Peringkat #1</span>
+          </div>
+        </a>
       </div>
     </article>
   );

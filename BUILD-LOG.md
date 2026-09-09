@@ -185,6 +185,23 @@
     - `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180): Apple iOS home screen icon.
   - Verified in real tab simulations (16px & 32px): completely fills the tab area with zero empty slivers.
 
+### Phase 19: Portfolio Expansion (Samira Travel Umroh & Haji) & Pillar 4 Skip Alignment
+- **Date:** 2026-09-09
+- **Objective:** Add live commercial showcase `https://samiratravelumrohhaji.com/` into the portfolio gallery, generate responsive WebP preview assets, add live showcase strip on `ComproSheet.tsx`, and clean up pillar numbering to skip 4 per user decision.
+- **Completed Actions:**
+  - Integrated `samira-travel-umroh` into `src/data/portfolio.json`:
+    - Client: Samira Travel Umroh & Haji Khusus (PT Samira Ali Wisata, PPIU No. 137/2020 & PIHK 2022)
+    - Category: `company-profile` (fills the company profile portfolio filter with an anchor enterprise showcase)
+    - Metrics: 50.000+ Jemaah (Peringkat #1 Kemenag RI, 3 Rekor MURI), 100% Charter Flight (Lion Air & Saudia A330 dari 11 Kota), 0.29s TTFB
+    - Tech: Next.js 16 App Router, Interactive Schedule Engine, Branch Lead Router (26 Cabang), TravelAgency Schema.org
+    - Live URL: `https://samiratravelumrohhaji.com`
+  - Captured authentic high-resolution screenshots via headless Chrome:
+    - Desktop: 1440x900 converted to `public/images/portfolio/samiratravel-desktop.webp` (81 KB)
+    - Mobile: 390x844 converted to `public/images/portfolio/samiratravel-mobile.webp` (27 KB)
+  - Embedded real client showcase strip on `ComproSheetLeft` linking directly to `samiratravelumrohhaji.com` with verification badge.
+  - Aligned pillar numbering: removed legacy `PILLAR 03 & 04` string from `src/data/services.json` to pure `PILLAR 03`, honoring the decision to skip number 4 (Pillar 01 -> 02 -> 03 -> skip 4 -> 05).
+
+
 
 
 
