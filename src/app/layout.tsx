@@ -26,11 +26,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
-    template: '%s - Jasa Website',
+    default: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
+    template: '%s | JasaWebsite.co',
   },
   description:
-    'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Desain premium, performa sub-detik, mobile-responsive, dan infrastruktur Global Edge Cloud. Konsultasi draft SOW via WhatsApp.',
+    'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
   keywords: [
     'Jasa Pembuatan Website',
     'Jasa Website',
@@ -79,25 +79,25 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'id_ID',
     url: siteConfig.url,
-    siteName: 'Jasa Website',
-    title: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
+    siteName: 'JasaWebsite.co',
+    title: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
     description:
-      'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Desain premium, performa sub-detik, mobile-responsive, dan infrastruktur Global Edge Cloud. Konsultasi draft SOW via WhatsApp.',
+      'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
     images: [
       {
         url: '/og-image.webp',
         width: 1200,
         height: 675,
-        alt: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
+        alt: 'Jasa Pembuatan Website & Toko Online - JasaWebsite.co',
         type: 'image/webp',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jasa Pembuatan Website Profesional & Toko Online Terbaik - Jasa Website',
+    title: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
     description:
-      'Jasa pembuatan website profesional, landing page sales, toko online e-commerce & custom web application untuk bisnis Indonesia. Konsultasi draft SOW via WhatsApp.',
+      'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
     images: ['/og-image.webp'],
   },
   robots: {

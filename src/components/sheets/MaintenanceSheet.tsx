@@ -66,9 +66,9 @@ export function MaintenanceSheetLeft() {
       </div>
 
       <div className="space-y-1">
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
+        <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
-        </h2>
+        </h1>
         <div className="font-mono text-xs font-bold text-[#c23b22]">
           Simulasi Investasi: {service.startingPriceAnchor}
         </div>

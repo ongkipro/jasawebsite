@@ -40,9 +40,9 @@ export function PortfolioGallerySheetLeft({
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <div className="flex items-center gap-1.5">
           <span className="w-2 h-2 bg-[#c23b22] inline-block rounded-xs" />
-          <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
+          <h1 className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
             DECK PORTOFOLIO TERKURASI
-          </span>
+          </h1>
         </div>
         <Badge variant="mono">{filteredProjects.length} PROYEK</Badge>
       </div>
@@ -192,7 +192,7 @@ export function PortfolioGallerySheetRight({
         >
           <img
             src={viewportMode === 'desktop' ? selectedItem.desktopImage : selectedItem.mobileImage}
-            alt={`${selectedItem.clientName} Preview`}
+            alt={`Portofolio Website ${selectedItem.clientName} - ${selectedItem.categoryLabel} (${viewportMode})`}
             width={640}
             height={360}
             className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"

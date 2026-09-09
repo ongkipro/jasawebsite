@@ -32,6 +32,7 @@ assert(fs.existsSync(path.join(outDir, 'og-image.webp')), 'out/og-image.webp exi
 const indexHtml = fs.readFileSync(path.join(outDir, 'index.html'), 'utf-8');
 assert(indexHtml.includes('application/ld+json'), 'index.html contains Schema.org JSON-LD graph');
 assert(indexHtml.includes('ProfessionalService'), 'index.html contains ProfessionalService schema');
+assert(indexHtml.includes('FAQPage'), 'index.html contains FAQPage rich snippet schema');
 assert(indexHtml.includes('JasaWebsite.co by ONG'), 'index.html contains brand name');
 
 // 3. Verify all core folio pages exist

@@ -1,4 +1,5 @@
 import { siteConfig } from '@/data/siteConfig';
+import faqsData from '@/data/faqs.json';
 
 export interface BreadcrumbItem {
   name: string;
@@ -114,6 +115,19 @@ export function generateMasterSchema() {
           '@id': `${siteConfig.url}/#service`,
         },
       },
+      {
+        '@type': 'FAQPage',
+        '@id': `${siteConfig.url}/#faq`,
+        name: 'Pertanyaan Umum Layanan Jasa Pembuatan Website & Toko Online',
+        mainEntity: faqsData.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
     ],
   };
 }
@@ -122,48 +136,92 @@ export function generateSheetSchema(
   title: string,
   description: string,
   slug: string,
-  schemaType = 'WebPage'
+  schemaType = 'WebPage',
+  price?: string
 ) {
   const pageUrl = `${siteConfig.url}/folio/${slug}`;
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': schemaType,
+      '@id': `${pageUrl}/#webpage`,
+      url: pageUrl,
+      name: title,
+      description: description,
+      isPartOf: {
+        '@id': `${siteConfig.url}/#website`,
+      },
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}/#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Beranda',
+          item: siteConfig.url,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Living Digital Brochure',
+          item: `${siteConfig.url}/folio/cover`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  // If this represents a core service or niche offering, inject structured Service schema
+  const isServiceFolio = [
+    'company-profile',
+    'sales-website',
+    'ecommerce-shopify',
+    'custom-web-app',
+    'maintenance-care',
+  ].includes(slug) || slug.startsWith('niche-');
+
+  if (isServiceFolio) {
+    const cleanPrice = price ? price.replace(/[^0-9]/g, '') : undefined;
+    graph.push({
+      '@type': 'Service',
+      '@id': `${pageUrl}/#service`,
+      name: title,
+      description: description,
+      provider: {
+        '@id': `${siteConfig.url}/#service`,
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Indonesia',
+      },
+      serviceType: title,
+      ...(cleanPrice
+        ? {
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: cleanPrice,
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'IDR',
+                price: price,
+              },
+            },
+          }
+        : {}),
+    });
+  }
+
   return {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': schemaType,
-        '@id': `${pageUrl}/#webpage`,
-        url: pageUrl,
-        name: title,
-        description: description,
-        isPartOf: {
-          '@id': `${siteConfig.url}/#website`,
-        },
-        inLanguage: 'id-ID',
-      },
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${pageUrl}/#breadcrumb`,
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Beranda',
-            item: siteConfig.url,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Living Digital Brochure',
-            item: `${siteConfig.url}/folio/cover`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: title,
-            item: pageUrl,
-          },
-        ],
-      },
-    ],
+    '@graph': graph,
   };
 }
 

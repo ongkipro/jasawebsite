@@ -122,6 +122,14 @@
     - Upgraded live client showcase strip in `CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) in responsive `grid-cols-5`.
     - Updated AI context in `public/llms.txt` and `public/llms-full.txt` with 11 live verified projects.
     - Total curated portfolio projects expanded to 11 live verified commercial systems.
+  - **Phase 21: Complete SEO Engineering, Semantic Hierarchy & Schema Perfection:**
+    - Calibrated all page titles to Google's golden pixel limit: 50–58 chars (suffix ` | JasaWebsite.co`), eliminating SERP truncation.
+    - Calibrated all meta descriptions to 140–152 characters across root, 8 core spreads, and 24 industry niche pages (eliminated 278-char bloat).
+    - Injected structured `FAQPage` Schema.org JSON-LD from `faqs.json` into master graph for Google Rich Snippets accordion dropdowns.
+    - Added structured `Service` and `Offer` schema with starting price specifications to all core service folios and niche programmatic pages.
+    - Corrected HTML heading hierarchy: transformed main headers in `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, `PortfolioGallerySheet`, and `ColophonSheet` to exact, semantic `<h1>` tags.
+    - Hardened Image SEO: rewritten all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
+    - Verified all 56/56 deterministic smoke checks passing (`npm test`).
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

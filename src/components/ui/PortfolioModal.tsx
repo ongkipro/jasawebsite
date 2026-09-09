@@ -80,7 +80,7 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
           <div className="relative max-h-[440px] overflow-y-auto bg-[#0a0a0a]">
             <img
               src={item.desktopImage}
-              alt={`${item.clientName} Full Screenshot`}
+              alt={`Hasil Karya Pembuatan Website ${item.clientName} - ${item.categoryLabel}`}
               width={1200}
               height={700}
               className="w-full h-auto object-cover object-top"

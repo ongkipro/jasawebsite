@@ -15,9 +15,9 @@ export function SalesSheetLeft() {
       </div>
 
       <div className="space-y-2">
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
+        <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
-        </h2>
+        </h1>
         <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
           Simulasi Investasi:{' '}
           <span className="stabilo-yellow font-bold text-[#111111]">
@@ -102,7 +102,7 @@ export function SalesSheetLeft() {
           >
             <img
               src="/images/portfolio/dealerhino-desktop.webp"
-              alt="Dealer Hino Resmi"
+              alt="Landing Page Sales Dealer Truk Hino Resmi Indonesia"
               width={320}
               height={180}
               loading="lazy"
@@ -122,7 +122,7 @@ export function SalesSheetLeft() {
           >
             <img
               src="/images/portfolio/dealertrukhino-desktop.webp"
-              alt="Dealer Truk Hino Jatim"
+              alt="Landing Page Katalog Spesifikasi Truk Hino Jawa Timur"
               width={320}
               height={180}
               loading="lazy"
@@ -142,7 +142,7 @@ export function SalesSheetLeft() {
           >
             <img
               src="/images/portfolio/dealerfoton-desktop.webp"
-              alt="Dealer Foton Motor"
+              alt="Showroom Landing Page Dealer Resmi Foton Motor Indonesia"
               width={320}
               height={180}
               loading="lazy"

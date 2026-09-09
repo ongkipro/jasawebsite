@@ -15,9 +15,9 @@ export function ComproSheetLeft() {
       </div>
 
       <div className="space-y-2">
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
+        <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] leading-tight">
           {service.headline}
-        </h2>
+        </h1>
         <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
           Simulasi Investasi:{' '}
           <span className="stabilo-yellow font-bold text-[#111111]">
@@ -79,7 +79,7 @@ export function ComproSheetLeft() {
         >
           <img
             src="/images/portfolio/samiratravel-desktop.webp"
-            alt="Samira Travel"
+            alt="Website Company Profile Samira Travel Umroh Haji Khusus Kemenag RI"
             width={540}
             height={220}
             loading="lazy"

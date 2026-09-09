@@ -18,9 +18,9 @@ export function ColophonSheet() {
       </div>
 
       <div className="space-y-1">
-        <h2 className="font-serif text-2xl font-bold text-[#111111]">
+        <h1 className="font-serif text-2xl font-bold text-[#111111]">
           Komitmen Kejujuran Rekayasa Teknis
-        </h2>
+        </h1>
         <p className="font-sans text-xs text-[#4b4b4b] leading-relaxed">
           Setiap proyek yang dirilis oleh {siteConfig.name} terikat pada 4 standar keunggulan tanpa kompromi:
         </p>

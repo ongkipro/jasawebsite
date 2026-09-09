@@ -15,9 +15,9 @@ export function CommerceSheetLeft() {
       </div>
 
       <div className="space-y-1.5">
-        <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#111111] leading-tight">
+        <h1 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-[#111111] leading-tight">
           Toko Online Brand Anda Sendiri
-        </h2>
+        </h1>
         <div className="font-mono text-xs font-semibold text-[#4b4b4b]">
           Bebas Biaya Admin 10% Marketplace:{' '}
           <span className="stabilo-green font-bold text-[#111111]">
@@ -113,7 +113,7 @@ export function CommerceSheetLeft() {
           >
             <img
               src="/images/portfolio/elfy-desktop.webp"
-              alt="ELFY Malaysia"
+              alt="Toko Online Shopify Headless ELFY Malaysia D2C Menswear"
               width={280}
               height={210}
               loading="lazy"
@@ -133,7 +133,7 @@ export function CommerceSheetLeft() {
           >
             <img
               src="/images/portfolio/batiksmile-desktop.webp"
-              alt="Batik Smile"
+              alt="Toko Online Flagship Batik Smile Semarang Katalog Sarimbit"
               width={280}
               height={210}
               loading="lazy"
@@ -153,7 +153,7 @@ export function CommerceSheetLeft() {
           >
             <img
               src="/images/portfolio/beautyinu-desktop.webp"
-              alt="Beautyinu"
+              alt="Toko Online D2C Beautyinu Skincare Pembayaran QRIS Otomatis"
               width={280}
               height={210}
               loading="lazy"
@@ -173,7 +173,7 @@ export function CommerceSheetLeft() {
           >
             <img
               src="/images/portfolio/petcue-desktop.webp"
-              alt="Petcue"
+              alt="Toko Online Brand Petcue Travel Gear Standar Global"
               width={280}
               height={210}
               loading="lazy"
@@ -193,7 +193,7 @@ export function CommerceSheetLeft() {
           >
             <img
               src="/images/portfolio/homelook-desktop.webp"
-              alt="Homelook"
+              alt="Toko Online Homelook Architectural Luxury Hardware Interior"
               width={280}
               height={210}
               loading="lazy"

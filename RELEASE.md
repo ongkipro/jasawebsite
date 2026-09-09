@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-008
-Base: 58b071e
+Release-ID: REL-20260909-009
+Base: a76d20a
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -33,6 +33,14 @@ Status: RELEASED_VERIFIED
   - `GET /images/portfolio/elfy-desktop.webp` -> HTTP 200 (image/webp, 71KB)
   - `GET /images/portfolio/elfy-mobile.webp` -> HTTP 200 (image/webp, 37KB)
 - **Key Architectural & Branding Highlights:**
+  - **Comprehensive SEO & Schema Perfection (Commit `REL-20260909-009`):**
+    - Golden Title Limits: Calibrated all title tags to 50–58 chars (safe from Google SERP ellipsis truncation) with suffix ` | JasaWebsite.co`.
+    - Golden Description Limits: Calibrated meta descriptions to 140–152 chars across root, 8 core spreads, and 24 industry niche pages.
+    - FAQPage Schema Integration: Injected structured Q&A schema from `faqs.json` into master JSON-LD graph for Google Rich Snippets accordions.
+    - Service & Offer Schema: Added `@type: 'Service'` and price specification on all core services and niche pages.
+    - Semantic HTML Hierarchy: Established exactly one primary `<h1>` per page across all sheets.
+    - Image SEO: Upgraded all `<img>` alt tags with descriptive, keyword-rich phrases.
+    - Smoke test suite expanded to 56/56 passing tests.
   - **ELFY Malaysia International D2C Flagship Portfolio Expansion:**
     - Live commercial case study integrated: `https://elfy.my` (Kuala Lumpur, Malaysia).
     - Authentic desktop & mobile WebP screenshots captured via headless Chrome (<100KB total).

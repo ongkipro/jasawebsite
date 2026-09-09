@@ -211,9 +211,20 @@
   - Captured authentic high-resolution screenshots via headless Chrome:
     - Desktop: 1440x900 converted to `public/images/portfolio/elfy-desktop.webp` (71 KB)
     - Mobile: 390x844 converted to `public/images/portfolio/elfy-mobile.webp` (37 KB)
-  - Upgraded live brand showcase strip in `CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) with `grid-cols-5`.
   - Updated AI context feed in `public/llms.txt` and `public/llms-full.txt` with 11 live verified projects.
   - Verified static compilation (`npm run build`) and smoke tests (`npm test` 55/55 passing).
+
+### Phase 21: Complete SEO Engineering, Semantic Hierarchy & Schema Perfection
+- **Date:** 2026-09-09
+- **Objective:** Fully optimize SEO titles, meta descriptions to golden character limits, integrate FAQPage and Service Schema.org JSON-LD, ensure single semantic `<h1>` on all sheets, and upgrade all image alt tags with descriptive keywords.
+- **Completed Actions:**
+  - Standardized Title Tags to 50–58 characters (including ` | JasaWebsite.co` template suffix), preventing search engine ellipsis cuts.
+  - Trimmed Meta Descriptions to 140–152 characters (eliminated 278-character truncation issue).
+  - Injected `FAQPage` schema into master `@graph` in `src/lib/seo.ts` using 8 comprehensive Q&As from `src/data/faqs.json`.
+  - Added structured `Service` schema with pricing and currency specifications for all service spreads and niche pages.
+  - Updated headings in `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, `PortfolioGallerySheet`, and `ColophonSheet` to semantic `<h1>` elements.
+  - Upgraded all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
+  - Added FAQPage schema check in `scripts/verify-build.js` and verified 56/56 smoke checks passing.
 
 
 

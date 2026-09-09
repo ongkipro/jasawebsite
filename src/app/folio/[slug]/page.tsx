@@ -22,9 +22,9 @@ const CORE_FOLIO_SEO: Record<
   { title: string; description: string; keywords: string[] }
 > = {
   cover: {
-    title: 'Brosur Digital Layanan Jasa Pembuatan Website & Toko Online',
+    title: 'Brosur Digital Jasa Pembuatan Website',
     description:
-      'Dossier resmi layanan pembuatan website profesional, landing page sales, toko online e-commerce, dan custom web application. Konsultasi draft SOW via WhatsApp.',
+      'Brosur digital interaktif layanan pembuatan website profesional, toko online & custom web app Indonesia. Konsultasi draft SOW via WhatsApp.',
     keywords: [
       'jasa pembuatan website',
       'jasa website profesional',
@@ -34,9 +34,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'company-profile': {
-    title: 'Jasa Pembuatan Website Company Profile Korporat & B2B',
+    title: 'Jasa Website Company Profile Korporat',
     description:
-      'Jasa bikin website profil perusahaan & korporat terpercaya. Desain elegan, loading sub-detik, SEO Google teroptimasi, dan infrastruktur Global Edge Cloud.',
+      'Jasa pembuatan website company profile korporat & B2B kredibel. Desain elegan, loading sub-detik, dan SEO Google optimal. Hubungi WhatsApp.',
     keywords: [
       'jasa pembuatan website company profile',
       'bikin web profil perusahaan',
@@ -46,9 +46,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'sales-website': {
-    title: 'Jasa Pembuatan Landing Page Sales & Leads WhatsApp Berkonversi Tinggi',
+    title: 'Jasa Landing Page Sales & Leads WhatsApp',
     description:
-      'Jasa pembuatan landing page iklan Meta Ads & Google Ads berkonversi tinggi untuk dealer mobil, mesin industri, kontraktor, dan properti.',
+      'Jasa pembuatan landing page iklan Meta & Google Ads berkonversi tinggi untuk dealer, mesin, properti & kontraktor. Konsultasi via WhatsApp.',
     keywords: [
       'jasa landing page sales',
       'landing page whatsapp leads',
@@ -58,9 +58,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'ecommerce-shopify': {
-    title: 'Jasa Pembuatan Website Toko Online Shopify & E-Commerce Mandiri',
+    title: 'Jasa Pembuatan Toko Online & Shopify',
     description:
-      'Jasa pembuatan toko online Shopify dan website e-commerce mandiri profesional. Setup Shopify, kustom desain tampilan, 0% komisi, QRIS, dan cek ongkir kurir otomatis.',
+      'Jasa pembuatan toko online Shopify & e-commerce mandiri tanpa komisi. Integrasi QRIS otomatis dan kurir se-Indonesia. Hubungi via WhatsApp.',
     keywords: [
       'jasa pembuatan website shopify',
       'jasa pembuatan toko online shopify',
@@ -72,9 +72,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'custom-web-app': {
-    title: 'Jasa Pembuatan Custom Web Application, CRM & Sistem Digital Perusahaan',
+    title: 'Jasa Web Application, CRM & Mini ERP',
     description:
-      'Jasa pembuatan aplikasi web custom, CRM penjualan, sistem operasional mini ERP, dan portal klien sesuai SOP unik bisnis Anda. Aman dan scalable.',
+      'Jasa pembuatan aplikasi web custom, CRM penjualan, sistem operasional mini ERP, dan portal klien sesuai SOP bisnis Anda. Hubungi WhatsApp.',
     keywords: [
       'jasa web application custom',
       'jasa pembuatan crm indonesia',
@@ -84,9 +84,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   portfolio: {
-    title: 'Portofolio Proyek & Studi Kasus Jasa Pembuatan Website Terpercaya',
+    title: 'Portofolio & Studi Kasus Website Live',
     description:
-      'Lihat galeri portofolio website company profile, landing page sales, toko online, dan web app dengan metrik performa nyata dan bukti kepuasan klien.',
+      'Galeri portofolio website company profile, landing page sales, toko online & web app live dengan metrik nyata. Cek hasil karya studio kami.',
     keywords: [
       'portofolio web developer',
       'studi kasus pembuatan website',
@@ -96,9 +96,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   'maintenance-care': {
-    title: 'Jasa Maintenance Website, Setup Iklan Meta & Google Ads - Jasa Website',
+    title: 'Jasa Maintenance Website & Iklan Ads',
     description:
-      'Layanan pemeliharaan website profesional, pemantauan uptime, proteksi performa cloud, serta jasa setup iklan Facebook, Instagram & Google Ads untuk bisnis yang ingin bertumbuh.',
+      'Jasa pemeliharaan website berkala, monitoring uptime 24/7, optimasi kecepatan, serta setup iklan Meta & Google Ads. Hubungi via WhatsApp.',
     keywords: [
       'jasa maintenance website',
       'jasa setup meta ads',
@@ -110,9 +110,9 @@ const CORE_FOLIO_SEO: Record<
     ],
   },
   colophon: {
-    title: 'Direktori Jasa Pembuatan Website 30+ Industri & Kontak Resmi Studio',
+    title: 'Direktori 24 Industri & Kontak Studio',
     description:
-      'Solusi pembuatan website untuk 30+ ceruk industri spesifik Indonesia. Konsultasikan kebutuhan bisnis Anda dan dapatkan draft proposal SOW via WhatsApp.',
+      'Solusi pembuatan website khusus untuk 24 sektor industri di Indonesia. Konsultasikan kebutuhan bisnis Anda dan dapatkan draft SOW via WA.',
     keywords: [
       'direktori jasa website indonesia',
       'jasa website spesifik industri',
@@ -140,8 +140,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const niche = nichesData.find((n) => n.slug === nicheSlug);
     if (!niche) return { title: 'Industri Tidak Ditemukan' };
 
-    const pageTitle = `Jasa Pembuatan Website ${niche.industryName} Profesional`;
-    const pageDesc = `${niche.headline}. Solusi jasa pembuatan website ${niche.industryName.toLowerCase()} dengan performa sub-detik dan arsitektur Global Edge Cloud. Hubungi via Call / WhatsApp.`;
+    const pageTitle = `Jasa Website ${niche.industryName}`;
+    const pageDesc = `Jasa pembuatan website ${niche.industryName.toLowerCase()} profesional. Performa sub-detik, mobile-first & siap closing. Konsultasi via WhatsApp.`;
 
     return {
       title: pageTitle,
@@ -164,19 +164,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         type: 'article',
         locale: 'id_ID',
         url: pageUrl,
-        siteName: 'Jasa Website',
-        title: `${pageTitle} - Jasa Website`,
+        siteName: 'JasaWebsite.co',
+        title: `${pageTitle} | JasaWebsite.co`,
         description: pageDesc,
         images: [
           {
             ...defaultImage,
-            alt: `${pageTitle} - Jasa Website`,
+            alt: `${pageTitle} - JasaWebsite.co`,
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${pageTitle} - Jasa Website`,
+        title: `${pageTitle} | JasaWebsite.co`,
         description: pageDesc,
         images: ['/og-image.webp'],
       },
@@ -219,14 +219,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'website',
       locale: 'id_ID',
       url: pageUrl,
-      siteName: 'Jasa Website',
-      title: `${pageTitle} - Jasa Website`,
+      siteName: 'JasaWebsite.co',
+      title: `${pageTitle} | JasaWebsite.co`,
       description: pageDesc,
       images: [defaultImage],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${pageTitle} - Jasa Website`,
+      title: `${pageTitle} | JasaWebsite.co`,
       description: pageDesc,
       images: ['/og-image.webp'],
     },
@@ -255,9 +255,10 @@ export default async function FolioPage({ params }: PageProps) {
 
     const sheetSchema = generateSheetSchema(
       niche.industryName,
-      niche.headline,
+      `Jasa pembuatan website ${niche.industryName.toLowerCase()} profesional. Performa sub-detik, mobile-first dan siap closing.`,
       slug,
-      niche.schemaType
+      niche.schemaType,
+      niche.startingPrice
     );
 
     return (
@@ -278,11 +279,20 @@ export default async function FolioPage({ params }: PageProps) {
   }
 
   const folio = foliosData[spreadIndex];
+  const startingPrices: Record<string, string> = {
+    'company-profile': 'Rp 2,9jt',
+    'sales-website': 'Rp 3,5jt',
+    'ecommerce-shopify': 'Rp 3,9jt',
+    'custom-web-app': 'Rp 15jt',
+    'maintenance-care': 'Rp 2,5jt',
+  };
+
   const sheetSchema = generateSheetSchema(
     folio.title,
     folio.description,
     slug,
-    'WebPage'
+    startingPrices[slug] ? 'Service' : 'WebPage',
+    startingPrices[slug]
   );
 
   return (
