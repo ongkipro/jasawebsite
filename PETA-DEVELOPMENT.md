@@ -30,7 +30,7 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 │    └── /folio/maintenance-care   -> [MaintenanceSheet.tsx]   (Mulai Rp 2,5jt/bln)      │
 │                                                                                        │
 │ 3. Portofolio & Colophon Studio (Folios 05, 07)                                        │
-│    ├── /folio/portfolio      -> [PortfolioGallerySheet.tsx]  (10+ Live Showcase)       │
+│    ├── /folio/portfolio      -> [PortfolioGallerySheet.tsx]  (11 Live Proyek Showcase) │
 │    └── /folio/colophon       -> [NicheCatalogSheet.tsx] + [ColophonSheet.tsx]          │
 │                                                                                        │
 │ 4. Direktori Ceruk Industri / Programmatic SEO (24 Sektor Spesifik)                    │
@@ -57,7 +57,7 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 | **03** | `/folio/sales-website` | `sales-website` | `SalesSheet` | Landing Page Sales & Leads WA | Mulai Rp 3,5jt | Dealer resmi, agen properti, distributor, tim sales |
 | **04** | `/folio/ecommerce-shopify` | `ecommerce-shopify` | `CommerceSheet` | Toko Mandiri & Shopify D2C | Mulai Rp 3,9jt | Brand retail, skincare, fashion, bebas fee admin 10% |
 | **05** | `/folio/custom-web-app` | `custom-web-app` | `CustomAppSheet` | Custom Web App, CRM & ERP | Mulai Rp 15jt+ | Perusahaan multi-divisi, gudang, replace spreadsheet |
-| **06** | `/folio/portfolio` | `portfolio` | `PortfolioGallerySheet` | Deck Portofolio Terkurasi Live | 10+ Proyek | Calon klien butuh bukti karya nyata & live URL |
+| **06** | `/folio/portfolio` | `portfolio` | `PortfolioGallerySheet` | Deck Portofolio Terkurasi Live | 11 Proyek Terverifikasi | Calon klien butuh bukti karya nyata & live URL |
 | **07** | `/folio/maintenance-care` | `maintenance-care` | `MaintenanceSheet` | Maintenance Care & Ads Scaling | Mulai Rp 2,5jt/bln | Brand aktif ngiklan, backup, uptime, server-side CAPI |
 | **08** | `/folio/colophon` | `colophon` | `NicheCatalog` + `Colophon` | Direktori 24 Sektor & Colophon | Direktori 24 Sektor | Navigasi ceruk industri pSEO & komitmen garansi |
 | **09** | `/folio/niche-dealer-otomotif` | `niche-dealer-otomotif` | `NicheDetailSheet` | Dealer Mobil & Showroom Kendaraan | Mulai Rp 5,9jt | Dealer Hino, Foton, mobil baru/bekas, simulasi kredit |
@@ -222,7 +222,7 @@ src/data/
 ├── folios.json      -> 8 Core Spreads (slug, title, headline, pillar, startingPrice)
 ├── services.json    -> 5 Core Pillars (problem, solution, idealFor, tiers, vouchers)
 ├── niches.json      -> 24 Industry Niches (painPoints, flow, keyFeatures, rationale)
-├── portfolio.json   -> 10+ Real Projects (metrics, tags, images, liveUrls)
-└── siteConfig.ts    -> Studio identity, phone, email, URLs, stats
+├── portfolio.json   -> 11 Real Projects (metrics, tags, images, liveUrls)
+└── siteConfig.ts    -> Studio Metadata (brand, phones, URLs, stats, schemas)
 ```
 Semua data di atas divalidasi dengan strict TypeScript interfaces di bawah `src/types/` (`folio.ts`, `service.ts`, `niche.ts`, `portfolio.ts`, `config.ts`), menjamin tidak ada `any` type atau kegagalan kompilasi saat build time.

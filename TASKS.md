@@ -368,5 +368,27 @@
     - Wire metadata in `src/app/layout.tsx` and verify static HTML output in `out/index.html`.
   - **Verification:** Verified via test suite (`npm test`), static build (`npm run build`), and visual inspector sheets across white, dark, and chrome tab backgrounds.
 
+- [x] **TASK-38: International D2C Flagship Portfolio Expansion (ELFY Malaysia)**
+  - **Owner:** `storefront-development` + `full-stack-development`
+  - **Scope:**
+    - Integrate international live D2C brand `https://elfy.my` (Kuala Lumpur, Malaysia) into curated portfolio gallery (`src/data/portfolio.json`).
+    - Capture authentic high-resolution desktop (1440x900) and mobile (390x844) screenshots via headless Chrome, converted to lightweight WebP (`public/images/portfolio/elfy-desktop.webp` 71KB, `public/images/portfolio/elfy-mobile.webp` 37KB).
+    - Upgrade client showcase strip in `src/components/sheets/CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) in responsive `grid-cols-5`.
+    - Update AI context documentation in `public/llms.txt` and `public/llms-full.txt` to reflect 11 live verified projects.
+  - **Verification:** Verified static build export, asset existence, and automated tests.
+
+- [x] **TASK-39: Complete SEO Engineering, Semantic Hierarchy & Schema Perfection**
+  - **Owner:** `seo-website-builder` + `full-stack-development`
+  - **Scope:**
+    - Standardize title tags to 50–58 characters (including ` | JasaWebsite.co` template suffix), preventing search engine ellipsis cuts.
+    - Trim meta descriptions to 140–152 characters across root, 8 core spreads, and 24 industry niche pages (eliminated 278-character truncation issue).
+    - Inject `FAQPage` schema into master `@graph` in `src/lib/seo.ts` using 8 comprehensive Q&As from `src/data/faqs.json`.
+    - Add structured `Service` and `Offer` schema with pricing and currency specifications for all service spreads and niche pages.
+    - Update headings in `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, `PortfolioGallerySheet`, and `ColophonSheet` to semantic `<h1>` elements.
+    - Upgrade all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
+    - Add FAQPage schema check in `scripts/verify-build.js` and expand smoke test suite to 56/56 passing checks.
+  - **Verification:** Verified 56/56 automated smoke checks passing, zero TypeScript errors, and deterministic static export.
+
+
 
 
