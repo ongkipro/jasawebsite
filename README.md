@@ -38,9 +38,38 @@
 │ • Rentan disusupi script malware & spam│ • Arsitektur statis kebal serangan CMS plugin │
 │ • Server lambat & cPanel sering down   │ • Managed Enterprise Edge Cloud (99.9% Uptime)│
 │ • Terkunci sepihak (Agency Lock-in)    │ • 100% Hak milik kode sumber via GitHub       │
-│ • Pelacakan event iklan sering meleset │ • Integrasi presisi Server-Side CAPI & dataLayer│
+│ • Pelacakan event iklan sering meleset │ • Integrasi Server-Side CAPI & dataLayer      │
 └────────────────────────────────────────┴───────────────────────────────────────────────┘
 ```
+
+### 🛡️ Filosofi Kemitraan: Mengapa Kami Tidak Menjual Web Lepas (The Managed Growth Moat)
+
+Banyak pemilik bisnis kapok membeli website dari agensi template biasa: setelah serah terima, agensi menghilang, website dibiarkan usang, hosting cPanel sering *down*, pixel pelacak iklan mati saat ada update browser/iOS, dan tim sales mengeluhkan leads yang tidak pernah masuk. Akhirnya, website hanya berakhir jadi "kartu nama digital mati".
+
+Di **JasaWebsite.co by ONG**, kami beroperasi sebagai **Boutique Software Studio & Growth Partner**. Kami merancang ekosistem yang **menjaga 4 urat nadi utama bisnis klien tetap beroperasi dan menghasilkan omzet**:
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                 ARSITEKTUR KEMITRAAN BERKELANJUTAN (BUKAN JUAL LEPAS)                  │
+├──────────────────────────┬──────────────────────────┬──────────────────────────────────┤
+│ [1] INFRASTRUKTUR CLOUD  │ [2] TRACKING IKLAN CAPI  │ [3] ALUR LEADS & OTOMASI SALES   │
+├──────────────────────────┼──────────────────────────┼──────────────────────────────────┤
+│ • Managed Edge CDN (sin1)│ • Server-Side Meta CAPI  │ • Form Web ➜ WhatsApp Sales     │
+│ • Uptime 99.99% Terjamin │ • Event Match Quality >8 │ • Auto-Record Spreadsheet / CRM  │
+│ • Zero Pusing cPanel/DNS │ • Anti Boncos Iklan Meta │ • Tim Sales Respon Hitungan Menit│
+├──────────────────────────┴──────────────────────────┴──────────────────────────────────┤
+│ [*] DEDICATED CARE RETAINER: Update Promo Bulanan, Audit Kecepatan & Siaga 24/7        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+1. **Urat Nadi Infrastruktur (Managed Global Edge Cloud):**  
+   Website Anda beroperasi di jaringan edge berkecepatan tinggi (Singapore `sin1`) dengan uptime 99.99%, proteksi anti-DDoS, dan pemantauan 24/7. Anda tidak perlu membuang waktu mengurus cPanel, SSL error, atau server lambat.
+2. **Urat Nadi Konversi Iklan (Server-Side Meta CAPI & Data Attribution):**  
+   Kami memasang pelacakan *server-side* langsung dari edge cloud ke Meta Conversions API dan Google Tag Manager. Data konversi tidak akan hilang oleh ad-blocker atau kebijakan privasi browser, sehingga algoritma iklan Anda tetap tajam dan budget iklan ratusan juta tidak terbakar sia-sia.
+3. **Urat Nadi Operasional Sales (Otomasi Leads ke WhatsApp & CRM):**  
+   Website bukan sekadar tampilan visual, melainkan pintu masuk utama leads pembeli. Setiap formulir langsung terhubung ke WhatsApp tim sales secara instan dan tercatat otomatis di spreadsheet/CRM perusahaan.
+4. **Urat Nadi Pertumbuhan & Retainer (Dukungan Rekayasa Berkelanjutan):**  
+   Setiap bulan bisnis pasti membutuhkan halaman promo baru, pembaruan katalog produk, atau kampanye musiman (Ramadhan, Gajian, Harbolnas). Retainer bulanan kami memberikan jatah pengerjaan (*sprint quota*) dan tim senior siaga dengan biaya jauh lebih terjangkau dibandingkan merekrut tim programmer dan desainer in-house tetap (hemat Rp 10–15jt/bulan).
 
 ---
 
@@ -252,17 +281,23 @@ Kami memiliki spesifikasi rekayasa teruji untuk 24 sektor industri di Indonesia:
 ## 🤝 5. Cara Memulai Kerjasama: The Engagement Sprint
 
 ```text
- ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐
- │  01. EVALUASI WA/CALL│ ──> │  02. PROPOSAL SOW/RAB│ ──> │  03. SPRINT REKAYASA │ ──> │  04. GO-LIVE & SERAH │
- │  Evaluasi Kebutuhan  │     │  Spesifikasi & Budget│     │  Pengerjaan Kode Next│     │  100% Repositori Git │
- └──────────────────────┘     └──────────────────────┘     └──────────────────────┘     └──────────────────────┘
+ ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐
+ │  01. EVALUASI WA/CALL│ ──> │  02. PROPOSAL SOW    │ ──> │  03. SPRINT REKAYASA │
+ │  Model Bisnis & Goal │     │  Spesifikasi & Biaya │     │  Arsitektur Next.js  │
+ └──────────────────────┘     └──────────────────────┘     └──────────────────────┘
+                                                                       │
+                                                                       ▼
+ ┌──────────────────────┐     ┌──────────────────────┐     ┌──────────────────────┐
+ │  KEMITRAAN PANJANG   │ <── │  05. MANAGED CARE    │ <── │  04. GO-LIVE & DATA  │
+ │  Ekosistem Terawat   │     │  Retainer & Scaling  │     │  Edge Cloud & CAPI   │
+ └──────────────────────┘     └──────────────────────┘     └──────────────────────┘
 ```
 
-1. **Evaluasi Kebutuhan Awal:** Hubungi tim kami via WhatsApp. Ceritakan model bisnis, target pasar, dan tantangan sistem yang ingin dipecahkan.
-2. **Draft SOW & Estimasi Anggaran (24–48 Jam):** Kami susun dokumen Scope of Work terperinci dengan timeline sprint dan biaya pasti tanpa biaya tersembunyi.
-3. **Fase Sprint Rekayasa (Engineering Sprint):** Pengerjaan kode murni dengan review berkala melalui staging link privat.
-4. **Setup Tracking & Conversion Verification:** Pemasangan instrumen pelacakan data (GTM, GA4, Meta CAPI) serta pengujian alur transaksi.
-5. **Peluncuran & Penyerahan Repositori:** Konfigurasi domain/DNS, deployment ke managed high-performance edge infrastructure, penyerahan repositori GitHub 100% hak milik Anda, dan pendampingan serah terima sistem.
+1. **Evaluasi Kebutuhan Awal:** Diskusi langsung via WhatsApp/Call. Kami telaah model bisnis, target audiens, dan problem operasional/iklan yang ingin diselesaikan.
+2. **Draft SOW & Estimasi Anggaran (24–48 Jam):** Kami susun dokumen Scope of Work terperinci dengan timeline sprint yang jelas, rincian deliverables, serta garansi biaya pasti (tanpa biaya tersembunyi).
+3. **Fase Sprint Rekayasa (Engineering Sprint):** Pengerjaan kode murni dengan arsitektur Next.js 16 SSG. Calon klien bisa memantau progres secara berkala via link staging privat.
+4. **Go-Live, Domain DNS & Setup Tracking Server-Side:** Peluncuran ke jaringan managed edge cloud berkecepatan tinggi, setup integrasi CAPI Meta/Google Ads, routing formulir ke WhatsApp sales, dan penyerahan 100% kepemilikan repositori Git.
+5. **Managed Care & Kemitraan Pertumbuhan Berkelanjutan:** Pendampingan aktif pasca-rilis: monitoring uptime 24/7, pemeliharaan sinyal iklan, audit kecepatan, serta kuota update landing page dan materi promo bulanan.
 
 ### Hubungi Kami Langsung:
 - 💬 **WhatsApp Resmi:** [+62 838-3044-1495](https://wa.me/6283830441495?text=Halo%20Tim%20JasaWebsite.co%20by%20ONG%2C%20saya%20tertarik%20konsultasi%20pembuatan%20website%20%2F%20sistem%20digital%20untuk%20bisnis%20saya.)
@@ -296,25 +331,25 @@ Platform ini bukan sekadar website agensi biasa, melainkan **etalase hidup (*liv
 ```text
 jasawebsite/
 ├── docs/
-│   ├── spec/                        # Canonical Specification Suite (BRD, PRD, Arsitektur, pSEO, Copywriting)
-│   └── audit/                       # Riset Industri & Analisis Komparasi Agensi Web
+│   ├── spec/           # Canonical Specs (BRD, PRD, Arsitektur, pSEO)
+│   └── audit/          # Riset & Analisis Komparasi Agensi Web
 ├── src/
-│   ├── app/                         # Next.js 16 App Router (Root layout, Folio routes, Sitemap, Robots)
+│   ├── app/            # Next.js 16 App Router (Layout, Folio, Sitemap)
 │   ├── components/
-│   │   ├── book/                    # Engine Buku Taktil (BookShell, SpreadView, TearOffVoucher, TornFolioView)
-│   │   ├── sheets/                  # Lembaran Semantik HTML (Cover, Compro, Sales, Commerce, CustomApp, Portfolio)
-│   │   └── ui/                      # Komponen Atomik (Button, Badge, InkStamp, Modal)
-│   ├── data/                        # Static Typed JSON Data Stores (services, portfolio, niches, faqs)
-│   ├── types/                       # TypeScript Strict Interfaces
-│   └── lib/                         # Pure Utilities (whatsapp.ts, seo.ts, cn.ts)
+│   │   ├── book/       # Engine Buku Taktil (BookShell, TearOffVoucher)
+│   │   ├── sheets/     # Lembaran Semantik HTML (Cover, Compro, Sales)
+│   │   └── ui/         # Komponen Atomik (Button, Badge, InkStamp)
+│   ├── data/           # Static JSON Data (services, portfolio, niches)
+│   ├── types/          # TypeScript Strict Interfaces
+│   └── lib/            # Utilities (whatsapp.ts, seo.ts, cn.ts)
 ├── scripts/
-│   └── verify-build.js              # Deterministic Smoke Verification Suite (72 automated assertions)
-├── ARCHITECTURE.md                  # System Boundaries & Engineering Guardrails
-├── TASKS.md                         # Executable Work Queue
-├── STATUS.md                        # State Machine & Log Pengiriman
-├── BUILD-LOG.md                     # Catatan Teknis Berkelanjutan (Phases 1–26)
-├── RELEASE.md                       # Manifes Rilis Produksi & Bukti Deploy Edge
-└── PETA-DEVELOPMENT.md              # Katalog Spesifikasi 33 Rute Publik & Manifes XML
+│   └── verify-build.js # Smoke Test Suite (72 automated assertions)
+├── ARCHITECTURE.md     # System Boundaries & Engineering Guardrails
+├── TASKS.md            # Executable Work Queue
+├── STATUS.md           # State Machine & Log Pengiriman
+├── BUILD-LOG.md        # Catatan Teknis Berkelanjutan (Phases 1–26)
+├── RELEASE.md          # Manifes Rilis Produksi & Bukti Deploy Edge
+└── PETA-DEVELOPMENT.md # Katalog Spesifikasi 33 Rute Publik
 ```
 
 ### Panduan Menjalankan Repositori Secara Lokal
