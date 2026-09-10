@@ -35,7 +35,7 @@
 
 ## 🕹️ 1. Studio Identity & Manifesto: JasaWebsite.co by ONG (`ongki.pro`)
 
-**JasaWebsite.co by ONG** adalah *boutique software engineering studio* dan arsitek sistem digital yang dipimpin langsung oleh **Ongki A Febriananda** ([ongki.pro](https://ongki.pro)), berbasis di Surabaya, Indonesia. Kami merancang platform web komersial berstandar industri untuk korporasi, brand D2C mandiri, distributor skala nasional, eksportir, dan bisnis bertumbuh di Indonesia dan Asia Tenggara.
+**JasaWebsite.co by ONG** adalah *boutique software engineering studio* dan arsitek sistem digital yang dipimpin langsung oleh [**ongki.pro**](https://ongki.pro), berbasis di Surabaya, Indonesia. Kami merancang platform web komersial berstandar industri untuk korporasi, brand D2C mandiri, distributor skala nasional, eksportir, dan bisnis bertumbuh di Indonesia dan Asia Tenggara.
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -331,4 +331,4 @@ npm run lint
 
 Hak Cipta © 2026 **JasaWebsite.co by ONG** ([ongki.pro](https://ongki.pro)). Seluruh hak cipta dilindungi undang-undang.
 
-Seluruh materi editorial, struktur penawaran komersial, identitas merek, naskah copywriting, dan studi kasus portofolio yang ada di dalam repositori ini adalah milik sah dari Ongki A Febriananda ([ongki.pro](https://ongki.pro)). Pola arsitektur teknis dan komponen rekayasa disajikan sebagai bukti transparansi teknis dan komitmen kualitas studio kepada calon klien dan mitra bisnis.
+Seluruh materi editorial, struktur penawaran komersial, identitas merek, naskah copywriting, dan studi kasus portofolio yang ada di dalam repositori ini adalah milik sah dari [**ongki.pro**](https://ongki.pro). Pola arsitektur teknis dan komponen rekayasa disajikan sebagai bukti transparansi teknis dan komitmen kualitas studio kepada calon klien dan mitra bisnis.
