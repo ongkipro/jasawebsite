@@ -26,8 +26,8 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
-    template: '%s | JasaWebsite.co',
+    default: 'Jasa Pembuatan Website & Toko Online - JasaWebsite.co',
+    template: '%s - JasaWebsite.co',
   },
   description:
     'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: siteConfig.url,
     siteName: 'JasaWebsite.co',
-    title: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
+    title: 'Jasa Pembuatan Website & Toko Online - JasaWebsite.co',
     description:
       'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
     images: [
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jasa Pembuatan Website & Toko Online | JasaWebsite.co',
+    title: 'Jasa Pembuatan Website & Toko Online - JasaWebsite.co',
     description:
       'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
     images: ['/og-image.webp'],

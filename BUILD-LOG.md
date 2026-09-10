@@ -275,3 +275,24 @@
     - Expanded smoke verification suite to 63/63 passing assertions (added tests for 404 static HTML, noindex robots directive, aggregateRating, knowsAbout, and portfolio ItemList).
     - Verified `npm run build` static export and `npm test` passing with 0 failures.
 
+### Phase 24: Title Separator Migration to Hyphen & Dynamic Client-Side SEO Synchronization
+- **Date:** 2026-09-10
+- **Objective:** Eliminate pipe (`|`) character from all page titles and OpenGraph/Twitter tags in favor of hyphen (`-`), and solve client-side tab navigation SEO desynchronization so that clicking any tab (e.g. Sales) immediately synchronizes `document.title`, `<meta name="description">`, `<link rel="canonical">`, OpenGraph, Twitter, and Schema.org JSON-LD in the browser DOM.
+- **Completed Actions:**
+  - **Hyphen Title Separator Standardization:**
+    - Updated `src/app/layout.tsx`: Replaced `%s | JasaWebsite.co` with `%s - JasaWebsite.co`, and updated default title, OpenGraph title, and Twitter title.
+    - Updated `src/app/folio/[slug]/page.tsx`: Replaced pipe with hyphen in all OpenGraph and Twitter card title tags.
+    - Updated `src/components/book/TornFolioView.tsx`: Replaced pipe divider in header with slash.
+    - Verified 0 pipe occurrences in title tags across all generated HTML output in `out/` (35 HTML files verified).
+  - **Dynamic Client-Side SEO Engine (`src/lib/seo.ts` & `src/components/book/BookShell.tsx`):**
+    - Created `syncDocumentSeo(slug: string)` in `src/lib/seo.ts` to update `document.title`, `meta[name="description"]`, `link[rel="canonical"]`, `og:title`, `og:description`, `og:url`, `twitter:title`, `twitter:description`, and inject the updated `folio-sheet-schema` JSON-LD in real-time.
+    - Wired `syncDocumentSeo` in `BookShell.tsx` inside `navigateToSpread` and via `useEffect([spreadIndex])`.
+    - Added browser `popstate` history listener so browser Back/Forward navigation turns book spreads and keeps DOM SEO tags perfectly synchronized.
+    - Upgraded `BookmarkRibbon.tsx` from plain `<button>` elements to semantic Next.js `<Link>` anchors (`<a href="/folio/[slug]">`) with tactile click interception, providing full crawlability for Googlebot.
+    - Upgraded Home and Portfolio navigation buttons in `BookShell.tsx` to semantic `<Link>` elements.
+    - Added `folio-sheet-schema` script tag in `src/app/page.tsx` for consistent DOM hydration.
+  - **Verification & Testing (`scripts/verify-build.js`):**
+    - Expanded smoke verification suite to 67/67 deterministic passing assertions (added checks for hyphen separator `- JasaWebsite.co`, absence of pipe `|`, and semantic Link anchors).
+    - Verified static compilation (`npm run build`) and smoke tests (`npm test` 67/67 passing).
+
+

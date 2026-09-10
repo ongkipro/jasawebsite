@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { ChevronLeft, ChevronRight, MessageSquareCode, Home, PhoneCall } from 'lucide-react';
 import { cn } from '@/lib/cn';
@@ -12,6 +13,7 @@ import { SingleSheetView } from '@/components/book/SingleSheetView';
 import { SheetTurner } from '@/components/book/SheetTurner';
 import { BookmarkRibbon } from '@/components/book/BookmarkRibbon';
 import { buildWhatsAppUrl } from '@/lib/whatsapp';
+import { syncDocumentSeo } from '@/lib/seo';
 
 export interface BookShellProps {
   initialSpreadIndex?: number;
@@ -48,12 +50,44 @@ export function BookShell({
       setSpreadIndex(newIndex);
       const targetSlug = foliosData[newIndex].slug;
       const targetUrl = targetSlug === 'cover' ? '/' : `/folio/${targetSlug}`;
-      if (pathname !== targetUrl) {
-        window.history.pushState(null, '', targetUrl);
+      if (window.location.pathname !== targetUrl) {
+        window.history.pushState({ spreadIndex: newIndex }, '', targetUrl);
       }
+      syncDocumentSeo(targetSlug);
     },
-    [totalSpreads, pathname]
+    [totalSpreads]
   );
+
+  // Synchronize document title, meta tags, and schema whenever spread changes
+  useEffect(() => {
+    const current = foliosData[spreadIndex];
+    if (current) {
+      syncDocumentSeo(current.slug);
+    }
+  }, [spreadIndex]);
+
+  // Support browser Back and Forward history navigation
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (e.state && typeof e.state.spreadIndex === 'number') {
+        setSpreadIndex(e.state.spreadIndex);
+      } else {
+        const path = window.location.pathname;
+        let newIdx = 0;
+        if (path === '/' || path === '/folio/cover') {
+          newIdx = 0;
+        } else if (path.startsWith('/folio/')) {
+          const slug = path.replace('/folio/', '');
+          const found = foliosData.findIndex((f) => f.slug === slug);
+          if (found !== -1) newIdx = found;
+        }
+        setSpreadIndex(newIdx);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const handleNext = useCallback(() => {
     if (spreadIndex < totalSpreads - 1) {
@@ -115,16 +149,19 @@ export function BookShell({
       {/* TOP TECHNICAL RUNNING NAV */}
       <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-1.5 mb-1.5 sm:pb-2 sm:mb-2 lg:mb-3 font-mono text-xs select-none">
         <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            type="button"
-            onClick={() => navigateToSpread(0, 'prev')}
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateToSpread(0, 'prev');
+            }}
             className="flex items-center gap-1.5 font-bold tracking-wider hover:text-[#c23b22] transition-colors cursor-pointer"
           >
             <Home className="w-3.5 h-3.5" />
             <span className="text-[11px] sm:text-xs">
               JASAWEBSITE.CO <span className="text-[#c23b22] font-semibold">by ONG</span>
             </span>
-          </button>
+          </Link>
           <span className="text-[#d5d5cd]">/</span>
           <span className="text-[#4b4b4b] hidden sm:inline text-[11px]">
             LIVING DIGITAL BROCHURE
@@ -132,9 +169,12 @@ export function BookShell({
         </div>
 
         <div className="flex items-center gap-1.5 sm:gap-4">
-          <button
-            type="button"
-            onClick={() => navigateToSpread(5, spreadIndex > 5 ? 'prev' : 'next')}
+          <Link
+            href="/folio/portfolio"
+            onClick={(e) => {
+              e.preventDefault();
+              navigateToSpread(5, spreadIndex > 5 ? 'prev' : 'next');
+            }}
             className={cn(
               'hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border font-mono text-[10px] sm:text-[11px] tracking-wide transition-all cursor-pointer',
               spreadIndex === 5
@@ -145,7 +185,7 @@ export function BookShell({
           >
             <span className="text-[#c23b22] text-[9px]">✦</span>
             <span>PORTFOLIO</span>
-          </button>
+          </Link>
 
           <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#4b4b4b]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />

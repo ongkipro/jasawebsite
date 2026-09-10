@@ -199,7 +199,7 @@ export function TornFolioView({ wa404Url, quickLinks }: TornFolioViewProps) {
             </div>
             <div className="hidden md:flex items-center gap-2 text-[#4b4b4b] text-[9px] uppercase tracking-widest">
               <span>REF: DISPLACED_FOLIO_404</span>
-              <span className="text-[#d5d5cd]">|</span>
+              <span className="text-[#d5d5cd]">/</span>
               <span>VOL. 01 · 2026</span>
             </div>
           </div>

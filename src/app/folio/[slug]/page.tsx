@@ -5,7 +5,11 @@ import nichesData from '@/data/niches.json';
 import { siteConfig } from '@/data/siteConfig';
 import { BookFolioRenderer } from '@/components/book/BookFolioRenderer';
 import { NicheBookShell } from '@/components/book/NicheBookShell';
-import { generateSheetSchema } from '@/lib/seo';
+import {
+  generateSheetSchema,
+  CORE_FOLIO_SEO,
+  NICHE_CALIBRATED_TITLES,
+} from '@/lib/seo';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -16,139 +20,6 @@ export async function generateStaticParams() {
   const nicheParams = nichesData.map((n) => ({ slug: `niche-${n.slug}` }));
   return [...coreParams, ...nicheParams];
 }
-
-const CORE_FOLIO_SEO: Record<
-  string,
-  { title: string; description: string; keywords: string[] }
-> = {
-  cover: {
-    title: 'Brosur Digital Jasa Pembuatan Website',
-    description:
-      'Brosur digital interaktif layanan pembuatan website profesional, toko online & custom web app Indonesia. Konsultasi draft SOW via WhatsApp.',
-    keywords: [
-      'jasa pembuatan website',
-      'jasa website profesional',
-      'brosur digital web developer',
-      'software house indonesia',
-      'full stack web developer',
-    ],
-  },
-  'company-profile': {
-    title: 'Jasa Website Company Profile Korporat',
-    description:
-      'Jasa pembuatan website company profile korporat & B2B kredibel. Desain elegan, loading sub-detik, dan SEO Google optimal. Hubungi WhatsApp.',
-    keywords: [
-      'jasa pembuatan website company profile',
-      'bikin web profil perusahaan',
-      'website korporat b2b indonesia',
-      'jasa website perusahaan',
-      'website tender b2b',
-    ],
-  },
-  'sales-website': {
-    title: 'Jasa Landing Page Sales & Leads WhatsApp',
-    description:
-      'Jasa pembuatan landing page iklan Meta & Google Ads berkonversi tinggi untuk dealer, mesin, properti & kontraktor. Konsultasi via WhatsApp.',
-    keywords: [
-      'jasa landing page sales',
-      'landing page whatsapp leads',
-      'jasa bikin landing page iklan',
-      'landing page konversi tinggi',
-      'website dealer mesin kontraktor',
-    ],
-  },
-  'ecommerce-shopify': {
-    title: 'Jasa Pembuatan Toko Online & Shopify',
-    description:
-      'Jasa pembuatan toko online Shopify & e-commerce mandiri tanpa komisi. Integrasi QRIS otomatis dan kurir se-Indonesia. Hubungi via WhatsApp.',
-    keywords: [
-      'jasa pembuatan website shopify',
-      'jasa pembuatan toko online shopify',
-      'jasa bikin toko online shopify',
-      'shopify developer indonesia',
-      'jasa toko online mandiri',
-      'jasa website e-commerce',
-      'toko online qris kurir otomatis',
-    ],
-  },
-  'custom-web-app': {
-    title: 'Jasa Web Application, CRM & Mini ERP',
-    description:
-      'Jasa pembuatan aplikasi web custom, CRM penjualan, sistem operasional mini ERP, dan portal klien sesuai SOP bisnis Anda. Hubungi WhatsApp.',
-    keywords: [
-      'jasa web application custom',
-      'jasa pembuatan crm indonesia',
-      'bikin sistem mini erp perusahaan',
-      'software house custom web app',
-      'software house custom dashboard',
-    ],
-  },
-  portfolio: {
-    title: 'Portofolio & Studi Kasus Website Live',
-    description:
-      'Galeri portofolio website company profile, landing page sales, toko online & web app live dengan metrik nyata. Cek hasil karya studio kami.',
-    keywords: [
-      'portofolio web developer',
-      'studi kasus pembuatan website',
-      'contoh website company profile',
-      'hasil karya jasa website',
-      'hasil karya jasa bikin web',
-    ],
-  },
-  'maintenance-care': {
-    title: 'Jasa Maintenance Website & Iklan Ads',
-    description:
-      'Jasa pemeliharaan website berkala, monitoring uptime 24/7, optimasi kecepatan, serta setup iklan Meta & Google Ads. Hubungi via WhatsApp.',
-    keywords: [
-      'jasa maintenance website',
-      'jasa setup meta ads',
-      'jasa pasang iklan facebook',
-      'jasa iklan google ads',
-      'jasa kelola website indonesia',
-      'server side capi meta google',
-      'jasa optimasi website indonesia',
-    ],
-  },
-  colophon: {
-    title: 'Direktori 24 Industri & Kontak Studio',
-    description:
-      'Solusi pembuatan website khusus untuk 24 sektor industri di Indonesia. Konsultasikan kebutuhan bisnis Anda dan dapatkan draft SOW via WA.',
-    keywords: [
-      'direktori jasa website indonesia',
-      'jasa website spesifik industri',
-      'kontak jasa website studio',
-      'konsultasi pembuatan website whatsapp',
-      'daftar industri jasa web',
-    ],
-  },
-};
-
-const NICHE_CALIBRATED_TITLES: Record<string, string> = {
-  'dealer-otomotif': 'Jasa Website Dealer Mobil & Showroom',
-  'rental-mobil-bus-pariwisata': 'Jasa Website Rental Mobil & Bus Pariwisata',
-  'bengkel-mobil-body-repair': 'Jasa Website Bengkel & Body Repair Mobil',
-  'alat-berat-mesin': 'Jasa Website Alat Berat & Mesin Industri',
-  'pabrik-manufaktur-b2b': 'Jasa Website Pabrikasi & Manufaktur B2B',
-  'percetakan-packaging-kemasan': 'Jasa Website Percetakan & Packaging Box',
-  'developer-properti': 'Jasa Website Developer & Real Estate',
-  'kontraktor-arsitek': 'Jasa Website Kontraktor & Desain Interior',
-  'klinik-kesehatan': 'Jasa Website Klinik Medis & Rumah Sakit',
-  'distributor-alkes-farmasi': 'Jasa Website Distributor Alkes & Farmasi',
-  'kantor-hukum-advokat': 'Jasa Website Kantor Hukum & Advokat',
-  'konsultan-pajak-akuntan': 'Jasa Website Konsultan Pajak & Akuntan',
-  'konsultan-it-cctv-keamanan': 'Jasa Website IT Solution & CCTV Keamanan',
-  'brand-fashion-d2c': 'Jasa Website Brand Fashion & Apparel D2C',
-  'brand-skincare-kosmetik': 'Jasa Website Brand Skincare & Kosmetik',
-  'restoran-cafe-fnb': 'Jasa Website Restoran, Cafe & Bisnis F&B',
-  'event-organizer-wedding-planner': 'Jasa Website Wedding Planner & Event EO',
-  'ekspedisi-logistik-cargo': 'Jasa Website Ekspedisi & Logistik Cargo',
-  'ekspor-komoditas-hasil-bumi': 'Jasa Website Eksportir Komoditas Alam',
-  'sekolah-universitas-bimbel': 'Jasa Website Sekolah, Kampus & Bimbel',
-  'tour-travel-umroh': 'Jasa Website Travel Umroh & Haji Khusus',
-  'cleaning-service-pest-control': 'Jasa Website Cleaning Service Komersial',
-  'agribisnis-peternakan-modern': 'Jasa Website Agribisnis & Peternakan',
-  'koperasi-keuangan-mikro': 'Jasa Website Koperasi Simpan Pinjam',
-};
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -194,7 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         locale: 'id_ID',
         url: pageUrl,
         siteName: 'JasaWebsite.co',
-        title: `${pageTitle} | JasaWebsite.co`,
+        title: `${pageTitle} - JasaWebsite.co`,
         description: pageDesc,
         images: [
           {
@@ -205,7 +76,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${pageTitle} | JasaWebsite.co`,
+        title: `${pageTitle} - JasaWebsite.co`,
         description: pageDesc,
         images: ['/og-image.webp'],
       },
@@ -249,13 +120,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'id_ID',
       url: pageUrl,
       siteName: 'JasaWebsite.co',
-      title: `${pageTitle} | JasaWebsite.co`,
+      title: `${pageTitle} - JasaWebsite.co`,
       description: pageDesc,
       images: [defaultImage],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${pageTitle} | JasaWebsite.co`,
+      title: `${pageTitle} - JasaWebsite.co`,
       description: pageDesc,
       images: ['/og-image.webp'],
     },
@@ -327,6 +198,7 @@ export default async function FolioPage({ params }: PageProps) {
   return (
     <>
       <script
+        id="folio-sheet-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(sheetSchema) }}
       />

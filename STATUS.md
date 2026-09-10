@@ -142,10 +142,16 @@
     - Hardened master Schema.org graph with `aggregateRating` (4.95/5.0 from 48 reviews) and `knowsAbout` competencies list.
     - Injected structured `ItemList` schema into `/folio/portfolio` mapping all 13 verified live projects.
     - Expanded automated smoke test suite to 63/63 passing assertions (`scripts/verify-build.js`).
+  - **Phase 24: Title Separator Migration to Hyphen & Dynamic Client-Side SEO Synchronization:**
+    - Migrated title separator from pipe (`|`) to hyphen (`-`) across layout template, all 33 routes, OpenGraph, and Twitter tags.
+    - Implemented `syncDocumentSeo(slug)` in `src/lib/seo.ts` updating DOM title, description, canonical link, OG, Twitter, and Schema.org JSON-LD in real-time.
+    - Wired `syncDocumentSeo` into `BookShell.tsx` and added `popstate` listener for seamless history navigation.
+    - Converted `BookmarkRibbon.tsx` and top nav buttons to semantic Next.js `<Link>` anchors for 100% crawlability.
+    - Expanded smoke verification suite to 67/67 passing assertions (`scripts/verify-build.js`).
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 41 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
-- **Smoke Suite:** 63/63 automated deterministic checks passing (`npm test`).
+- **Smoke Suite:** 67/67 automated deterministic checks passing (`npm test`).
 - **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
 - **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
 - **Live URLs:**

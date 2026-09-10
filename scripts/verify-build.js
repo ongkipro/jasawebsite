@@ -115,6 +115,26 @@ assert(
   'portfolio.html includes ItemList schema with 13 verified live projects'
 );
 
+// 11. Verify title separator format (hyphen instead of pipe) across HTML output
+const salesHtmlPath = path.join(outDir, 'folio', 'sales-website.html');
+assert(fs.existsSync(salesHtmlPath), 'out/folio/sales-website.html exists');
+const salesHtml = fs.readFileSync(salesHtmlPath, 'utf-8');
+assert(
+  salesHtml.includes('<title>Jasa Landing Page Sales &amp; Leads WhatsApp - JasaWebsite.co</title>') ||
+  salesHtml.includes('<title>Jasa Landing Page Sales & Leads WhatsApp - JasaWebsite.co</title>'),
+  'sales-website.html has calibrated title with hyphen separator (-)'
+);
+assert(
+  !salesHtml.includes('| JasaWebsite.co'),
+  'sales-website.html does not contain pipe (|) in title'
+);
+
+// 12. Verify semantic BookmarkRibbon link anchors
+assert(
+  indexHtml.includes('href="/folio/sales-website"'),
+  'index.html contains semantic Link anchor to /folio/sales-website'
+);
+
 console.log('--------------------------------------------------');
 console.log(`TOTAL CHECKS: ${passed + failed} | PASSED: ${passed} | FAILED: ${failed}`);
 

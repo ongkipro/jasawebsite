@@ -1,18 +1,17 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260910-011
-Base: d68e23a
+Release-ID: REL-20260910-012
+Base: 7cf16a1
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
 Rollback-Command: git revert HEAD --no-edit
 Backup-Proof: NOT_REQUIRED
-Status: RELEASED_VERIFIED
+Status: RELEASE_READY
 
 ## Contract & Deployment Evidence
 
 - **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co)
-- **Deployment URL:** [https://jwco-bhf1a8kzd-ongkipro.vercel.app](https://jwco-bhf1a8kzd-ongkipro.vercel.app) (`dpl_9kZLgQpTK8ecs6kCiN4U8u1uLPF1`)
 - **Vercel Project:** `ongkipro/jwco` (`prj_M3dsY8tssCiR2RL9OIxUtFFZsmet`)
 - **Framework & Runtime:** Next.js 16.3.4 App Router SSG (Turbopack, Tailwind CSS v4, Motion 13.2.0, Lucide React 1.16.0)
 - **Edge Deployment & CDN:** Vercel Edge Singapore (`sin1`) + Cloudflare Pages
@@ -33,6 +32,12 @@ Status: RELEASED_VERIFIED
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
   - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
 - **Key Architectural & Branding Highlights:**
+  - **Hyphen Title Separator & Dynamic Client-Side SEO Engine (Commit `REL-20260910-012`):**
+    - Migrated title separator from pipe (`|`) to hyphen (`-`) across layout template (`%s - JasaWebsite.co`), all 33 routes, OpenGraph, and Twitter tags.
+    - Built `syncDocumentSeo(slug)` updating `document.title`, `<meta name="description">`, `<link rel="canonical">`, OpenGraph, Twitter, and Schema.org JSON-LD in real-time.
+    - Wired `syncDocumentSeo` into `BookShell.tsx` and added `popstate` listener for seamless history navigation.
+    - Converted `BookmarkRibbon.tsx` and top nav buttons to semantic Next.js `<Link>` anchors for 100% crawlability.
+    - Smoke test suite expanded to 67/67 deterministic passing assertions (`npm test`).
   - **Tactile 404 Displaced Folio & Master SEO Graph Hardening (Commit `REL-20260910-011`):**
     - Created `TornFolioView.tsx`: tactile floating paper drift with spring physics, physical ink stamp micro-bounce (`FOLIO TERLEPAS`), interactive animated scissor on perforated dashed tear seam, staggered quick index links, and interactive corner dog-ear curl.
     - Preserved `src/app/not-found.tsx` as a Server Component exporting crawler directives (`robots: { index: false, follow: true }`).

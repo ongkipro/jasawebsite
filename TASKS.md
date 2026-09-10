@@ -410,3 +410,14 @@
     - Expand `scripts/verify-build.js` smoke suite from 56 to 63 deterministic assertions.
   - **Verification:** Verified static build export, 63/63 test checks passing, 0 TypeScript/ESLint errors, and deterministic HTML generation.
 
+- [x] **TASK-42: Title Separator Migration to Hyphen & Dynamic Client-Side SEO Synchronization**
+  - **Owner:** `seo-website-builder` + `nextjs-development`
+  - **Scope:**
+    - Replace pipe (`|`) with hyphen (`-`) across all page titles, layout template (`%s - JasaWebsite.co`), OpenGraph, and Twitter tags.
+    - Implement `syncDocumentSeo(slug)` in `src/lib/seo.ts` updating `document.title`, `<meta name="description">`, `<link rel="canonical">`, OpenGraph, Twitter, and Schema.org JSON-LD.
+    - Wire `syncDocumentSeo` and `popstate` history listener in `src/components/book/BookShell.tsx` so tab clicking and browser back/forward buttons instantly update browser metadata.
+    - Convert `BookmarkRibbon.tsx` and top nav buttons to semantic Next.js `<Link>` elements for 100% crawlability.
+    - Expand `scripts/verify-build.js` smoke suite from 63 to 67 deterministic assertions.
+  - **Verification:** Verified static build export, 67/67 automated checks passing, 0 pipes in HTML output, and deterministic DOM synchronization.
+
+

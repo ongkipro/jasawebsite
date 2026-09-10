@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { cn } from '@/lib/cn';
 import foliosData from '@/data/folios.json';
 
@@ -25,12 +26,24 @@ export function BookmarkRibbon({
     >
       {foliosData.map((folio, index) => {
         const isActive = currentSpreadIndex === index;
+        const targetUrl = folio.slug === 'cover' ? '/' : `/folio/${folio.slug}`;
 
         return (
-          <button
+          <Link
             key={folio.id}
-            type="button"
-            onClick={() => onSelectSpread(index)}
+            href={targetUrl}
+            onClick={(e) => {
+              if (
+                !e.metaKey &&
+                !e.ctrlKey &&
+                !e.shiftKey &&
+                !e.altKey &&
+                e.button === 0
+              ) {
+                e.preventDefault();
+                onSelectSpread(index);
+              }
+            }}
             title={folio.title}
             aria-current={isActive ? 'page' : undefined}
             className={cn(
@@ -50,7 +63,7 @@ export function BookmarkRibbon({
               <span>{folio.title}</span>
               <span className="absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-y-[4px] border-y-transparent border-l-[5px] border-l-[#111111]" />
             </div>
-          </button>
+          </Link>
         );
       })}
     </nav>
