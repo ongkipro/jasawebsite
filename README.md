@@ -15,8 +15,8 @@
 
 <p align="center">
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Production-Live%20at%20jasawebsite.co-111111?style=for-the-badge&logo=vercel" alt="Live Production" /></a>
-  <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Lighthouse-100%2F100-emerald?style=for-the-badge&logo=lighthouse" alt="Lighthouse 100" /></a>
-  <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Speed-TTFB%20%3C%200.3s-blue?style=for-the-badge" alt="Sub-0.3s TTFB" /></a>
+  <a href="docs/audit/2026-09-11-qa.md"><img src="https://img.shields.io/badge/QA-Verified%20locally-emerald?style=for-the-badge&logo=lighthouse" alt="Local QA evidence" /></a>
+  <a href="docs/audit/2026-09-11-qa.md"><img src="https://img.shields.io/badge/Performance-Lab%20measured-blue?style=for-the-badge" alt="Measured lab performance" /></a>
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Infra-Managed%20Edge%20Cloud-purple?style=for-the-badge" alt="Managed Edge Cloud" /></a>
   <a href="https://wa.me/6283830441495"><img src="https://img.shields.io/badge/WhatsApp-%2B62%20838--3044--1495-25D366?style=for-the-badge&logo=whatsapp" alt="Direct WhatsApp" /></a>
 </p>
@@ -34,7 +34,7 @@
 │ ❌ AGENSI TEMPLATE BIASA (MARKETPLACE) │ ⚡ ONG-OS SOFTWARE STUDIO (JASAWEBSITE.CO)    │
 ├────────────────────────────────────────┼───────────────────────────────────────────────┤
 │ • Template WordPress / Elementor berat │ • Pure Next.js 16 App Router SSG (Hardware)   │
-│ • Loading lelet 3–8 detik (Pahit Iklan)│ • Sub-0.3s TTFB Global Edge CDN Delivery      │
+│ • Loading lelet 3–8 detik (Pahit Iklan)│ • Static export and measured performance QA    │
 │ • Rentan disusupi script malware & spam│ • Arsitektur statis kebal serangan CMS plugin │
 │ • Server lambat & cPanel sering down   │ • Managed Enterprise Edge Cloud (99.9% Uptime)│
 │ • Terkunci sepihak (Agency Lock-in)    │ • 100% Hak milik kode sumber via GitHub       │
@@ -325,7 +325,7 @@ Platform ini bukan sekadar website agensi biasa, melainkan **etalase hidup (*liv
 - **Ikon:** Lucide React (100% SVG vektor pohon, zero emoji)
 - **Bahasa:** Strict TypeScript (Target ES2022)
 - **Structured Data:** Master Schema.org JSON-LD (`ProfessionalService`, `FAQPage`, `ItemList`, `BreadcrumbList`)
-- **Infrastruktur Target:** Managed Global Edge Network (Singapore `sin1`) — Sub-0.3s TTFB latency, auto-scaling, dan enterprise security.
+- **Infrastruktur Target:** Static hosting on Vercel; concrete deployment, runtime, and performance evidence is recorded per release.
 
 ### Struktur Direktori Repositori
 ```text
@@ -354,7 +354,7 @@ jasawebsite/
 
 ### Panduan Menjalankan Repositori Secara Lokal
 
-Prasyarat: Node.js 20.x atau lebih baru, dan npm.
+Prasyarat: Node.js 22.19+ atau 24+, npm, Python 3 untuk validasi development map, dan Chrome terpasang untuk browser QA.
 
 ```bash
 # 1. Clone repositori ke mesin lokal
@@ -362,7 +362,7 @@ git clone https://github.com/ongkipro/jasawebsite.git
 cd jasawebsite
 
 # 2. Pasang seluruh dependensi
-npm install
+npm ci
 
 # 3. Jalankan development server lokal
 npm run dev
@@ -374,11 +374,18 @@ npm run build
 
 # 5. Jalankan automated smoke verification suite
 npm test
-# Menjalankan 72 checks deterministik: JSON-LD, routes, SEO titles, no-pipe, no-slop
+# Memeriksa 1.634 assertion output, SEO, schema, sitemap, dan development map
 
 # 6. Audit kualitas dan linting kode
 npm run lint
+
+# 7. Jalankan browser QA lintas route dan viewport
+npm run test:ui
 ```
+
+Development map per halaman ada di [docs/PETA-DEVELOPMENT.md](docs/PETA-DEVELOPMENT.md) dan [docs/peta-development.xml](docs/peta-development.xml). Jalankan `npm run test:map` setelah build untuk memeriksa route, metadata, harga, output, dan salinan XML publik.
+
+Hasil Lighthouse adalah pengukuran lab, bukan jaminan Core Web Vitals lapangan. Bukti QA, keterbatasan PSI/CrUX, dan langkah verifikasi pascadeploy dicatat pada [audit 2026-09-11](docs/audit/2026-09-11-qa.md).
 
 ---
 

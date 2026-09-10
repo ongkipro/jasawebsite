@@ -4,7 +4,7 @@ Updated: 2026-09-11. Task: TASK-44 / REQ-AUDIT-01.
 
 ## Delivery state
 
-Local audit and remediation are complete, including development-map synchronization and the pointer-focus regression fix on branch `audit/qa-seo-20260910`, worktree `~/Projects/jasawebsite-audit`. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean. No commit, push, or production deployment has been performed.
+Local audit and remediation are complete, including development-map synchronization and the pointer-focus regression fix. The candidate is rebased on `origin/main` at `47ec88b`; it is ready for the user-authorized push and production deployment. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean.
 
 The previously deployed artifact remains documented in [RELEASE.md](RELEASE.md). Historical completion claims in the build log do not establish the current state.
 
