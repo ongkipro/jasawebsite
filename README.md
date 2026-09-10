@@ -10,7 +10,7 @@
  ║ │   ████║██║  ██║███████║██║  ██║╚███╔███╔╝███████╗██████╔╝             │ ║
  ║ │   ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚═════╝              │ ║
  ║ │                                                                       │ ║
- ║ │        B Y   O N G K I   H E R L A M B A N G   ( O N G K I . P R O )  │ ║
+ ║ │                        B Y   O N G K I . P R O                        │ ║
  ║ │                                                                       │ ║
  ║ │        "Website & Sistem Digital untuk Bisnis yang Ingin Bertumbuh"   │ ║
  ║ │                                                                       │ ║
@@ -22,12 +22,6 @@
  ║              ▼                                         SELECT    START    ║
  ╚═══════════════════════════════════════════════════════════════════════════╝
 ```
-
-<p align="center">
-  <a href="https://jasawebsite.co">
-    <img src="public/og-image.webp" alt="JasaWebsite.co by ONG - Living Digital Brochure" width="100%" style="border-radius: 8px;" />
-  </a>
-</p>
 
 <p align="center">
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Production-Live%20at%20jasawebsite.co-111111?style=for-the-badge&logo=vercel" alt="Live Production" /></a>
