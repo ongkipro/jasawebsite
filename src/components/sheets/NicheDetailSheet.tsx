@@ -65,7 +65,6 @@ export function NicheDetailSheetLeft({ niche }: { niche: NicheItem }) {
           <span className="text-[#d5d5cd]">/</span>
           <span className="text-[#4b4b4b] font-medium">{niche.recommendedPillar}</span>
         </div>
-        <Badge variant="outline">SKEMA: {niche.schemaType}</Badge>
       </div>
 
       {/* Main Title & Editorial Headline */}
@@ -89,7 +88,7 @@ export function NicheDetailSheetLeft({ niche }: { niche: NicheItem }) {
         <div className="p-2.5 sm:p-3 bg-[#fbf7ee] border-l-3 border-[#c23b22] border-t border-r border-b border-[#e8dfc8] rounded-r-xs shadow-2xs space-y-1">
           <div className="flex items-center gap-1.5 font-mono text-[10px] font-bold tracking-wider text-[#c23b22]">
             <FileText className="w-3 h-3" />
-            <span>CATATAN LAPANGAN: {niche.fieldNote.tag}</span>
+            <span>TEMUAN UNTUK SEKTOR INI: {niche.fieldNote.tag}</span>
           </div>
           <p className="font-serif italic text-xs text-[#222222] leading-relaxed">
             &ldquo;{niche.fieldNote.content}&rdquo;
@@ -101,7 +100,7 @@ export function NicheDetailSheetLeft({ niche }: { niche: NicheItem }) {
       <div className="space-y-2 pt-0.5">
         <div className="font-mono text-xs font-bold uppercase tracking-wider text-[#c23b22] flex items-center gap-1.5">
           <AlertCircle className="w-3.5 h-3.5" />
-          <span>3 Hambatan Lapangan di Sektor Ini:</span>
+          <span>Hambatan yang Sering Muncul:</span>
         </div>
         <div className="space-y-1.5">
           {niche.painPoints.map((point, i) => (
@@ -132,7 +131,7 @@ export function NicheDetailSheetRight({ niche }: { niche: NicheItem }) {
       {/* Header Bar */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-          BLUEPRINT OPERASIONAL & SPESIFIKASI SOW
+          RUANG LINGKUP &amp; ESTIMASI
         </span>
         <span className="font-mono text-xs font-bold">
           <span className="stabilo-yellow text-[#111111]">
@@ -145,8 +144,8 @@ export function NicheDetailSheetRight({ niche }: { niche: NicheItem }) {
       {niche.conversionFlow && niche.conversionFlow.length > 0 && (
         <div className="space-y-1.5">
           <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] flex items-center justify-between">
-            <span>Alur Konversi & Transaksi Ideal:</span>
-            <span className="text-[10px] text-[#4b4b4b]">4 TAHAP PIPELINE</span>
+            <span>Alur yang Dapat Dibangun:</span>
+            <span className="text-[10px] text-[#4b4b4b]">{niche.conversionFlow.length} TAHAP</span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
             {niche.conversionFlow.map((step, idx) => (
@@ -224,4 +223,3 @@ export function NicheDetailSheetRight({ niche }: { niche: NicheItem }) {
     </article>
   );
 }
-

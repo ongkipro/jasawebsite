@@ -19,10 +19,10 @@ export function ColophonSheet() {
 
       <div className="space-y-1">
         <h2 className="font-serif text-2xl font-bold text-[#111111]">
-          Komitmen Kejujuran Rekayasa Teknis
+          Cara Kami Menjalankan Proyek
         </h2>
         <p className="font-sans text-xs text-[#4b4b4b] leading-relaxed">
-          Setiap proyek yang dirilis oleh {siteConfig.name} terikat pada 4 standar keunggulan tanpa kompromi:
+          Empat hal ini dibicarakan sejak awal proyek dan dirinci kembali dalam Scope of Work (SOW):
         </p>
       </div>
 
@@ -31,40 +31,40 @@ export function ColophonSheet() {
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>100% Repositori</span>
+            <span>Repositori klien</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Source code diserahkan penuh ke GitHub Anda tanpa penguncian.
+            Source code dan akses GitHub diserahkan sesuai lingkup proyek.
           </p>
         </div>
 
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>Global Edge Cloud</span>
+            <span>Hosting sesuai kebutuhan</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Infrastruktur Cloud modern terdistribusi global dengan konfigurasi keamanan dan monitoring sesuai lingkup proyek.
+            Infrastruktur, keamanan, dan monitoring dipilih sesuai kebutuhan aplikasi.
           </p>
         </div>
 
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>Optimasi Performa</span>
+            <span>Performa terukur</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Performa diuji dengan Lighthouse pada halaman dan perangkat yang disepakati.
+            Performa diuji pada halaman dan perangkat yang disepakati.
           </p>
         </div>
 
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>Zero Plugin Bloat</span>
+            <span>Dependensi secukupnya</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Kode bersih modern tanpa plugin pihak ketiga yang rawan crash.
+            Kami menggunakan dependensi yang diperlukan dan mendokumentasikan pilihan teknisnya.
           </p>
         </div>
       </div>
@@ -72,8 +72,8 @@ export function ColophonSheet() {
       {/* Ink Stamp */}
       <div className="py-1 flex justify-center">
         <InkStamp
-          text="RESMI & BERGARANSI"
-          subtext="100% KEPEMILIKAN PENUH · TANPA BIAYA TERSEMBUNYI"
+          text="SOW & SERAH TERIMA"
+          subtext="RUANG LINGKUP DAN BIAYA TERTULIS"
           date="2026"
         />
       </div>
@@ -117,9 +117,9 @@ export function ColophonSheet() {
 
       {/* Master WhatsApp Consultation Voucher */}
       <TearOffVoucher
-        title="Konsultasi Strategis Langsung Bersama Lead Engineer"
+        title="Diskusikan Kebutuhan Proyek Anda"
         code="ONG-MASTER-BRIEF"
-        perks="Diskusi Arsitektur Kustom, Pemetaan Kebutuhan Sistem & Estimasi SOW Transparan"
+        perks="Pemetaan kebutuhan, pilihan pendekatan, dan estimasi awal yang dijelaskan di depan."
         intentParams={{
           serviceName: 'Konsultasi Master SOW Studio',
           ref: 'ONG-MASTER-BRIEF',

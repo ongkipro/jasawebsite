@@ -11,6 +11,8 @@ export interface TabletSheetViewProps {
   rightContent: React.ReactNode;
   leftFolioNumber?: string;
   rightFolioNumber?: string;
+  leftLabel?: string;
+  rightLabel?: string;
   onPrevPage?: () => void;
   onNextPage?: () => void;
   hasPrev?: boolean;
@@ -23,6 +25,8 @@ export function TabletSheetView({
   rightContent,
   leftFolioNumber = 'FOLIO 00',
   rightFolioNumber = 'FOLIO 01',
+  leftLabel = 'Ringkasan',
+  rightLabel = 'Paket & Estimasi',
   onPrevPage,
   onNextPage,
   hasPrev = true,
@@ -90,7 +94,7 @@ export function TabletSheetView({
               )}
             >
               <BookOpen className="w-3 h-3" />
-              <span>Page 1: Overview</span>
+              <span>{leftLabel}</span>
             </button>
             <button
               type="button"
@@ -104,7 +108,7 @@ export function TabletSheetView({
               )}
             >
               <Layers className="w-3 h-3" />
-              <span>Page 2: Pricing &amp; SOW</span>
+              <span>{rightLabel}</span>
             </button>
           </div>
         )}
@@ -165,14 +169,14 @@ export function TabletSheetView({
         <DogEarPeel
           position="bottom-right"
           onClick={() => setActiveSubSheet(1)}
-          label="Page 2: Pricing &amp; SOW →"
+          label={`${rightLabel} →`}
         />
       )}
       {activeSubSheet === 1 && (
         <DogEarPeel
           position="bottom-left"
           onClick={() => setActiveSubSheet(0)}
-          label="← Page 1: Overview"
+          label={`← ${leftLabel}`}
         />
       )}
       {activeSubSheet === 0 && hasPrev && onPrevPage && (

@@ -50,7 +50,7 @@ export function TearOffVoucher({
       <div className="flex flex-wrap items-center justify-between gap-1 pb-1.5 border-b border-dashed border-[#111111]/20 text-[10px] font-mono text-[#4b4b4b]">
         <div className="flex items-center gap-1.5 uppercase tracking-wider font-semibold min-w-0">
           <Scissors className="w-3 h-3 text-[#c23b22] shrink-0" />
-          <span className="truncate">KONSULTASI KEBUTUHAN &amp; DRAFT SOW</span>
+          <span className="truncate">KONSULTASI KEBUTUHAN</span>
         </div>
         <div className="font-mono text-[9px] bg-[#111111] text-[#fbfbfa] px-1.5 py-0.5 rounded-xs font-bold shrink-0">
           KODE: {code}
@@ -75,22 +75,22 @@ export function TearOffVoucher({
 
         {/* Small ink stamp */}
         <div className="hidden sm:block shrink-0">
-          <InkStamp text="RESMI" subtext="GARANSI SOW" date="2026" className="scale-75 origin-right" />
+          <InkStamp text="RINGKAS" subtext="SOW SESUAI KEBUTUHAN" date="2026" className="scale-75 origin-right" />
         </div>
       </div>
 
       {/* Action CTA Button */}
       <div className="mt-2 pt-2 border-t border-dashed border-[#111111]/20 flex flex-wrap items-center justify-between gap-1.5">
         <span className="font-mono text-[9.5px] text-[#4b4b4b] tracking-wider hidden sm:inline">
-          POTONG DI SINI &amp; KLAIM SESI EVALUASI SOW
+          ROBEK UNTUK MEMULAI DISKUSI
         </span>
         <button
           type="button"
           onClick={handleTear}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-1.5 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] font-mono text-[11px] font-semibold tracking-wider uppercase transition-colors duration-150 rounded-xs shadow-sm cursor-pointer"
+          className="w-full sm:w-auto min-h-11 inline-flex items-center justify-center gap-2 px-3.5 py-1.5 bg-[#111111] hover:bg-[#c23b22] text-[#fbfbfa] font-mono text-[11px] font-semibold tracking-wider uppercase transition-colors duration-150 rounded-xs shadow-sm cursor-pointer"
         >
           <Scissors className="w-3.5 h-3.5" />
-          <span>Robek &amp; Konsultasi SOW</span>
+          <span>Mulai Konsultasi</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </button>
       </div>

@@ -67,15 +67,15 @@ export function NicheCatalogSheet() {
     <article className="space-y-3">
       {/* Header */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
-        <h1 className="flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
+        <h1 className="flex items-center gap-1.5 font-serif text-lg sm:text-xl font-bold text-[#111111]">
           <Layers className="w-3.5 h-3.5 text-[#c23b22]" />
-          <span>DIREKTORI CERUK INDUSTRI (pSEO)</span>
+          <span>Direktori Industri</span>
         </h1>
         <Badge variant="mono">{nichesData.length} SEKTOR TERVERIFIKASI</Badge>
       </div>
 
       <p className="font-sans text-xs text-[#4b4b4b] leading-relaxed">
-        Setiap industri memiliki alur konversi dan tantangan operasional unik. Pilih sektor bisnis Anda untuk membuka lembar spesifikasi teknis, catatan lapangan engineer, dan estimasi SOW:
+        Setiap sektor memiliki cara kerja dan kebutuhan informasi yang berbeda. Pilih sektor untuk melihat contoh ruang lingkup, tantangan, dan estimasi awal.
       </p>
 
       {/* QUICK JUMP DROPDOWN SELECTOR & SEARCH BAR */}
@@ -186,7 +186,7 @@ export function NicheCatalogSheet() {
           <div className="p-4 text-center bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs font-mono text-xs text-[#4b4b4b] space-y-1 my-2">
             <p>Tidak ada sektor industri yang cocok dengan pencarian Anda.</p>
             <p className="text-[10px]">
-              Industri unik Anda belum tercantum? Diskusikan kebutuhan arsitektur kustom bersama lead engineer kami via WhatsApp.
+              Sektor Anda belum ada? Ceritakan kebutuhan tim Anda melalui WhatsApp.
             </p>
           </div>
         )}
@@ -194,4 +194,3 @@ export function NicheCatalogSheet() {
     </article>
   );
 }
-

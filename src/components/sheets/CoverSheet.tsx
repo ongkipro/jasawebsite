@@ -25,13 +25,13 @@ export function CoverSheet() {
           <span className="stabilo-yellow">Bisnis yang Ingin Bertumbuh.</span>
         </h1>
         <p className="font-serif italic text-base sm:text-lg text-[#4b4b4b] leading-snug">
-          Full-Stack Web Engineering untuk kehadiran brand berwibawa, akuisisi prospek ber-ROI tinggi, dan automasi proses bisnis.
+          Website, toko online, dan sistem kerja yang membantu bisnis menjelaskan layanan, menerima prospek, dan merapikan proses harian.
         </p>
       </div>
 
       {/* Positioning manifesto summary */}
       <p className="font-sans text-xs sm:text-[13px] text-[#4b4b4b] leading-relaxed">
-        Bukan agensi template murahan yang lambat dan rawan malware. Bukan software house elitis yang lambat dan overpriced. JasaWebsite memposisikan diri sebagai mitra rekayasa web dan sistem digital terpercaya untuk pelaku bisnis Indonesia yang sedang bertumbuh.
+        JasaWebsite merancang dan membangun website berdasarkan alur bisnis yang nyata. Mulai dari profil perusahaan dan katalog, sampai toko online dan sistem operasional yang disesuaikan dengan kebutuhan tim.
       </p>
 
       {/* Open Editorial Navigation Band (No boxy frames, stabilo accented) */}
@@ -39,7 +39,7 @@ export function CoverSheet() {
         <div className="flex items-center gap-2 font-mono text-xs">
           <span className="w-2 h-2 rounded-full bg-[#c23b22] inline-block animate-pulse" />
           <span className="text-[#111111] uppercase tracking-wider font-semibold">
-            Bukti Karya: <span className="stabilo-yellow font-bold text-[#111111] px-1.5 py-0.5">10+ Proyek Live</span>
+            Portofolio: <span className="stabilo-yellow font-bold text-[#111111] px-1.5 py-0.5">13 Proyek Live</span>
           </span>
         </div>
 
@@ -68,15 +68,15 @@ export function CoverSheet() {
         <div className="shrink-0">
           <InkStamp
             text="WEB ENGINEERING"
-            subtext="STATIC HTML · GLOBAL EDGE CLOUD"
+            subtext="STATIC EXPORT · SETUP SESUAI PROYEK"
             date="2026"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-x-2.5 sm:gap-x-4 gap-y-1 font-mono text-[10px] sm:text-[10.5px] text-[#4b4b4b]">
           <div>Render: <span className="text-[#111111] font-bold">Static HTML</span></div>
-          <div>Cloud: <span className="stabilo-green font-bold text-[#111111]">Global Edge</span></div>
-          <div>Aset: <span className="text-[#111111] font-bold">100% Hak Milik</span></div>
+          <div>Hosting: <span className="stabilo-green font-bold text-[#111111]">Sesuai proyek</span></div>
+          <div>Aset: <span className="text-[#111111] font-bold">Sesuai SOW</span></div>
           <div>Uptime: <span className="text-[#111111] font-bold">Sesuai SOW</span></div>
         </div>
       </div>

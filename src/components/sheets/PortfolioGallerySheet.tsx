@@ -40,8 +40,8 @@ export function PortfolioGallerySheetLeft({
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <div className="flex items-center gap-1.5">
           <span className="w-2 h-2 bg-[#c23b22] inline-block rounded-xs" />
-          <h1 className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-            DECK PORTOFOLIO TERKURASI
+          <h1 className="font-serif text-lg sm:text-xl font-bold text-[#111111]">
+            Portofolio Terpilih
           </h1>
         </div>
         <Badge variant="mono">{filteredProjects.length} PROYEK</Badge>
@@ -66,16 +66,19 @@ export function PortfolioGallerySheetLeft({
       </div>
 
       {/* Project Cards List */}
-      <div className="space-y-2.5 max-h-[380px] overflow-y-auto pr-1">
+      <div className="space-y-2.5 pr-1">
         {filteredProjects.map((item) => {
           const isSelected = item.id === selectedId;
           const primaryMetric = item.metrics[0];
 
           return (
-            <div
+            <button
+              type="button"
+              aria-pressed={isSelected}
+              aria-label={`Pilih proyek ${item.clientName}`}
               key={item.id}
               onClick={() => onSelectProject(item.id)}
-              className={`p-3 rounded-xs border cursor-pointer transition-all ${
+              className={`w-full p-3 rounded-xs border cursor-pointer transition-all text-left ${
                 isSelected
                   ? 'bg-[#f4f4ef] border-[#111111] shadow-xs translate-x-1'
                   : 'bg-[#fbfbfa] border-[#d5d5cd] hover:border-[#111111]/60 hover:bg-[#f4f4ef]/60'
@@ -107,7 +110,7 @@ export function PortfolioGallerySheetLeft({
               <p className="font-sans text-[11px] text-[#4b4b4b] mt-1.5 line-clamp-2 leading-relaxed">
                 {item.solution}
               </p>
-            </div>
+            </button>
           );
         })}
       </div>
@@ -131,7 +134,7 @@ export function PortfolioGallerySheetRight({
       {/* Top Header & Viewport Switcher */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
-          PROJECT INSPECTOR
+          DETAIL PROYEK
         </span>
 
         <div className="flex items-center gap-1 bg-[#ebebe3] p-0.5 rounded-xs border border-[#d5d5cd]">

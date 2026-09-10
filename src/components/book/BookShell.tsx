@@ -39,6 +39,17 @@ export function BookShell({
 
   const totalSpreads = foliosData.length;
   const currentSpread = foliosData[spreadIndex] || foliosData[0];
+  const sheetLabels: Record<string, [string, string]> = {
+    cover: ['Sampul', 'Daftar isi'],
+    'company-profile': ['Layanan', 'Paket'],
+    'sales-website': ['Strategi', 'Paket'],
+    'ecommerce-shopify': ['Toko online', 'Pilihan paket'],
+    'custom-web-app': ['Sistem', 'Pilihan paket'],
+    portfolio: ['Proyek', 'Detail proyek'],
+    'maintenance-care': ['Perawatan', 'Pilihan paket'],
+    colophon: ['Direktori', 'Tentang studio'],
+  };
+  const [leftLabel, rightLabel] = sheetLabels[currentSpread.slug] ?? ['Ringkasan', 'Paket & Estimasi'];
 
   const navigateToSpread = useCallback(
     (newIndex: number, dir: 'next' | 'prev') => {
@@ -239,6 +250,8 @@ export function BookShell({
               }
               leftFolioNumber={currentSpread.leftFolioNumber}
               rightFolioNumber={currentSpread.rightFolioNumber}
+              leftLabel={leftLabel}
+              rightLabel={rightLabel}
               onPrevPage={handlePrev}
               onNextPage={handleNext}
               hasPrev={spreadIndex > 0}
@@ -254,6 +267,8 @@ export function BookShell({
                 renderRightSheet ? renderRightSheet(spreadIndex) : null
               }
               folioNumber={currentSpread.leftFolioNumber}
+              leftLabel={leftLabel}
+              rightLabel={rightLabel}
               onPrevPage={handlePrev}
               onNextPage={handleNext}
               hasPrev={spreadIndex > 0}

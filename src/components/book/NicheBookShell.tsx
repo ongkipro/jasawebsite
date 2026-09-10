@@ -383,6 +383,8 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
               rightContent={<NicheDetailSheetRight niche={currentNiche} />}
               leftFolioNumber={`CERUK ${currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1}`}
               rightFolioNumber={`SPESIFIKASI · ${currentNiche.schemaType}`}
+              leftLabel="Sektor"
+              rightLabel="Fitur & Estimasi"
               onPrevPage={handlePrev}
               onNextPage={handleNext}
               hasPrev={true}
@@ -396,6 +398,8 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
               leftContent={<NicheDetailSheetLeft niche={currentNiche} />}
               rightContent={<NicheDetailSheetRight niche={currentNiche} />}
               folioNumber={`CERUK ${currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1}`}
+              leftLabel="Sektor"
+              rightLabel="Fitur & Estimasi"
               onPrevPage={handlePrev}
               onNextPage={handleNext}
               hasPrev={true}
