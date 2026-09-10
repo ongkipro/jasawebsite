@@ -12,7 +12,7 @@ Status: RELEASED_VERIFIED
 ## Contract & Deployment Evidence
 
 - **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co)
-- **Deployment URL:** [https://jasawebsite.co](https://jasawebsite.co)
+- **Deployment URL:** [https://jwco-jl03yzmiz-ongkipro.vercel.app](https://jwco-jl03yzmiz-ongkipro.vercel.app) (`dpl_8cHkeqgu33JpeADf7V3C89WEZGKi`)
 - **Vercel Project:** `ongkipro/jwco` (`prj_M3dsY8tssCiR2RL9OIxUtFFZsmet`)
 - **Framework & Runtime:** Next.js 16.3.4 App Router SSG (Turbopack, Tailwind CSS v4, Motion 13.2.0, Lucide React 1.16.0)
 - **Edge Deployment & CDN:** Vercel Edge Singapore (`sin1`) + Cloudflare Pages
