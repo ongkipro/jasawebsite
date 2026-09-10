@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260910-014
-Base: 9c74bf0
+Release-ID: REL-20260910-015
+Base: c0c52b6
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -12,7 +12,7 @@ Status: RELEASED_VERIFIED
 ## Contract & Deployment Evidence
 
 - **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co)
-- **Deployment URL:** [https://jwco-3y5q2ly9w-ongkipro.vercel.app](https://jwco-3y5q2ly9w-ongkipro.vercel.app) (`dpl_2vpUuccS8qmnwRVnsCeVKMMo2yfe`)
+- **Deployment URL:** [https://jwco-f4pexmzf0-ongkipro.vercel.app](https://jwco-f4pexmzf0-ongkipro.vercel.app) (`dpl_5rk2sMCrXRBXP7wyRJHk2VpugqN5`)
 - **Vercel Project:** `ongkipro/jwco` (`prj_M3dsY8tssCiR2RL9OIxUtFFZsmet`)
 - **Framework & Runtime:** Next.js 16.3.4 App Router SSG (Turbopack, Tailwind CSS v4, Motion 13.2.0, Lucide React 1.16.0)
 - **Edge Deployment & CDN:** Vercel Edge Singapore (`sin1`) + Cloudflare Pages
@@ -33,6 +33,12 @@ Status: RELEASED_VERIFIED
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
   - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
 - **Key Architectural & Branding Highlights:**
+  - **The Managed Growth Moat & Cyclical Engagement Sprint (Commit `REL-20260910-015`):**
+    - Embedded comprehensive "Bukan Jual Lepas" positioning in `README.md`: 4 business lifelines (Managed Edge Cloud, Server-Side CAPI Tracking, Sales Lead Automation, Continuous Maintenance Sprints).
+    - Added pixel-perfect 90-column ASCII architecture table detailing the sustainable partnership ecosystem.
+    - Upgraded Engagement Sprint flowchart to a 2-tier cyclical roadmap (Intake -> SOW -> Engineering Sprint -> Go-Live & CAPI -> Managed Care -> Long-Term Partnership).
+    - Integrated visual flat-square badges for all 5 core pillars and supporting retainer care.
+    - Verified all 72 automated assertions passing (`npm test`).
   - **Retro Game Boy Headline & Visual Portfolio Showcase (Commit `REL-20260910-014`):**
     - Engineered a pixel-perfect 78-column Game Boy ASCII console frame at the top of `README.md` (`DOT MATRIX WITH STEREO SOUND`, battery indicator, D-pad, A/B buttons, Select/Start).
     - Embedded side-by-side visual portfolio showcase featuring 6 live production systems with real screenshots from `public/images/portfolio/*.webp` (Samira Travel, ELFY Malaysia, Petani Sejahtera, AUSSIE Sawit, Beautyinu, Dealer Truk Hino).
