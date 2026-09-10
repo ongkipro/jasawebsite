@@ -4,9 +4,9 @@ Updated: 2026-09-11. Task: TASK-44 / REQ-AUDIT-01.
 
 ## Delivery state
 
-Local audit and remediation are complete, including development-map synchronization and the pointer-focus regression fix. The candidate is rebased on `origin/main` at `47ec88b`; it is ready for the user-authorized push and production deployment. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean.
+Audit remediation is deployed to production from `cf03b3fb071264e0aa75657db7e469e2243f5ec2`, following a rebase on `origin/main` at `47ec88b`. Vercel deployment `dpl_4rximtDJK9DSbtdiCWgoc4gzWAyZ` is ready and aliased to `jasawebsite.co`. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean.
 
-The previously deployed artifact remains documented in [RELEASE.md](RELEASE.md). Historical completion claims in the build log do not establish the current state.
+The current deployment and the preceding release are documented in [RELEASE.md](RELEASE.md). Historical completion claims in the build log do not establish the current state.
 
 ## Implemented
 

@@ -1,5 +1,17 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
+## Latest release
+
+- **Release-ID:** REL-20260911-016
+- **Source revision:** `cf03b3fb071264e0aa75657db7e469e2243f5ec2`
+- **Environment:** production
+- **Deployment:** [jwco-n286dzyei-ongkipro.vercel.app](https://jwco-n286dzyei-ongkipro.vercel.app) (`dpl_4rximtDJK9DSbtdiCWgoc4gzWAyZ`)
+- **Promotion:** `https://jasawebsite.co`, `https://www.jasawebsite.co`, and `https://jwco.vercel.app` were aliased by Vercel.
+- **Verified after promotion:** root HTTP 200 with root canonical; 32 sitemap URLs; `/folio/company-profile` HTTP 200; unknown route HTTP 404; HSTS, `nosniff`, frame, referrer, and permissions headers present.
+- **Validation before release:** production build, TypeScript, lint (11 existing image warnings and zero errors), 1,634 export assertions, development-map validation, and 83 browser cases passed. See [the audit](docs/audit/2026-09-11-qa.md).
+
+The historical manifest below records an earlier deployment. Its unverified performance and infrastructure claims are not evidence for this release.
+
 Release-ID: REL-20260910-015
 Base: c0c52b6
 Environment: production
@@ -98,7 +110,6 @@ Status: RELEASED_VERIFIED
   - **Negative Margin Elimination:** Removed `-mx-2 sm:-mx-3` across all recommended tiers in Compro, Sales, Commerce, Custom App, and Maintenance sheets.
   - **Page-by-Page Development Map & Manifest:** Published `docs/PETA-DEVELOPMENT.md` (& root `PETA-DEVELOPMENT.md`) and `docs/peta-development.xml` (& `public/peta-development.xml`) cataloging all 33 semantic routes, 8 core spreads, 24 industry niche sheets, component sources, vouchers, and SEO metadata.
 - **Customer Hotline:** Call & WhatsApp `+62 838-3044-1495` (`6283830441495`), Email: `get@ongki.pro`
-
 
 
 
