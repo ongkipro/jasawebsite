@@ -226,10 +226,28 @@
   - Upgraded all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
   - Added FAQPage schema check in `scripts/verify-build.js` and verified 56/56 smoke checks passing.
 
-
-
-
-
-
-
-
+### Phase 22: Agriculture & Cross-Border D2C Expansion — Petani Sejahtera & AUSSIE Sawit Malaysia
+- **Date:** 2026-09-10
+- **Objective:** Integrate live agricultural platforms `https://petanisejahtera.com` and `https://aussiesawit.my` into the curated portfolio deck, generate responsive desktop and mobile WebP screenshots, populate the E-Commerce portfolio filter, and deploy updates to production.
+- **Completed Actions:**
+  - Added `petani-sejahtera` into `src/data/portfolio.json`:
+    - Client: Petani Sejahtera Indonesia (`https://petanisejahtera.com`)
+    - Category: `ecommerce` (Agro E-Commerce & Portal Solusi)
+    - Industry: Agrikultur & Solusi Tani Modern
+    - Metrics: Kecepatan Akses (0.26s TTFB, Mobile-First SSG Edge Cloudflare Delivery), Potongan Komisi (0% Komisi, Toko Mandiri Bebas Potongan Marketplace), Tracking Signal (100% CAPI, Presisi Pelacakan Event GTM dataLayer & Meta CAPI)
+    - Tech: Astro SSG, Tailwind CSS, Cloudflare Edge, GTM E-Commerce, Meta Pixel & CAPI, WhatsApp Direct Order
+    - Voucher: `ONG-CASE-PETANI`
+  - Added `aussie-sawit-malaysia` into `src/data/portfolio.json`:
+    - Client: AUSSIE Sawit Malaysia (`https://aussiesawit.my`)
+    - Category: `ecommerce` (D2C Brand & E-Commerce COD)
+    - Industry: Perkebunan Sawit & Agro Treatment (MY)
+    - Metrics: Kecepatan Akses (0.24s TTFB, Edge Runtime Cloudflare Global Network), Kemudahan Bayar (100% COD, Bayar Semasa Terima Seluruh Semenanjung & Borneo), Sinyal Meta Ads (9.4 / 10 Match, Kualitas Konversi Meta Pixel & CAPI Malaysia)
+    - Tech: Astro SSG, Tailwind CSS, Cloudflare Edge, Malaysia COD Logistics, Meta Pixel & CAPI, Schema.org Structured Data
+    - Voucher: `ONG-CASE-AUSSIE`
+  - Captured authentic high-resolution screenshots via headless Chromium:
+    - Desktop (1440x900): `public/images/portfolio/petanisejahtera-desktop.webp` (44 KB), `public/images/portfolio/aussiesawit-desktop.webp` (105 KB)
+    - Mobile (390x844): `public/images/portfolio/petanisejahtera-mobile.webp` (37 KB), `public/images/portfolio/aussiesawit-mobile.webp` (55 KB)
+  - Synchronized portfolio project count across documentation (`PETA-DEVELOPMENT.md`, `docs/peta-development.xml`, `public/peta-development.xml`, `RELEASE.md`, `STATUS.md`) to 13 live verified projects.
+  - Calibrated default selected project ID in `BookFolioRenderer.tsx` from obsolete placeholder to `samira-travel-umroh`.
+  - Built static production export and verified all 56/56 smoke checks passing deterministically (`npm test`).
+  - Deployed to Vercel production edge (`dpl_H6bfav86bW8ZMtWCps7hTkL79UtQ`) aliased to `https://jasawebsite.co`.

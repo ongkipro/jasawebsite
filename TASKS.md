@@ -389,6 +389,13 @@
     - Add FAQPage schema check in `scripts/verify-build.js` and expand smoke test suite to 56/56 passing checks.
   - **Verification:** Verified 56/56 automated smoke checks passing, zero TypeScript errors, and deterministic static export.
 
-
-
-
+- [x] **TASK-40: Agriculture & Cross-Border D2C Portfolio Expansion (Petani Sejahtera & AUSSIE Sawit)**
+  - **Owner:** `storefront-development` + `full-stack-development`
+  - **Scope:**
+    - Integrate live production platforms `https://petanisejahtera.com` and `https://aussiesawit.my` into curated portfolio data (`src/data/portfolio.json`).
+    - Capture authentic desktop (1440x900) and mobile (390x844) WebP screenshots via headless Chromium into `public/images/portfolio/`.
+    - Populate the `E-Commerce` portfolio category, expanding total curated portfolio to 13 live verified systems.
+    - Calibrate initial project ID in `BookFolioRenderer.tsx` to `samira-travel-umroh`.
+    - Synchronize development map and XML manifests (`PETA-DEVELOPMENT.md`, `peta-development.xml`).
+    - Execute production build, smoke verification suite (56/56 passing), git commit/push, and production deployment.
+  - **Verification:** Verified live HTTP 200 responses on `https://jasawebsite.co`, asset delivery, and deterministic test suite.
