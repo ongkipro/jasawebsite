@@ -420,4 +420,15 @@
     - Expand `scripts/verify-build.js` smoke suite from 63 to 67 deterministic assertions.
   - **Verification:** Verified static build export, 67/67 automated checks passing, 0 pipes in HTML output, and deterministic DOM synchronization.
 
+- [x] **TASK-43: Commercial Keyword Optimization & Elimination of Redundant Brand Suffix**
+  - **Owner:** `seo-website-builder` + `full-stack-development`
+  - **Scope:**
+    - Strip `- JasaWebsite.co` brand suffix from sub-page and niche title tags, reclaiming 17 characters of prime SEO real estate on Google SERP.
+    - Change `template: '%s'` in `src/app/layout.tsx` and calibrate primary default title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars).
+    - Upgrade `CORE_FOLIO_SEO` (8 spreads) and `NICHE_CALIBRATED_TITLES` (24 niches) to full commercial search queries (`Jasa Pembuatan Website ...`, `Portofolio Jasa Pembuatan Website ...`, `Jasa Maintenance Website ...`).
+    - Calibrate all 32 titles to strictly between 51 and 58 characters (zero ellipsis truncation on 600px desktop & mobile SERP).
+    - Synchronize OpenGraph and Twitter card titles, `syncDocumentSeo()`, `docs/peta-development.xml`, `public/peta-development.xml`, `PETA-DEVELOPMENT.md`, `llms.txt`, and `llms-full.txt`.
+    - Expand smoke test assertions in `scripts/verify-build.js` from 67 to 72 deterministic checks.
+  - **Verification:** Verified static build export, 72/72 automated checks passing, 0 pipes in HTML output, zero `- JasaWebsite.co` in sub-page titles, and live production deployment.
+
 

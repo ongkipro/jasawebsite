@@ -115,18 +115,41 @@ assert(
   'portfolio.html includes ItemList schema with 13 verified live projects'
 );
 
-// 11. Verify title separator format (hyphen instead of pipe) across HTML output
+// 11. Verify keyword-rich titles without redundant brand suffix
 const salesHtmlPath = path.join(outDir, 'folio', 'sales-website.html');
 assert(fs.existsSync(salesHtmlPath), 'out/folio/sales-website.html exists');
 const salesHtml = fs.readFileSync(salesHtmlPath, 'utf-8');
 assert(
-  salesHtml.includes('<title>Jasa Landing Page Sales &amp; Leads WhatsApp - JasaWebsite.co</title>') ||
-  salesHtml.includes('<title>Jasa Landing Page Sales & Leads WhatsApp - JasaWebsite.co</title>'),
-  'sales-website.html has calibrated title with hyphen separator (-)'
+  salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales &amp; Leads WhatsApp</title>') ||
+  salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp</title>'),
+  'sales-website.html has calibrated keyword title without brand suffix'
 );
 assert(
-  !salesHtml.includes('| JasaWebsite.co'),
-  'sales-website.html does not contain pipe (|) in title'
+  indexHtml.includes('<title>Jasa Pembuatan Website Profesional &amp; Toko Online Indonesia</title>') ||
+  indexHtml.includes('<title>Jasa Pembuatan Website Profesional & Toko Online Indonesia</title>'),
+  'index.html has keyword-rich primary title without brand suffix'
+);
+assert(
+  !salesHtml.includes('| JasaWebsite.co') && !indexHtml.includes('| JasaWebsite.co'),
+  'HTML outputs do not contain pipe (|) in title tags'
+);
+assert(
+  !salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales &amp; Leads WhatsApp - JasaWebsite.co</title>') &&
+  !salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp - JasaWebsite.co</title>'),
+  'sales-website.html does not append redundant brand suffix (- JasaWebsite.co)'
+);
+
+const dealerHtmlPath = path.join(outDir, 'folio', 'niche-dealer-otomotif.html');
+assert(fs.existsSync(dealerHtmlPath), 'out/folio/niche-dealer-otomotif.html exists');
+const dealerHtml = fs.readFileSync(dealerHtmlPath, 'utf-8');
+assert(
+  dealerHtml.includes('Jasa Pembuatan Website Dealer Mobil &amp; Showroom Otomotif') ||
+  dealerHtml.includes('Jasa Pembuatan Website Dealer Mobil & Showroom Otomotif'),
+  'niche-dealer-otomotif.html has calibrated keyword-rich title'
+);
+assert(
+  !dealerHtml.includes('- JasaWebsite.co</title>'),
+  'niche-dealer-otomotif.html title does not contain redundant - JasaWebsite.co suffix'
 );
 
 // 12. Verify semantic BookmarkRibbon link anchors

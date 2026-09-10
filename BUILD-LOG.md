@@ -295,4 +295,30 @@
     - Expanded smoke verification suite to 67/67 deterministic passing assertions (added checks for hyphen separator `- JasaWebsite.co`, absence of pipe `|`, and semantic Link anchors).
     - Verified static compilation (`npm run build`) and smoke tests (`npm test` 67/67 passing).
 
+### Phase 25: Commercial Keyword Maximization & Elimination of Redundant Brand Suffix
+- **Date:** 2026-09-10
+- **Objective:** Eliminate redundant `- JasaWebsite.co` brand suffix across sub-page and niche title tags to reclaim 17 characters of prime Google SERP real estate, upgrade all page titles to high-volume commercial keywords (`Jasa Pembuatan Website ...`), calibrate the homepage title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'`, and synchronize all XML/markdown catalogs.
+- **Completed Actions:**
+  - **Eliminated Redundant Brand Suffix:**
+    - Updated `src/app/layout.tsx`: Changed title template to `%s` and set `title.default`, `openGraph.title`, and `twitter.title` to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'`.
+    - Updated `src/lib/seo.ts`: Stripped `- JasaWebsite.co` from `syncDocumentSeo(slug)` so browser `document.title`, OpenGraph, and Twitter tags receive clean, keyword-dense titles.
+    - Updated `src/app/folio/[slug]/page.tsx`: Set `openGraph.title`, `openGraph.images[0].alt`, and `twitter.title` to `pageTitle` directly without trailing suffix.
+  - **High-Intent Commercial Keyword Title Calibration (51–58 characters):**
+    - Calibrated 8 Core Folio Spreads in `src/lib/seo.ts` (`CORE_FOLIO_SEO`):
+      - Cover: `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars)
+      - Company Profile: `'Jasa Pembuatan Website Company Profile Korporat & B2B'` (53 chars)
+      - Sales Website: `'Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp'` (56 chars)
+      - E-Commerce: `'Jasa Pembuatan Toko Online Shopify & E-Commerce Mandiri'` (55 chars)
+      - Custom Web App: `'Jasa Pembuatan Web Application Custom, CRM & Mini ERP'` (53 chars)
+      - Portfolio: `'Portofolio Jasa Pembuatan Website & Studi Kasus Sistem Live'` (58 chars)
+      - Maintenance Care: `'Jasa Maintenance Website, Monitoring Uptime & Setup Ads'` (55 chars)
+      - Colophon: `'Direktori Jasa Pembuatan Website 24 Sektor Industri Bisnis'` (58 chars)
+    - Calibrated all 24 Industry Niches in `src/lib/seo.ts` (`NICHE_CALIBRATED_TITLES`) using full `'Jasa Pembuatan Website [Niche] [Modifier]'` strings (strictly between 51 and 57 chars).
+  - **Machine & Human Manifests Synchronization:**
+    - Updated `<seo-title>` elements in `docs/peta-development.xml` and `public/peta-development.xml`.
+    - Synchronized verified live project count (13 live systems) across `PETA-DEVELOPMENT.md`, `docs/PETA-DEVELOPMENT.md`, `public/llms.txt`, and `public/llms-full.txt`.
+  - **Smoke Verification Suite & Release Gate (`scripts/verify-build.js`):**
+    - Expanded smoke tests to 72 deterministic assertions (including checks for new keyword titles, absence of pipe `|`, absence of trailing brand suffix `- JasaWebsite.co`, and niche titles).
+    - Verified static compilation (`npm run build`), test suite (`npm test` 72/72 passing), and ESLint (`npm run lint` 0 errors).
+
 

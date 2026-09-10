@@ -21,7 +21,7 @@
       <type>Cover &amp; Table of Contents</type>
       <component-left>src/components/sheets/CoverSheet.tsx</component-left>
       <component-right>src/components/sheets/TocSheet.tsx</component-right>
-      <seo-title>Jasa Pembuatan Website &amp; Toko Online | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Pembuatan Website Profesional &amp; Toko Online Indonesia</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -37,7 +37,7 @@
         <tier id="business" name="Kredibilitas Vendor &amp; Mitra B2B" is-recommended="true" price="Rp 4,9jt" sprint="5–10 Hari" target="PT/CV, pabrik &amp; kontraktor untuk kurasi vendor B2B" />
         <tier id="corporate" name="Standar Korporat &amp; Lolos Tender Besar" price="Rp 8,9jt – Rp 15jt+" sprint="10–20 Hari" target="Korporasi, holding &amp; eksportir skala nasional" />
       </tiers>
-      <seo-title>Jasa Website Company Profile Korporat | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Pembuatan Website Company Profile Korporat &amp; B2B</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -53,7 +53,7 @@
         <tier id="growth" name="Mesin Iklan Siap Tempur &amp; Katalog Sales" is-recommended="true" price="Rp 6,5jt" sprint="7–14 Hari" target="Dealer resmi, distributor mesin &amp; tim sales aktif iklan" />
         <tier id="pro" name="Showroom Digital &amp; Brosur Sales Interaktif" price="Rp 12,5jt+" sprint="14–21 Hari" target="Showroom multi-cabang &amp; developer kawasan" />
       </tiers>
-      <seo-title>Jasa Landing Page Sales &amp; Leads WhatsApp | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Pembuatan Landing Page Iklan Sales &amp; Leads WhatsApp</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -69,7 +69,7 @@
         <tier id="shopify-growth" name="Shopify Custom Storefront &amp; Desain Mewah" is-recommended="true" price="Rp 6,9jt" sprint="7–14 Hari" target="Brand D2C &amp; pebisnis butuh toko resmi Shopify kelas dunia" />
         <tier id="custom-ecommerce" name="Toko Mandiri Skala Besar &amp; Grosir / Reseller" price="Rp 8,9jt – Rp 19,9jt+" sprint="10–20 Hari" target="Brand volume tinggi, grosir &amp; jaringan agen reseller" />
       </tiers>
-      <seo-title>Jasa Pembuatan Toko Online &amp; Shopify | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Pembuatan Toko Online Shopify &amp; E-Commerce Mandiri</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -85,7 +85,7 @@
         <tier id="business-system" name="Sistem Operasional Bisnis Terpadu" is-recommended="true" price="Rp 25jt – Rp 50jt" sprint="4–8 Minggu" target="Perusahaan multi-divisi, sales lapangan &amp; multi-gudang" />
         <tier id="advanced-saas" name="Platform Skala Korporat / SaaS" price="Rp 50jt – Rp 100jt+" sprint="8–16 Minggu" target="Sistem ribuan user, multi-tenant &amp; produk digital SaaS" />
       </tiers>
-      <seo-title>Jasa Web Application, CRM &amp; Mini ERP | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Pembuatan Web Application Custom, CRM &amp; Mini ERP</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -95,7 +95,7 @@
       <pillar>SHOWCASE</pillar>
       <starting-anchor>13 Live Proyek</starting-anchor>
       <component>src/components/sheets/PortfolioGallerySheet.tsx</component>
-      <seo-title>Portofolio &amp; Studi Kasus Website Live | JasaWebsite.co</seo-title>
+      <seo-title>Portofolio Jasa Pembuatan Website &amp; Studi Kasus Sistem Live</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -111,7 +111,7 @@
         <tier id="scale-retainer" name="Scale &amp; Strategic Ads Retainer" is-recommended="true" price="Rp 4,5jt – Rp 7,5jt / bln" sprint="Bulanan" target="Bisnis agresif scale-up Meta &amp; Google Ads" />
         <tier id="partner" name="Dedicated Tech &amp; Performance Partner" price="Rp 10jt – Rp 25jt+ / bln" sprint="Bulanan" target="Perusahaan butuh tim engineering eksternal dedicated" />
       </tiers>
-      <seo-title>Jasa Maintenance Website &amp; Iklan Ads | JasaWebsite.co</seo-title>
+      <seo-title>Jasa Maintenance Website, Monitoring Uptime &amp; Setup Ads</seo-title>
       <status>200 OK (Live)</status>
     </folio>
 
@@ -123,7 +123,7 @@
       <voucher-code>ONG-MASTER-BRIEF</voucher-code>
       <component-left>src/components/sheets/NicheCatalogSheet.tsx</component-left>
       <component-right>src/components/sheets/ColophonSheet.tsx</component-right>
-      <seo-title>Direktori 24 Industri &amp; Kontak Studio | JasaWebsite.co</seo-title>
+      <seo-title>Direktori Jasa Pembuatan Website 24 Sektor Industri Bisnis</seo-title>
       <status>200 OK (Live)</status>
     </folio>
   </core-folios>

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!niche) return { title: 'Industri Tidak Ditemukan' };
 
     const pageTitle =
-      NICHE_CALIBRATED_TITLES[nicheSlug] || `Jasa Website ${niche.industryName}`;
+      NICHE_CALIBRATED_TITLES[nicheSlug] || `Jasa Pembuatan Website ${niche.industryName}`;
     const pageDesc = `Jasa pembuatan website ${niche.industryName.toLowerCase()} profesional. Performa sub-detik, mobile-first & siap closing. Konsultasi via WhatsApp.`;
 
     return {
@@ -65,18 +65,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         locale: 'id_ID',
         url: pageUrl,
         siteName: 'JasaWebsite.co',
-        title: `${pageTitle} - JasaWebsite.co`,
+        title: pageTitle,
         description: pageDesc,
         images: [
           {
             ...defaultImage,
-            alt: `${pageTitle} - JasaWebsite.co`,
+            alt: pageTitle,
           },
         ],
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${pageTitle} - JasaWebsite.co`,
+        title: pageTitle,
         description: pageDesc,
         images: ['/og-image.webp'],
       },
@@ -120,13 +120,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'id_ID',
       url: pageUrl,
       siteName: 'JasaWebsite.co',
-      title: `${pageTitle} - JasaWebsite.co`,
+      title: pageTitle,
       description: pageDesc,
       images: [defaultImage],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${pageTitle} - JasaWebsite.co`,
+      title: pageTitle,
       description: pageDesc,
       images: ['/og-image.webp'],
     },

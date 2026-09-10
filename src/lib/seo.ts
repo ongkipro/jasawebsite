@@ -299,20 +299,20 @@ export const CORE_FOLIO_SEO: Record<
   }
 > = {
   cover: {
-    title: 'Brosur Digital Jasa Pembuatan Website',
+    title: 'Jasa Pembuatan Website Profesional & Toko Online Indonesia',
     description:
       'Brosur digital interaktif layanan pembuatan website profesional, toko online & custom web app Indonesia. Konsultasi draft SOW via WhatsApp.',
     keywords: [
       'jasa pembuatan website',
       'jasa website profesional',
-      'brosur digital web developer',
+      'jasa bikin website',
       'software house indonesia',
       'full stack web developer',
     ],
     schemaType: 'WebPage',
   },
   'company-profile': {
-    title: 'Jasa Website Company Profile Korporat',
+    title: 'Jasa Pembuatan Website Company Profile Korporat & B2B',
     description:
       'Jasa pembuatan website company profile korporat & B2B kredibel. Desain elegan, loading sub-detik, dan SEO Google optimal. Hubungi WhatsApp.',
     keywords: [
@@ -326,13 +326,13 @@ export const CORE_FOLIO_SEO: Record<
     schemaType: 'Service',
   },
   'sales-website': {
-    title: 'Jasa Landing Page Sales & Leads WhatsApp',
+    title: 'Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp',
     description:
       'Jasa pembuatan landing page iklan Meta & Google Ads berkonversi tinggi untuk dealer, mesin, properti & kontraktor. Konsultasi via WhatsApp.',
     keywords: [
+      'jasa pembuatan landing page iklan',
       'jasa landing page sales',
       'landing page whatsapp leads',
-      'jasa bikin landing page iklan',
       'landing page konversi tinggi',
       'website dealer mesin kontraktor',
     ],
@@ -340,12 +340,12 @@ export const CORE_FOLIO_SEO: Record<
     schemaType: 'Service',
   },
   'ecommerce-shopify': {
-    title: 'Jasa Pembuatan Toko Online & Shopify',
+    title: 'Jasa Pembuatan Toko Online Shopify & E-Commerce Mandiri',
     description:
       'Jasa pembuatan toko online Shopify & e-commerce mandiri tanpa komisi. Integrasi QRIS otomatis dan kurir se-Indonesia. Hubungi via WhatsApp.',
     keywords: [
-      'jasa pembuatan website shopify',
       'jasa pembuatan toko online shopify',
+      'jasa pembuatan website shopify',
       'jasa bikin toko online shopify',
       'shopify developer indonesia',
       'jasa toko online mandiri',
@@ -356,11 +356,11 @@ export const CORE_FOLIO_SEO: Record<
     schemaType: 'Service',
   },
   'custom-web-app': {
-    title: 'Jasa Web Application, CRM & Mini ERP',
+    title: 'Jasa Pembuatan Web Application Custom, CRM & Mini ERP',
     description:
       'Jasa pembuatan aplikasi web custom, CRM penjualan, sistem operasional mini ERP, dan portal klien sesuai SOP bisnis Anda. Hubungi WhatsApp.',
     keywords: [
-      'jasa web application custom',
+      'jasa pembuatan web application custom',
       'jasa pembuatan crm indonesia',
       'bikin sistem mini erp perusahaan',
       'software house custom web app',
@@ -370,20 +370,20 @@ export const CORE_FOLIO_SEO: Record<
     schemaType: 'Service',
   },
   portfolio: {
-    title: 'Portofolio & Studi Kasus Website Live',
+    title: 'Portofolio Jasa Pembuatan Website & Studi Kasus Sistem Live',
     description:
       'Galeri portofolio website company profile, landing page sales, toko online & web app live dengan metrik nyata. Cek hasil karya studio kami.',
     keywords: [
+      'portofolio jasa pembuatan website',
       'portofolio web developer',
       'studi kasus pembuatan website',
       'contoh website company profile',
       'hasil karya jasa website',
-      'hasil karya jasa bikin web',
     ],
     schemaType: 'WebPage',
   },
   'maintenance-care': {
-    title: 'Jasa Maintenance Website & Iklan Ads',
+    title: 'Jasa Maintenance Website, Monitoring Uptime & Setup Ads',
     description:
       'Jasa pemeliharaan website berkala, monitoring uptime 24/7, optimasi kecepatan, serta setup iklan Meta & Google Ads. Hubungi via WhatsApp.',
     keywords: [
@@ -399,11 +399,11 @@ export const CORE_FOLIO_SEO: Record<
     schemaType: 'Service',
   },
   colophon: {
-    title: 'Direktori 24 Industri & Kontak Studio',
+    title: 'Direktori Jasa Pembuatan Website 24 Sektor Industri Bisnis',
     description:
       'Solusi pembuatan website khusus untuk 24 sektor industri di Indonesia. Konsultasikan kebutuhan bisnis Anda dan dapatkan draft SOW via WA.',
     keywords: [
-      'direktori jasa website indonesia',
+      'direktori jasa pembuatan website',
       'jasa website spesifik industri',
       'kontak jasa website studio',
       'konsultasi pembuatan website whatsapp',
@@ -414,30 +414,30 @@ export const CORE_FOLIO_SEO: Record<
 };
 
 export const NICHE_CALIBRATED_TITLES: Record<string, string> = {
-  'dealer-otomotif': 'Jasa Website Dealer Mobil & Showroom',
-  'rental-mobil-bus-pariwisata': 'Jasa Website Rental Mobil & Bus Pariwisata',
-  'bengkel-mobil-body-repair': 'Jasa Website Bengkel & Body Repair Mobil',
-  'alat-berat-mesin': 'Jasa Website Alat Berat & Mesin Industri',
-  'pabrik-manufaktur-b2b': 'Jasa Website Pabrikasi & Manufaktur B2B',
-  'percetakan-packaging-kemasan': 'Jasa Website Percetakan & Packaging Box',
-  'developer-properti': 'Jasa Website Developer & Real Estate',
-  'kontraktor-arsitek': 'Jasa Website Kontraktor & Desain Interior',
-  'klinik-kesehatan': 'Jasa Website Klinik Medis & Rumah Sakit',
-  'distributor-alkes-farmasi': 'Jasa Website Distributor Alkes & Farmasi',
-  'kantor-hukum-advokat': 'Jasa Website Kantor Hukum & Advokat',
-  'konsultan-pajak-akuntan': 'Jasa Website Konsultan Pajak & Akuntan',
-  'konsultan-it-cctv-keamanan': 'Jasa Website IT Solution & CCTV Keamanan',
-  'brand-fashion-d2c': 'Jasa Website Brand Fashion & Apparel D2C',
-  'brand-skincare-kosmetik': 'Jasa Website Brand Skincare & Kosmetik',
-  'restoran-cafe-fnb': 'Jasa Website Restoran, Cafe & Bisnis F&B',
-  'event-organizer-wedding-planner': 'Jasa Website Wedding Planner & Event EO',
-  'ekspedisi-logistik-cargo': 'Jasa Website Ekspedisi & Logistik Cargo',
-  'ekspor-komoditas-hasil-bumi': 'Jasa Website Eksportir Komoditas Alam',
-  'sekolah-universitas-bimbel': 'Jasa Website Sekolah, Kampus & Bimbel',
-  'tour-travel-umroh': 'Jasa Website Travel Umroh & Haji Khusus',
-  'cleaning-service-pest-control': 'Jasa Website Cleaning Service Komersial',
-  'agribisnis-peternakan-modern': 'Jasa Website Agribisnis & Peternakan',
-  'koperasi-keuangan-mikro': 'Jasa Website Koperasi Simpan Pinjam',
+  'dealer-otomotif': 'Jasa Pembuatan Website Dealer Mobil & Showroom Otomotif',
+  'rental-mobil-bus-pariwisata': 'Jasa Pembuatan Website Rental Mobil & Bus Pariwisata',
+  'bengkel-mobil-body-repair': 'Jasa Pembuatan Website Bengkel Mobil & Body Repair',
+  'alat-berat-mesin': 'Jasa Pembuatan Website Alat Berat & Mesin Industri',
+  'pabrik-manufaktur-b2b': 'Jasa Pembuatan Website Pabrik & Manufaktur Industri B2B',
+  'percetakan-packaging-kemasan': 'Jasa Pembuatan Website Percetakan & Packaging Kemasan',
+  'developer-properti': 'Jasa Pembuatan Website Developer Properti & Real Estate',
+  'kontraktor-arsitek': 'Jasa Pembuatan Website Kontraktor & Desain Arsitek',
+  'klinik-kesehatan': 'Jasa Pembuatan Website Klinik Medis & Fasilitas RS',
+  'distributor-alkes-farmasi': 'Jasa Pembuatan Website Distributor Alkes & Farmasi B2B',
+  'kantor-hukum-advokat': 'Jasa Pembuatan Website Kantor Hukum & Advokat Pengacara',
+  'konsultan-pajak-akuntan': 'Jasa Pembuatan Website Konsultan Pajak & Kantor Akuntan',
+  'konsultan-it-cctv-keamanan': 'Jasa Pembuatan Website IT Solution & Sistem Keamanan',
+  'brand-fashion-d2c': 'Jasa Pembuatan Website Brand Fashion & Toko Apparel D2C',
+  'brand-skincare-kosmetik': 'Jasa Pembuatan Website Brand Skincare & Kosmetik BPOM',
+  'restoran-cafe-fnb': 'Jasa Pembuatan Website Restoran, Cafe & Bisnis Kuliner',
+  'event-organizer-wedding-planner': 'Jasa Pembuatan Website Wedding Planner & Event Organizer',
+  'ekspedisi-logistik-cargo': 'Jasa Pembuatan Website Ekspedisi & Logistik Cargo B2B',
+  'ekspor-komoditas-hasil-bumi': 'Jasa Pembuatan Website Eksportir Komoditas Hasil Bumi',
+  'sekolah-universitas-bimbel': 'Jasa Pembuatan Website Sekolah, Kampus & Lembaga Bimbel',
+  'tour-travel-umroh': 'Jasa Pembuatan Website Travel Umroh & Wisata Halal Haji',
+  'cleaning-service-pest-control': 'Jasa Pembuatan Website Cleaning Service & Pest Control',
+  'agribisnis-peternakan-modern': 'Jasa Pembuatan Website Agribisnis & Peternakan Modern',
+  'koperasi-keuangan-mikro': 'Jasa Pembuatan Website Koperasi Simpan Pinjam & Finansial',
 };
 
 export function syncDocumentSeo(slug: string) {
@@ -452,18 +452,18 @@ export function syncDocumentSeo(slug: string) {
     const nicheSlug = slug.replace('niche-', '');
     const titleText =
       NICHE_CALIBRATED_TITLES[nicheSlug] ||
-      `Jasa Website ${nicheSlug.replace(/-/g, ' ')}`;
-    title = `${titleText} - JasaWebsite.co`;
+      `Jasa Pembuatan Website ${nicheSlug.replace(/-/g, ' ')}`;
+    title = titleText;
     description = `Jasa pembuatan website ${nicheSlug.replace(/-/g, ' ')} profesional. Performa sub-detik, mobile-first & siap closing. Konsultasi via WhatsApp.`;
     url = `${siteConfig.url}/folio/${slug}`;
   } else {
     const seo = CORE_FOLIO_SEO[slug];
     if (seo) {
-      title = `${seo.title} - JasaWebsite.co`;
+      title = seo.title;
       description = seo.description;
       url = slug === 'cover' ? siteConfig.url : `${siteConfig.url}/folio/${slug}`;
     } else {
-      title = 'Jasa Pembuatan Website & Toko Online - JasaWebsite.co';
+      title = 'Jasa Pembuatan Website Profesional & Toko Online Indonesia';
       description = siteConfig.description;
       url = siteConfig.url;
     }

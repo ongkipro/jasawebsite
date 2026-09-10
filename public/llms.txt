@@ -53,7 +53,7 @@
 
 ---
 
-## Bukti Karya Portofolio Terverifikasi (11 Proyek Live)
+## Bukti Karya Portofolio Terverifikasi (13 Proyek Live)
 
 1. **Samira Travel Umroh & Haji Khusus** (https://samiratravelumrohhaji.com)
    - Biro perjalanan ibadah umroh peringkat #1 nasional Kemenag RI (50.000+ jemaah, 3 Rekor MURI).
@@ -65,19 +65,23 @@
    - Butik batik terkemuka 3 lantai di Semarang dengan ribuan SKU sarimbit & WhatsApp Concierge.
 4. **Beautyinu Skincare** (https://beautyinu.co)
    - Toko online D2C skincare mandiri dengan checkout QRIS & e-wallet tanpa komisi marketplace.
-5. **Dealer Truk Hino Resmi Indonesia** (https://dealerhinoofficial.com)
+5. **Petani Sejahtera Indonesia** (https://petanisejahtera.com)
+   - Portal e-commerce agro & solusi pemulihan tanaman pangan / hortikultura bermasalah dengan pengiriman edge super ringan (0.26s TTFB) & direct order WA.
+6. **AUSSIE Sawit Malaysia** (https://aussiesawit.my)
+   - Storefront edukatif & D2C brand rawatan sawit (daun kuning & Ganoderma) dengan integrasi bayar semasa terima (COD) seluruh Semenanjung & Borneo.
+7. **Dealer Truk Hino Resmi Indonesia** (https://dealerhinoofficial.com)
    - Landing page dealer komersial dengan simulasi kredit leasing & katalog unit Hino 300, 500, 700.
-6. **Dealer Truk Hino Jawa Timur** (https://dealertrukhino.com)
+8. **Dealer Truk Hino Jawa Timur** (https://dealertrukhino.com)
    - Katalog spesifikasi teknis 46 varian Euro 4 untuk tender pengadaan armada ekspedisi.
-7. **Dealer Resmi Foton Motor Indonesia** (https://dealerfoton.com)
+9. **Dealer Resmi Foton Motor Indonesia** (https://dealerfoton.com)
    - Showroom digital pickup niaga, light truck, dan bus komersial.
-8. **Traktor Nusa Teknik B2B**
-   - Katalog digital alat berat & formulir Request for Quotation (RFQ) tender korporat.
-9. **Logis-Track Armada Indonesia**
-   - Sistem aplikasi web operasional ekspedisi dengan cetak surat jalan QR code otomatis.
-10. **Petcue Travel Gear** (https://petcue.co)
+10. **Traktor Nusa Teknik B2B**
+    - Katalog digital alat berat & formulir Request for Quotation (RFQ) tender korporat.
+11. **Logis-Track Armada Indonesia**
+    - Sistem aplikasi web operasional ekspedisi dengan cetak surat jalan QR code otomatis.
+12. **Petcue Travel Gear** (https://petcue.co)
     - Toko online perlengkapan travel hewan standar global dengan review engine interaktif.
-11. **Homelook Architectural** (https://homelook.shop)
+13. **Homelook Architectural** (https://homelook.shop)
     - Storefront designer hardware interior mewah dengan data sheet arsitektural presisi.
 
 ---

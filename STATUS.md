@@ -148,10 +148,16 @@
     - Wired `syncDocumentSeo` into `BookShell.tsx` and added `popstate` listener for seamless history navigation.
     - Converted `BookmarkRibbon.tsx` and top nav buttons to semantic Next.js `<Link>` anchors for 100% crawlability.
     - Expanded smoke verification suite to 67/67 passing assertions (`scripts/verify-build.js`).
+  - **Phase 25: Commercial Keyword Maximization & Elimination of Redundant Brand Suffix:**
+    - Stripped redundant `- JasaWebsite.co` brand suffix across sub-page and niche title tags to reclaim 17 characters of prime Google SERP real estate.
+    - Changed title template in `src/app/layout.tsx` to `%s` and calibrated default homepage title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars).
+    - Calibrated all 8 Core Folio Spreads and 24 Industry Niche titles to high-volume commercial keywords (`Jasa Pembuatan Website ...`), keeping character count strictly between 51 and 58 characters.
+    - Synchronized `syncDocumentSeo()`, OpenGraph, Twitter cards, XML manifests (`peta-development.xml`), markdown manifests (`PETA-DEVELOPMENT.md`), and LLM context files (`llms.txt`, `llms-full.txt`).
+    - Expanded automated smoke test suite to 72/72 passing assertions (`scripts/verify-build.js`).
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 41 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
-- **Smoke Suite:** 67/67 automated deterministic checks passing (`npm test`).
+- **Smoke Suite:** 72/72 automated deterministic checks passing (`npm test`).
 - **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
 - **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
 - **Live URLs:**
