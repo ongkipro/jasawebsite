@@ -93,7 +93,7 @@
       <route>/folio/portfolio</route>
       <title>Deck Portofolio Terkurasi Live</title>
       <pillar>SHOWCASE</pillar>
-      <starting-anchor>11 Live Proyek</starting-anchor>
+      <starting-anchor>13 Live Proyek</starting-anchor>
       <component>src/components/sheets/PortfolioGallerySheet.tsx</component>
       <seo-title>Portofolio &amp; Studi Kasus Website Live | JasaWebsite.co</seo-title>
       <status>200 OK (Live)</status>

@@ -392,5 +392,81 @@
     "desktopImage": "/images/portfolio/logistrack-desktop.webp",
     "mobileImage": "/images/portfolio/logistrack-desktop.webp",
     "voucherCode": "ONG-CASE-LOGISTRACK"
+  },
+  {
+    "id": "petani-sejahtera",
+    "clientName": "Petani Sejahtera Indonesia",
+    "category": "ecommerce",
+    "categoryLabel": "Agro E-Commerce & Portal Solusi",
+    "industry": "Agrikultur & Solusi Tani Modern",
+    "challenge": "Petani komersial tanaman pangan dan hortikultura di pelosok daerah membutuhkan akses cepat ke solusi pemulihan tanaman bermasalah (daun kuning, kerdil, busuk pucuk, gagal berbunga) dengan konsumsi kuota data hemat dan alur transaksi yang ramah pengguna ponsel.",
+    "solution": "Membangun portal agro-commerce mobile-first berbasis Astro SSG & Tailwind CSS yang super ringan (< 0.26s TTFB), landing page terdedikasi per komoditas (Saratoga Anthurium/Anggrek, Bensu Jagung, Aussie Sawit), dataLayer GTM E-Commerce, Meta Pixel CAPI, serta alur direct order WhatsApp.",
+    "metrics": [
+      {
+        "label": "Kecepatan Akses",
+        "value": "0.26s TTFB",
+        "detail": "Mobile-First SSG Edge Cloudflare Delivery"
+      },
+      {
+        "label": "Potongan Komisi",
+        "value": "0% Komisi",
+        "detail": "Toko Mandiri 100% Hak Milik Bebas Potongan Marketplace"
+      },
+      {
+        "label": "Tracking Signal",
+        "value": "100% CAPI",
+        "detail": "Presisi Pelacakan Event GTM dataLayer & Meta CAPI"
+      }
+    ],
+    "techStack": [
+      "Astro SSG",
+      "Tailwind CSS",
+      "Cloudflare Edge",
+      "GTM E-Commerce",
+      "Meta Pixel & CAPI",
+      "WhatsApp Direct Order"
+    ],
+    "desktopImage": "/images/portfolio/petanisejahtera-desktop.webp",
+    "mobileImage": "/images/portfolio/petanisejahtera-mobile.webp",
+    "liveUrl": "https://petanisejahtera.com",
+    "voucherCode": "ONG-CASE-PETANI"
+  },
+  {
+    "id": "aussie-sawit-malaysia",
+    "clientName": "AUSSIE Sawit Malaysia",
+    "category": "ecommerce",
+    "categoryLabel": "D2C Brand & E-Commerce COD",
+    "industry": "Perkebunan Sawit & Agro Treatment (MY)",
+    "challenge": "Pekebun sawit di Semenanjung dan Sabah Sarawak menghadapi ancaman daun kuning, pelepah patah, dan serangan kulat Ganoderma. Diperlukan platform resmi berstandar tinggi yang menyajikan diagnosa visual lapangan terpercaya dan mendukung alur bayar di tempat (COD) tanpa kerumitan payment gateway konvensional.",
+    "solution": "Pengembangan storefront brand D2C edukatif berbasis Astro SSG dengan panduan visual diagnosa gejala sawit, kalkulator paket rawatan bertingkat (mulai RM93), pelacakan e-commerce Meta Pixel (ViewContent, AddToCart), dan integrasi logistik Cash-on-Delivery (COD) kurir seluruh Malaysia.",
+    "metrics": [
+      {
+        "label": "Kecepatan Akses",
+        "value": "0.24s TTFB",
+        "detail": "Edge Runtime Cloudflare Global Network"
+      },
+      {
+        "label": "Kemudahan Bayar",
+        "value": "100% COD",
+        "detail": "Bayar Semasa Terima Seluruh Semenanjung & Borneo"
+      },
+      {
+        "label": "Sinyal Meta Ads",
+        "value": "9.4 / 10 Match",
+        "detail": "Kualitas Konversi Meta Pixel & CAPI Malaysia"
+      }
+    ],
+    "techStack": [
+      "Astro SSG",
+      "Tailwind CSS",
+      "Cloudflare Edge",
+      "Malaysia COD Logistics",
+      "Meta Pixel & CAPI",
+      "Schema.org Structured Data"
+    ],
+    "desktopImage": "/images/portfolio/aussiesawit-desktop.webp",
+    "mobileImage": "/images/portfolio/aussiesawit-mobile.webp",
+    "liveUrl": "https://aussiesawit.my",
+    "voucherCode": "ONG-CASE-AUSSIE"
   }
 ]

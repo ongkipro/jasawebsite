@@ -129,7 +129,12 @@
     - Added structured `Service` and `Offer` schema with starting price specifications to all core service folios and niche programmatic pages.
     - Corrected HTML heading hierarchy: transformed main headers in `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, `PortfolioGallerySheet`, and `ColophonSheet` to exact, semantic `<h1>` tags.
     - Hardened Image SEO: rewritten all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
-    - Verified all 56/56 deterministic smoke checks passing (`npm test`).
+  - **Phase 22: Agriculture & Cross-Border D2C Expansion — Petani Sejahtera & AUSSIE Sawit Malaysia:**
+    - Integrated two premier commercial agriculture platforms: **Petani Sejahtera Indonesia** (`https://petanisejahtera.com`) and **AUSSIE Sawit Malaysia** (`https://aussiesawit.my`).
+    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) WebP screenshots directly from live production sites.
+    - Populated the `E-Commerce` portfolio category (`src/data/portfolio.json`), expanding total curated portfolio to 13 live verified projects across Indonesia and Malaysia.
+    - Calibrated default selected project ID in `BookFolioRenderer.tsx` to `samira-travel-umroh`.
+    - Verified all 56/56 deterministic smoke verification checks passing (`npm test`).
 
 ### Production Release Evidence:
 - **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).

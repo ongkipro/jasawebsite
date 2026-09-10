@@ -30,7 +30,7 @@ Platform ini dibangun dengan konsep **Tactile Living Digital Brochure (Buku Mono
 │    └── /folio/maintenance-care   -> [MaintenanceSheet.tsx]   (Mulai Rp 2,5jt/bln)      │
 │                                                                                        │
 │ 3. Portofolio & Colophon Studio (Folios 05, 07)                                        │
-│    ├── /folio/portfolio      -> [PortfolioGallerySheet.tsx]  (11 Live Proyek Showcase) │
+│    ├── /folio/portfolio      -> [PortfolioGallerySheet.tsx]  (13 Live Proyek Showcase) │
 │    └── /folio/colophon       -> [NicheCatalogSheet.tsx] + [ColophonSheet.tsx]          │
 │                                                                                        │
 │ 4. Direktori Ceruk Industri / Programmatic SEO (24 Sektor Spesifik)                    │

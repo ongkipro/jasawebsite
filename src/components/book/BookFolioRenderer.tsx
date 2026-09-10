@@ -27,7 +27,7 @@ export function BookFolioRenderer({
   initialSpreadIndex = 0,
 }: BookFolioRendererProps) {
   // State for selected portfolio item in Spread 05
-  const [selectedProjectId, setSelectedProjectId] = useState('summarecon-mutiara');
+  const [selectedProjectId, setSelectedProjectId] = useState('samira-travel-umroh');
 
   const renderLeftSheet = (spreadIndex: number) => {
     switch (spreadIndex) {

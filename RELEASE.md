@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260909-009
-Base: a76d20a
+Release-ID: REL-20260910-010
+Base: 0bd733b
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -30,9 +30,16 @@ Status: RELEASED_VERIFIED
   - `GET /robots.txt` -> HTTP 200 (text/plain, User-agent: *, Allow: /)
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
   - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
-  - `GET /images/portfolio/elfy-desktop.webp` -> HTTP 200 (image/webp, 71KB)
-  - `GET /images/portfolio/elfy-mobile.webp` -> HTTP 200 (image/webp, 37KB)
+  - `GET /images/portfolio/petanisejahtera-desktop.webp` -> HTTP 200 (image/webp, 44KB)
+  - `GET /images/portfolio/petanisejahtera-mobile.webp` -> HTTP 200 (image/webp, 37KB)
+  - `GET /images/portfolio/aussiesawit-desktop.webp` -> HTTP 200 (image/webp, 105KB)
+  - `GET /images/portfolio/aussiesawit-mobile.webp` -> HTTP 200 (image/webp, 55KB)
 - **Key Architectural & Branding Highlights:**
+  - **Petani Sejahtera & AUSSIE Sawit Malaysia Portfolio Expansion (Commit `REL-20260910-010`):**
+    - Live production agro-commerce and cross-border palm recovery platforms integrated: `https://petanisejahtera.com` and `https://aussiesawit.my`.
+    - Authentic desktop & mobile WebP screenshots captured via headless Chromium.
+    - Curated portfolio deck populated to 13 live verified commercial systems with E-Commerce category enabled.
+    - Automated smoke test suite: 56/56 passing.
   - **Comprehensive SEO & Schema Perfection (Commit `REL-20260909-009`):**
     - Golden Title Limits: Calibrated all title tags to 50–58 chars (safe from Google SERP ellipsis truncation) with suffix ` | JasaWebsite.co`.
     - Golden Description Limits: Calibrated meta descriptions to 140–152 chars across root, 8 core spreads, and 24 industry niche pages.
