@@ -17,7 +17,7 @@
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Production-Live%20at%20jasawebsite.co-111111?style=for-the-badge&logo=vercel" alt="Live Production" /></a>
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Lighthouse-100%2F100-emerald?style=for-the-badge&logo=lighthouse" alt="Lighthouse 100" /></a>
   <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Speed-TTFB%20%3C%200.3s-blue?style=for-the-badge" alt="Sub-0.3s TTFB" /></a>
-  <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Hosting%20Cost-%240%2Fmo%20Edge-purple?style=for-the-badge" alt="$0 Server Cost" /></a>
+  <a href="https://jasawebsite.co"><img src="https://img.shields.io/badge/Infra-Managed%20Edge%20Cloud-purple?style=for-the-badge" alt="Managed Edge Cloud" /></a>
   <a href="https://wa.me/6283830441495"><img src="https://img.shields.io/badge/WhatsApp-%2B62%20838--3044--1495-25D366?style=for-the-badge&logo=whatsapp" alt="Direct WhatsApp" /></a>
 </p>
 
@@ -36,7 +36,7 @@
 │ • Template WordPress / Elementor berat │ • Pure Next.js 16 App Router SSG (Hardware)   │
 │ • Loading lelet 3–8 detik (Pahit Iklan)│ • Sub-0.3s TTFB Global Edge CDN Delivery      │
 │ • Rentan disusupi script malware & spam│ • Arsitektur statis kebal serangan CMS plugin │
-│ • Biaya sewa server mahal per bulan/th │ • $0/bulan biaya hosting server (Edge Cloud)  │
+│ • Server lambat & cPanel sering down   │ • Managed Enterprise Edge Cloud (99.9% Uptime)│
 │ • Terkunci sepihak (Agency Lock-in)    │ • 100% Hak milik kode sumber via GitHub       │
 │ • Pelacakan event iklan sering meleset │ • Integrasi presisi Server-Side CAPI & dataLayer│
 └────────────────────────────────────────┴───────────────────────────────────────────────┘
@@ -49,6 +49,11 @@
 Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi secara cepat (*agile sprint*):
 
 ### 🏢 [01] Company Profile Website Korporat & B2B
+[![Pillar 01](https://img.shields.io/badge/Pillar%2001-Company%20Profile-111111?style=flat-square)](https://jasawebsite.co/folio/company-profile)
+[![Investasi](https://img.shields.io/badge/Investasi-Mulai%20Rp%202%2C9jt-10b981?style=flat-square)](https://jasawebsite.co/folio/company-profile)
+[![Sprint](https://img.shields.io/badge/Sprint-3--10%20Hari-3b82f6?style=flat-square)](https://jasawebsite.co/folio/company-profile)
+[![Infrastruktur](https://img.shields.io/badge/Infrastruktur-All--In%20Managed%20Cloud-8b5cf6?style=flat-square)](https://jasawebsite.co/folio/company-profile)
+
 > **Membangun Kredibilitas Resmi, Lolos Kurasi Vendor & Pemenang Tender Besar**  
 > *Target: PT, CV, Pabrik Manufaktur, Kontraktor, Kantor Hukum, Konsultan, Holding Company.*
 
@@ -59,6 +64,11 @@ Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi
 ---
 
 ### 🎯 [02] Sales & Lead Generation Website (Ads to WhatsApp)
+[![Pillar 02](https://img.shields.io/badge/Pillar%2002-Sales%20%26%20Leads-111111?style=flat-square)](https://jasawebsite.co/folio/sales-website)
+[![Investasi](https://img.shields.io/badge/Investasi-Mulai%20Rp%203%2C5jt-10b981?style=flat-square)](https://jasawebsite.co/folio/sales-website)
+[![Sprint](https://img.shields.io/badge/Sprint-4--10%20Hari-3b82f6?style=flat-square)](https://jasawebsite.co/folio/sales-website)
+[![Tracking](https://img.shields.io/badge/Tracking-Server--Side%20CAPI-ef4444?style=flat-square)](https://jasawebsite.co/folio/sales-website)
+
 > **Corong Konversi Traffic Iklan Berbayar Menjadi Leads Pembeli Bernilai Tinggi**  
 > *Target: Dealer Mobil/Truk, Agen Properti & Real Estate, Distributor Mesin/Alat Berat, Tim Sales Iklan.*
 
@@ -69,6 +79,11 @@ Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi
 ---
 
 ### 🛒 [03] Toko Online Mandiri D2C (Bebas Komisi Marketplace)
+[![Pillar 03](https://img.shields.io/badge/Pillar%2003-Toko%20Online%20Mandiri-111111?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Investasi](https://img.shields.io/badge/Investasi-Mulai%20Rp%203%2C9jt-10b981?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Integrasi](https://img.shields.io/badge/Integrasi-QRIS%20%2B%20Cek%20Ongkir-3b82f6?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Admin Fee](https://img.shields.io/badge/Biaya%20Admin-0%25%20Bebas%20Potongan-10b981?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+
 > **Platform E-Commerce 100% Hak Milik Pribadi — 0% Potongan Admin Selamanya**  
 > *Target: Brand Retail, Produsen Fashion & Apparel, Skincare & Kosmetik, UKM Produk Fisik.*
 
@@ -79,6 +94,11 @@ Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi
 ---
 
 ### 🛍️ [04] Shopify Custom Storefront & Headless Commerce
+[![Pillar 04](https://img.shields.io/badge/Pillar%2004-Shopify%20Development-111111?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Investasi](https://img.shields.io/badge/Investasi-Mulai%20Rp%206%2C9jt-10b981?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Engine](https://img.shields.io/badge/Engine-Liquid%202.0%20%7C%20Hydrogen-9333ea?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+[![Market](https://img.shields.io/badge/Market-Indonesia%20%26%20Malaysia-0ea5e9?style=flat-square)](https://jasawebsite.co/folio/ecommerce-shopify)
+
 > **Pengembangan Toko Shopify Kelas Dunia dengan Desain Eksklusif & Konversi Tinggi**  
 > *Target: Brand D2C Nasional & Internasional yang Menginginkan Storefront Mewah Tanpa Batasan Tema Standar.*
 
@@ -89,6 +109,11 @@ Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi
 ---
 
 ### ⚙️ [05] Custom Web Application & Business Operating Systems
+[![Pillar 05](https://img.shields.io/badge/Pillar%2005-Custom%20Web%20App-111111?style=flat-square)](https://jasawebsite.co/folio/custom-web-app)
+[![Investasi](https://img.shields.io/badge/Investasi-Mulai%20Rp%2015jt-10b981?style=flat-square)](https://jasawebsite.co/folio/custom-web-app)
+[![Stack](https://img.shields.io/badge/Stack-Next.js%20%2B%20Postgres-3b82f6?style=flat-square)](https://jasawebsite.co/folio/custom-web-app)
+[![Solusi](https://img.shields.io/badge/Solusi-CRM%20%7C%20ERP%20%7C%20SaaS-f59e0b?style=flat-square)](https://jasawebsite.co/folio/custom-web-app)
+
 > **Digitalisasi Alur Kerja Kunci Perusahaan: CRM, Mini ERP, Customer Portal & Dashboard**  
 > *Target: Bisnis Berkembang yang Ingin Menggantikan File Spreadsheet Manual Menjadi Sistem Otomatis.*
 
@@ -99,6 +124,11 @@ Kami membagi keahlian studio ke dalam 5 pilar layanan utama yang siap dieksekusi
 ---
 
 ### 🛡️ [Supporting] Website Maintenance Care & Strategic Ads Retainer
+[![Retainer](https://img.shields.io/badge/Retainer-Managed%20Care-111111?style=flat-square)](https://jasawebsite.co/folio/maintenance-care)
+[![Investasi](https://img.shields.io/badge/Paket-Mulai%20Rp%202%2C5jt%2Fbln-10b981?style=flat-square)](https://jasawebsite.co/folio/maintenance-care)
+[![Monitoring](https://img.shields.io/badge/SLA-24%2F7%20Uptime%20Monitoring-3b82f6?style=flat-square)](https://jasawebsite.co/folio/maintenance-care)
+[![Support](https://img.shields.io/badge/Support-Priority%20WhatsApp-25D366?style=flat-square)](https://jasawebsite.co/folio/maintenance-care)
+
 > **Proteksi Performa 24/7, Monitoring Uptime, Setup Iklan & Strategic Engineering Partner**  
 > *Retainer Bulanan: Rp 2,5jt/bln (Growth Care) · Rp 4,5jt–Rp 7,5jt/bln (Scale & Ads ⭐) · Rp 10jt–Rp 25jt+/bln (Dedicated Partner).*
 
@@ -232,7 +262,7 @@ Kami memiliki spesifikasi rekayasa teruji untuk 24 sektor industri di Indonesia:
 2. **Draft SOW & Estimasi Anggaran (24–48 Jam):** Kami susun dokumen Scope of Work terperinci dengan timeline sprint dan biaya pasti tanpa biaya tersembunyi.
 3. **Fase Sprint Rekayasa (Engineering Sprint):** Pengerjaan kode murni dengan review berkala melalui staging link privat.
 4. **Setup Tracking & Conversion Verification:** Pemasangan instrumen pelacakan data (GTM, GA4, Meta CAPI) serta pengujian alur transaksi.
-5. **Peluncuran & Penyerahan Repositori:** Pemindahan domain/DNS, deployment ke edge CDN global ($0 hosting fee), penyerahan repositori GitHub 100% hak milik Anda, dan panduan mandiri.
+5. **Peluncuran & Penyerahan Repositori:** Konfigurasi domain/DNS, deployment ke managed high-performance edge infrastructure, penyerahan repositori GitHub 100% hak milik Anda, dan pendampingan serah terima sistem.
 
 ### Hubungi Kami Langsung:
 - 💬 **WhatsApp Resmi:** [+62 838-3044-1495](https://wa.me/6283830441495?text=Halo%20Tim%20JasaWebsite.co%20by%20ONG%2C%20saya%20tertarik%20konsultasi%20pembuatan%20website%20%2F%20sistem%20digital%20untuk%20bisnis%20saya.)
@@ -260,7 +290,7 @@ Platform ini bukan sekadar website agensi biasa, melainkan **etalase hidup (*liv
 - **Ikon:** Lucide React (100% SVG vektor pohon, zero emoji)
 - **Bahasa:** Strict TypeScript (Target ES2022)
 - **Structured Data:** Master Schema.org JSON-LD (`ProfessionalService`, `FAQPage`, `ItemList`, `BreadcrumbList`)
-- **Infrastruktur Target:** Cloudflare Pages / Vercel Edge Singapore (`sin1`) — **$0 Biaya Server Bulanan**
+- **Infrastruktur Target:** Managed Global Edge Network (Singapore `sin1`) — Sub-0.3s TTFB latency, auto-scaling, dan enterprise security.
 
 ### Struktur Direktori Repositori
 ```text
