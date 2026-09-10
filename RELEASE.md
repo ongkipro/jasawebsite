@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260910-013
-Base: 8c0eef3
+Release-ID: REL-20260910-014
+Base: 9c74bf0
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -12,7 +12,7 @@ Status: RELEASED_VERIFIED
 ## Contract & Deployment Evidence
 
 - **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co)
-- **Deployment URL:** [https://jwco-60ijwar7n-ongkipro.vercel.app](https://jwco-60ijwar7n-ongkipro.vercel.app) (`dpl_BhsGEp8Q1GJW6vaM38iRNKkU88vL`)
+- **Deployment URL:** [https://jwco-3y5q2ly9w-ongkipro.vercel.app](https://jwco-3y5q2ly9w-ongkipro.vercel.app) (`dpl_2vpUuccS8qmnwRVnsCeVKMMo2yfe`)
 - **Vercel Project:** `ongkipro/jwco` (`prj_M3dsY8tssCiR2RL9OIxUtFFZsmet`)
 - **Framework & Runtime:** Next.js 16.3.4 App Router SSG (Turbopack, Tailwind CSS v4, Motion 13.2.0, Lucide React 1.16.0)
 - **Edge Deployment & CDN:** Vercel Edge Singapore (`sin1`) + Cloudflare Pages
@@ -33,6 +33,11 @@ Status: RELEASED_VERIFIED
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
   - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
 - **Key Architectural & Branding Highlights:**
+  - **Retro Game Boy Headline & Visual Portfolio Showcase (Commit `REL-20260910-014`):**
+    - Engineered a pixel-perfect 78-column Game Boy ASCII console frame at the top of `README.md` (`DOT MATRIX WITH STEREO SOUND`, battery indicator, D-pad, A/B buttons, Select/Start).
+    - Embedded side-by-side visual portfolio showcase featuring 6 live production systems with real screenshots from `public/images/portfolio/*.webp` (Samira Travel, ELFY Malaysia, Petani Sejahtera, AUSSIE Sawit, Beautyinu, Dealer Truk Hino).
+    - Added visual comparison matrix (Traditional Web Agency vs Ong-OS Studio), structured pillar cards with investment tiers, 24 industry niche categorization table, and ASCII Engagement Sprint roadmap.
+    - Verified all 72 automated assertions passing (`npm test`).
   - **Commercial Keyword Maximization & Elimination of Redundant Brand Suffix (Commit `REL-20260910-013`):**
     - Stripped redundant `- JasaWebsite.co` brand suffix from sub-page and niche title tags, reclaiming 17 characters of prime Google SERP real estate.
     - Updated layout template to `%s` and calibrated default homepage title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars).
