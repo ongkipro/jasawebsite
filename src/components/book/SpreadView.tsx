@@ -55,7 +55,7 @@ export function SpreadView({
 
         {/* Bottom Folio Footer Left */}
         <div className="flex-shrink-0 flex items-center justify-between border-t border-[#e5e5df] pt-2.5 text-[10px] font-mono text-[#4b4b4b] select-none">
-          <span>● SUB-SECOND TTFB</span>
+          <span>● STATIC HTML</span>
           <span>
             OFFICIALLY ENGINEERED BY{' '}
             <a

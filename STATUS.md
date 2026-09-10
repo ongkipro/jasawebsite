@@ -1,175 +1,41 @@
-# Project Status: Ong-OS Web Development Services (`ongki.pro`)
+# Current Handoff — JasaWebsite.co
 
-**Status:** `100% COMPLETED & VERIFIED (RELEASE READY)`  
-**Brand Positioning:** *"Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh"*  
-**Architecture:** Next.js 16 App Router (SSG `output: 'export'`) + Tailwind CSS v4 + Motion (Framer Motion)  
-**Concept & Metaphor:** Interactive Tactile Living Digital Brochure (Buku Lembar-per-Lembar) with 100% Crawlable Semantic HTML  
-**Hosting Target:** Cloudflare Pages / Vercel Edge ($0 Server Cost)  
+Updated: 2026-09-11. Task: TASK-44 / REQ-AUDIT-01.
 
-### Accomplished Deliverables:
-- **Full Implementation Completed (Phases 1–5):**
-  - **Tactile Living Digital Brochure Engine:** `BookShell`, `SpreadView`, `SingleSheetView`, `SheetTurner`, `BookmarkRibbon`, `DogEarPeel`, `SpineCrease`, `TearOffVoucher`, `InkStamp`.
-  - **All 8 Core Folio Spreads (`src/components/sheets/`):**
-    - `Folio 00`: Front Cover & Table of Contents
-    - `Folio 01`: Company Profile Website
-    - `Folio 02`: Sales & Lead Generation Website
-    - `Folio 03`: E-Commerce Website & Shopify Development
-    - `Folio 04`: Custom Web Application & Systems
-    - `Folio 05`: Curated Portfolio Gallery & Interactive Inspector (`PortfolioModal`)
-    - `Folio 06`: Website Maintenance Care & Strategic Add-Ons
-    - `Folio 07`: Niche Directory Catalog & Colophon Studio
-  - **Programmatic SEO Engine:**
-    - Dynamic route `/folio/[slug]` pre-rendering all 8 spreads + 30+ industry niche pages (`generateStaticParams`).
-    - Dynamic XML Sitemap (`/sitemap.xml`) & Robots (`/robots.txt`).
-    - Schema.org JSON-LD structured graph (`ProfessionalService`, `LocalBusiness`, `FAQPage`, `BreadcrumbList`).
-  - **Direct WhatsApp Conversion Funnel:**
-    - Contextual lead router (`src/lib/whatsapp.ts`) with service, tier, niche, and UTM tracking tags.
-  - **Verification & CI/CD:**
-    - Zero TypeScript errors (`npx tsc --noEmit` -> 0 errors).
-    - Zero ESLint errors (`npm run lint` -> 0 errors).
-    - Deterministic SSG compilation (`npm run build` -> creates static `out/` with 26 pre-rendered routes).
-    - Smoke verification suite (`npm test` -> 41/41 passing).
-    - GitHub Actions automated workflow (`.github/workflows/ci-cd.yml`).
-  - **E-Commerce & Shopify Dual-Track Architecture:**
-    - Explicitly bifurcated into two high-converting offerings on `Folio 06 & 07` (`CommerceSheet.tsx`):
-      1. *Opsi Setup & Custom Toko Shopify:* Setup resmi, custom UI/UX desain tampilan tema eksklusif, integrasi pembayaran lokal (QRIS & Virtual Account), dan cek ongkir kurir otomatis se-Indonesia (J&T, SiCepat, JNE). Menangkap trafik SEO "jasa pembuatan website/toko online shopify indonesia".
-      2. *Opsi Toko Online Mandiri (CMS Studio Pribadi):* 100% hak milik sendiri tanpa biaya sewa/langganan bulanan platform selamanya, 0% komisi penjualan, uang langsung masuk rekening, alur belanja kilat dari HP, dan notifikasi pesanan otomatis masuk ke WhatsApp admin toko.
-    - Updated SEO metadata and Schema.org keywords in `src/app/folio/[slug]/page.tsx` for `ecommerce-shopify`.
-  - **Phase 9: Comprehensive Industry Catalog (24 Sectors) & Tactile Brochure Overhaul:**
-    - Expanded `src/data/niches.json` from 12 to 24 deeply audited Indonesian commercial sectors across 10 major industry categories.
-    - Upgraded `src/types/niche.ts` with rich editorial schema (`fieldNote`, `conversionFlow`, `painPoints`, `keyFeatures`, `techRationale`).
-    - Revamped `src/components/sheets/NicheDetailSheet.tsx` into a tactile engineering field notebook & monograph brochure:
-      - *Catatan Lapangan Engineer:* Candid, non-AI real-world operational insights per sector.
-      - *Alur Konversi & Transaksi Ideal:* 4-stage visual pipeline showing how traffic turns into qualified WhatsApp leads.
-      - *3 Hambatan Lapangan:* Structured cards detailing specific bottlenecks and revenue bleed.
-      - *Fitur Rekayasa yang Dibangun:* 4 concrete features with implementation and business advantages.
-      - *Rasional Arsitektur Teknis Studio:* Architectural rationale explaining why static edge & sub-second response times outrank bloated CMS plugins.
-      - *Perforated Tear-Off Voucher:* Contextual SOW voucher with starting price anchor and pre-filled WhatsApp routing.
-    - Enhanced `src/components/sheets/NicheCatalogSheet.tsx` with category filter pills, search bar, and 24-sector quick switcher.
-  - **Phase 10: High-Conversion Conversational Copywriting Overhaul:**
-    - Rewrote narrative, headlines, and problem statements across all 5 core service offerings (`src/data/services.json`) and folio descriptions (`src/data/folios.json`).
-    - Targeted specific Indonesian B2B buyer psychology: B2B vendor qualification & tender procurement, paid ads traffic-to-WhatsApp closing engines, anti-marketplace commission (0% fee) direct-to-consumer commerce, and bespoke internal operational systems.
-  - **Phase 11: Card/Frame/Border Slop Elimination (Open Editorial Swiss Monograph):**
-    - Removed nested card containers and boxy borders across `CoverSheet`, `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, and `TocSheet`.
-    - Replaced with open hairline ledger divides (`divide-y divide-[#e5e5df]`), vermillion left-accent markers (`border-l-2 border-[#c23b22]`), and stabilo yellow/green text highlights (`stabilo-yellow`, `stabilo-green`).
-  - **Phase 12: Emoji & Unicode Glyphs Elimination — Lucide Vector Icons Migration:**
-    - Completely scanned and eradicated platform emojis and inconsistent unicode glyphs (`⭐`, `✂️`, `★`, `✓`, `↗`, `▼`, `➜`).
-    - Migrated to crisp, tree-shakable, 0-overhead vector SVG icons via `lucide-react`:
-      - Replaced `⭐` in tier names with `<Badge variant="vermillion"><Star className="w-2.5 h-2.5 fill-current" /> REKOMENDASI UTAMA</Badge>`.
-      - Replaced `✂️` in `TearOffVoucher` with `<Scissors className="w-3.5 h-3.5" />`.
-      - Replaced `★` in `InkStamp` with `<Star className="w-2.5 h-2.5 fill-current" />`.
-      - Replaced bullets in `CoverSheet` with `<Zap />`, `<Cloud />`, `<KeyRound />`, `<ShieldCheck />`.
-      - Replaced bullets in `CustomAppSheet` with `<Database />`, `<Package />`, `<Users />`, `<LineChart />`.
-      - Replaced checkmarks in `CommerceSheet` with `<Check className="w-3 h-3 text-[#2d6a4f]" />`.
-      - Replaced arrows with `<ArrowUpRight />` and `<Maximize2 />`.
-  - **Phase 13: Live Production Deployment on Vercel & Cloudflare Edge:**
-    - Production deployed to Vercel and aliased to primary domain: `https://jasawebsite.co`.
-    - Live HTTPS SSL (A+ rating, HSTS `max-age=63072000`) verified.
-    - Verified live XML sitemap: `https://jasawebsite.co/sitemap.xml` with all 33 URLs returning HTTP 200.
-    - Verified live `https://jasawebsite.co/robots.txt` returning HTTP 200.
-    - Edge TTFB verified sub-0.3s (Root TTFB 0.17s from Singapore `sin1` edge).
-    - GitHub Actions CI/CD pipeline passing 100% on `main`.
-  - **Phase 14: Professional Brand Favicon & Cover Layout Zero-Scroll Hardening:**
-    - Generated Swiss Monograph architectural folio mark with vermillion bookmark ribbon on charcoal `#111111`.
-    - Produced full multi-resolution icon suite: `public/icon.png` (512x512), `public/apple-touch-icon.png` (180x180), `public/favicon-32x32.png`, `public/favicon-16x16.png`, and `public/favicon.ico` (multi-res 16/32/48).
-    - Placed App Router automatic icon routes: `src/app/icon.png`, `src/app/apple-icon.png`, `src/app/favicon.ico` and configured `src/app/layout.tsx` icons metadata.
-    - Streamlined `CoverSheet.tsx` bottom metrics to clean monospace text grid without icons, preventing side scrolling on 390px mobile screens.
-  - **Phase 15: Global Zero-Horizontal-Scroll Hardening & Niche Catalog Editorial Overhaul:**
-    - Eradicated all horizontal scroll containers (`overflow-x-auto whitespace-nowrap`) from `NicheCatalogSheet.tsx`, converting category filter pills into responsive vertical wrapping elements (`flex-wrap gap-1`).
-    - Revamped Niche Directory from squished 2-column card grid to an elegant open editorial hairline ledger (`divide-y divide-[#e5e5df]`) with top-to-bottom vertical flow, unclipped titles, category, recommended pillar, and price tags (`[01]` to `[24]`).
-    - Removed negative margin bleed (`-mx-2 sm:-mx-3`) on recommended tiers in `ComproSheet.tsx`, `SalesSheet.tsx`, `CommerceSheet.tsx`, `CustomAppSheet.tsx`, and `MaintenanceSheet.tsx`.
-    - Enforced responsive wrapping (`flex-col sm:flex-row sm:items-baseline`) and word-breaks on all tier headers to prevent wide labels from pushing price badges offscreen.
-    - Fully verified in `agent-browser` on mobile viewport (390x844): `scrollWidth === innerWidth` across all 8 spreads, maintenance, custom app, and niche directory sheets.
-  - **Phase 16: Concise Executive Copywriting Polish Across All Tiers (Zero Horizontal Sprawl):**
-    - Streamlined `Sprint` and `Sasaran` targets across all 5 core service offerings (`src/data/services.json`) into punchy, high-impact phrases.
-    - Tightened deliverables bullet points across all tiers to clear, professional core essence without rambling text stretching to sides.
-    - Refined UI tier item layouts in `ComproSheet`, `SalesSheet`, `CommerceSheet`, and `CustomAppSheet` with clean typography, responsive wrapping, and zero horizontal stretch.
-    - Verified via mobile (390px) screenshots across all spreads.
-  - **Phase 17: Page-by-Page Development Map & Manifest Documentation (MD & XML):**
-    - Authored comprehensive Page-by-Page Development Map in Markdown (`docs/PETA-DEVELOPMENT.md` & root `PETA-DEVELOPMENT.md`) inventorying all 33 semantic routes, 8 core spreads, 24 industry niche sheets, component paths, vouchers, and price points.
-    - Authored structured machine-readable XML manifest (`docs/peta-development.xml` & `public/peta-development.xml`) containing complete hierarchical route attributes, components, and SEO metadata.
-  - **Phase 18: High-Fill Obsidian Squircle `.ONG` Monogram Favicon Suite & Multi-Res Pipeline:**
-    - Solved negative space & small tab-rendering issues by upgrading from floating transparent horizontal text to a maximum-fill luxury obsidian squircle badge (`#0e0f12`, radius 112px on 512px canvas).
-    - Maximized typographic scale & fill: Bold architectural `ONG` lettering (size 187px) and prominent glowing vermillion red baseline dot (`#ff453a`, radius 33px) spanning 90%+ of badge width.
-    - Engineered dynamic vector SVG favicon (`public/favicon.svg`):
-      - Solid obsidian squircle container with fine luminous border (`rgba(255,255,255,0.2)`).
-      - Pure chalk white `ONG` typography and glowing vermillion baseline dot.
-      - 100% vector scaling, crystal clear on 16x16, 32x32, and high-DPI retina displays.
-    - Built comprehensive Python asset pipeline (`scripts/build_favicons.py`) generating multi-resolution assets:
-      - `public/icon.png` & `src/app/icon.png` (512x512): Master high-density squircle icon.
-      - `public/icon-light.png` & `public/icon-dark.png` (512x512): High-fill theme assets.
-      - `public/icon-light-32x32.png` & `public/icon-dark-32x32.png`: 32x32 theme-specific favicons.
-      - `public/favicon-32x32.png` & `public/favicon-16x16.png`: Pixel-fitted PNG fallbacks.
-      - `public/favicon.ico` & `src/app/favicon.ico`: Multi-resolution ICO (16, 32, 48) with high tab contrast.
-      - `public/apple-touch-icon.png` & `src/app/apple-icon.png` (180x180): High-end Apple iOS home screen icon.
-    - Verified in real tab previews (16px & 32px): completely fills the tab space, eliminating hollow outline or tiny sliver rendering.
-  - **Phase 19: Portfolio Expansion (Samira Travel Umroh & Haji) & Pillar 4 Skip Alignment:**
-    - Integrated premier client portfolio project: **Samira Travel Umroh & Haji Khusus** (`https://samiratravelumrohhaji.com/`).
-    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) viewport screenshots, converted to lightweight WebP (`public/images/portfolio/samiratravel-desktop.webp` 81KB, `public/images/portfolio/samiratravel-mobile.webp` 27KB).
-    - Categorized under `company-profile` with rich real-world impact metrics: 50.000+ Jemaah (Peringkat #1 Kemenag RI, 3 Rekor MURI), 100% Charter Flight (Lion Air & Saudia A330 dari 11 Kota), sub-0.3s TTFB.
-    - Added dedicated real client showcase strip on `ComproSheet.tsx` linking directly to `samiratravelumrohhaji.com`.
-    - Total curated portfolio projects expanded to 10 live verified commercial systems.
-    - Executed user decision to omit number 4 from the pillars: cleaned up legacy `PILLAR 03 & 04` string in `services.json` to pure `PILLAR 03` (Pillar 01 -> Pillar 02 -> Pillar 03 -> skip 4 -> Pillar 05).
-  - **Phase 20: International Portfolio Expansion — ELFY Malaysia (Shopify Headless D2C Flagship):**
-    - Integrated premier international D2C menswear & horology brand: **ELFY Malaysia (Kuala Lumpur)** (`https://elfy.my`).
-    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) screenshots via headless Chrome, converted to lightweight WebP (`public/images/portfolio/elfy-desktop.webp` 71KB, `public/images/portfolio/elfy-mobile.webp` 37KB).
-    - Added `elfy-malaysia` to `src/data/portfolio.json`:
-      - Category: `shopify` (Shopify D2C Flagship MY)
-      - Industry: `Men's Sartorial Footwear & Horology`
-      - Metrics: 0.28s TTFB (Shopify Oxygen Edge Runtime), 4.9/5.0 Rating (2.400+ Pelanggan Terverifikasi), +48% Checkout Flow (Optimasi konversi FPX & E-Wallet Malaysia)
-      - Tech: Shopify Hydrogen, Oxygen Edge CDN, Tailwind CSS, Malaysia FPX Gateway
-      - Live URL: `https://elfy.my`
-    - Upgraded live client showcase strip in `CommerceSheet.tsx` to 5 active brands (`elfy.my`, `batiksmile.com`, `beautyinu.co`, `petcue.co`, `homelook.shop`) in responsive `grid-cols-5`.
-    - Updated AI context in `public/llms.txt` and `public/llms-full.txt` with 11 live verified projects.
-    - Total curated portfolio projects expanded to 11 live verified commercial systems.
-  - **Phase 21: Complete SEO Engineering, Semantic Hierarchy & Schema Perfection:**
-    - Calibrated all page titles to Google's golden pixel limit: 50–58 chars (suffix ` | JasaWebsite.co`), eliminating SERP truncation.
-    - Calibrated all meta descriptions to 140–152 characters across root, 8 core spreads, and 24 industry niche pages (eliminated 278-char bloat).
-    - Injected structured `FAQPage` Schema.org JSON-LD from `faqs.json` into master graph for Google Rich Snippets accordion dropdowns.
-    - Added structured `Service` and `Offer` schema with starting price specifications to all core service folios and niche programmatic pages.
-    - Corrected HTML heading hierarchy: transformed main headers in `ComproSheet`, `SalesSheet`, `CommerceSheet`, `CustomAppSheet`, `MaintenanceSheet`, `PortfolioGallerySheet`, and `ColophonSheet` to exact, semantic `<h1>` tags.
-    - Hardened Image SEO: rewritten all `<img>` alt attributes with keyword-rich, contextual Indonesian descriptions.
-  - **Phase 22: Agriculture & Cross-Border D2C Expansion — Petani Sejahtera & AUSSIE Sawit Malaysia:**
-    - Integrated two premier commercial agriculture platforms: **Petani Sejahtera Indonesia** (`https://petanisejahtera.com`) and **AUSSIE Sawit Malaysia** (`https://aussiesawit.my`).
-    - Captured authentic high-resolution desktop (1440x900) and mobile (390x844) WebP screenshots directly from live production sites.
-    - Populated the `E-Commerce` portfolio category (`src/data/portfolio.json`), expanding total curated portfolio to 13 live verified projects across Indonesia and Malaysia.
-    - Calibrated default selected project ID in `BookFolioRenderer.tsx` to `samira-travel-umroh`.
-    - Verified all 56/56 deterministic smoke verification checks passing (`npm test`).
-  - **Phase 23: Tactile 404 Displaced Folio & Comprehensive SEO Graph Calibration:**
-    - Engineered bespoke client-side tactile component `TornFolioView.tsx`: floating paper drift entry, physical ink stamp micro-bounce (`FOLIO TERLEPAS`), interactive animated scissor vector along perforated tear seam, 6 quick index links, and interactive corner dog-ear curl.
-    - Maintained `src/app/not-found.tsx` as a Server Component preserving crawler directives (`robots: { index: false, follow: true }`).
-    - Calibrated all 24 industry niche title tags to strict 52–59 character limits (`NICHE_CALIBRATED_TITLES`), preventing Google SERP truncation.
-    - Hardened master Schema.org graph with `aggregateRating` (4.95/5.0 from 48 reviews) and `knowsAbout` competencies list.
-    - Injected structured `ItemList` schema into `/folio/portfolio` mapping all 13 verified live projects.
-    - Expanded automated smoke test suite to 63/63 passing assertions (`scripts/verify-build.js`).
-  - **Phase 24: Title Separator Migration to Hyphen & Dynamic Client-Side SEO Synchronization:**
-    - Migrated title separator from pipe (`|`) to hyphen (`-`) across layout template, all 33 routes, OpenGraph, and Twitter tags.
-    - Implemented `syncDocumentSeo(slug)` in `src/lib/seo.ts` updating DOM title, description, canonical link, OG, Twitter, and Schema.org JSON-LD in real-time.
-    - Wired `syncDocumentSeo` into `BookShell.tsx` and added `popstate` listener for seamless history navigation.
-    - Converted `BookmarkRibbon.tsx` and top nav buttons to semantic Next.js `<Link>` anchors for 100% crawlability.
-    - Expanded smoke verification suite to 67/67 passing assertions (`scripts/verify-build.js`).
-  - **Phase 25: Commercial Keyword Maximization & Elimination of Redundant Brand Suffix:**
-    - Stripped redundant `- JasaWebsite.co` brand suffix across sub-page and niche title tags to reclaim 17 characters of prime Google SERP real estate.
-    - Changed title template in `src/app/layout.tsx` to `%s` and calibrated default homepage title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars).
-    - Calibrated all 8 Core Folio Spreads and 24 Industry Niche titles to high-volume commercial keywords (`Jasa Pembuatan Website ...`), keeping character count strictly between 51 and 58 characters.
-    - Synchronized `syncDocumentSeo()`, OpenGraph, Twitter cards, XML manifests (`peta-development.xml`), markdown manifests (`PETA-DEVELOPMENT.md`), and LLM context files (`llms.txt`, `llms-full.txt`).
-    - Expanded automated smoke test suite to 72/72 passing assertions (`scripts/verify-build.js`).
-  - **Phase 26: Studio-First Professional README Architecture & Identity Overhaul:**
-    - Overhauled `README.md` into an authoritative, client-facing showcase of `JasaWebsite.co by ONG` (`ongki.pro`).
-    - Established studio identity, engineering positioning, 5 Core Solution Pillars, 13 live verified case studies, 24 industry niche blueprints, engagement sprint roadmap, and living digital brochure architecture.
+## Delivery state
 
-### Production Release Evidence:
-- **Build Output:** Static HTML/CSS/JS export in `out/` with 41 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
-- **Smoke Suite:** 72/72 automated deterministic checks passing (`npm test`).
-- **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
-- **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
-- **Live URLs:**
-  - Primary Domain: [https://jasawebsite.co](https://jasawebsite.co) (HTTP 200)
-  - 404 Not Found Page: [https://jasawebsite.co/404](https://jasawebsite.co/404) (Tactile Torn Sheet)
-  - Robots: [https://jasawebsite.co/robots.txt](https://jasawebsite.co/robots.txt)
-  - Sitemap: [https://jasawebsite.co/sitemap.xml](https://jasawebsite.co/sitemap.xml)
-  - Route Manifest: [https://jasawebsite.co/peta-development.xml](https://jasawebsite.co/peta-development.xml)
-  - Favicon Vector: [https://jasawebsite.co/favicon.svg](https://jasawebsite.co/favicon.svg)
-- **Bundle size:** Total `out/` directory is ~4.6 MB (including WebP/AVIF/OG images, fonts, and static HTML).
-- **Metadata checks:** Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.
-- **Lighthouse target verified:** Sub-second TTFB (0.17s), 0 CLS, hardware-accelerated transforms only.
+Local audit and remediation are complete, including development-map synchronization and the pointer-focus regression fix on branch `audit/qa-seo-20260910`, worktree `~/Projects/jasawebsite-audit`. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean. No commit, push, or production deployment has been performed.
+
+The previously deployed artifact remains documented in [RELEASE.md](RELEASE.md). Historical completion claims in the build log do not establish the current state.
+
+## Implemented
+
+- Correct IDR starting-price schema and web-development service identity; remove unsupported rating and invisible FAQ markup.
+- Canonical cover alias, consistent root metadata, 32 canonical sitemap entries, no fabricated modification dates, and language-alternate synchronization during navigation.
+- Visible initial HTML; corrected mobile directory heading; focus outlines, touch targets, contrast, reduced motion, and transform-only corner hover.
+- Native portfolio dialog with focus containment/restoration and shell keyboard isolation; searchable niche disclosure and mobile subpage focus recovery.
+- Pinned browser/Lighthouse QA tooling and tests against actual generated HTML and user interactions.
+- Validated page-by-page development XML: 32 canonical pages plus the cover alias, synchronized with code, built metadata, prices, and its public copy.
+- Refreshed README, implementation architecture, observability, audit report, and execution log.
+
+## Verification evidence
+
+- Build, TypeScript, and lint passed; lint retains 11 existing raw-image warnings.
+- 1,634 generated-output checks and 83 browser route/viewport cases passed, plus critical interactions.
+- Independent reviewer `/root/designer` accepted the changes after verifying its reported fixes.
+- Same-host mobile Lighthouse comparison: 79 → 88 performance, 91 → 100 accessibility, LCP 4.38s → 3.76s. Final local desktop: 100/100/100/100.
+- npm audit reported zero known vulnerabilities. The Google PSI endpoint remained unavailable (429).
+- Delivery evidence is recorded under `.delivery/runs/RUN-20260910T165913Z-139c7750.jsonl`.
+
+See [the audit](docs/audit/2026-09-11-qa.md) for reproduction commands, artifact links, and limits. These are local measurements; the production site still serves the earlier release.
+
+## External limitations
+
+- PageSpeed Insights API returned 429; the public UI did not produce a completed report during the initial attempt. Google-hosted PSI and CrUX field data remain unverified.
+- Search Console, Bing Webmaster, traffic, conversion reports, review evidence, and portfolio business-metric provenance were not available.
+- Live responses identify Vercel. The inspected GitHub workflow succeeded while its Cloudflare deployment step was skipped. No deployment configuration was changed.
+- Current code keeps separate responsive component trees and broad client imports. These are documented architecture costs, not newly introduced failures.
+
+## Next release boundary
+
+After user-authorized commit/push/deployment, rerun live HTTP, browser, canonical, structured-price, sitemap, and Lighthouse checks. Local validation does not certify the as-yet undeployed result.

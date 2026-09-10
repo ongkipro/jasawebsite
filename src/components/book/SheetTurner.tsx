@@ -49,7 +49,7 @@ export function SheetTurner({
       className={cn('relative w-full h-full perspective-[1400px]', className)}
       style={{ perspective: '1400px' }}
     >
-      <AnimatePresence mode="wait" custom={direction}>
+      <AnimatePresence initial={false} mode="wait" custom={direction}>
         <motion.div
           key={currentKey}
           custom={direction}

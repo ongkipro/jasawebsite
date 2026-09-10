@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter, Newsreader, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/siteConfig';
-import { generateMasterSchema } from '@/lib/seo';
+import { CORE_FOLIO_SEO, generateMasterSchema } from '@/lib/seo';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description:
-    'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
+    CORE_FOLIO_SEO.cover.description,
   keywords: [
     'Jasa Pembuatan Website',
     'Jasa Website',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     siteName: 'JasaWebsite.co',
     title: 'Jasa Pembuatan Website Profesional & Toko Online Indonesia',
     description:
-      'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
+      CORE_FOLIO_SEO.cover.description,
     images: [
       {
         url: '/og-image.webp',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jasa Pembuatan Website Profesional & Toko Online Indonesia',
     description:
-      'Jasa pembuatan website profesional, landing page sales, toko online Shopify & custom web app berkecepatan sub-detik. Konsultasi draft SOW via WhatsApp.',
+      CORE_FOLIO_SEO.cover.description,
     images: ['/og-image.webp'],
   },
   robots: {

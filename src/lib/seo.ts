@@ -1,5 +1,4 @@
 import { siteConfig } from '@/data/siteConfig';
-import faqsData from '@/data/faqs.json';
 import portfolioData from '@/data/portfolio.json';
 
 export interface BreadcrumbItem {
@@ -46,13 +45,6 @@ export function generateMasterSchema() {
           contactType: 'customer service',
           availableLanguage: ['Indonesian', 'English'],
           areaServed: 'ID',
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.95',
-          reviewCount: '48',
-          bestRating: '5',
-          worstRating: '1',
         },
         knowsAbout: [
           'Next.js 16 App Router',
@@ -132,19 +124,7 @@ export function generateMasterSchema() {
           '@id': `${siteConfig.url}/#service`,
         },
       },
-      {
-        '@type': 'FAQPage',
-        '@id': `${siteConfig.url}/#faq`,
-        name: 'Pertanyaan Umum Layanan Jasa Pembuatan Website & Toko Online',
-        mainEntity: faqsData.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer,
-          },
-        })),
-      },
+
     ],
   };
 }
@@ -153,13 +133,12 @@ export function generateSheetSchema(
   title: string,
   description: string,
   slug: string,
-  schemaType = 'WebPage',
   price?: string
 ) {
-  const pageUrl = `${siteConfig.url}/folio/${slug}`;
+  const pageUrl = slug === 'cover' ? siteConfig.url : `${siteConfig.url}/folio/${slug}`;
   const graph: Record<string, unknown>[] = [
     {
-      '@type': schemaType,
+      '@type': 'WebPage',
       '@id': `${pageUrl}/#webpage`,
       url: pageUrl,
       name: title,
@@ -173,24 +152,10 @@ export function generateSheetSchema(
       '@type': 'BreadcrumbList',
       '@id': `${pageUrl}/#breadcrumb`,
       itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Beranda',
-          item: siteConfig.url,
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Living Digital Brochure',
-          item: `${siteConfig.url}/folio/cover`,
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: title,
-          item: pageUrl,
-        },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+        ...(slug === 'cover' ? [] : [
+          { '@type': 'ListItem', position: 2, name: title, item: pageUrl },
+        ]),
       ],
     },
   ];
@@ -205,7 +170,10 @@ export function generateSheetSchema(
   ].includes(slug) || slug.startsWith('niche-');
 
   if (isServiceFolio) {
-    const cleanPrice = price ? price.replace(/[^0-9]/g, '') : undefined;
+    // Display anchors use Indonesian million notation, not literal rupiah digits.
+    const amount = price?.match(/^(?:Mulai\s+)?Rp\s+(\d+(?:,\d+)?)jt(?:\+)?(?:\s*\/\s*bln)?$/i);
+    const cleanPrice = amount ? Math.round(Number(amount[1].replace(',', '.')) * 1_000_000) : undefined;
+    if (price && !cleanPrice) throw new Error(`Unsupported price anchor: ${price}`);
     graph.push({
       '@type': 'Service',
       '@id': `${pageUrl}/#service`,
@@ -224,11 +192,11 @@ export function generateSheetSchema(
             offers: {
               '@type': 'Offer',
               priceCurrency: 'IDR',
-              price: cleanPrice,
+              url: pageUrl,
               priceSpecification: {
                 '@type': 'PriceSpecification',
                 priceCurrency: 'IDR',
-                price: price,
+                minPrice: cleanPrice,
               },
             },
           }
@@ -494,6 +462,9 @@ export function syncDocumentSeo(slug: string) {
     document.head.appendChild(linkCanonical);
   }
   linkCanonical.setAttribute('href', url);
+  document.querySelectorAll('link[rel="alternate"][hreflang="id-ID"]').forEach((link) => {
+    link.setAttribute('href', url);
+  });
 
   // 5. Update OpenGraph tags
   setMeta('meta[property="og:title"]', 'property', 'og:title', title);
@@ -512,7 +483,6 @@ export function syncDocumentSeo(slug: string) {
         seo.title,
         seo.description,
         slug,
-        seo.schemaType || 'WebPage',
         seo.startingPrice
       );
       let schemaScript = document.getElementById('folio-sheet-schema') as HTMLScriptElement | null;

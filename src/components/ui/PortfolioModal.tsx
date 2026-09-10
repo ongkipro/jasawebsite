@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useId } from 'react';
 import { X, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { PortfolioItem } from '@/types/portfolio';
 import { Badge } from '@/components/ui/Badge';
@@ -13,29 +13,42 @@ export interface PortfolioModalProps {
 }
 
 export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    }
-
+    const dialog = dialogRef.current;
+    if (!isOpen || !item || !dialog) return;
+    const previousFocus = document.activeElement;
+    dialog.showModal();
     return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleKeyDown);
+      dialog.close();
+      if (previousFocus instanceof HTMLElement) previousFocus.focus();
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, item]);
 
   if (!isOpen || !item) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200"
+    <dialog
+      ref={dialogRef}
+      aria-labelledby={titleId}
+      onKeyDown={(event) => {
+        if (event.key !== 'Tab') return;
+        const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>(
+          'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex="0"]'
+        )).filter((element) => element.getClientRects().length > 0);
+        const first = controls[0];
+        const last = controls.at(-1);
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }}
+      onCancel={(event) => { event.preventDefault(); onClose(); }}
+      className="fixed inset-0 m-0 w-screen h-dvh max-w-none max-h-none z-50 flex items-center justify-center p-4 sm:p-6 bg-black/70 backdrop-blur-xs animate-in fade-in duration-200"
       onClick={onClose}
     >
       <div
@@ -58,7 +71,7 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
             <Badge variant="mono">{item.categoryLabel}</Badge>
             <Badge variant="outline">{item.industry}</Badge>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] tracking-tight">
+          <h2 id={titleId} className="font-serif text-2xl sm:text-3xl font-bold text-[#111111] tracking-tight">
             {item.clientName}
           </h2>
         </div>
@@ -172,6 +185,6 @@ export function PortfolioModal({ item, isOpen, onClose }: PortfolioModalProps) {
           />
         </div>
       </div>
-    </div>
+    </dialog>
   );
 }

@@ -137,6 +137,7 @@ export function PortfolioGallerySheetRight({
         <div className="flex items-center gap-1 bg-[#ebebe3] p-0.5 rounded-xs border border-[#d5d5cd]">
           <button
             type="button"
+            aria-pressed={viewportMode === 'desktop'}
             onClick={() => setViewportMode('desktop')}
             className={`p-1 rounded-xs transition-colors cursor-pointer ${
               viewportMode === 'desktop'
@@ -149,6 +150,7 @@ export function PortfolioGallerySheetRight({
           </button>
           <button
             type="button"
+            aria-pressed={viewportMode === 'mobile'}
             onClick={() => setViewportMode('mobile')}
             className={`p-1 rounded-xs transition-colors cursor-pointer ${
               viewportMode === 'mobile'
@@ -187,6 +189,15 @@ export function PortfolioGallerySheetRight({
 
         {/* Mockup Presentation Canvas with Real Screenshot */}
         <div
+          role="button"
+          tabIndex={0}
+          aria-label={`Buka galeri ${selectedItem.clientName}`}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              setIsModalOpen(true);
+            }
+          }}
           onClick={() => setIsModalOpen(true)}
           className="relative w-full h-44 sm:h-48 bg-[#111111] rounded-xs border border-[#d5d5cd] overflow-hidden cursor-pointer group"
         >

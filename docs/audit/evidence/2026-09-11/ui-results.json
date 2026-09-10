@@ -1,0 +1,845 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "route": "/",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/cover",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/company-profile",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Bikin Klien Korporat, Mitra Bisnis & Tim Pengadaan Yakin Memilih Anda Sebagai Pemenang Tender"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/company-profile"
+    },
+    {
+      "route": "/folio/sales-website",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Bukan Brosur Pajangan. Ini Mesin Perekrut Leads WhatsApp Pembeli Siap Closing"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/sales-website"
+    },
+    {
+      "route": "/folio/ecommerce-shopify",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Toko Online Brand Anda Sendiri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/ecommerce-shopify"
+    },
+    {
+      "route": "/folio/custom-web-app",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Ketika Bisnis Makin Besar & Spreadsheet Mulai Bikin Pusing, Saatnya Punya Sistem Sendiri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/custom-web-app"
+    },
+    {
+      "route": "/folio/portfolio",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "DECK PORTOFOLIO TERKURASI"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/portfolio"
+    },
+    {
+      "route": "/folio/maintenance-care",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Jaga Web Tetap Kencang, Bebas Error, dan Siap Tempur Menghasilkan Penjualan Tiap Hari"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/maintenance-care"
+    },
+    {
+      "route": "/folio/colophon",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "DIREKTORI CERUK INDUSTRI (pSEO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/colophon"
+    },
+    {
+      "route": "/folio/niche-dealer-otomotif",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Dealer Mobil & Showroom Kendaraan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-dealer-otomotif"
+    },
+    {
+      "route": "/folio/niche-rental-mobil-bus-pariwisata",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Rental Mobil Mewah & Bus Pariwisata"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-rental-mobil-bus-pariwisata"
+    },
+    {
+      "route": "/folio/niche-bengkel-mobil-body-repair",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Bengkel Mobil, Body Repair & Modifikasi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-bengkel-mobil-body-repair"
+    },
+    {
+      "route": "/folio/niche-alat-berat-mesin",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Distributor Alat Berat & Mesin Industri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-alat-berat-mesin"
+    },
+    {
+      "route": "/folio/niche-pabrik-manufaktur-b2b",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Pabrikasi & Manufaktur Industri B2B"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-pabrik-manufaktur-b2b"
+    },
+    {
+      "route": "/folio/niche-percetakan-packaging-kemasan",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Percetakan Kemasan, Dus Box & Offset"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-percetakan-packaging-kemasan"
+    },
+    {
+      "route": "/folio/niche-developer-properti",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Pengembang Properti & Real Estate"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-developer-properti"
+    },
+    {
+      "route": "/folio/niche-kontraktor-arsitek",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Kontraktor Bangunan & Desain Interior"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-kontraktor-arsitek"
+    },
+    {
+      "route": "/folio/niche-klinik-kesehatan",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Klinik Medis, Dokter & Rumah Sakit"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-klinik-kesehatan"
+    },
+    {
+      "route": "/folio/niche-distributor-alkes-farmasi",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Distributor Alat Kesehatan & Farmasi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-distributor-alkes-farmasi"
+    },
+    {
+      "route": "/folio/niche-kantor-hukum-advokat",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Kantor Hukum, Advokat & Notaris"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-kantor-hukum-advokat"
+    },
+    {
+      "route": "/folio/niche-konsultan-pajak-akuntan",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Kantor Akuntan Publik & Konsultan Pajak"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-konsultan-pajak-akuntan"
+    },
+    {
+      "route": "/folio/niche-konsultan-it-cctv-keamanan",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Integrator Sistem IT & CCTV Keamanan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-konsultan-it-cctv-keamanan"
+    },
+    {
+      "route": "/folio/niche-brand-fashion-d2c",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Brand Fashion, Hijab & Apparel D2C"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-brand-fashion-d2c"
+    },
+    {
+      "route": "/folio/niche-brand-skincare-kosmetik",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Brand Skincare & Kosmetik Kecantikan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-brand-skincare-kosmetik"
+    },
+    {
+      "route": "/folio/niche-restoran-cafe-fnb",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Restoran Fine Dining, Cafe & F&B"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-restoran-cafe-fnb"
+    },
+    {
+      "route": "/folio/niche-event-organizer-wedding-planner",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Wedding Planner & Event Organizer (EO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-event-organizer-wedding-planner"
+    },
+    {
+      "route": "/folio/niche-ekspedisi-logistik-cargo",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Ekspedisi, Cargo & Freight Forwarding"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-ekspedisi-logistik-cargo"
+    },
+    {
+      "route": "/folio/niche-ekspor-komoditas-hasil-bumi",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Eksportir Komoditas & Hasil Bumi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-ekspor-komoditas-hasil-bumi"
+    },
+    {
+      "route": "/folio/niche-sekolah-universitas-bimbel",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Sekolah Unggulan, Kampus & Bimbel"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-sekolah-universitas-bimbel"
+    },
+    {
+      "route": "/folio/niche-tour-travel-umroh",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Biro Perjalanan Umroh & Haji Khusus"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-tour-travel-umroh"
+    },
+    {
+      "route": "/folio/niche-cleaning-service-pest-control",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Cleaning Service Komersial & Pest Control"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-cleaning-service-pest-control"
+    },
+    {
+      "route": "/folio/niche-agribisnis-peternakan-modern",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Agribisnis, Bibit Tanaman & Peternakan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-agribisnis-peternakan-modern"
+    },
+    {
+      "route": "/folio/niche-koperasi-keuangan-mikro",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Koperasi Simpan Pinjam & Lembaga Keuangan Mikro"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-koperasi-keuangan-mikro"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/cover",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/company-profile",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Bikin Klien Korporat, Mitra Bisnis & Tim Pengadaan Yakin Memilih Anda Sebagai Pemenang Tender"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/company-profile"
+    },
+    {
+      "route": "/folio/sales-website",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Bukan Brosur Pajangan. Ini Mesin Perekrut Leads WhatsApp Pembeli Siap Closing"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/sales-website"
+    },
+    {
+      "route": "/folio/ecommerce-shopify",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Toko Online Brand Anda Sendiri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/ecommerce-shopify"
+    },
+    {
+      "route": "/folio/custom-web-app",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Ketika Bisnis Makin Besar & Spreadsheet Mulai Bikin Pusing, Saatnya Punya Sistem Sendiri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/custom-web-app"
+    },
+    {
+      "route": "/folio/portfolio",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "DECK PORTOFOLIO TERKURASI"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/portfolio"
+    },
+    {
+      "route": "/folio/maintenance-care",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Jaga Web Tetap Kencang, Bebas Error, dan Siap Tempur Menghasilkan Penjualan Tiap Hari"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/maintenance-care"
+    },
+    {
+      "route": "/folio/colophon",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "DIREKTORI CERUK INDUSTRI (pSEO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/colophon"
+    },
+    {
+      "route": "/folio/niche-dealer-otomotif",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Dealer Mobil & Showroom Kendaraan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-dealer-otomotif"
+    },
+    {
+      "route": "/folio/niche-rental-mobil-bus-pariwisata",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Rental Mobil Mewah & Bus Pariwisata"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-rental-mobil-bus-pariwisata"
+    },
+    {
+      "route": "/folio/niche-bengkel-mobil-body-repair",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Bengkel Mobil, Body Repair & Modifikasi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-bengkel-mobil-body-repair"
+    },
+    {
+      "route": "/folio/niche-alat-berat-mesin",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Distributor Alat Berat & Mesin Industri"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-alat-berat-mesin"
+    },
+    {
+      "route": "/folio/niche-pabrik-manufaktur-b2b",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Pabrikasi & Manufaktur Industri B2B"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-pabrik-manufaktur-b2b"
+    },
+    {
+      "route": "/folio/niche-percetakan-packaging-kemasan",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Percetakan Kemasan, Dus Box & Offset"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-percetakan-packaging-kemasan"
+    },
+    {
+      "route": "/folio/niche-developer-properti",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Pengembang Properti & Real Estate"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-developer-properti"
+    },
+    {
+      "route": "/folio/niche-kontraktor-arsitek",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Kontraktor Bangunan & Desain Interior"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-kontraktor-arsitek"
+    },
+    {
+      "route": "/folio/niche-klinik-kesehatan",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Klinik Medis, Dokter & Rumah Sakit"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-klinik-kesehatan"
+    },
+    {
+      "route": "/folio/niche-distributor-alkes-farmasi",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Distributor Alat Kesehatan & Farmasi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-distributor-alkes-farmasi"
+    },
+    {
+      "route": "/folio/niche-kantor-hukum-advokat",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Kantor Hukum, Advokat & Notaris"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-kantor-hukum-advokat"
+    },
+    {
+      "route": "/folio/niche-konsultan-pajak-akuntan",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Kantor Akuntan Publik & Konsultan Pajak"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-konsultan-pajak-akuntan"
+    },
+    {
+      "route": "/folio/niche-konsultan-it-cctv-keamanan",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Integrator Sistem IT & CCTV Keamanan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-konsultan-it-cctv-keamanan"
+    },
+    {
+      "route": "/folio/niche-brand-fashion-d2c",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Brand Fashion, Hijab & Apparel D2C"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-brand-fashion-d2c"
+    },
+    {
+      "route": "/folio/niche-brand-skincare-kosmetik",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Brand Skincare & Kosmetik Kecantikan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-brand-skincare-kosmetik"
+    },
+    {
+      "route": "/folio/niche-restoran-cafe-fnb",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Restoran Fine Dining, Cafe & F&B"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-restoran-cafe-fnb"
+    },
+    {
+      "route": "/folio/niche-event-organizer-wedding-planner",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Wedding Planner & Event Organizer (EO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-event-organizer-wedding-planner"
+    },
+    {
+      "route": "/folio/niche-ekspedisi-logistik-cargo",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Ekspedisi, Cargo & Freight Forwarding"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-ekspedisi-logistik-cargo"
+    },
+    {
+      "route": "/folio/niche-ekspor-komoditas-hasil-bumi",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Eksportir Komoditas & Hasil Bumi"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-ekspor-komoditas-hasil-bumi"
+    },
+    {
+      "route": "/folio/niche-sekolah-universitas-bimbel",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Sekolah Unggulan, Kampus & Bimbel"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-sekolah-universitas-bimbel"
+    },
+    {
+      "route": "/folio/niche-tour-travel-umroh",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Biro Perjalanan Umroh & Haji Khusus"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-tour-travel-umroh"
+    },
+    {
+      "route": "/folio/niche-cleaning-service-pest-control",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Cleaning Service Komersial & Pest Control"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-cleaning-service-pest-control"
+    },
+    {
+      "route": "/folio/niche-agribisnis-peternakan-modern",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Agribisnis, Bibit Tanaman & Peternakan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-agribisnis-peternakan-modern"
+    },
+    {
+      "route": "/folio/niche-koperasi-keuangan-mikro",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": [
+        "Koperasi Simpan Pinjam & Lembaga Keuangan Mikro"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-koperasi-keuangan-mikro"
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "scroll": 320,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/company-profile",
+      "width": 320,
+      "scroll": 320,
+      "h1": [
+        "Bikin Klien Korporat, Mitra Bisnis & Tim Pengadaan Yakin Memilih Anda Sebagai Pemenang Tender"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/company-profile"
+    },
+    {
+      "route": "/folio/portfolio",
+      "width": 320,
+      "scroll": 320,
+      "h1": [
+        "DECK PORTOFOLIO TERKURASI"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/portfolio"
+    },
+    {
+      "route": "/folio/colophon",
+      "width": 320,
+      "scroll": 320,
+      "h1": [
+        "DIREKTORI CERUK INDUSTRI (pSEO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/colophon"
+    },
+    {
+      "route": "/folio/niche-dealer-otomotif",
+      "width": 320,
+      "scroll": 320,
+      "h1": [
+        "Dealer Mobil & Showroom Kendaraan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-dealer-otomotif"
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "scroll": 768,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/company-profile",
+      "width": 768,
+      "scroll": 768,
+      "h1": [
+        "Bikin Klien Korporat, Mitra Bisnis & Tim Pengadaan Yakin Memilih Anda Sebagai Pemenang Tender"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/company-profile"
+    },
+    {
+      "route": "/folio/portfolio",
+      "width": 768,
+      "scroll": 768,
+      "h1": [
+        "DECK PORTOFOLIO TERKURASI"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/portfolio"
+    },
+    {
+      "route": "/folio/colophon",
+      "width": 768,
+      "scroll": 768,
+      "h1": [
+        "DIREKTORI CERUK INDUSTRI (pSEO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/colophon"
+    },
+    {
+      "route": "/folio/niche-dealer-otomotif",
+      "width": 768,
+      "scroll": 768,
+      "h1": [
+        "Dealer Mobil & Showroom Kendaraan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-dealer-otomotif"
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/folio/company-profile",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": [
+        "Bikin Klien Korporat, Mitra Bisnis & Tim Pengadaan Yakin Memilih Anda Sebagai Pemenang Tender"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/company-profile"
+    },
+    {
+      "route": "/folio/portfolio",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": [
+        "DECK PORTOFOLIO TERKURASI"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/portfolio"
+    },
+    {
+      "route": "/folio/colophon",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": [
+        "DIREKTORI CERUK INDUSTRI (pSEO)"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/colophon"
+    },
+    {
+      "route": "/folio/niche-dealer-otomotif",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": [
+        "Dealer Mobil & Showroom Kendaraan"
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/folio/niche-dealer-otomotif"
+    },
+    {
+      "route": "/",
+      "width": 720,
+      "scroll": 720,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "scroll": 390,
+      "h1": [
+        "Website dan Sistem Digital untuk Bisnis yang Ingin Bertumbuh."
+      ],
+      "blank": false,
+      "canonical": "https://jasawebsite.co/"
+    }
+  ],
+  "interactions": [
+    "mobile subsheets",
+    "dropdown Escape and focus",
+    "niche search",
+    "history back/forward",
+    "canonical and hreflang",
+    "portfolio modal focus trap and Escape",
+    "reduced motion",
+    "no JavaScript"
+  ]
+}

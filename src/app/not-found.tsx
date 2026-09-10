@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 
 const QUICK_FOLIO_LINKS: QuickFolioLink[] = [
   {
-    slug: '/folio/cover',
+    slug: '/',
     folioNumber: 'FOLIO 00–01',
     badge: 'COVER',
     title: 'Front Cover & Ringkasan Studio',
     description:
-      'Living digital brochure, positioning studio, komitmen performa Lighthouse 100/100.',
+      'Living digital brochure, positioning studio, layanan website dan sistem bisnis.',
   },
   {
     slug: '/folio/company-profile',

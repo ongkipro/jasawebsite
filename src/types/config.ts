@@ -20,10 +20,4 @@ export interface SiteConfig {
     country: string;
   };
   social: SiteSocial;
-  stats: {
-    speedScore: number;
-    ttfb: string;
-    hostingCost: string;
-    codeOwnership: string;
-  };
 }

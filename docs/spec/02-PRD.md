@@ -104,3 +104,17 @@ Setiap kupon sobek (*perforated voucher*) di lembar buku mengalirkan pesan terst
 - **Niche Spesifik:** *"Halo Tim Ong-OS, saya sedang membaca lembar brosur untuk industri [NAMA_INDUSTRI]. Mohon info proposal dan konsultasinya. [Ref: Niche-Folio]"*
 
 
+
+## REQ-AUDIT-01 — Evidence-backed SEO, performance, and interaction quality
+
+Authorized by the owner on 2026-09-10, with Markdown documentation and execution logging explicitly requested.
+
+- All 33 existing public content routes remain available. The duplicate `/folio/cover` resolves its canonical to `/`; only the 32 canonical URLs appear in the sitemap.
+- Generated HTML remains readable before client hydration, with route-specific metadata, meaningful page headings, crawlable links, and accurate structured data.
+- Starting prices in structured data represent IDR amounts from the displayed anchors. Service pages describe web-development services, not the businesses of prospective customers. Unsupported ratings and invisible FAQ markup are excluded.
+- Keyboard navigation respects focused controls and dialogs. Mobile selectors support search, Escape, and focus recovery. Reduced-motion preferences are respected.
+- Performance and SEO claims distinguish a measured lab run, field data, and an engineering target. No Lighthouse result implies guaranteed rankings or universal device performance.
+- Verification covers generated output, mobile/desktop browser journeys, lint, types, dependency audit, and build. Record measurement limitations and unresolved business evidence.
+- Changes remain local for review. Commit, push, and production deployment require separate authorization.
+
+- Owner clarification (2026-09-11): maintain the existing page-by-page development XML with actual source/component/output mappings and validation; distinguish it from the crawler sitemap.

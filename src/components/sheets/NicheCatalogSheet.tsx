@@ -67,10 +67,10 @@ export function NicheCatalogSheet() {
     <article className="space-y-3">
       {/* Header */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
-        <div className="flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
+        <h1 className="flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
           <Layers className="w-3.5 h-3.5 text-[#c23b22]" />
           <span>DIREKTORI CERUK INDUSTRI (pSEO)</span>
-        </div>
+        </h1>
         <Badge variant="mono">{nichesData.length} SEKTOR TERVERIFIKASI</Badge>
       </div>
 
@@ -111,6 +111,7 @@ export function NicheCatalogSheet() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Cari sektor industri"
             placeholder="Cari sektor: dealer, alkes, kargo, pabrik, katering, hukum..."
             className="w-full pl-8 pr-3 py-2 sm:py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-base sm:text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
           />

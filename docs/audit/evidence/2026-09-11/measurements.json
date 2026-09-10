@@ -1,0 +1,227 @@
+[
+  {
+    "label": "Live mobile",
+    "rawReport": "lighthouse-live-full-mobile.json",
+    "sha256": "a170b554141c20dc807fb5b3385807aff6cf7c7be101f005ada5a324c136c646",
+    "fetchTime": "2026-09-10T17:03:12.942Z",
+    "lighthouseVersion": "13.4.1",
+    "url": "https://jasawebsite.co/",
+    "scores": {
+      "performance": 85,
+      "accessibility": 91,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1762.8425,
+      "largest-contentful-paint": 3483.8424999999997,
+      "total-blocking-time": 200,
+      "cumulative-layout-shift": 0,
+      "speed-index": 4253.8464165395735
+    },
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 1888,
+      "credits": {
+        "axe-core": "4.13.0"
+      }
+    }
+  },
+  {
+    "label": "Live desktop",
+    "rawReport": "lighthouse-live-full-desktop.json",
+    "sha256": "52c7c2e8ff50b4cba20a9fdc8f486ddc3ddbf6e81b20d2f48693e36e9ea22d17",
+    "fetchTime": "2026-09-10T17:05:57.551Z",
+    "lighthouseVersion": "13.4.1",
+    "url": "https://jasawebsite.co/",
+    "scores": {
+      "performance": 100,
+      "accessibility": 91,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 303.188,
+      "largest-contentful-paint": 702.188,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "speed-index": 489.4587570073419
+    },
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": false,
+      "width": 1350,
+      "height": 940,
+      "deviceScaleFactor": 1,
+      "disabled": false
+    },
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 1797.5,
+      "credits": {
+        "axe-core": "4.13.0"
+      }
+    }
+  },
+  {
+    "label": "Local baseline mobile",
+    "rawReport": "lighthouse-baseline-compressed-mobile.json",
+    "sha256": "54aaf47949b6eecadafbb95c7de8be1aa15ac358a9f909eba72dabe854565125",
+    "fetchTime": "2026-09-10T17:11:48.158Z",
+    "lighthouseVersion": "13.4.1",
+    "url": "http://127.0.0.1:13185/",
+    "scores": {
+      "performance": 79,
+      "accessibility": 91,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 1050.135,
+      "largest-contentful-paint": 4383.405000000001,
+      "total-blocking-time": 290,
+      "cumulative-layout-shift": 0,
+      "speed-index": 2669.109892496037
+    },
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 1719.5,
+      "credits": {
+        "axe-core": "4.13.0"
+      }
+    }
+  },
+  {
+    "label": "Local fixed mobile",
+    "rawReport": "lighthouse-final-mobile.json",
+    "sha256": "84cfcac8b7e218ca369baec994fb18fb53b985f3e6fa3e24784ebf7327f03e80",
+    "fetchTime": "2026-09-10T17:14:41.837Z",
+    "lighthouseVersion": "13.4.1",
+    "url": "http://127.0.0.1:24519/",
+    "scores": {
+      "performance": 88,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 755.6943000000001,
+      "largest-contentful-paint": 3758.54145,
+      "total-blocking-time": 125.5,
+      "cumulative-layout-shift": 0,
+      "speed-index": 755.6943000000001
+    },
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 1799,
+      "credits": {
+        "axe-core": "4.13.0"
+      }
+    }
+  },
+  {
+    "label": "Local fixed desktop",
+    "rawReport": "lighthouse-final-desktop.json",
+    "sha256": "1ce1f9434392fac9a7b1ebd3e634ef8b7caa2232e6eb923033f06dfb8af9cb51",
+    "fetchTime": "2026-09-10T17:14:54.214Z",
+    "lighthouseVersion": "13.4.1",
+    "url": "http://127.0.0.1:22729/",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": 205.9943,
+      "largest-contentful-paint": 731.9886000000001,
+      "total-blocking-time": 0,
+      "cumulative-layout-shift": 0,
+      "speed-index": 215.68291823780942
+    },
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": false,
+      "width": 1350,
+      "height": 940,
+      "deviceScaleFactor": 1,
+      "disabled": false
+    },
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "benchmarkIndex": 1820,
+      "credits": {
+        "axe-core": "4.13.0"
+      }
+    }
+  }
+]

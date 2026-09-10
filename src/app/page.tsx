@@ -6,8 +6,7 @@ export default function HomePage() {
   const sheetSchema = generateSheetSchema(
     coverSeo.title,
     coverSeo.description,
-    'cover',
-    'WebPage'
+    'cover'
   );
 
   return (

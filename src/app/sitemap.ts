@@ -6,20 +6,16 @@ import { siteConfig } from '@/data/siteConfig';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date();
-
   // Root entry
   const rootEntry: MetadataRoute.Sitemap[number] = {
     url: siteConfig.url,
-    lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 1.0,
   };
 
   // Core folio spreads
-  const coreEntries: MetadataRoute.Sitemap = foliosData.map((folio) => ({
+  const coreEntries: MetadataRoute.Sitemap = foliosData.filter((folio) => folio.slug !== 'cover').map((folio) => ({
     url: `${siteConfig.url}/folio/${folio.slug}`,
-    lastModified: currentDate,
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
@@ -27,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 30+ Niche programmatic SEO pages
   const nicheEntries: MetadataRoute.Sitemap = nichesData.map((niche) => ({
     url: `${siteConfig.url}/folio/niche-${niche.slug}`,
-    lastModified: currentDate,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

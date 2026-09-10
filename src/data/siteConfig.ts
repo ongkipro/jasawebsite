@@ -20,10 +20,4 @@ export const siteConfig: SiteConfig = {
     instagram: 'https://instagram.com/ongki.pro',
     linkedin: 'https://linkedin.com/in/ongkipro',
   },
-  stats: {
-    speedScore: 100,
-    ttfb: '< 0.3s',
-    hostingCost: 'Global Edge Cloud',
-    codeOwnership: '100%',
-  },
 };

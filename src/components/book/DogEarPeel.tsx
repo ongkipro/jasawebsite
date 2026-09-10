@@ -24,14 +24,14 @@ export function DogEarPeel({
       onClick={onClick}
       aria-label={label}
       className={cn(
-        'group absolute bottom-0 z-30 p-2 text-xs font-mono select-none cursor-pointer focus:outline-none',
+        'group absolute bottom-0 z-30 p-2 text-xs font-mono select-none cursor-pointer ',
         isRight ? 'right-0' : 'left-0',
         className
       )}
     >
       <div
         className={cn(
-          'relative w-8 h-8 transition-all duration-200 ease-out group-hover:w-11 group-hover:h-11',
+          'relative w-8 h-8 transition-transform duration-200 ease-out group-hover:scale-110 motion-reduce:transform-none',
           isRight ? 'ml-auto' : 'mr-auto'
         )}
       >

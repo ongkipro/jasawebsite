@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence, PanInfo } from 'motion/react';
+import { motion, AnimatePresence, PanInfo, useReducedMotion } from 'motion/react';
 import { cn } from '@/lib/cn';
 import { DogEarPeel } from '@/components/book/DogEarPeel';
 import { BookOpen, Layers } from 'lucide-react';
@@ -30,6 +30,7 @@ export function TabletSheetView({
   className,
 }: TabletSheetViewProps) {
   // Active tablet sub-sheet (0: Left sheet, 1: Right sheet)
+  const reducedMotion = useReducedMotion();
   const [activeSubSheet, setActiveSubSheet] = useState<0 | 1>(0);
 
   const handleDragEnd = (_e: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
@@ -55,7 +56,7 @@ export function TabletSheetView({
     <motion.div
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.15}
+      dragElastic={reducedMotion ? 0 : 0.15}
       onDragEnd={handleDragEnd}
       className={cn(
         'relative w-full max-w-3xl mx-auto h-full flex-1 min-h-0 flex flex-col justify-between p-4 sm:p-6 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
@@ -79,6 +80,7 @@ export function TabletSheetView({
           <div className="flex items-center gap-1 bg-[#ebebe3] p-1 rounded-xs border border-[#d5d5cd]">
             <button
               type="button"
+              aria-pressed={activeSubSheet === 0}
               onClick={() => setActiveSubSheet(0)}
               className={cn(
                 'flex items-center gap-1.5 px-3 py-1 rounded-xs font-semibold text-[11px] transition-all cursor-pointer',
@@ -92,6 +94,7 @@ export function TabletSheetView({
             </button>
             <button
               type="button"
+              aria-pressed={activeSubSheet === 1}
               onClick={() => setActiveSubSheet(1)}
               className={cn(
                 'flex items-center gap-1.5 px-3 py-1 rounded-xs font-semibold text-[11px] transition-all cursor-pointer',
@@ -109,14 +112,14 @@ export function TabletSheetView({
 
       {/* Main Tablet Sheet Animated Body */}
       <div className="flex-1 min-h-0 overflow-y-auto paper-scrollbar py-4 my-auto pr-1">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="wait">
           {activeSubSheet === 0 ? (
             <motion.div
               key="tablet-left"
-              initial={{ opacity: 0, x: -10 }}
+              initial={{ opacity: 0, x: reducedMotion ? 0 : -10 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 10 }}
-              transition={{ duration: 0.2 }}
+              exit={{ opacity: 0, x: reducedMotion ? 0 : 10 }}
+              transition={{ duration: reducedMotion ? 0 : 0.2 }}
               className="space-y-4"
             >
               {leftContent}
@@ -124,10 +127,10 @@ export function TabletSheetView({
           ) : (
             <motion.div
               key="tablet-right"
-              initial={{ opacity: 0, x: 10 }}
+              initial={{ opacity: 0, x: reducedMotion ? 0 : 10 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -10 }}
-              transition={{ duration: 0.2 }}
+              exit={{ opacity: 0, x: reducedMotion ? 0 : -10 }}
+              transition={{ duration: reducedMotion ? 0 : 0.2 }}
               className="space-y-4"
             >
               {rightContent}

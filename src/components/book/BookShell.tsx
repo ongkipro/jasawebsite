@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
 import { ChevronLeft, ChevronRight, MessageSquareCode, Home, PhoneCall } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import foliosData from '@/data/folios.json';
@@ -28,8 +27,6 @@ export function BookShell({
   renderRightSheet,
   className,
 }: BookShellProps) {
-  const router = useRouter();
-  const pathname = usePathname();
   const [spreadIndex, setSpreadIndex] = useState(initialSpreadIndex);
   const [prevInitialIndex, setPrevInitialIndex] = useState(initialSpreadIndex);
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
@@ -104,7 +101,9 @@ export function BookShell({
   // Keyboard Navigation Listeners
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey ||
+          document.querySelector('dialog[open]') ||
+          (e.target instanceof Element && e.target.closest('input, textarea, select, button, a, [contenteditable], [role="dialog"]'))) {
         return;
       }
       if (e.key === 'ArrowRight' || e.key === 'PageDown') {
@@ -152,6 +151,7 @@ export function BookShell({
           <Link
             href="/"
             onClick={(e) => {
+              if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
               e.preventDefault();
               navigateToSpread(0, 'prev');
             }}
@@ -172,6 +172,7 @@ export function BookShell({
           <Link
             href="/folio/portfolio"
             onClick={(e) => {
+              if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
               e.preventDefault();
               navigateToSpread(5, spreadIndex > 5 ? 'prev' : 'next');
             }}
@@ -189,7 +190,7 @@ export function BookShell({
 
           <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#4b4b4b]">
             <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
-            <span>LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD</span>
+            <span>STATIC HTML · GLOBAL EDGE CLOUD</span>
           </div>
 
           <div className="flex items-center gap-1 bg-[#ebebe3] px-2 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] font-semibold text-[10px] sm:text-[11px]">
@@ -269,15 +270,16 @@ export function BookShell({
           <button
             type="button"
             onClick={handlePrev}
+            aria-label="Previous folio"
             disabled={spreadIndex === 0}
             className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#fbfbfa] hover:bg-[#ebebe3] disabled:opacity-35 disabled:cursor-not-allowed border border-[#d5d5cd] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            <span>Prev</span>
+            <span className="hidden min-[360px]:inline">Prev</span>
           </button>
 
           {/* Spread dots indicator */}
-          <div className="flex items-center gap-1 sm:gap-1.5 px-1 sm:px-2">
+          <div className="flex items-center gap-0 px-0 sm:px-2">
             {foliosData.map((_, idx) => (
               <button
                 key={idx}
@@ -286,23 +288,25 @@ export function BookShell({
                   navigateToSpread(idx, idx > spreadIndex ? 'next' : 'prev')
                 }
                 aria-label={`Open Folio ${idx + 1}`}
-                className={cn(
-                  'h-1.5 sm:h-2 rounded-full transition-all duration-200 cursor-pointer',
-                  spreadIndex === idx
-                    ? 'w-4 sm:w-6 bg-[#111111]'
-                    : 'w-1.5 sm:w-2 bg-[#d5d5cd] hover:bg-[#4b4b4b]'
-                )}
-              />
+                aria-current={spreadIndex === idx ? 'page' : undefined}
+                className="flex h-8 min-w-6 items-center justify-center cursor-pointer"
+              >
+                <span className={cn(
+                  'h-1.5 rounded-full transition-all duration-200',
+                  spreadIndex === idx ? 'w-4 bg-[#111111]' : 'w-1.5 bg-[#d5d5cd]'
+                )} />
+              </button>
             ))}
           </div>
 
           <button
             type="button"
             onClick={handleNext}
+            aria-label="Next folio"
             disabled={spreadIndex === totalSpreads - 1}
             className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 min-h-[34px] sm:min-h-[38px] bg-[#111111] hover:bg-[#c23b22] disabled:opacity-35 disabled:cursor-not-allowed text-[#fbfbfa] border border-[#111111] rounded-xs font-medium text-[11px] sm:text-xs transition-colors cursor-pointer"
           >
-            <span>Next</span>
+            <span className="hidden min-[360px]:inline">Next</span>
             <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
         </div>

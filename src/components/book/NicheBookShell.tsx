@@ -89,12 +89,15 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (
-        e.target instanceof HTMLInputElement ||
-        e.target instanceof HTMLTextAreaElement
-      ) {
+      if (e.key === 'Escape' && dropdownOpen) {
+        e.preventDefault();
+        setDropdownOpen(false);
+        dropdownRef.current?.querySelector('button')?.focus();
         return;
       }
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || dropdownOpen ||
+          document.querySelector('dialog[open]') ||
+          (e.target instanceof Element && e.target.closest('input, textarea, select, button, a, [contenteditable]'))) return;
       if (e.key === 'ArrowRight' || e.key === 'PageDown') {
         e.preventDefault();
         handleNext();
@@ -108,7 +111,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleNext, handlePrev]);
+  }, [handleNext, handlePrev, dropdownOpen]);
 
   // Filtered niches for dropdown
   const filteredNiches = nichesData.filter(
@@ -138,8 +141,8 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
       )}
     >
       {/* TOP TECHNICAL RUNNING NAV */}
-      <header className="flex-shrink-0 flex items-center justify-between border-b border-[#d5d5cd] pb-1.5 mb-1.5 sm:pb-2 sm:mb-2 lg:mb-3 font-mono text-xs select-none relative z-50">
-        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+      <header className="flex-shrink-0 flex items-center justify-between gap-3 border-b border-[#d5d5cd] pb-1.5 mb-1.5 sm:pb-2 sm:mb-2 lg:mb-3 font-mono text-xs select-none relative z-50">
+        <div className="flex flex-1 items-center gap-2 sm:gap-3 min-w-0">
           <Link
             href="/"
             className="flex items-center gap-1.5 font-bold tracking-wider hover:text-[#c23b22] transition-colors shrink-0"
@@ -163,21 +166,21 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           <span className="text-[#d5d5cd] hidden sm:inline shrink-0">/</span>
 
           {/* INTERACTIVE NICHE SELECTOR DROPDOWN */}
-          <div ref={dropdownRef} className="relative inline-block text-left">
+          <div ref={dropdownRef} className="relative min-w-0 text-left">
             <button
               type="button"
               onClick={() => setDropdownOpen((prev) => !prev)}
               aria-expanded={dropdownOpen}
-              aria-haspopup="listbox"
+              aria-controls="industry-selector"
               className={cn(
-                'flex items-center gap-1.5 px-2.5 py-1 rounded-xs border transition-all cursor-pointer font-sans text-xs',
+                'flex max-w-full min-w-0 items-center gap-1.5 px-2.5 py-1 rounded-xs border transition-all cursor-pointer font-sans text-xs',
                 dropdownOpen
                   ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] shadow-sm'
                   : 'bg-[#ebebe3] hover:bg-[#d5d5cd] text-[#111111] border-[#d5d5cd]'
               )}
             >
               <Layers className="w-3 h-3 text-[#c23b22] shrink-0" />
-              <span className="font-serif font-bold truncate max-w-[140px] sm:max-w-[200px] md:max-w-[260px]">
+              <span className="font-serif font-bold min-w-0 truncate sm:max-w-[200px] md:max-w-[260px]">
                 {currentNiche.industryName}
               </span>
               <ChevronDown
@@ -191,8 +194,10 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
             {/* DROPDOWN POPOVER MENU WITH SMOOTH SCROLLING */}
             {dropdownOpen && (
               <div
-                role="listbox"
-                className="absolute left-0 mt-1.5 w-[280px] sm:w-[340px] max-w-[calc(100vw-24px)] bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs shadow-2xl z-50 overflow-hidden font-sans animate-in fade-in zoom-in-95 duration-150"
+                id="industry-selector"
+                role="region"
+                aria-label="Pilih sektor industri"
+                className="fixed left-3 right-3 sm:absolute sm:left-0 sm:right-auto mt-1.5 w-auto sm:w-[340px] max-w-[calc(100vw-24px)] bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs shadow-2xl z-50 overflow-hidden font-sans animate-in fade-in zoom-in-95 duration-150"
               >
                 {/* Search Box Header */}
                 <div className="p-2 border-b border-[#e5e5df] bg-[#ebebe3]/60">
@@ -203,8 +208,9 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
+                      aria-label="Cari sektor industri"
                       placeholder="Cari sektor industri..."
-                      className="w-full pl-8 pr-2.5 py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
+                      className="w-full pl-8 pr-2.5 py-1.5 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs text-base md:text-xs font-mono text-[#111111] placeholder:text-[#4b4b4b]/60 focus:outline-none focus:border-[#111111]"
                     />
                   </div>
                 </div>
@@ -307,20 +313,16 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
         </div>
 
         {/* Right Header Status */}
-        <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
+        <div className="hidden sm:flex items-center gap-1.5 sm:gap-4 shrink-0">
           <Link
             href="/folio/portfolio"
-            className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] hover:border-[#111111] bg-[#fbfbfa] hover:bg-[#ebebe3] font-mono text-[10px] sm:text-[11px] tracking-wide text-[#111111] transition-all cursor-pointer"
+            className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] hover:border-[#111111] bg-[#fbfbfa] hover:bg-[#ebebe3] font-mono text-[10px] sm:text-[11px] tracking-wide text-[#111111] transition-all cursor-pointer"
             title="Open Portfolio & Live Projects"
           >
             <span className="text-[#c23b22] text-[9px]">✦</span>
             <span>PORTFOLIO</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1.5 text-[11px] text-[#4b4b4b]">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
-            <span>LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD</span>
-          </div>
 
           <div className="flex items-center gap-1 bg-[#ebebe3] px-2 py-0.5 sm:py-1 rounded-xs border border-[#d5d5cd] font-semibold text-[10px] sm:text-[11px]">
             <span className="hidden sm:inline">NICHE</span>

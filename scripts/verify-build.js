@@ -1,169 +1,63 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import assert from 'node:assert/strict';
 
-console.log('--- ONG-OS BROCHURE SMOKE VERIFICATION SUITE ---');
-
-let passed = 0;
-let failed = 0;
-
-function assert(condition, message) {
-  if (condition) {
-    console.log(`✅ PASS: ${message}`);
-    passed++;
-  } else {
-    console.error(`❌ FAIL: ${message}`);
-    failed++;
+const out = path.resolve('out');
+const folios = JSON.parse(fs.readFileSync('src/data/folios.json', 'utf8'));
+const niches = JSON.parse(fs.readFileSync('src/data/niches.json', 'utf8'));
+const origin = 'https://jasawebsite.co';
+const decode = (text) => text.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#x27;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
+const routes = ['/', ...folios.map(f => `/folio/${f.slug}`), ...niches.map(n => `/folio/niche-${n.slug}`)];
+const prices = { 'company-profile': 2900000, 'sales-website': 3500000, 'ecommerce-shopify': 3900000, 'custom-web-app': 15000000, 'maintenance-care': 2500000 };
+const nichePrices = [5900000,3500000,3500000,8900000,6900000,4900000,5900000,4900000,4900000,6900000,4900000,3500000,3500000,6900000,6900000,2900000,3500000,5900000,5900000,4900000,5900000,3500000,3500000,4900000];
+const titles = new Set();
+let checks = 0;
+function check(ok, message) { assert.ok(ok, message); checks++; }
+for (const route of routes) {
+  const html = fs.readFileSync(path.join(out, route === '/' ? 'index.html' : `${route.slice(1)}.html`), 'utf8');
+  const expected = origin + (route === '/' || route === '/folio/cover' ? '' : route);
+  const canonical = [...html.matchAll(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"[^>]*>/g)];
+  check(canonical.length === 1 && decode(canonical[0][1]) === expected, `${route}: exactly one correct canonical`);
+  const title = html.match(/<title>(.*?)<\/title>/s)?.[1];
+  check(title && (route === '/folio/cover' || !titles.has(title)), `${route}: unique title except explicit cover alias`);
+  titles.add(title);
+  check(/<meta name="description" content="[^"]+"/.test(html), `${route}: description`);
+  check(!/<meta name="robots"[^>]*noindex/.test(html), `${route}: indexable`);
+  check(/<meta property="og:url" content="[^"]+"/.test(html) && html.includes(`content="${expected}"`), `${route}: social URL`);
+  check(/<meta name="twitter:card" content="summary_large_image"/.test(html), `${route}: share card`);
+  const body = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, '');
+  check(/<h1\b/.test(body) && body.includes('<article'), `${route}: primary content is in initial HTML`);
+  check(!body.includes('opacity:0'), `${route}: first content is visible without hydration`);
+  const graphs = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => { const data=JSON.parse(m[1]); return data['@graph'] || [data]; });
+  check(graphs.some(g=>g['@type']==='WebPage' && g.url===expected), `${route}: WebPage entity matches canonical`);
+  check(!graphs.some(g=>g.aggregateRating || g['@type']==='FAQPage'), `${route}: no unsupported rating or invisible FAQ`);
+  const slug=route.split('/').at(-1);
+  const nicheIndex=niches.findIndex(n=>`niche-${n.slug}`===slug);
+  const price=prices[slug] ?? (nicheIndex < 0 ? undefined : nichePrices[nicheIndex]);
+  if (price) {
+    const service=graphs.find(g=>g['@type']==='Service');
+    check(service?.offers?.priceSpecification?.minPrice===price, `${route}: starting price is ${price} IDR`);
+    check(service?.offers?.priceSpecification?.priceCurrency==='IDR', `${route}: rupiah currency`);
+  }
+  const links=[...body.matchAll(/href="([^"]+)"/g)].map(m=>decode(m[1]));
+  const wa=links.filter(h=>h.startsWith('https://wa.me/'));
+  check(wa.length>0,`${route}: actual WhatsApp conversion link`);
+  check(wa.some(h=>new URL(h).searchParams.get('text')?.includes('[Ref:')),`${route}: WhatsApp carries page attribution`);
+  for(const href of wa) {
+    const url=new URL(href);
+    check(url.pathname==='/6283830441495' && Boolean(url.searchParams.get('text')?.includes('JasaWebsite.co')), `${route}: correct WhatsApp recipient and encoded message`);
+  }
+  for(const href of links.filter(h=>h.startsWith('/')&&!h.startsWith('//'))) {
+    const pathname=new URL(href,origin).pathname;
+    check([pathname,`${pathname}.html`,`${pathname}/index.html`].some(p=>fs.existsSync(path.join(out,p))),`${route}: internal target exists ${pathname}`);
   }
 }
-
-const outDir = path.resolve('out');
-const foliosData = JSON.parse(fs.readFileSync('src/data/folios.json', 'utf-8'));
-const nichesData = JSON.parse(fs.readFileSync('src/data/niches.json', 'utf-8'));
-
-// 1. Verify static output root exists
-assert(fs.existsSync(outDir), 'out/ directory exists');
-assert(fs.existsSync(path.join(outDir, 'index.html')), 'out/index.html exists');
-assert(fs.existsSync(path.join(outDir, 'robots.txt')), 'out/robots.txt exists');
-assert(fs.existsSync(path.join(outDir, 'sitemap.xml')), 'out/sitemap.xml exists');
-assert(fs.existsSync(path.join(outDir, 'llms.txt')), 'out/llms.txt exists');
-assert(fs.existsSync(path.join(outDir, 'og-image.webp')), 'out/og-image.webp exists');
-
-// 2. Check JSON-LD in index.html
-const indexHtml = fs.readFileSync(path.join(outDir, 'index.html'), 'utf-8');
-assert(indexHtml.includes('application/ld+json'), 'index.html contains Schema.org JSON-LD graph');
-assert(indexHtml.includes('ProfessionalService'), 'index.html contains ProfessionalService schema');
-assert(indexHtml.includes('FAQPage'), 'index.html contains FAQPage rich snippet schema');
-assert(indexHtml.includes('JasaWebsite.co by ONG'), 'index.html contains brand name');
-
-// 3. Verify all core folio pages exist
-for (const folio of foliosData) {
-  const folioPath = path.join(outDir, 'folio', `${folio.slug}.html`);
-  const folioDir = path.join(outDir, 'folio', folio.slug, 'index.html');
-  const exists = fs.existsSync(folioPath) || fs.existsSync(folioDir);
-  assert(exists, `Folio spread exists: /folio/${folio.slug}`);
-}
-
-// 4. Verify all niche programmatic pages exist
-for (const niche of nichesData) {
-  const nicheSlug = `niche-${niche.slug}`;
-  const nichePath = path.join(outDir, 'folio', `${nicheSlug}.html`);
-  const nicheDir = path.join(outDir, 'folio', nicheSlug, 'index.html');
-  const exists = fs.existsSync(nichePath) || fs.existsSync(nicheDir);
-  assert(exists, `Niche page exists: /folio/${nicheSlug}`);
-}
-
-// 5. Verify robots.txt syntax and sitemap link
-const robotsContent = fs.readFileSync(path.join(outDir, 'robots.txt'), 'utf-8');
-assert(robotsContent.includes('User-Agent: *') && robotsContent.includes('sitemap.xml'), 'robots.txt properly configured');
-
-// 6. Verify sitemap.xml contains all expected routes
-const sitemapContent = fs.readFileSync(path.join(outDir, 'sitemap.xml'), 'utf-8');
-assert(sitemapContent.includes('<urlset'), 'sitemap.xml has valid XML schema');
-assert(sitemapContent.includes('https://jasawebsite.co'), 'sitemap.xml contains site root');
-for (const folio of foliosData) {
-  assert(sitemapContent.includes(`/folio/${folio.slug}`), `sitemap includes /folio/${folio.slug}`);
-}
-
-// 7. Verify WhatsApp conversion utility logic
-function buildTestWhatsAppUrl({ ref, tier, niche }) {
-  const basePhone = '6283830441495';
-  let message = 'Halo Tim JasaWebsite.co by ONG, ';
-  if (tier) message += `saya tertarik dengan paket ${tier}. `;
-  if (niche) message += `Industri saya: ${niche}. `;
-  message += `[Ref: ${ref}]`;
-  return `https://wa.me/${basePhone}?text=${encodeURIComponent(message)}`;
-}
-
-const testWaUrl = buildTestWhatsAppUrl({
-  ref: 'folio-compro',
-  tier: 'Business Growth',
-  niche: 'Kontraktor & Arsitektur',
-});
-assert(testWaUrl.startsWith('https://wa.me/'), 'WhatsApp URL generated properly');
-assert(testWaUrl.includes('Business%20Growth'), 'WhatsApp URL contains encoded tier parameter');
-assert(testWaUrl.includes('Kontraktor'), 'WhatsApp URL contains encoded niche parameter');
-
-// 8. Verify tactile 404 not-found page and crawler directives
-const notFoundHtmlPath = path.join(outDir, '404.html');
-assert(fs.existsSync(notFoundHtmlPath), 'out/404.html static page exists');
-const notFoundHtml = fs.readFileSync(notFoundHtmlPath, 'utf-8');
-assert(
-  notFoundHtml.includes('Lembar Ini Terlepas') || notFoundHtml.includes('Halaman Tidak Ditemukan'),
-  '404.html contains tactile folio messaging'
-);
-assert(
-  notFoundHtml.includes('noindex'),
-  '404.html has noindex crawler directive'
-);
-
-// 9. Verify enhanced Schema.org graph (aggregateRating & knowsAbout)
-assert(
-  indexHtml.includes('aggregateRating') && indexHtml.includes('4.95'),
-  'index.html includes aggregateRating structured data (4.95)'
-);
-assert(
-  indexHtml.includes('knowsAbout'),
-  'index.html includes knowsAbout competency list'
-);
-
-// 10. Verify portfolio ItemList schema mapping 13 live projects
-const portfolioHtmlPath = path.join(outDir, 'folio', 'portfolio.html');
-assert(fs.existsSync(portfolioHtmlPath), 'out/folio/portfolio.html exists');
-const portfolioHtml = fs.readFileSync(portfolioHtmlPath, 'utf-8');
-assert(
-  portfolioHtml.includes('ItemList') && portfolioHtml.includes('petanisejahtera.com') && portfolioHtml.includes('aussiesawit.my'),
-  'portfolio.html includes ItemList schema with 13 verified live projects'
-);
-
-// 11. Verify keyword-rich titles without redundant brand suffix
-const salesHtmlPath = path.join(outDir, 'folio', 'sales-website.html');
-assert(fs.existsSync(salesHtmlPath), 'out/folio/sales-website.html exists');
-const salesHtml = fs.readFileSync(salesHtmlPath, 'utf-8');
-assert(
-  salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales &amp; Leads WhatsApp</title>') ||
-  salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp</title>'),
-  'sales-website.html has calibrated keyword title without brand suffix'
-);
-assert(
-  indexHtml.includes('<title>Jasa Pembuatan Website Profesional &amp; Toko Online Indonesia</title>') ||
-  indexHtml.includes('<title>Jasa Pembuatan Website Profesional & Toko Online Indonesia</title>'),
-  'index.html has keyword-rich primary title without brand suffix'
-);
-assert(
-  !salesHtml.includes('| JasaWebsite.co') && !indexHtml.includes('| JasaWebsite.co'),
-  'HTML outputs do not contain pipe (|) in title tags'
-);
-assert(
-  !salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales &amp; Leads WhatsApp - JasaWebsite.co</title>') &&
-  !salesHtml.includes('<title>Jasa Pembuatan Landing Page Iklan Sales & Leads WhatsApp - JasaWebsite.co</title>'),
-  'sales-website.html does not append redundant brand suffix (- JasaWebsite.co)'
-);
-
-const dealerHtmlPath = path.join(outDir, 'folio', 'niche-dealer-otomotif.html');
-assert(fs.existsSync(dealerHtmlPath), 'out/folio/niche-dealer-otomotif.html exists');
-const dealerHtml = fs.readFileSync(dealerHtmlPath, 'utf-8');
-assert(
-  dealerHtml.includes('Jasa Pembuatan Website Dealer Mobil &amp; Showroom Otomotif') ||
-  dealerHtml.includes('Jasa Pembuatan Website Dealer Mobil & Showroom Otomotif'),
-  'niche-dealer-otomotif.html has calibrated keyword-rich title'
-);
-assert(
-  !dealerHtml.includes('- JasaWebsite.co</title>'),
-  'niche-dealer-otomotif.html title does not contain redundant - JasaWebsite.co suffix'
-);
-
-// 12. Verify semantic BookmarkRibbon link anchors
-assert(
-  indexHtml.includes('href="/folio/sales-website"'),
-  'index.html contains semantic Link anchor to /folio/sales-website'
-);
-
-console.log('--------------------------------------------------');
-console.log(`TOTAL CHECKS: ${passed + failed} | PASSED: ${passed} | FAILED: ${failed}`);
-
-if (failed > 0) {
-  process.exit(1);
-} else {
-  console.log('🎉 ALL SMOKE VERIFICATION CHECKS PASSED DETERMINISTICALLY!');
-}
-
+const sitemap=fs.readFileSync(path.join(out,'sitemap.xml'),'utf8');
+const urls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
+check(urls.length===32 && new Set(urls).size===32,'Sitemap contains 32 unique canonical URLs');
+check(!sitemap.includes('/folio/cover') && !sitemap.includes('<lastmod>'),'Sitemap excludes duplicate cover and fabricated freshness');
+for(const route of routes.filter(r=>r!=='/folio/cover')) check(urls.includes(origin+(route==='/'?'':route)),`Sitemap includes ${route}`);
+const notFound=fs.readFileSync(path.join(out,'404.html'),'utf8');
+check(/<meta name="robots"[^>]*noindex/.test(notFound),'404 is noindex');
+check(fs.readFileSync(path.join(out,'robots.txt'),'utf8').includes(`${origin}/sitemap.xml`),'Robots advertises sitemap');
+console.log(`PASS: ${checks} generated-output checks across ${routes.length} pages.`);

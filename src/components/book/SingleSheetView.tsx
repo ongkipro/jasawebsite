@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence, PanInfo } from 'motion/react';
+import { motion, AnimatePresence, PanInfo, useReducedMotion } from 'motion/react';
 import { cn } from '@/lib/cn';
 import { DogEarPeel } from '@/components/book/DogEarPeel';
 import { BookOpen, Tag, ChevronDown, Check } from 'lucide-react';
@@ -27,12 +27,20 @@ export function SingleSheetView({
   hasNext = true,
   className,
 }: SingleSheetViewProps) {
+  const reducedMotion = useReducedMotion();
   // Active mobile sub-page (0: Left/Narrative, 1: Right/SOW & Voucher)
   const [activeSubSheet, setActiveSubSheet] = useState<0 | 1>(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setDropdownOpen(false);
+        dropdownRef.current?.querySelector('button')?.focus();
+      }
+    }
     function handleClickOutside(e: MouseEvent | TouchEvent) {
       if (
         dropdownRef.current &&
@@ -42,9 +50,11 @@ export function SingleSheetView({
       }
     }
     if (dropdownOpen) {
+      document.addEventListener('keydown', handleEscape);
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('touchstart', handleClickOutside);
       return () => {
+        document.removeEventListener('keydown', handleEscape);
         document.removeEventListener('mousedown', handleClickOutside);
         document.removeEventListener('touchstart', handleClickOutside);
       };
@@ -74,7 +84,7 @@ export function SingleSheetView({
     <motion.div
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
-      dragElastic={0.15}
+      dragElastic={reducedMotion ? 0 : 0.15}
       onDragEnd={handleDragEnd}
       className={cn(
         'relative w-full max-w-md mx-auto h-full flex-1 min-h-0 flex flex-col justify-between p-3 sm:p-4 bg-[#fbfbfa] border border-[#d5d5cd] rounded-sm book-elevation select-text overflow-hidden touch-pan-y',
@@ -121,7 +131,7 @@ export function SingleSheetView({
 
             {dropdownOpen && (
               <div
-                role="menu"
+                role="group" aria-label="Select page"
                 className="absolute right-0 mt-1 w-44 bg-[#fbfbfa] border border-[#d5d5cd] rounded-xs shadow-xl z-50 overflow-hidden font-mono text-[10px] animate-in fade-in zoom-in-95 duration-100 divide-y divide-[#e5e5df]"
               >
                 <div className="px-2.5 py-1.5 bg-[#ebebe3]/70 text-[9px] text-[#4b4b4b] uppercase font-bold tracking-wider">
@@ -130,14 +140,10 @@ export function SingleSheetView({
                 <button
                   type="button"
                   data-testid="subsheet-item-0"
-                  onPointerDown={(e) => {
-                    e.stopPropagation();
-                    setActiveSubSheet(0);
-                    setDropdownOpen(false);
-                  }}
                   onClick={() => {
                     setActiveSubSheet(0);
                     setDropdownOpen(false);
+                    dropdownRef.current?.querySelector('button')?.focus();
                   }}
                   className={cn(
                     'w-full flex items-center justify-between px-2.5 py-2 text-left transition-colors cursor-pointer',
@@ -157,14 +163,10 @@ export function SingleSheetView({
                 <button
                   type="button"
                   data-testid="subsheet-item-1"
-                  onPointerDown={(e) => {
-                    e.stopPropagation();
-                    setActiveSubSheet(1);
-                    setDropdownOpen(false);
-                  }}
                   onClick={() => {
                     setActiveSubSheet(1);
                     setDropdownOpen(false);
+                    dropdownRef.current?.querySelector('button')?.focus();
                   }}
                   className={cn(
                     'w-full flex items-center justify-between px-2.5 py-2 text-left transition-colors cursor-pointer',
@@ -193,14 +195,14 @@ export function SingleSheetView({
 
       {/* Sheet Content Body with Internal Smooth Scroll */}
       <div className="flex-1 min-h-0 overflow-y-auto paper-scrollbar py-3 pr-0.5">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="wait">
           {activeSubSheet === 0 ? (
             <motion.div
               key="mobile-sheet-left"
-              initial={{ opacity: 0, x: -8 }}
+              initial={{ opacity: 0, x: reducedMotion ? 0 : -8 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 8 }}
-              transition={{ duration: 0.18 }}
+              exit={{ opacity: 0, x: reducedMotion ? 0 : 8 }}
+              transition={{ duration: reducedMotion ? 0 : 0.18 }}
               className="space-y-4"
             >
               {leftContent}
@@ -208,10 +210,10 @@ export function SingleSheetView({
           ) : (
             <motion.div
               key="mobile-sheet-right"
-              initial={{ opacity: 0, x: 8 }}
+              initial={{ opacity: 0, x: reducedMotion ? 0 : 8 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -8 }}
-              transition={{ duration: 0.18 }}
+              exit={{ opacity: 0, x: reducedMotion ? 0 : -8 }}
+              transition={{ duration: reducedMotion ? 0 : 0.18 }}
               className="space-y-4"
             >
               {rightContent}

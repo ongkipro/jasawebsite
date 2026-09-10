@@ -444,3 +444,11 @@
   - **Verification:** Verified deterministic smoke test suite passing (72/72 checks), clean markdown syntax, and valid links.
 
 
+
+- [x] **TASK-44: Repository, SEO, Performance, and Browser QA Audit**
+  - **Requirement:** REQ-AUDIT-01 (`docs/spec/02-PRD.md`)
+  - **Owner:** Main Codex session; designer capability review before visual edits; separate correctness review before delivery.
+  - **Scope:** Schema/canonical/sitemap accuracy, first-render visibility, keyboard/modal/disclosure usability, measurable performance, reproducible QA, and current documentation.
+  - **Done when:** `npm run build`, `npm test`, `npm run lint`, `tsc --noEmit`, `npm run test:ui`, independent review, and delivery boundary checks pass; `docs/audit/2026-09-11-qa.md` records measured findings and explicit external limitations.
+  - **Release:** Local review only; no commit, push, or deployment authorized.
+  - **Evidence:** 1,634 export checks; 83 browser cases plus interactions; lint/typecheck/build and npm audit passed; independent reviewer accepted. See `docs/audit/2026-09-11-qa.md` for external PSI, indexing, conversion, and provenance limits.

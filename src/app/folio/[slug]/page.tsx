@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const pageUrl = `${siteConfig.url}/folio/${slug}`;
+  const pageUrl = slug === 'cover' ? siteConfig.url : `${siteConfig.url}/folio/${slug}`;
   const defaultImage = {
     url: '/og-image.webp',
     width: 1200,
@@ -154,10 +154,9 @@ export default async function FolioPage({ params }: PageProps) {
     if (!niche) notFound();
 
     const sheetSchema = generateSheetSchema(
-      niche.industryName,
+      NICHE_CALIBRATED_TITLES[nicheSlug] || `Jasa Pembuatan Website ${niche.industryName}`,
       `Jasa pembuatan website ${niche.industryName.toLowerCase()} profesional. Performa sub-detik, mobile-first dan siap closing.`,
       slug,
-      niche.schemaType,
       niche.startingPrice
     );
 
@@ -188,10 +187,9 @@ export default async function FolioPage({ params }: PageProps) {
   };
 
   const sheetSchema = generateSheetSchema(
-    folio.title,
-    folio.description,
+    CORE_FOLIO_SEO[slug]?.title || folio.title,
+    CORE_FOLIO_SEO[slug]?.description || folio.description,
     slug,
-    startingPrices[slug] ? 'Service' : 'WebPage',
     startingPrices[slug]
   );
 

@@ -18,9 +18,9 @@ export function ColophonSheet() {
       </div>
 
       <div className="space-y-1">
-        <h1 className="font-serif text-2xl font-bold text-[#111111]">
+        <h2 className="font-serif text-2xl font-bold text-[#111111]">
           Komitmen Kejujuran Rekayasa Teknis
-        </h1>
+        </h2>
         <p className="font-sans text-xs text-[#4b4b4b] leading-relaxed">
           Setiap proyek yang dirilis oleh {siteConfig.name} terikat pada 4 standar keunggulan tanpa kompromi:
         </p>
@@ -44,17 +44,17 @@ export function ColophonSheet() {
             <span>Global Edge Cloud</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Infrastruktur Cloud modern terdistribusi global dengan proteksi keamanan dan uptime 99.9%.
+            Infrastruktur Cloud modern terdistribusi global dengan konfigurasi keamanan dan monitoring sesuai lingkup proyek.
           </p>
         </div>
 
         <div className="p-2.5 bg-[#f4f4ef] border border-[#d5d5cd] rounded-xs space-y-0.5">
           <div className="font-bold text-[#111111] flex items-center gap-1">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>Sub-Detik TTFB</span>
+            <span>Optimasi Performa</span>
           </div>
           <p className="text-[10px] text-[#4b4b4b]">
-            Garansi skor Google Lighthouse 95–100 Hijau di seluruh layar HP.
+            Performa diuji dengan Lighthouse pada halaman dan perangkat yang disepakati.
           </p>
         </div>
 

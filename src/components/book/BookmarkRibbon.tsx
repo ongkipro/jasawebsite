@@ -47,7 +47,7 @@ export function BookmarkRibbon({
             title={folio.title}
             aria-current={isActive ? 'page' : undefined}
             className={cn(
-              'group relative flex items-center justify-center font-mono font-bold text-[9px] tracking-wider transition-all duration-200 cursor-pointer focus:outline-none rounded-r-xs',
+              'group relative flex items-center justify-center font-mono font-bold text-[9px] tracking-wider transition-all duration-200 cursor-pointer  rounded-r-xs',
               isActive
                 ? 'bg-[#111111] text-[#fbfbfa] w-8.5 min-h-[46px] translate-x-1 shadow-md'
                 : 'bg-[#ebebe3] text-[#4b4b4b] hover:bg-[#d5d5cd] hover:text-[#111111] w-7 min-h-[42px] hover:translate-x-1 border-r border-t border-b border-[#d5d5cd]'

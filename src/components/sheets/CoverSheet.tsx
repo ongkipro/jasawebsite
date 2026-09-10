@@ -67,17 +67,17 @@ export function CoverSheet() {
       <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 border-t border-[#e5e5df]">
         <div className="shrink-0">
           <InkStamp
-            text="CERTIFIED ARCHITECTURE"
-            subtext="LIGHTHOUSE 100/100 · GLOBAL EDGE CLOUD"
+            text="WEB ENGINEERING"
+            subtext="STATIC HTML · GLOBAL EDGE CLOUD"
             date="2026"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-x-2.5 sm:gap-x-4 gap-y-1 font-mono text-[10px] sm:text-[10.5px] text-[#4b4b4b]">
-          <div>Akses: <span className="text-[#111111] font-bold">&lt; 0.3s TTFB</span></div>
+          <div>Render: <span className="text-[#111111] font-bold">Static HTML</span></div>
           <div>Cloud: <span className="stabilo-green font-bold text-[#111111]">Global Edge</span></div>
           <div>Aset: <span className="text-[#111111] font-bold">100% Hak Milik</span></div>
-          <div>Uptime: <span className="text-[#111111] font-bold">99.9% SLA</span></div>
+          <div>Uptime: <span className="text-[#111111] font-bold">Sesuai SOW</span></div>
         </div>
       </div>
     </article>
