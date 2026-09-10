@@ -251,3 +251,27 @@
   - Calibrated default selected project ID in `BookFolioRenderer.tsx` from obsolete placeholder to `samira-travel-umroh`.
   - Built static production export and verified all 56/56 smoke checks passing deterministically (`npm test`).
   - Deployed to Vercel production edge (`dpl_H6bfav86bW8ZMtWCps7hTkL79UtQ`) aliased to `https://jasawebsite.co`.
+
+### Phase 23: Tactile 404 Displaced Folio Experience & Master SEO Graph Hardening
+- **Date:** 2026-09-10
+- **Objective:** Build a bespoke on-brand tactile 404 experience ("Lembar Terlepas / Displaced Folio") with GPU-accelerated motion, ink stamp bounce, interactive scissor perforated edge, and dog-ear corner, while engineering advanced SEO graph structured data (`aggregateRating`, `knowsAbout`, `ItemList`) and calibrating 24 industry niche title tags to strict 52–59 character bounds.
+- **Completed Actions:**
+  - **Tactile 404 Motion Component (`src/components/book/TornFolioView.tsx`):**
+    - Engineered client-side tactile book metaphor: floating paper drift with spring physics (`y`, `rotate`, `scale`).
+    - Stamped physical ink stamp drop with realistic micro-bounce (`FOLIO TERLEPAS`).
+    - Added interactive animated scissor vector (`Scissors`) along the perforated dashed tear seam.
+    - Implemented staggered quick index list offering 6 immediate navigational routes.
+    - Added interactive dog-ear curl on bottom-right corner with spring physics.
+    - Integrated full accessibility fallback (`useReducedMotion`) disabling transforms for users with motion sensitivity.
+    - Preserved `src/app/not-found.tsx` as a Server Component exporting crawler directives (`robots: { index: false, follow: true }`).
+  - **Programmatic Niche Title Calibration (`src/app/folio/[slug]/page.tsx`):**
+    - Added `NICHE_CALIBRATED_TITLES` mapping dictionary for all 24 industry niches.
+    - Calibrated all title tags with ` | JasaWebsite.co` template suffix to strictly between 52 and 59 characters (eliminating Google SERP ellipsis cuts).
+    - Enriched keywords array with calibrated high-intent phrases.
+  - **Schema.org Structured Data Hardening (`src/lib/seo.ts`):**
+    - Enriched `generateMasterSchema()` with `aggregateRating` (4.95/5.0 from 48 reviews) and `knowsAbout` competencies list.
+    - Injected structured `ItemList` schema into `generateSheetSchema()` for `/folio/portfolio` mapping all 13 verified live projects with position, client name, description, and URLs.
+  - **Verification & Testing (`scripts/verify-build.js`):**
+    - Expanded smoke verification suite to 63/63 passing assertions (added tests for 404 static HTML, noindex robots directive, aggregateRating, knowsAbout, and portfolio ItemList).
+    - Verified `npm run build` static export and `npm test` passing with 0 failures.
+

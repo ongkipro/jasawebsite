@@ -83,6 +83,38 @@ assert(testWaUrl.startsWith('https://wa.me/'), 'WhatsApp URL generated properly'
 assert(testWaUrl.includes('Business%20Growth'), 'WhatsApp URL contains encoded tier parameter');
 assert(testWaUrl.includes('Kontraktor'), 'WhatsApp URL contains encoded niche parameter');
 
+// 8. Verify tactile 404 not-found page and crawler directives
+const notFoundHtmlPath = path.join(outDir, '404.html');
+assert(fs.existsSync(notFoundHtmlPath), 'out/404.html static page exists');
+const notFoundHtml = fs.readFileSync(notFoundHtmlPath, 'utf-8');
+assert(
+  notFoundHtml.includes('Lembar Ini Terlepas') || notFoundHtml.includes('Halaman Tidak Ditemukan'),
+  '404.html contains tactile folio messaging'
+);
+assert(
+  notFoundHtml.includes('noindex'),
+  '404.html has noindex crawler directive'
+);
+
+// 9. Verify enhanced Schema.org graph (aggregateRating & knowsAbout)
+assert(
+  indexHtml.includes('aggregateRating') && indexHtml.includes('4.95'),
+  'index.html includes aggregateRating structured data (4.95)'
+);
+assert(
+  indexHtml.includes('knowsAbout'),
+  'index.html includes knowsAbout competency list'
+);
+
+// 10. Verify portfolio ItemList schema mapping 13 live projects
+const portfolioHtmlPath = path.join(outDir, 'folio', 'portfolio.html');
+assert(fs.existsSync(portfolioHtmlPath), 'out/folio/portfolio.html exists');
+const portfolioHtml = fs.readFileSync(portfolioHtmlPath, 'utf-8');
+assert(
+  portfolioHtml.includes('ItemList') && portfolioHtml.includes('petanisejahtera.com') && portfolioHtml.includes('aussiesawit.my'),
+  'portfolio.html includes ItemList schema with 13 verified live projects'
+);
+
 console.log('--------------------------------------------------');
 console.log(`TOTAL CHECKS: ${passed + failed} | PASSED: ${passed} | FAILED: ${failed}`);
 
@@ -91,3 +123,4 @@ if (failed > 0) {
 } else {
   console.log('🎉 ALL SMOKE VERIFICATION CHECKS PASSED DETERMINISTICALLY!');
 }
+

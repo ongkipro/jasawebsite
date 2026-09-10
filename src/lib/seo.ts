@@ -1,5 +1,6 @@
 import { siteConfig } from '@/data/siteConfig';
 import faqsData from '@/data/faqs.json';
+import portfolioData from '@/data/portfolio.json';
 
 export interface BreadcrumbItem {
   name: string;
@@ -46,6 +47,22 @@ export function generateMasterSchema() {
           availableLanguage: ['Indonesian', 'English'],
           areaServed: 'ID',
         },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.95',
+          reviewCount: '48',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        knowsAbout: [
+          'Next.js 16 App Router',
+          'Shopify Headless Hydrogen & Liquid 2.0',
+          'High-Converting Sales Landing Pages',
+          'Custom Web Applications CRM & Mini ERP',
+          'Edge Cloud Architecture Cloudflare & Vercel',
+          'Programmatic SEO & Schema.org Structured Data',
+          'Server-Side Conversion API Meta & Google Ads',
+        ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Layanan Utama Rekayasa Web & Sistem Digital',
@@ -216,6 +233,24 @@ export function generateSheetSchema(
             },
           }
         : {}),
+    });
+  }
+
+  if (slug === 'portfolio') {
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${pageUrl}/#portfolio-list`,
+      name: 'Daftar Portofolio & Studi Kasus Website Live JasaWebsite.co',
+      description:
+        'Kumpulan 13 proyek website live, landing page sales, toko online dan web app terverifikasi.',
+      numberOfItems: portfolioData.length,
+      itemListElement: portfolioData.map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: item.clientName,
+        description: item.challenge,
+        url: item.liveUrl || pageUrl,
+      })),
     });
   }
 

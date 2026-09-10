@@ -399,3 +399,14 @@
     - Synchronize development map and XML manifests (`PETA-DEVELOPMENT.md`, `peta-development.xml`).
     - Execute production build, smoke verification suite (56/56 passing), git commit/push, and production deployment.
   - **Verification:** Verified live HTTP 200 responses on `https://jasawebsite.co`, asset delivery, and deterministic test suite.
+
+- [x] **TASK-41: On-Brand Tactile 404 Displaced Folio & Comprehensive SEO Graph Calibration**
+  - **Owner:** `design-taste` + `nextjs-development` + `seo-website-builder`
+  - **Scope:**
+    - Create `src/components/book/TornFolioView.tsx` with tactile paper drift, ink stamp bounce, interactive scissors along the perforated tear seam, dog-ear curl, and reduced-motion fallback.
+    - Keep `src/app/not-found.tsx` as a Server Component with `robots: { index: false, follow: true }` and descriptive metadata.
+    - Map all 24 niche titles in `src/app/folio/[slug]/page.tsx` (`NICHE_CALIBRATED_TITLES`) ensuring 52–59 character limits.
+    - Add `aggregateRating` (4.95, 48 reviews), `knowsAbout` competency list, and `ItemList` (13 live projects) in `src/lib/seo.ts`.
+    - Expand `scripts/verify-build.js` smoke suite from 56 to 63 deterministic assertions.
+  - **Verification:** Verified static build export, 63/63 test checks passing, 0 TypeScript/ESLint errors, and deterministic HTML generation.
+

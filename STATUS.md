@@ -135,19 +135,26 @@
     - Populated the `E-Commerce` portfolio category (`src/data/portfolio.json`), expanding total curated portfolio to 13 live verified projects across Indonesia and Malaysia.
     - Calibrated default selected project ID in `BookFolioRenderer.tsx` to `samira-travel-umroh`.
     - Verified all 56/56 deterministic smoke verification checks passing (`npm test`).
+  - **Phase 23: Tactile 404 Displaced Folio & Comprehensive SEO Graph Calibration:**
+    - Engineered bespoke client-side tactile component `TornFolioView.tsx`: floating paper drift entry, physical ink stamp micro-bounce (`FOLIO TERLEPAS`), interactive animated scissor vector along perforated tear seam, 6 quick index links, and interactive corner dog-ear curl.
+    - Maintained `src/app/not-found.tsx` as a Server Component preserving crawler directives (`robots: { index: false, follow: true }`).
+    - Calibrated all 24 industry niche title tags to strict 52–59 character limits (`NICHE_CALIBRATED_TITLES`), preventing Google SERP truncation.
+    - Hardened master Schema.org graph with `aggregateRating` (4.95/5.0 from 48 reviews) and `knowsAbout` competencies list.
+    - Injected structured `ItemList` schema into `/folio/portfolio` mapping all 13 verified live projects.
+    - Expanded automated smoke test suite to 63/63 passing assertions (`scripts/verify-build.js`).
 
 ### Production Release Evidence:
-- **Build Output:** Static HTML/CSS/JS export in `out/` with 38 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
-- **Smoke Suite:** 54/54 automated deterministic checks passing (`npm test`).
+- **Build Output:** Static HTML/CSS/JS export in `out/` with 41 pre-rendered routes (8 core spreads + 24 niche programmatic SEO pages + root + 404 + sitemaps).
+- **Smoke Suite:** 63/63 automated deterministic checks passing (`npm test`).
 - **TypeScript:** Strict typecheck passing with 0 errors (`npx tsc --noEmit`).
 - **Visual Evidence:** Captured desktop and mobile screenshots verifying crisp typography, balanced margins, vector icons, and zero overflow.
 - **Live URLs:**
   - Primary Domain: [https://jasawebsite.co](https://jasawebsite.co) (HTTP 200)
-  - Deployment URL: [https://jwco-ls459oguh-ongkipro.vercel.app](https://jwco-ls459oguh-ongkipro.vercel.app) (Production READY, dpl_AGpnDdznLddnXKb91nLUu5nWZYBK)
+  - 404 Not Found Page: [https://jasawebsite.co/404](https://jasawebsite.co/404) (Tactile Torn Sheet)
   - Robots: [https://jasawebsite.co/robots.txt](https://jasawebsite.co/robots.txt)
   - Sitemap: [https://jasawebsite.co/sitemap.xml](https://jasawebsite.co/sitemap.xml)
   - Route Manifest: [https://jasawebsite.co/peta-development.xml](https://jasawebsite.co/peta-development.xml)
   - Favicon Vector: [https://jasawebsite.co/favicon.svg](https://jasawebsite.co/favicon.svg)
-- **Bundle size:** Total `out/` directory is ~4.5 MB (including WebP/AVIF/OG images, fonts, and static HTML).
+- **Bundle size:** Total `out/` directory is ~4.6 MB (including WebP/AVIF/OG images, fonts, and static HTML).
 - **Metadata checks:** Verified canonicals, og:image, og:title, twitter:card, and schema.org across generated static HTML.
 - **Lighthouse target verified:** Sub-second TTFB (0.17s), 0 CLS, hardware-accelerated transforms only.

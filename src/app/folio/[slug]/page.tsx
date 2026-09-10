@@ -123,6 +123,33 @@ const CORE_FOLIO_SEO: Record<
   },
 };
 
+const NICHE_CALIBRATED_TITLES: Record<string, string> = {
+  'dealer-otomotif': 'Jasa Website Dealer Mobil & Showroom',
+  'rental-mobil-bus-pariwisata': 'Jasa Website Rental Mobil & Bus Pariwisata',
+  'bengkel-mobil-body-repair': 'Jasa Website Bengkel & Body Repair Mobil',
+  'alat-berat-mesin': 'Jasa Website Alat Berat & Mesin Industri',
+  'pabrik-manufaktur-b2b': 'Jasa Website Pabrikasi & Manufaktur B2B',
+  'percetakan-packaging-kemasan': 'Jasa Website Percetakan & Packaging Box',
+  'developer-properti': 'Jasa Website Developer & Real Estate',
+  'kontraktor-arsitek': 'Jasa Website Kontraktor & Desain Interior',
+  'klinik-kesehatan': 'Jasa Website Klinik Medis & Rumah Sakit',
+  'distributor-alkes-farmasi': 'Jasa Website Distributor Alkes & Farmasi',
+  'kantor-hukum-advokat': 'Jasa Website Kantor Hukum & Advokat',
+  'konsultan-pajak-akuntan': 'Jasa Website Konsultan Pajak & Akuntan',
+  'konsultan-it-cctv-keamanan': 'Jasa Website IT Solution & CCTV Keamanan',
+  'brand-fashion-d2c': 'Jasa Website Brand Fashion & Apparel D2C',
+  'brand-skincare-kosmetik': 'Jasa Website Brand Skincare & Kosmetik',
+  'restoran-cafe-fnb': 'Jasa Website Restoran, Cafe & Bisnis F&B',
+  'event-organizer-wedding-planner': 'Jasa Website Wedding Planner & Event EO',
+  'ekspedisi-logistik-cargo': 'Jasa Website Ekspedisi & Logistik Cargo',
+  'ekspor-komoditas-hasil-bumi': 'Jasa Website Eksportir Komoditas Alam',
+  'sekolah-universitas-bimbel': 'Jasa Website Sekolah, Kampus & Bimbel',
+  'tour-travel-umroh': 'Jasa Website Travel Umroh & Haji Khusus',
+  'cleaning-service-pest-control': 'Jasa Website Cleaning Service Komersial',
+  'agribisnis-peternakan-modern': 'Jasa Website Agribisnis & Peternakan',
+  'koperasi-keuangan-mikro': 'Jasa Website Koperasi Simpan Pinjam',
+};
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const pageUrl = `${siteConfig.url}/folio/${slug}`;
@@ -140,13 +167,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const niche = nichesData.find((n) => n.slug === nicheSlug);
     if (!niche) return { title: 'Industri Tidak Ditemukan' };
 
-    const pageTitle = `Jasa Website ${niche.industryName}`;
+    const pageTitle =
+      NICHE_CALIBRATED_TITLES[nicheSlug] || `Jasa Website ${niche.industryName}`;
     const pageDesc = `Jasa pembuatan website ${niche.industryName.toLowerCase()} profesional. Performa sub-detik, mobile-first & siap closing. Konsultasi via WhatsApp.`;
 
     return {
       title: pageTitle,
       description: pageDesc,
       keywords: [
+        pageTitle.toLowerCase(),
         `jasa pembuatan website ${niche.industryName.toLowerCase()}`,
         `website ${niche.industryName.toLowerCase()}`,
         `jasa bikin web ${niche.slug.replace(/-/g, ' ')}`,

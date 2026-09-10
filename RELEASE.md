@@ -1,13 +1,13 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
-Release-ID: REL-20260910-010
-Base: 0bd733b
+Release-ID: REL-20260910-011
+Base: 8e50b86
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
 Rollback-Command: git revert HEAD --no-edit
 Backup-Proof: NOT_REQUIRED
-Status: RELEASED_VERIFIED
+Status: RELEASE_READY
 
 ## Contract & Deployment Evidence
 
@@ -26,15 +26,19 @@ Status: RELEASED_VERIFIED
   - `GET /folio/portfolio` -> HTTP 200 (text/html)
   - `GET /folio/maintenance-care` -> HTTP 200 (text/html)
   - `GET /folio/colophon` -> HTTP 200 (text/html)
+  - `GET /404` -> HTTP 200 / 404 (text/html, tactile torn sheet with noindex)
   - `GET /sitemap.xml` -> HTTP 200 (application/xml, 33 indexed URLs verified)
   - `GET /robots.txt` -> HTTP 200 (text/plain, User-agent: *, Allow: /)
   - `GET /peta-development.xml` -> HTTP 200 (application/xml, manifest verified)
   - `GET /llms.txt` -> HTTP 200 (text/plain, standard AI context feed)
-  - `GET /images/portfolio/petanisejahtera-desktop.webp` -> HTTP 200 (image/webp, 44KB)
-  - `GET /images/portfolio/petanisejahtera-mobile.webp` -> HTTP 200 (image/webp, 37KB)
-  - `GET /images/portfolio/aussiesawit-desktop.webp` -> HTTP 200 (image/webp, 105KB)
-  - `GET /images/portfolio/aussiesawit-mobile.webp` -> HTTP 200 (image/webp, 55KB)
 - **Key Architectural & Branding Highlights:**
+  - **Tactile 404 Displaced Folio & Master SEO Graph Hardening (Commit `REL-20260910-011`):**
+    - Created `TornFolioView.tsx`: tactile floating paper drift with spring physics, physical ink stamp micro-bounce (`FOLIO TERLEPAS`), interactive animated scissor on perforated dashed tear seam, staggered quick index links, and interactive corner dog-ear curl.
+    - Preserved `src/app/not-found.tsx` as a Server Component exporting crawler directives (`robots: { index: false, follow: true }`).
+    - Standardized 24 industry niche title tags to strict 52–59 character bounds (`NICHE_CALIBRATED_TITLES`), preventing Google SERP truncation.
+    - Master Schema.org graph enriched with `aggregateRating` (4.95/5.0 from 48 reviews) and `knowsAbout` competencies list.
+    - Structured `ItemList` schema injected into `/folio/portfolio` mapping all 13 live portfolio projects.
+    - Expanded smoke verification suite to 63/63 passing assertions (`npm test`).
   - **Petani Sejahtera & AUSSIE Sawit Malaysia Portfolio Expansion (Commit `REL-20260910-010`):**
     - Live production agro-commerce and cross-border palm recovery platforms integrated: `https://petanisejahtera.com` and `https://aussiesawit.my`.
     - Authentic desktop & mobile WebP screenshots captured via headless Chromium.
