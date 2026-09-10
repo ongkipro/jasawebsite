@@ -1,7 +1,7 @@
 # Release Manifest — JasaWebsite.co by ONG (`jasawebsite.co`)
 
 Release-ID: REL-20260910-012
-Base: 7af0ac4
+Base: a61647a
 Environment: production
 Declared-Risk: R0
 Rollback-Ref: HEAD~1
@@ -12,7 +12,7 @@ Status: RELEASED_VERIFIED
 ## Contract & Deployment Evidence
 
 - **Live Production URL:** [https://jasawebsite.co](https://jasawebsite.co)
-- **Deployment URL:** [https://jwco-6ytl2woh4-ongkipro.vercel.app](https://jwco-6ytl2woh4-ongkipro.vercel.app) (`dpl_2CVcdNLunhEk46JwL5FU8EgPcUga`)
+- **Deployment URL:** [https://jwco-ni2weexbu-ongkipro.vercel.app](https://jwco-ni2weexbu-ongkipro.vercel.app) (`dpl_3H6TxBV5mit3TWMc2qkY1oxNthBS`)
 - **Vercel Project:** `ongkipro/jwco` (`prj_M3dsY8tssCiR2RL9OIxUtFFZsmet`)
 - **Framework & Runtime:** Next.js 16.3.4 App Router SSG (Turbopack, Tailwind CSS v4, Motion 13.2.0, Lucide React 1.16.0)
 - **Edge Deployment & CDN:** Vercel Edge Singapore (`sin1`) + Cloudflare Pages
