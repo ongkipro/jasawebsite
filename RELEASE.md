@@ -37,6 +37,7 @@ Status: RELEASED_VERIFIED
     - Stripped redundant `- JasaWebsite.co` brand suffix from sub-page and niche title tags, reclaiming 17 characters of prime Google SERP real estate.
     - Updated layout template to `%s` and calibrated default homepage title to `'Jasa Pembuatan Website Profesional & Toko Online Indonesia'` (58 chars).
     - Upgraded 8 core spreads and 24 industry niche titles to high-volume commercial keywords (`Jasa Pembuatan Website ...`), keeping character count strictly between 51 and 58 characters.
+    - Overhauled `README.md` into a studio-first showcase of `JasaWebsite.co by ONG` (`ongki.pro`) detailing 5 core pillars, 13 live case studies, 24 industry blueprints, and engagement sprint roadmap.
     - Synchronized `syncDocumentSeo()`, OpenGraph, Twitter cards, XML manifests (`peta-development.xml`), markdown manifests (`PETA-DEVELOPMENT.md`), and LLM context files (`llms.txt`, `llms-full.txt`).
     - Smoke test suite expanded to 72/72 deterministic passing assertions (`npm test`).
   - **Hyphen Title Separator & Dynamic Client-Side SEO Engine (Commit `REL-20260910-012`):**
