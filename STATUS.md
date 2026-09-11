@@ -1,10 +1,10 @@
 # Current Handoff — JasaWebsite.co
 
-Updated: 2026-09-11. Task: FEAT-SHOPIFY-01 (Dedicated Bespoke Shopify Service & Growth Engine).
+Updated: 2026-09-11. Task: FEAT-MOTION-01 (Luxury Editorial Paper Glide & Spine Shadow Sweep).
 
 ## Delivery state
 
-Shopify bespoke service sheet, dedicated SEO route, and ribbon navigation are deployed to production from `36087067f3f6e1ae575dce0297e4dd7393f1579a`, following a clean rebase on `origin/main`. Vercel deployment `dpl_AkzQdKMB8fMgYzP1MN88FUM66Cw7` is ready and aliased to `jasawebsite.co`. Working tree is verified.
+Tactile editorial paper glide transition with responsive parallax offsets and dynamic spine shadow sweep is deployed to production from `17e2f6239e07e42d8c6f4c52a4ed1437d0d078e0`. Vercel deployment `dpl_DMDVRj9qXjEiNMaqkjbBceRxvXVj` is ready and aliased to `jasawebsite.co`. Working tree is verified.
 
 The current deployment and preceding releases are documented in [RELEASE.md](file:///Users/ongki/Projects/jasawebsite/RELEASE.md). Historical completion claims in the build log do not establish the current state.
 

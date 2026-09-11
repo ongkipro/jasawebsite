@@ -2,15 +2,20 @@
 
 ## Latest release
 
-- **Release-ID:** REL-20260911-017
-- **Source revision:** `36087067f3f6e1ae575dce0297e4dd7393f1579a`
+- **Release-ID:** REL-20260911-018
+- **Source revision:** `17e2f6239e07e42d8c6f4c52a4ed1437d0d078e0`
 - **Environment:** production
-- **Deployment:** [jwco-mhc3wrz4y-ongkipro.vercel.app](https://jwco-mhc3wrz4y-ongkipro.vercel.app) (`dpl_AkzQdKMB8fMgYzP1MN88FUM66Cw7`)
+- **Deployment:** [jwco-q2ypc65ip-ongkipro.vercel.app](https://jwco-q2ypc65ip-ongkipro.vercel.app) (`dpl_DMDVRj9qXjEiNMaqkjbBceRxvXVj`)
 - **Promotion:** `https://jasawebsite.co`, `https://www.jasawebsite.co`, and `https://jwco.vercel.app` aliased by Vercel.
-- **Verified after promotion:** `/shopify` HTTP 200; `/folio/shopify` HTTP 200; 32 sitemap URLs; build verification and development-map verification passed (1,643 assertions).
+- **Verified after promotion:** Root `/` and `/shopify` HTTP 200; luxury editorial paper glide and spine shadow sweep live across all folios; 1,643 test assertions passed.
 - **Validation before release:** Next.js 16.3.4 SSG build, TypeScript compilation, 1,643 export assertions, development map validation, and live HTTP/2 edge probes passed.
 
 The historical manifest below records an earlier deployment. Its unverified performance and infrastructure claims are not evidence for this release.
+
+Release-ID: REL-20260911-017
+Base: 3608706
+Environment: production
+Status: RELEASED_HISTORICAL
 
 Release-ID: REL-20260911-016
 Base: cf03b3f
