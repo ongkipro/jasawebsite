@@ -8,7 +8,7 @@ const niches = JSON.parse(fs.readFileSync('src/data/niches.json', 'utf8'));
 const origin = 'https://jasawebsite.co';
 const decode = (text) => text.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#x27;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
 const routes = ['/', ...folios.map(f => `/folio/${f.slug}`), ...niches.map(n => `/folio/niche-${n.slug}`)];
-const prices = { 'company-profile': 2900000, 'sales-website': 3500000, 'ecommerce-shopify': 3900000, 'custom-web-app': 15000000, 'maintenance-care': 2500000 };
+const prices = { 'company-profile': 2900000, 'sales-website': 3500000, 'shopify': 6900000, 'ecommerce-shopify': 3900000, 'custom-web-app': 15000000, 'maintenance-care': 2500000 };
 const nichePrices = [5900000,3500000,3500000,8900000,6900000,4900000,5900000,4900000,4900000,6900000,4900000,3500000,3500000,6900000,6900000,2900000,3500000,5900000,5900000,4900000,5900000,3500000,3500000,4900000];
 const titles = new Set();
 let checks = 0;

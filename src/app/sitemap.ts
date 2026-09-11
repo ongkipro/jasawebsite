@@ -13,20 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   };
 
-  // Dedicated Shopify Featured Landing Page
-  const shopifyEntry: MetadataRoute.Sitemap[number] = {
-    url: `${siteConfig.url}/shopify`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly',
-    priority: 0.95,
-  };
-
   // Core folio spreads
-  const coreEntries: MetadataRoute.Sitemap = foliosData.filter((folio) => folio.slug !== 'cover').map((folio) => ({
-    url: `${siteConfig.url}/folio/${folio.slug}`,
-    changeFrequency: 'weekly',
-    priority: 0.9,
-  }));
+  const coreEntries: MetadataRoute.Sitemap = foliosData
+    .filter((folio) => folio.slug !== 'cover')
+    .map((folio) => ({
+      url: `${siteConfig.url}/folio/${folio.slug}`,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    }));
 
   // 30+ Niche programmatic SEO pages
   const nicheEntries: MetadataRoute.Sitemap = nichesData.map((niche) => ({
@@ -35,5 +29,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [rootEntry, shopifyEntry, ...coreEntries, ...nicheEntries];
+  return [rootEntry, ...coreEntries, ...nicheEntries];
 }

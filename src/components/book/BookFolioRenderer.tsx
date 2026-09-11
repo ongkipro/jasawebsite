@@ -27,7 +27,7 @@ export interface BookFolioRendererProps {
 export function BookFolioRenderer({
   initialSpreadIndex = 0,
 }: BookFolioRendererProps) {
-  // State for selected portfolio item in Spread 06
+  // State for selected portfolio item in Spread 05
   const [selectedProjectId, setSelectedProjectId] = useState('samira-travel-umroh');
 
   const renderLeftSheet = (spreadIndex: number) => {
@@ -39,21 +39,19 @@ export function BookFolioRenderer({
       case 2:
         return <SalesSheetLeft />;
       case 3:
-        return <CommerceSheetLeft />;
-      case 4:
         return <ShopifySheetLeft />;
-      case 5:
+      case 4:
         return <CustomAppSheetLeft />;
-      case 6:
+      case 5:
         return (
           <PortfolioGallerySheetLeft
             selectedId={selectedProjectId}
             onSelectProject={setSelectedProjectId}
           />
         );
-      case 7:
+      case 6:
         return <MaintenanceSheetLeft />;
-      case 8:
+      case 7:
         return <NicheCatalogSheet />;
       default:
         return <CoverSheet />;
@@ -69,16 +67,14 @@ export function BookFolioRenderer({
       case 2:
         return <SalesSheetRight />;
       case 3:
-        return <CommerceSheetRight />;
-      case 4:
         return <ShopifySheetRight />;
-      case 5:
+      case 4:
         return <CustomAppSheetRight />;
-      case 6:
+      case 5:
         return <PortfolioGallerySheetRight selectedId={selectedProjectId} />;
-      case 7:
+      case 6:
         return <MaintenanceSheetRight />;
-      case 8:
+      case 7:
         return <ColophonSheet />;
       default:
         return <TocSheet />;

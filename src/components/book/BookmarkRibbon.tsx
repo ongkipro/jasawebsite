@@ -47,6 +47,7 @@ export function BookmarkRibbon({
             }}
             title={folio.title}
             aria-current={isActive ? 'page' : undefined}
+            className={cn(
               'group relative flex items-center justify-center font-mono font-bold text-[9px] tracking-wider transition-all duration-200 cursor-pointer rounded-r-xs',
               isShopify
                 ? isActive
