@@ -78,14 +78,14 @@ export function PortfolioGallerySheetLeft({
               aria-label={`Pilih proyek ${item.clientName}`}
               key={item.id}
               onClick={() => onSelectProject(item.id)}
-              className={`w-full p-3 rounded-xs border cursor-pointer transition-all text-left ${
+              className={`group w-full p-3 rounded-xs border cursor-pointer transition-all text-left ${
                 isSelected
                   ? 'bg-[#f4f4ef] border-[#111111] shadow-xs translate-x-1'
                   : 'bg-[#fbfbfa] border-[#d5d5cd] hover:border-[#111111]/60 hover:bg-[#f4f4ef]/60'
               }`}
             >
               <div className="flex items-baseline justify-between gap-2">
-                <span className="font-serif text-sm font-bold text-[#111111]">
+                <span className="font-serif text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors">
                   {item.clientName}
                 </span>
                 {primaryMetric && (
@@ -110,6 +110,30 @@ export function PortfolioGallerySheetLeft({
               <p className="font-sans text-[11px] text-[#4b4b4b] mt-1.5 line-clamp-2 leading-relaxed">
                 {item.solution}
               </p>
+
+              {/* Tactile Visual Cue for Mobile & Desktop Discovery */}
+              <div className="mt-2.5 pt-2 border-t border-[#e5e5df] flex items-center justify-between font-mono text-[10px]">
+                <span className="text-[#888880] text-[9px] uppercase tracking-wider flex items-center gap-1.5">
+                  {isSelected ? (
+                    <>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#c23b22] inline-block animate-pulse" />
+                      <span className="font-semibold text-[#111111]">Sedang Dipilih</span>
+                    </>
+                  ) : (
+                    <span>Studi Kasus</span>
+                  )}
+                </span>
+                <span
+                  className={`inline-flex items-center gap-1 font-semibold transition-all ${
+                    isSelected
+                      ? 'text-[#c23b22]'
+                      : 'text-[#4b4b4b] group-hover:text-[#111111]'
+                  }`}
+                >
+                  <span>Lihat Mockup &amp; Detail</span>
+                  <span className="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                </span>
+              </div>
             </button>
           );
         })}
@@ -118,11 +142,15 @@ export function PortfolioGallerySheetLeft({
   );
 }
 
+export interface PortfolioGallerySheetRightProps {
+  selectedId: string;
+  onBackToProjects?: () => void;
+}
+
 export function PortfolioGallerySheetRight({
   selectedId,
-}: {
-  selectedId: string;
-}) {
+  onBackToProjects,
+}: PortfolioGallerySheetRightProps) {
   const [viewportMode, setViewportMode] = useState<'desktop' | 'mobile'>('desktop');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -131,6 +159,23 @@ export function PortfolioGallerySheetRight({
 
   return (
     <article className="space-y-4">
+      {/* Mobile & Tablet Quick Return to Project Directory (lg:hidden) */}
+      {onBackToProjects && (
+        <div className="lg:hidden">
+          <button
+            type="button"
+            onClick={onBackToProjects}
+            aria-label="Kembali ke Daftar Proyek"
+            className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3 py-1.5 bg-[#ebebe3] hover:bg-[#111111] hover:text-[#fbfbfa] border border-[#d5d5cd] hover:border-[#111111] rounded-xs font-mono text-[11px] font-bold text-[#111111] transition-all cursor-pointer shadow-2xs select-none active:scale-[0.99]"
+          >
+            <span className="text-[#c23b22] group-hover:text-[#fbfbfa] font-bold transition-transform duration-150 group-hover:-translate-x-1">
+              ←
+            </span>
+            <span>Kembali ke Daftar Proyek</span>
+          </button>
+        </div>
+      )}
+
       {/* Top Header & Viewport Switcher */}
       <div className="flex items-center justify-between border-b border-[#e5e5df] pb-2">
         <span className="font-mono text-xs uppercase tracking-widest font-bold text-[#111111]">
@@ -316,6 +361,19 @@ export function PortfolioGallerySheetRight({
           </Link>
         </div>
       </div>
+
+      {/* Mobile-only return link at bottom */}
+      {onBackToProjects && (
+        <div className="lg:hidden pt-1 pb-0.5 text-center">
+          <button
+            type="button"
+            onClick={onBackToProjects}
+            className="inline-flex items-center gap-1.5 font-mono text-[11px] text-[#4b4b4b] hover:text-[#111111] underline transition-colors cursor-pointer py-1"
+          >
+            <span>← Kembali ke Daftar Proyek Portofolio</span>
+          </button>
+        </div>
+      )}
 
       {/* Full-screen Lightbox Modal */}
       <PortfolioModal

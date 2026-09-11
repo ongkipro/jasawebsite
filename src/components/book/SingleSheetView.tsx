@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, PanInfo, useReducedMotion } from 'motion/react';
 import { cn } from '@/lib/cn';
 import { DogEarPeel } from '@/components/book/DogEarPeel';
@@ -17,6 +17,8 @@ export interface SingleSheetViewProps {
   hasPrev?: boolean;
   hasNext?: boolean;
   className?: string;
+  activeSubSheet?: 0 | 1;
+  onSubSheetChange?: (sub: 0 | 1) => void;
 }
 
 export function SingleSheetView({
@@ -30,12 +32,44 @@ export function SingleSheetView({
   hasPrev = true,
   hasNext = true,
   className,
+  activeSubSheet: controlledSubSheet,
+  onSubSheetChange,
 }: SingleSheetViewProps) {
   const reducedMotion = useReducedMotion();
+  const isControlled = controlledSubSheet !== undefined;
   // Active mobile sub-page (0: Left/Narrative, 1: Right/SOW & Voucher)
-  const [activeSubSheet, setActiveSubSheet] = useState<0 | 1>(0);
+  const [internalSubSheet, setInternalSubSheet] = useState<0 | 1>(controlledSubSheet ?? 0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const contentContainerRef = useRef<HTMLDivElement>(null);
+
+  const activeSubSheet = isControlled ? controlledSubSheet : internalSubSheet;
+
+  const handleSubSheetChange = useCallback(
+    (sub: 0 | 1) => {
+      if (!isControlled) {
+        setInternalSubSheet(sub);
+      }
+      onSubSheetChange?.(sub);
+    },
+    [isControlled, onSubSheetChange]
+  );
+
+  // Reset activeSubSheet ke 0 saat berpindah folio (folioNumber berubah)
+  const prevFolioRef = useRef(folioNumber);
+  useEffect(() => {
+    if (prevFolioRef.current !== folioNumber) {
+      prevFolioRef.current = folioNumber;
+      handleSubSheetChange(0);
+    }
+  }, [folioNumber, handleSubSheetChange]);
+
+  // Reset vertical scroll to top when toggling sub-sheet
+  useEffect(() => {
+    if (contentContainerRef.current) {
+      contentContainerRef.current.scrollTop = 0;
+    }
+  }, [activeSubSheet]);
 
   useEffect(() => {
     function handleEscape(e: KeyboardEvent) {
@@ -69,16 +103,16 @@ export function SingleSheetView({
     const swipeThreshold = 45;
     if (info.offset.x < -swipeThreshold) {
       if (activeSubSheet === 0 && rightContent) {
-        setActiveSubSheet(1);
+        handleSubSheetChange(1);
       } else if (hasNext && onNextPage) {
-        setActiveSubSheet(0);
+        handleSubSheetChange(0);
         onNextPage();
       }
     } else if (info.offset.x > swipeThreshold) {
       if (activeSubSheet === 1) {
-        setActiveSubSheet(0);
+        handleSubSheetChange(0);
       } else if (hasPrev && onPrevPage) {
-        setActiveSubSheet(1);
+        handleSubSheetChange(1);
         onPrevPage();
       }
     }
@@ -145,7 +179,7 @@ export function SingleSheetView({
                   type="button"
                   data-testid="subsheet-item-0"
                   onClick={() => {
-                    setActiveSubSheet(0);
+                    handleSubSheetChange(0);
                     setDropdownOpen(false);
                     dropdownRef.current?.querySelector('button')?.focus();
                   }}
@@ -168,7 +202,7 @@ export function SingleSheetView({
                   type="button"
                   data-testid="subsheet-item-1"
                   onClick={() => {
-                    setActiveSubSheet(1);
+                    handleSubSheetChange(1);
                     setDropdownOpen(false);
                     dropdownRef.current?.querySelector('button')?.focus();
                   }}
@@ -198,7 +232,7 @@ export function SingleSheetView({
       </div>
 
       {/* Sheet Content Body with Internal Smooth Scroll */}
-      <div className="flex-1 min-h-0 overflow-y-auto paper-scrollbar py-3 pr-0.5">
+      <div ref={contentContainerRef} className="flex-1 min-h-0 overflow-y-auto paper-scrollbar py-3 pr-0.5">
         <AnimatePresence initial={false} mode="wait">
           {activeSubSheet === 0 ? (
             <motion.div
@@ -241,7 +275,7 @@ export function SingleSheetView({
         <DogEarPeel
           position="bottom-right"
           onClick={() => {
-            setActiveSubSheet(0);
+            handleSubSheetChange(0);
             onNextPage();
           }}
           label="Next Folio →"
@@ -250,14 +284,14 @@ export function SingleSheetView({
       {activeSubSheet === 0 && rightContent && (
         <DogEarPeel
           position="bottom-right"
-          onClick={() => setActiveSubSheet(1)}
+          onClick={() => handleSubSheetChange(1)}
           label={`${rightLabel} →`}
         />
       )}
       {activeSubSheet === 1 && (
         <DogEarPeel
           position="bottom-left"
-          onClick={() => setActiveSubSheet(0)}
+          onClick={() => handleSubSheetChange(0)}
           label={`← ${leftLabel}`}
         />
       )}
@@ -265,7 +299,7 @@ export function SingleSheetView({
         <DogEarPeel
           position="bottom-left"
           onClick={() => {
-            setActiveSubSheet(1);
+            handleSubSheetChange(1);
             onPrevPage();
           }}
           label="← Previous Folio"

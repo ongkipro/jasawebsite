@@ -29,6 +29,17 @@ export function BookFolioRenderer({
 }: BookFolioRendererProps) {
   // State for selected portfolio item in Spread 05
   const [selectedProjectId, setSelectedProjectId] = useState('samira-travel-umroh');
+  // Sub-sheet state for mobile & tablet (0: Left/list, 1: Right/detail mockup)
+  const [activeSubSheet, setActiveSubSheet] = useState<0 | 1>(0);
+
+  const handleSelectProject = (id: string) => {
+    setSelectedProjectId(id);
+    setActiveSubSheet(1);
+  };
+
+  const handleBackToProjects = () => {
+    setActiveSubSheet(0);
+  };
 
   const renderLeftSheet = (spreadIndex: number) => {
     switch (spreadIndex) {
@@ -46,7 +57,7 @@ export function BookFolioRenderer({
         return (
           <PortfolioGallerySheetLeft
             selectedId={selectedProjectId}
-            onSelectProject={setSelectedProjectId}
+            onSelectProject={handleSelectProject}
           />
         );
       case 6:
@@ -71,7 +82,12 @@ export function BookFolioRenderer({
       case 4:
         return <CustomAppSheetRight />;
       case 5:
-        return <PortfolioGallerySheetRight selectedId={selectedProjectId} />;
+        return (
+          <PortfolioGallerySheetRight
+            selectedId={selectedProjectId}
+            onBackToProjects={handleBackToProjects}
+          />
+        );
       case 6:
         return <MaintenanceSheetRight />;
       case 7:
@@ -86,6 +102,8 @@ export function BookFolioRenderer({
       initialSpreadIndex={initialSpreadIndex}
       renderLeftSheet={renderLeftSheet}
       renderRightSheet={renderRightSheet}
+      activeSubSheet={activeSubSheet}
+      onSubSheetChange={setActiveSubSheet}
     />
   );
 }

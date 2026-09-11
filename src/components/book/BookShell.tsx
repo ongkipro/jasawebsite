@@ -19,6 +19,8 @@ export interface BookShellProps {
   renderLeftSheet: (spreadIndex: number) => React.ReactNode;
   renderRightSheet?: (spreadIndex: number) => React.ReactNode;
   className?: string;
+  activeSubSheet?: 0 | 1;
+  onSubSheetChange?: (sub: 0 | 1) => void;
 }
 
 export function BookShell({
@@ -26,10 +28,26 @@ export function BookShell({
   renderLeftSheet,
   renderRightSheet,
   className,
+  activeSubSheet: propActiveSubSheet,
+  onSubSheetChange,
 }: BookShellProps) {
   const [spreadIndex, setSpreadIndex] = useState(initialSpreadIndex);
   const [prevInitialIndex, setPrevInitialIndex] = useState(initialSpreadIndex);
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
+  const [internalSubSheet, setInternalSubSheet] = useState<0 | 1>(0);
+
+  const isControlled = propActiveSubSheet !== undefined;
+  const activeSubSheet = isControlled ? propActiveSubSheet : internalSubSheet;
+
+  const handleSubSheetChange = useCallback(
+    (sub: 0 | 1) => {
+      if (!isControlled) {
+        setInternalSubSheet(sub);
+      }
+      onSubSheetChange?.(sub);
+    },
+    [isControlled, onSubSheetChange]
+  );
 
   // Synchronize state if initialSpreadIndex changes without cascading renders
   if (prevInitialIndex !== initialSpreadIndex) {
@@ -56,6 +74,7 @@ export function BookShell({
       if (newIndex < 0 || newIndex >= totalSpreads) return;
       setDirection(dir);
       setSpreadIndex(newIndex);
+      handleSubSheetChange(0);
       const targetSlug = foliosData[newIndex].slug;
       const targetUrl = targetSlug === 'cover' ? '/' : `/folio/${targetSlug}`;
       if (window.location.pathname !== targetUrl) {
@@ -63,7 +82,7 @@ export function BookShell({
       }
       syncDocumentSeo(targetSlug);
     },
-    [totalSpreads]
+    [totalSpreads, handleSubSheetChange]
   );
 
   // Synchronize document title, meta tags, and schema whenever spread changes
@@ -79,6 +98,7 @@ export function BookShell({
     const handlePopState = (e: PopStateEvent) => {
       if (e.state && typeof e.state.spreadIndex === 'number') {
         setSpreadIndex(e.state.spreadIndex);
+        handleSubSheetChange(0);
       } else {
         const path = window.location.pathname;
         let newIdx = 0;
@@ -90,12 +110,13 @@ export function BookShell({
           if (found !== -1) newIdx = found;
         }
         setSpreadIndex(newIdx);
+        handleSubSheetChange(0);
       }
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [handleSubSheetChange]);
 
   const handleNext = useCallback(() => {
     if (spreadIndex < totalSpreads - 1) {
@@ -280,6 +301,8 @@ export function BookShell({
               onNextPage={handleNext}
               hasPrev={spreadIndex > 0}
               hasNext={spreadIndex < totalSpreads - 1}
+              activeSubSheet={activeSubSheet}
+              onSubSheetChange={handleSubSheetChange}
             />
           </div>
 
@@ -297,6 +320,8 @@ export function BookShell({
               onNextPage={handleNext}
               hasPrev={spreadIndex > 0}
               hasNext={spreadIndex < totalSpreads - 1}
+              activeSubSheet={activeSubSheet}
+              onSubSheetChange={handleSubSheetChange}
             />
           </div>
         </SheetTurner>
