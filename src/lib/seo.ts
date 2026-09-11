@@ -83,10 +83,20 @@ export function generateMasterSchema() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'Jasa Pembuatan Toko Online E-Commerce & Shopify D2C',
-                description: 'Toko online mandiri terintegrasi Payment Gateway QRIS dan API Kurir Indonesia tanpa biaya potongan komisi marketplace.',
+                name: 'Jasa Pembuatan Toko Online Mandiri (0% Komisi Marketplace)',
+                description: 'Toko online mandiri 100% hak milik terintegrasi Payment Gateway QRIS dan API Kurir Indonesia tanpa biaya potongan komisi marketplace.',
               },
               price: '3900000',
+              priceCurrency: 'IDR',
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Jasa Pembuatan Website Shopify Profesional & Bespoke Storefront',
+                description: 'Toko online flagship Shopify kustom dari nol dengan performa sub-detik, integrasi pembayaran QRIS & kurir lokal se-Indonesia, serta setup sinyal iklan Meta CAPI & Google Ads.',
+              },
+              price: '6900000',
               priceCurrency: 'IDR',
             },
             {
@@ -164,6 +174,8 @@ export function generateSheetSchema(
   const isServiceFolio = [
     'company-profile',
     'sales-website',
+    'ecommerce',
+    'shopify',
     'ecommerce-shopify',
     'custom-web-app',
     'maintenance-care',
@@ -307,6 +319,39 @@ export const CORE_FOLIO_SEO: Record<
     startingPrice: 'Rp 3,5jt',
     schemaType: 'Service',
   },
+  ecommerce: {
+    title: 'Jasa Pembuatan Toko Online Mandiri Bebas Komisi Marketplace',
+    description:
+      'Jasa pembuatan toko online mandiri tanpa komisi 10% marketplace. 100% hak milik data & kode, integrasi QRIS & kurir se-Indonesia. Hubungi via WhatsApp.',
+    keywords: [
+      'jasa pembuatan toko online mandiri',
+      'jasa toko online bebas komisi',
+      'toko online cms mandiri indonesia',
+      'jasa website e-commerce',
+      'toko online qris kurir otomatis',
+    ],
+    startingPrice: 'Rp 3,9jt',
+    schemaType: 'Service',
+  },
+  shopify: {
+    title: 'Jasa Pembuatan Website Shopify Profesional & Bespoke Storefront',
+    description:
+      'Jasa pembuatan website Shopify profesional kustom dari nol. Desain bespoke eksklusif, loading sub-detik, integrasi QRIS & kurir lokal se-Indonesia, SEO Google, serta setup Meta CAPI & Google Ads.',
+    keywords: [
+      'jasa pembuatan website shopify',
+      'jasa custom website shopify dari nol',
+      'shopify developer indonesia',
+      'shopify agency indonesia',
+      'jasa toko online shopify profesional',
+      'jasa integrasi payment gateway dan kurir shopify',
+      'jasa setup meta pixel capi google ads shopify',
+      'jasa bikin toko shopify d2c brand',
+      'jasa optimasi kecepatan shopify',
+      'shopify partner indonesia',
+    ],
+    startingPrice: 'Rp 6,9jt',
+    schemaType: 'Service',
+  },
   'ecommerce-shopify': {
     title: 'Jasa Pembuatan Toko Online Shopify & E-Commerce Mandiri',
     description:
@@ -320,7 +365,7 @@ export const CORE_FOLIO_SEO: Record<
       'jasa website e-commerce',
       'toko online qris kurir otomatis',
     ],
-    startingPrice: 'Rp 3,9jt',
+    startingPrice: 'Rp 6,9jt',
     schemaType: 'Service',
   },
   'custom-web-app': {

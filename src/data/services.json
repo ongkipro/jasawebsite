@@ -140,59 +140,44 @@
     ]
   },
   {
-    "id": "ecommerce-shopify",
+    "id": "ecommerce",
     "pillarNumber": "PILLAR 03",
-    "category": "Toko Online & E-Commerce",
-    "title": "Toko Online Mandiri & Shopify E-Commerce",
-    "headline": "Toko Online Brand Anda Sendiri: Bebas Potongan Biaya Admin 10% Marketplace",
+    "category": "Toko Online Mandiri",
+    "title": "Toko Online Mandiri (0% Komisi Marketplace)",
+    "headline": "Toko Online Brand Anda Sendiri: 100% Hak Milik, Bebas Potongan Biaya Admin 10% Marketplace",
     "startingPriceAnchor": "Mulai Rp 3,9jt",
     "problemStatement": "Jualan di marketplace makin bikin sesak napas: potongan komisi admin naik terus sampai 8–12%, perang harga banting-bantingan, dan pembeli gampang pindah ke toko sebelah. Saat akun bermasalah, omzet hancur seketika. Toko online milik sendiri bikin 100% profit penjualan utuh masuk kantong dan database pembeli aman di tangan Anda.",
-    "solutionNarrative": "Kami hadirkan 2 pilihan solusi teruji: (1) Opsi Toko Mandiri (CMS Studio Pribadi): 100% hak milik kode & data tanpa potongan komisi jualan, biaya server sangat terjangkau disesuaikan volume traffic, cek ongkir kurir otomatis se-Indonesia, dan orderan masuk langsung ke WhatsApp admin. (2) Opsi Setup Resmi Shopify: Cocok untuk brand yang butuh ekosistem global Shopify, custom tema mewah & nyaman di HP, integrasi pembayaran QRIS/VA lokal, dan kurir pengiriman otomatis.",
+    "solutionNarrative": "Solusi Toko Mandiri (CMS Studio Pribadi): 100% hak milik kode & database tanpa potongan komisi penjualan selamanya. Biaya operasional server sangat terjangkau, cek ongkir kurir otomatis se-Indonesia, pembayaran QRIS instan, dan orderan otomatis langsung masuk ke WhatsApp admin toko.",
     "idealFor": [
-      "Brand Fashion, Hijab & Sepatu",
+      "Brand Fashion, Hijab & Sepatu Lokal",
       "Brand Skincare, Kosmetik & Herbal",
       "F&B Ritel, Kopi & Camilan Kemasan",
       "Gadget, Aksesoris & Produk Hobi",
       "Distributor & Toko Grosir B2B"
     ],
-    "voucherTitle": "KONSULTASI TOKO ONLINE (MANDIRI / SHOPIFY)",
+    "voucherTitle": "KONSULTASI TOKO MANDIRI (0% KOMISI)",
     "voucherCode": "ONG-COMMERCE-D2C",
     "voucherPerks": "Konsultasi Alur Belanja, Integrasi Ongkir Kurir & Rencana Anggaran Toko",
-    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi pembuatan website toko online untuk produk saya (Toko Mandiri Bebas Komisi / Shopify). Mau tanya alur belanja otomatis, integrasi kurir, dan estimasi biayanya.",
+    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi pembuatan website toko online mandiri bebas komisi marketplace untuk produk saya. Mau tanya alur belanja otomatis, integrasi kurir, dan estimasi biayanya.",
     "tiers": [
       {
-        "id": "shopify-starter",
+        "id": "commerce-starter",
         "name": "Toko Mandiri Bebas Komisi (CMS Pribadi)",
+        "isRecommended": true,
         "investment": "Rp 3,9jt",
         "timeline": "4–7 Hari",
         "targetClients": "Brand & UKM jualan mandiri tanpa potongan admin 10%",
         "deliverables": [
-          "100% Hak milik mandiri, 0% potongan komisi",
+          "100% Hak milik mandiri, 0% potongan komisi jualan",
           "Input awal katalog lengkap hingga 20 produk",
           "Hitung ongkir otomatis se-Indonesia (J&T, SiCepat, JNE)",
           "Bayar instan via QRIS, VA Bank & Transfer",
-          "Notifikasi order & invoice otomatis ke WhatsApp"
+          "Notifikasi order & invoice otomatis ke WhatsApp admin"
         ],
         "couponCode": "ONG-COMMERCE-START"
       },
       {
-        "id": "shopify-growth",
-        "name": "Shopify Custom Storefront & Desain Mewah",
-        "isRecommended": true,
-        "investment": "Rp 6,9jt",
-        "timeline": "7–14 Hari",
-        "targetClients": "Brand D2C & pebisnis butuh toko resmi Shopify kelas dunia",
-        "deliverables": [
-          "Setup resmi akun Shopify hingga domain aktif",
-          "Desain tema custom eksklusif & nyaman di HP",
-          "Integrasi pembayaran QRIS/VA + kurir lokal",
-          "Checkout instan, diskon otomatis & upsell promo",
-          "Setup pixel iklan Meta/TikTok & panduan kelola"
-        ],
-        "couponCode": "ONG-COMMERCE-GROWTH"
-      },
-      {
-        "id": "custom-ecommerce",
+        "id": "commerce-pro",
         "name": "Toko Mandiri Skala Besar & Grosir / Reseller",
         "investment": "Rp 8,9jt – Rp 19,9jt+",
         "timeline": "10–20 Hari",
@@ -204,7 +189,125 @@
           "Sinkronisasi stok & sistem pencatatan gudang",
           "Dukungan teknis prioritas & garansi kelancaran"
         ],
-        "couponCode": "ONG-COMMERCE-CUSTOM"
+        "couponCode": "ONG-COMMERCE-PRO"
+      }
+    ]
+  },
+  {
+    "id": "shopify",
+    "pillarNumber": "PILLAR 04 · FEATURED",
+    "category": "Shopify E-Commerce & Growth",
+    "title": "Jasa Pembuatan Website Shopify Profesional",
+    "headline": "Bespoke Shopify Storefront dari Nol: Performa Sub-Detik, Desain Eksklusif, Full Setup Payment & Ads Engine",
+    "startingPriceAnchor": "Mulai Rp 6,9jt",
+    "problemStatement": "Banyak brand memakai tema template pasaran yang berat, kaku, dan lambat di HP. Ditambah lagi masalah krusial Shopify di Indonesia: sulitnya integrasi QRIS/VA lokal, ongkir kurir yang tidak otomatis, serta kebocoran tracking iklan di era iOS privacy. Hasilnya: budget iklan Meta & Google Ads boncos tanpa konversi.",
+    "solutionNarrative": "Kami bangun toko online Shopify flagship kustom dari nol khusus untuk brand Anda: visual mewah kelas dunia tanpa batasan tema generik, kecepatan loading instan, integrasi resmi Midtrans/Xendit (QRIS & Virtual Account) + ongkir otomatis kurir se-Indonesia, SEO Google optimal, serta setup sinyal iklan Meta CAPI & Google Ads akurat 100%.",
+    "idealFor": [
+      "Brand D2C (Direct-to-Consumer) yang Ingin Naik Kelas",
+      "Brand Fashion, Apparel, Hijab & Aksesoris Mewah",
+      "Brand Skincare, Kosmetik & Beauty Care Resmi BPOM",
+      "Pebisnis Ekspor & Brand Indonesia Menjangkau Pasar Global",
+      "Retailer & Distributor Modern dengan Katalog Unggulan"
+    ],
+    "voucherTitle": "KONSULTASI & BLUEPRINT BESPOKE SHOPIFY",
+    "voucherCode": "ONG-SHOPIFY-PRO",
+    "voucherPerks": "Audit Konversi Brand, Blueprint Arsitektur Kustom, Integrasi Payment/Kurir & Setup Sinyal Ads",
+    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi pembuatan website Shopify profesional kustom dari nol untuk brand saya. Mau tanya arsitektur bespoke, integrasi QRIS & kurir lokal, serta setup tracking Meta/Google Ads.",
+    "tiers": [
+      {
+        "id": "shopify-bespoke",
+        "name": "Shopify Bespoke Storefront (Custom dari Nol)",
+        "investment": "Rp 6,9jt",
+        "timeline": "7–10 Hari",
+        "targetClients": "Brand D2C butuh tampilan eksklusif, performa sub-detik & integrasi lokal beres",
+        "deliverables": [
+          "Arsitektur storefront custom dari nol tanpa batasan tema generik",
+          "Integrasi payment gateway lokal (QRIS, VA semua bank, e-Wallet)",
+          "Hitung ongkir kurir otomatis se-Indonesia (JNE, SiCepat, J&T)",
+          "Desain mobile-first super nyaman untuk jempol & fast checkout",
+          "Setup dasar Meta Pixel, Google Analytics 4, dan indeks Google Search"
+        ],
+        "couponCode": "ONG-SHOPIFY-BESPOKE"
+      },
+      {
+        "id": "shopify-growth",
+        "name": "Shopify Scale-Up & Full Growth Engine",
+        "isRecommended": true,
+        "investment": "Rp 12,9jt",
+        "timeline": "10–14 Hari",
+        "targetClients": "Brand berkembang & pengiklan aktif yang butuh konversi tinggi dan data akurat",
+        "deliverables": [
+          "Semua fitur Bespoke Storefront + Kustomisasi PDP konversi tinggi",
+          "Meta Pixel + Server-Side Conversions API (CAPI) kebal adblock & iOS",
+          "Google Ads Enhanced Conversions & GA4 Full eCommerce Event Mapping",
+          "Google Merchant Center Sync otomatis (Siap Google Shopping & PMax Ads)",
+          "Dual Checkout Flow (Standar Shopify + Tombol Order WhatsApp Otomatis)",
+          "Optimasi Core Web Vitals Grade A & Schema.org Product Rich Snippets"
+        ],
+        "couponCode": "ONG-SHOPIFY-GROWTH"
+      },
+      {
+        "id": "shopify-enterprise",
+        "name": "Shopify Enterprise & Multi-Market Expansion",
+        "investment": "Rp 24,9jt+",
+        "timeline": "14–21 Hari",
+        "targetClients": "Brand skala besar, ekspansi ekspor global, multi-currency, atau katalog kompleks",
+        "deliverables": [
+          "Arsitektur toko multi-market & multi-currency (USD, SGD, EUR, IDR)",
+          "Integrasi Stripe / PayPal internasional + logistik kargo ekspor",
+          "Sistem bundling produk custom, subscription jualan, atau tier harga agen B2B",
+          "Integrasi sistem gudang / WMS / ERP pihak ketiga",
+          "Sesi video training staf admin + prioritas SLA pemeliharaan berkala"
+        ],
+        "couponCode": "ONG-SHOPIFY-ENTERPRISE"
+      }
+    ]
+  },
+  {
+    "id": "ecommerce-shopify",
+    "pillarNumber": "PILLAR 03-04",
+    "category": "Toko Online & Shopify",
+    "title": "Toko Online Mandiri & Shopify E-Commerce",
+    "headline": "Toko Online Brand Anda Sendiri: Bebas Potongan Biaya Admin 10% Marketplace",
+    "startingPriceAnchor": "Mulai Rp 3,9jt",
+    "problemStatement": "Jualan di marketplace makin bikin sesak napas: potongan komisi admin naik terus sampai 8–12%. Toko online milik sendiri bikin 100% profit penjualan utuh masuk kantong.",
+    "solutionNarrative": "Solusi toko online mandiri bebas komisi atau setup toko resmi Shopify dengan pembayaran QRIS & kurir otomatis se-Indonesia.",
+    "idealFor": [
+      "Brand Fashion, Hijab & Sepatu",
+      "Brand Skincare, Kosmetik & Herbal",
+      "Retailer D2C"
+    ],
+    "voucherTitle": "KONSULTASI TOKO ONLINE (MANDIRI / SHOPIFY)",
+    "voucherCode": "ONG-COMMERCE-D2C",
+    "voucherPerks": "Konsultasi Alur Belanja, Integrasi Ongkir Kurir & Rencana Anggaran Toko",
+    "whatsappMessageTemplate": "Halo Tim JasaWebsite.co by ONG, saya ingin konsultasi pembuatan website toko online untuk produk saya (Toko Mandiri Bebas Komisi / Shopify).",
+    "tiers": [
+      {
+        "id": "shopify-starter",
+        "name": "Toko Mandiri Bebas Komisi",
+        "investment": "Rp 3,9jt",
+        "timeline": "4–7 Hari",
+        "targetClients": "Brand & UKM jualan mandiri tanpa potongan admin 10%",
+        "deliverables": [
+          "100% Hak milik mandiri, 0% potongan komisi",
+          "Hitung ongkir otomatis se-Indonesia (J&T, SiCepat, JNE)",
+          "Bayar instan via QRIS, VA Bank & Transfer"
+        ],
+        "couponCode": "ONG-COMMERCE-START"
+      },
+      {
+        "id": "shopify-growth-legacy",
+        "name": "Shopify Custom Storefront & Desain Mewah",
+        "isRecommended": true,
+        "investment": "Rp 6,9jt",
+        "timeline": "7–14 Hari",
+        "targetClients": "Brand D2C & pebisnis butuh toko resmi Shopify kelas dunia",
+        "deliverables": [
+          "Setup resmi akun Shopify hingga domain aktif",
+          "Desain tema custom eksklusif & nyaman di HP",
+          "Integrasi pembayaran QRIS/VA + kurir lokal"
+        ],
+        "couponCode": "ONG-COMMERCE-GROWTH"
       }
     ]
   },

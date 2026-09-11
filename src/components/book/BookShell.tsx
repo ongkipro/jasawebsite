@@ -179,17 +179,41 @@ export function BookShell({
           </span>
         </div>
 
-        <div className="flex items-center gap-1.5 sm:gap-4">
+        <div className="flex items-center gap-1.5 sm:gap-3">
+          <Link
+            href="/shopify"
+            onClick={(e) => {
+              e.preventDefault();
+              const shopifyIdx = foliosData.findIndex((f) => f.slug === 'shopify');
+              if (shopifyIdx !== -1) {
+                navigateToSpread(shopifyIdx, shopifyIdx > spreadIndex ? 'next' : 'prev');
+              }
+            }}
+            className={cn(
+              'hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border font-mono text-[10px] sm:text-[11px] tracking-wide transition-all cursor-pointer',
+              currentSpread.slug === 'shopify'
+                ? 'bg-[#111111] text-[#fbfbfa] border-[#111111] font-bold shadow-2xs'
+                : 'bg-[#fbfbfa] hover:bg-[#ebebe3] border-[#d5d5cd] hover:border-[#111111] text-[#111111]'
+            )}
+            title="Buka Lembar Layanan Shopify Profesional"
+          >
+            <span className="text-amber-500 text-[9px]">★</span>
+            <span>SHOPIFY</span>
+          </Link>
+
           <Link
             href="/folio/portfolio"
             onClick={(e) => {
               if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
               e.preventDefault();
-              navigateToSpread(5, spreadIndex > 5 ? 'prev' : 'next');
+              const portIdx = foliosData.findIndex((f) => f.slug === 'portfolio');
+              if (portIdx !== -1) {
+                navigateToSpread(portIdx, portIdx > spreadIndex ? 'next' : 'prev');
+              }
             }}
             className={cn(
               'hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-xs border font-mono text-[10px] sm:text-[11px] tracking-wide transition-all cursor-pointer',
-              spreadIndex === 5
+              currentSpread.slug === 'portfolio'
                 ? 'bg-[#ebebe3] border-[#111111] text-[#c23b22] font-bold shadow-2xs'
                 : 'bg-[#fbfbfa] hover:bg-[#ebebe3] border-[#d5d5cd] hover:border-[#111111] text-[#111111]'
             )}

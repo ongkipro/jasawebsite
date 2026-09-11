@@ -7,6 +7,7 @@ import { TocSheet } from '@/components/sheets/TocSheet';
 import { ComproSheetLeft, ComproSheetRight } from '@/components/sheets/ComproSheet';
 import { SalesSheetLeft, SalesSheetRight } from '@/components/sheets/SalesSheet';
 import { CommerceSheetLeft, CommerceSheetRight } from '@/components/sheets/CommerceSheet';
+import { ShopifySheetLeft, ShopifySheetRight } from '@/components/sheets/ShopifySheet';
 import { CustomAppSheetLeft, CustomAppSheetRight } from '@/components/sheets/CustomAppSheet';
 import {
   PortfolioGallerySheetLeft,
@@ -26,7 +27,7 @@ export interface BookFolioRendererProps {
 export function BookFolioRenderer({
   initialSpreadIndex = 0,
 }: BookFolioRendererProps) {
-  // State for selected portfolio item in Spread 05
+  // State for selected portfolio item in Spread 06
   const [selectedProjectId, setSelectedProjectId] = useState('samira-travel-umroh');
 
   const renderLeftSheet = (spreadIndex: number) => {
@@ -40,17 +41,19 @@ export function BookFolioRenderer({
       case 3:
         return <CommerceSheetLeft />;
       case 4:
-        return <CustomAppSheetLeft />;
+        return <ShopifySheetLeft />;
       case 5:
+        return <CustomAppSheetLeft />;
+      case 6:
         return (
           <PortfolioGallerySheetLeft
             selectedId={selectedProjectId}
             onSelectProject={setSelectedProjectId}
           />
         );
-      case 6:
-        return <MaintenanceSheetLeft />;
       case 7:
+        return <MaintenanceSheetLeft />;
+      case 8:
         return <NicheCatalogSheet />;
       default:
         return <CoverSheet />;
@@ -68,12 +71,14 @@ export function BookFolioRenderer({
       case 3:
         return <CommerceSheetRight />;
       case 4:
-        return <CustomAppSheetRight />;
+        return <ShopifySheetRight />;
       case 5:
-        return <PortfolioGallerySheetRight selectedId={selectedProjectId} />;
+        return <CustomAppSheetRight />;
       case 6:
-        return <MaintenanceSheetRight />;
+        return <PortfolioGallerySheetRight selectedId={selectedProjectId} />;
       case 7:
+        return <MaintenanceSheetRight />;
+      case 8:
         return <ColophonSheet />;
       default:
         return <TocSheet />;

@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import nichesData from '@/data/niches.json';
+import foliosData from '@/data/folios.json';
 import { siteConfig } from '@/data/siteConfig';
 import { SpreadView } from '@/components/book/SpreadView';
 import { TabletSheetView } from '@/components/book/TabletSheetView';
@@ -337,25 +338,13 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
       <div className="relative w-full flex-1 min-h-0 flex flex-col">
         {/* Bookmark Ribbon on Desktop Edge */}
         <BookmarkRibbon
-          currentSpreadIndex={7} // Points to INDEX / Colophon tab
+          currentSpreadIndex={foliosData.length - 1} // Points to INDEX / Colophon tab
           onSelectSpread={(idx) => {
+            const targetFolio = foliosData[idx];
             const target =
-              idx === 0
+              !targetFolio || targetFolio.slug === 'cover'
                 ? '/'
-                : idx === 7
-                ? '/folio/colophon'
-                : `/folio/${
-                    [
-                      'cover',
-                      'company-profile',
-                      'sales-website',
-                      'ecommerce-shopify',
-                      'custom-web-app',
-                      'portfolio',
-                      'maintenance-care',
-                      'colophon',
-                    ][idx]
-                  }`;
+                : `/folio/${targetFolio.slug}`;
             router.push(target);
           }}
         />

@@ -39,16 +39,24 @@ const QUICK_FOLIO_LINKS: QuickFolioLink[] = [
       'Corong konversi traffic Meta/Google Ads menjadi leads WhatsApp pembeli bernilai tinggi.',
   },
   {
-    slug: '/folio/ecommerce-shopify',
+    slug: '/folio/ecommerce',
     folioNumber: 'FOLIO 06–07',
     badge: 'COMM',
-    title: 'E-Commerce & Shopify D2C',
+    title: 'Toko Online Mandiri (0% Komisi)',
     description:
       'Toko online mandiri terintegrasi Payment Gateway QRIS & kurir otomatis tanpa komisi.',
   },
   {
-    slug: '/folio/custom-web-app',
+    slug: '/shopify',
     folioNumber: 'FOLIO 08–09',
+    badge: 'SHOPIFY',
+    title: 'Shopify Bespoke & Growth Engine',
+    description:
+      'Storefront Shopify custom dari nol, performa sub-detik, pembayaran QRIS, kurir lokal & ads tracking.',
+  },
+  {
+    slug: '/folio/custom-web-app',
+    folioNumber: 'FOLIO 10–11',
     badge: 'APPS',
     title: 'Custom Web Application & Systems',
     description:
@@ -56,7 +64,7 @@ const QUICK_FOLIO_LINKS: QuickFolioLink[] = [
   },
   {
     slug: '/folio/portfolio',
-    folioNumber: 'FOLIO 10–11',
+    folioNumber: 'FOLIO 12–13',
     badge: 'GALERI',
     title: 'Galeri Portofolio & Case Studies',
     description:

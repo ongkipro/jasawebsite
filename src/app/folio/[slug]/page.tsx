@@ -17,8 +17,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const coreParams = foliosData.map((f) => ({ slug: f.slug }));
+  const legacyParams = [{ slug: 'ecommerce-shopify' }];
   const nicheParams = nichesData.map((n) => ({ slug: `niche-${n.slug}` }));
-  return [...coreParams, ...nicheParams];
+  return [...coreParams, ...legacyParams, ...nicheParams];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -172,7 +173,12 @@ export default async function FolioPage({ params }: PageProps) {
   }
 
   // Scenario B: Core Folio Spread
-  const spreadIndex = foliosData.findIndex((f) => f.slug === slug);
+  let effectiveSlug = slug;
+  if (slug === 'ecommerce-shopify') {
+    effectiveSlug = 'shopify';
+  }
+
+  const spreadIndex = foliosData.findIndex((f) => f.slug === effectiveSlug);
   if (spreadIndex === -1) {
     notFound();
   }
@@ -181,7 +187,9 @@ export default async function FolioPage({ params }: PageProps) {
   const startingPrices: Record<string, string> = {
     'company-profile': 'Rp 2,9jt',
     'sales-website': 'Rp 3,5jt',
-    'ecommerce-shopify': 'Rp 3,9jt',
+    'ecommerce': 'Rp 3,9jt',
+    'shopify': 'Rp 6,9jt',
+    'ecommerce-shopify': 'Rp 6,9jt',
     'custom-web-app': 'Rp 15jt',
     'maintenance-care': 'Rp 2,5jt',
   };

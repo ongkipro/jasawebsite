@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { cn } from '@/lib/cn';
 import foliosData from '@/data/folios.json';
@@ -17,19 +17,22 @@ export function TocSheet() {
         <Badge variant="outline">TABLE OF CONTENTS</Badge>
       </div>
 
-      {/* Directory list of spreads (1-7 Clickable Links) */}
-      <div className="space-y-1.5 sm:space-y-2 font-mono text-xs">
+      {/* Directory list of spreads (Clickable Links) */}
+      <div className="space-y-1 sm:space-y-1.5 font-mono text-xs">
         {foliosData.slice(1).map((folio, index) => {
           const isPortfolio = folio.slug === 'portfolio';
+          const isShopify = folio.slug === 'shopify';
           return (
             <Link
               key={folio.id}
               href={`/folio/${folio.slug}`}
               className={cn(
-                'group block p-2 sm:p-2.5 rounded-xs border transition-all cursor-pointer',
-                isPortfolio
-                  ? 'bg-[#fbfbfa] border-[#c23b22]/40 shadow-xs hover:border-[#c23b22]'
-                  : 'border-transparent hover:border-[#d5d5cd] hover:bg-[#f4f4ef]'
+                'group block p-1.5 sm:p-2 rounded-xs border transition-all cursor-pointer',
+                isShopify
+                  ? 'bg-[#fbfbfa] border-[#111111] shadow-2xs hover:border-[#c23b22]'
+                  : isPortfolio
+                    ? 'bg-[#fbfbfa] border-[#c23b22]/40 shadow-xs hover:border-[#c23b22]'
+                    : 'border-transparent hover:border-[#d5d5cd] hover:bg-[#f4f4ef]'
               )}
             >
               <div className="flex items-start justify-between gap-2">
@@ -40,6 +43,12 @@ export function TocSheet() {
                   <span className="font-serif text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#c23b22] transition-colors leading-snug">
                     {folio.title}
                   </span>
+                  {isShopify && (
+                    <span className="px-1.5 py-0.5 bg-[#111111] text-[#fbfbfa] text-[8.5px] font-mono font-bold rounded-xs shrink-0 tracking-wider flex items-center gap-1">
+                      <Star className="w-2.5 h-2.5 fill-current text-yellow-400" />
+                      FEATURED
+                    </span>
+                  )}
                   {isPortfolio && (
                     <span className="px-1.5 py-0.5 bg-[#c23b22] text-[#fbfbfa] text-[9px] font-mono font-bold rounded-xs shrink-0 tracking-wider">
                       BUKTI KARYA

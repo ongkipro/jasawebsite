@@ -13,6 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   };
 
+  // Dedicated Shopify Featured Landing Page
+  const shopifyEntry: MetadataRoute.Sitemap[number] = {
+    url: `${siteConfig.url}/shopify`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly',
+    priority: 0.95,
+  };
+
   // Core folio spreads
   const coreEntries: MetadataRoute.Sitemap = foliosData.filter((folio) => folio.slug !== 'cover').map((folio) => ({
     url: `${siteConfig.url}/folio/${folio.slug}`,
@@ -27,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [rootEntry, ...coreEntries, ...nicheEntries];
+  return [rootEntry, shopifyEntry, ...coreEntries, ...nicheEntries];
 }
