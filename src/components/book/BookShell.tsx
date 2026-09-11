@@ -247,7 +247,7 @@ export function BookShell({
           }
         />
 
-        {/* 3D Motion Turner Container */}
+        {/* Luxury Editorial Paper Turner Container */}
         <SheetTurner currentKey={spreadIndex} direction={direction} className="w-full h-full flex-1 min-h-0">
           {/* 1. Desktop Two-Page Open Spread (>= 1024px) - 1 Layar Fixed */}
           <div className="hidden lg:block w-full h-full">

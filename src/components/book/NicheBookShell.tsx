@@ -349,7 +349,7 @@ export function NicheBookShell({ currentNiche }: NicheBookShellProps) {
           }}
         />
 
-        {/* 3D Motion Turner Container */}
+        {/* Luxury Editorial Paper Turner Container */}
         <SheetTurner currentKey={currentNiche.slug} direction={direction} className="w-full h-full flex-1 min-h-0">
           {/* 1. Desktop Two-Page Open Spread (>= 1024px) */}
           <div className="hidden lg:block w-full h-full">
