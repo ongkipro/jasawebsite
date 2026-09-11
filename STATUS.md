@@ -1,10 +1,10 @@
 # Current Handoff — JasaWebsite.co
 
-Updated: 2026-09-11. Task: FEAT-MOTION-01 (Luxury Editorial Paper Glide & Spine Shadow Sweep).
+Updated: 2026-09-11. Task: FEAT-PORTFOLIO-02 (Mobile & Tablet Portfolio Master-Detail Auto-Flip and Quick Back Navigation).
 
 ## Delivery state
 
-Tactile editorial paper glide transition with responsive parallax offsets and dynamic spine shadow sweep is deployed to production from `17e2f6239e07e42d8c6f4c52a4ed1437d0d078e0`. Vercel deployment `dpl_DMDVRj9qXjEiNMaqkjbBceRxvXVj` is ready and aliased to `jasawebsite.co`. Working tree is verified.
+Mobile and tablet portfolio master-detail auto-navigation with quick return button and visual cues is deployed to production from `7e7eb3ac0cf7daaa8b3de654c4546998874267d6`. Vercel deployment `dpl_6A6vvyS2rm3PpPuyeQZSoGb4aeZg` is ready and aliased to `jasawebsite.co`. Working tree is verified.
 
 The current deployment and preceding releases are documented in [RELEASE.md](file:///Users/ongki/Projects/jasawebsite/RELEASE.md). Historical completion claims in the build log do not establish the current state.
 
