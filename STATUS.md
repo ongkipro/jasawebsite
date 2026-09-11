@@ -1,12 +1,12 @@
 # Current Handoff — JasaWebsite.co
 
-Updated: 2026-09-11. Task: TASK-44 / REQ-AUDIT-01.
+Updated: 2026-09-11. Task: FEAT-SHOPIFY-01 (Dedicated Bespoke Shopify Service & Growth Engine).
 
 ## Delivery state
 
-Audit remediation is deployed to production from `cf03b3fb071264e0aa75657db7e469e2243f5ec2`, following a rebase on `origin/main` at `47ec88b`. Vercel deployment `dpl_4rximtDJK9DSbtdiCWgoc4gzWAyZ` is ready and aliased to `jasawebsite.co`. Base HEAD: `96205ba46a890f70ce26e96070a1d37ea5b4adaa`; initial working tree was clean.
+Shopify bespoke service sheet, dedicated SEO route, and ribbon navigation are deployed to production from `36087067f3f6e1ae575dce0297e4dd7393f1579a`, following a clean rebase on `origin/main`. Vercel deployment `dpl_AkzQdKMB8fMgYzP1MN88FUM66Cw7` is ready and aliased to `jasawebsite.co`. Working tree is verified.
 
-The current deployment and the preceding release are documented in [RELEASE.md](RELEASE.md). Historical completion claims in the build log do not establish the current state.
+The current deployment and preceding releases are documented in [RELEASE.md](file:///Users/ongki/Projects/jasawebsite/RELEASE.md). Historical completion claims in the build log do not establish the current state.
 
 ## Implemented
 

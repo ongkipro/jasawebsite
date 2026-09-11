@@ -2,15 +2,20 @@
 
 ## Latest release
 
-- **Release-ID:** REL-20260911-016
-- **Source revision:** `cf03b3fb071264e0aa75657db7e469e2243f5ec2`
+- **Release-ID:** REL-20260911-017
+- **Source revision:** `36087067f3f6e1ae575dce0297e4dd7393f1579a`
 - **Environment:** production
-- **Deployment:** [jwco-n286dzyei-ongkipro.vercel.app](https://jwco-n286dzyei-ongkipro.vercel.app) (`dpl_4rximtDJK9DSbtdiCWgoc4gzWAyZ`)
-- **Promotion:** `https://jasawebsite.co`, `https://www.jasawebsite.co`, and `https://jwco.vercel.app` were aliased by Vercel.
-- **Verified after promotion:** root HTTP 200 with root canonical; 32 sitemap URLs; `/folio/company-profile` HTTP 200; unknown route HTTP 404; HSTS, `nosniff`, frame, referrer, and permissions headers present.
-- **Validation before release:** production build, TypeScript, lint (11 existing image warnings and zero errors), 1,634 export assertions, development-map validation, and 83 browser cases passed. See [the audit](docs/audit/2026-09-11-qa.md).
+- **Deployment:** [jwco-mhc3wrz4y-ongkipro.vercel.app](https://jwco-mhc3wrz4y-ongkipro.vercel.app) (`dpl_AkzQdKMB8fMgYzP1MN88FUM66Cw7`)
+- **Promotion:** `https://jasawebsite.co`, `https://www.jasawebsite.co`, and `https://jwco.vercel.app` aliased by Vercel.
+- **Verified after promotion:** `/shopify` HTTP 200; `/folio/shopify` HTTP 200; 32 sitemap URLs; build verification and development-map verification passed (1,643 assertions).
+- **Validation before release:** Next.js 16.3.4 SSG build, TypeScript compilation, 1,643 export assertions, development map validation, and live HTTP/2 edge probes passed.
 
 The historical manifest below records an earlier deployment. Its unverified performance and infrastructure claims are not evidence for this release.
+
+Release-ID: REL-20260911-016
+Base: cf03b3f
+Environment: production
+Status: RELEASED_HISTORICAL
 
 Release-ID: REL-20260910-015
 Base: c0c52b6
